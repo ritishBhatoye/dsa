@@ -45,9 +45,53 @@ int main(){
     return 0;
 }*/
 //OPTMIZED SOLUTION
+// #include<iostream>
+// using namespace std;
+// void user_input(vector<int> &arr,int size){
+//     cout<<"ENTER THE ELEMENTS IN AN ARRAY YOU WANT TO INSERT : "<<endl;
+//     int a;
+//     for(int i=0;i<size;i++){
+//         cin>>a;
+//         arr.push_back(a);
+//     }
+// }
+// void print(vector<int> &arr,int size){
+//     for(int i=0;i<size;i++){
+//         cout<<arr[i]<<endl;
+//     }
+// }
+// void MoveZeros(vector<int> arr,int size){
+//     vector<int> temp;
+//     for(int i=0;i<size;i++){
+//         if(arr[i]!=0){
+//       temp.push_back(arr[i]);
+//         }
+//     }
+//        int n=temp.size();
+//     for(int i=0;i<n;i++){
+//         arr[i]=temp[i];
+//     }
+
+//     for(int i=n;i<size;i++){
+//      arr[i]=0;
+//     }
+//     print(arr,size);
+// }
+// int main(){
+//     int n;
+//     cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
+//     cin>>n;
+//     vector<int> arr;
+//     user_input(arr,n);
+// cout<<"ENTERRED ELEMENTS IN AN ARRAY "<<endl;
+//     print(arr,n);
+//     cout<<"MOVING ZEROS TO THE END "<<endl;
+//     MoveZeros(arr,n);
+//     return 0;
+// }
 #include<iostream>
-using namespace std;
-void user_input(vector<int> &arr,int size){
+ using namespace std;
+ void user_input(vector<int> &arr,int size){
     cout<<"ENTER THE ELEMENTS IN AN ARRAY YOU WANT TO INSERT : "<<endl;
     int a;
     for(int i=0;i<size;i++){
@@ -60,32 +104,35 @@ void print(vector<int> &arr,int size){
         cout<<arr[i]<<endl;
     }
 }
-void MoveZeros(vector<int> arr,int size){
-    vector<int> temp;
-    for(int i=0;i<size;i++){
-        if(arr[i]!=0){
-      temp.push_back(arr[i]);
-        }
-    }
-       int n=temp.size();
-    for(int i=0;i<n;i++){
-        arr[i]=temp[i];
-    }
 
-    for(int i=n;i<size;i++){
-     arr[i]=0;
-    }
-    print(arr,size);
+void MoveZeros(vector<int> arr,int size){
+    int j=-1;
+     for(int i=0;i<size;i++){
+        if(arr[i]==0){
+            j=i;
+           break;
+        }
+     }
+     int temp;
+     for(int i=j+1;i<size;i++){
+        if(arr[i]!=0){ 
+            temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            j++;
+        }
+     }
+     print(arr,size);
 }
 int main(){
-    int n;
-    cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
-    cin>>n;
     vector<int> arr;
-    user_input(arr,n);
-cout<<"ENTERRED ELEMENTS IN AN ARRAY "<<endl;
-    print(arr,n);
-    cout<<"MOVING ZEROS TO THE END "<<endl;
-    MoveZeros(arr,n);
+    int size;
+    cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
+    cin>>size;
+    user_input(arr,size);
+    cout<<"ENTERRED ELEMENTS IN AN ARRAY "<<endl;
+    print(arr,size);
+    cout<<"AFTER MOVING ZEROS TO THE END : "<<endl;
+    MoveZeros(arr,size);
     return 0;
 }
