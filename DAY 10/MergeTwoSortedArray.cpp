@@ -23,15 +23,28 @@ void print(vector<int> &arr, int size)
 void MergeTwoSortedArrays(vector<int> &arr1,vector<int> &arr2,int size){
    int s1=arr1.size();
    int s2=arr2.size();
-   
     vector<int> arr3;
-    for(int i=0;i<s1;i++){
-     arr3.push_back(arr1[i]);
+    int i=0,j=0;
+    while(i<s1 && j<s2){
+     if(arr1[i]<arr2[j]){
+        arr3.push_back(arr1[i]);
+        i++;
+     }
+     else{
+        arr3.push_back(arr2[j]);
+        j++;
+     }
     }
-    for(int i=0;i<s2;i++){
-        arr3.push_back(arr2[i]);
+    while(i<s1){
+      arr3.push_back(arr1[i]);
+      i++;
     }
-    size=s1+s2;
+    while(j<s2){
+        arr3.push_back(arr2[j]);
+        j++;
+    }
+   
+   
     print(arr3,size);
 }
 using namespace std;
