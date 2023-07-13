@@ -46,6 +46,7 @@ void SumOfArrays(vector<int> &a1,vector<int> &a2){
         j--;
     }
     while(i>=0){
+        //LENGTH OF ARRAY 1 IS LESS THAN LENGTH OF ARRAY 2
     //  7
     //456
     //463
@@ -56,6 +57,7 @@ void SumOfArrays(vector<int> &a1,vector<int> &a2){
         i--; 
     }
     while(j>=0){
+         //LENGTH OF ARRAY 2 IS LESS THAN LENGTH OF ARRAY 1
     //127
     //  6
     //133
@@ -65,6 +67,7 @@ void SumOfArrays(vector<int> &a1,vector<int> &a2){
         j--;
     }
     while(carry!=0){
+         //CARRY IS GENERATEED IN THIS CASE
     //999
     //999
  //  1998
