@@ -19,7 +19,7 @@ void print(vector<int> &arr, int size)
 bool RotateArray(vector<int> &arr,int size){
     int count=0;
     for(int i=1;i<size;i++){
-        if(arr[size-1]>arr[i]){
+        if(arr[i-1]>arr[i]){
             count++;
         }
     }
