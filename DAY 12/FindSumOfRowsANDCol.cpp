@@ -7,23 +7,34 @@ using namespace std;
 
 // }
 
-void printSum(int arr[3][3],int i,int j){
-    cout<<"PRINTING SUM OF 2D ARRAY :- "<<endl;
-    int sum=0;
+void printRowWiseSum(int arr[3][3],int i,int j){
+    cout<<"PRINTING ROW-WISE SUM OF 2D ARRAY :- "<<endl;
+    
 for(int i=0;i<3;i++){
+    int sum=0;
     for(int j=0;j<3;j++)
     {
         sum+=arr[i][j];
     }
     cout<<"SUM OF "<<i<<" ROW IS "<<sum<<" "<<endl;
+  }
 }
-
+void printColWiseSum(int arr[3][3],int i,int j){
+    cout<<"PRINTING COL-WISE SUM OF 2D ARRAY :- "<<endl;
+    
+for(int i=0;i<3;i++){
+    int sum=0;
+    for(int j=0;j<3;j++)
+    {
+        sum+=arr[j][i];
+    }
+    cout<<"SUM OF "<<j<<" COLOUMN IS "<<sum<<" "<<endl;
+  }
 }
 int main(){
 
     int arr[3][3];
-    
-   for(int i=0;i<3;i++){
+    for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
             cin>>arr[i][j];
         }
@@ -36,6 +47,7 @@ int main(){
     cout<<endl;
 }
 int rol=3,col=3;
-printSum(arr,3,3);
+printColWiseSum(arr,3,3);
+
     return 0;
 }
