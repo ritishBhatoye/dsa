@@ -6,7 +6,7 @@ void WavePrint(int arr[2][2],int r,int c){
             for(int r=2-1;r>=0;r--){
                 cout<<arr[r][c]<<" ";
             }
-          //  cout<<endl;
+          //  cout<<endl; 
         }
         else{
             for(int r=0;r<2;r++){
