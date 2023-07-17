@@ -18,12 +18,12 @@ void print(vector<int> &arr, int size)
     }
 }
 void Rearrange_arr(vector<int> &arr,int size){
-    vector<int> ans;
+    vector<int> ans(size,0);
     int n=1;
     int p=0;
     for(int i=0;i<size;i++){
        if(arr[i]<0){
-        ans.arr[i];
+        ans[n]=arr[i];
         n+=2;
        }
       else {
@@ -31,8 +31,8 @@ void Rearrange_arr(vector<int> &arr,int size){
         p+=2;
       }
     }
-    int s=ans.size();
-     print(ans,s);
+   // int s=ans.size();
+     print(ans,size);
 }
 int main(){
     int size;
