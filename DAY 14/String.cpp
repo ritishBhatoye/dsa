@@ -16,3 +16,4 @@ int main(){
     cout<<"LENGTH OF ENTERRED STRING IS :- "<<getLength(name)<<endl;
     return 0;
 }
+//END 
