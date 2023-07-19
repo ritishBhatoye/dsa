@@ -31,3 +31,4 @@ string s;
 cout<<"MAXIMUM OCCURING CHARACTER "<<MaxOcc(s)<<endl;
     return 0;
 }
+//END
