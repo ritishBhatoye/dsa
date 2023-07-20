@@ -63,7 +63,8 @@
         "chrono": "cpp",
         "compare": "cpp",
         "concepts": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "MCQ_POINTER1.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
