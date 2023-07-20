@@ -6,8 +6,10 @@ int main(){
     // cout<<"LOCATION OR ADDRESS OF THE FIRST ELEMENT IN AN ARRAY "<<arr<<endl;
     // cout<<"LOCATION OF ANY OTHER ELEMENT CAN  BE "<<&arr[1]<<endl;
     //
-    int temp[10];
+    int temp[10]={1,2,3,4};
     cout<<sizeof(temp)<<endl;
+    cout<<sizeof(*temp)<<endl;
+    cout<<sizeof(&temp)<<endl;
 int *ptr=&temp[0];
     cout<<sizeof(ptr)<<endl;
     
