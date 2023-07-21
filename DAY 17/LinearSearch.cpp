@@ -23,10 +23,8 @@ bool LinearSearch(int arr[],int size,int target){
         return true;
     }
     else{
-        int m=LinearSearch(arr+1,size-1,target);
-      if(m==arr[0]) 
-      { ans=true;}
-        
+        bool m=LinearSearch(arr+1,size-1,target);
+        ans=m;
     }
     return ans;
 }
