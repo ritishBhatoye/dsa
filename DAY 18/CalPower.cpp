@@ -4,7 +4,7 @@ using namespace std;
 int Cal(int base,int power){
   if(power!=0)
     {    
-        return base*Cal(base,power);
+        return base*Cal(base,power-1);
     }
 }
 int main(){
