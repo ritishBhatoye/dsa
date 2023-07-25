@@ -1,3 +1,4 @@
+//STATIC AND DYANAMIC ALLOCATION 
 #include<iostream>
 using namespace std;
 class Person{
