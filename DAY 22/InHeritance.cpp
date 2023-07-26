@@ -35,8 +35,9 @@ int main(){
 //  m.setHeight(6);
  m.color="BLACK";
  cout<<m.getAge()<<endl;
- cout<<m.getWeight()<<endl;
- cout<<m.getHeight()<<endl;
+//  cout<<m.getWeight()<<endl;
+//  cout<<m.getHeight()<<endl;
+
  cout<<m.color<<endl;
  cout<<m.sleep()<<endl;
     return 0;
