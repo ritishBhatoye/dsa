@@ -64,7 +64,8 @@
     "compare": "cpp",
     "concepts": "cpp",
     "algorithm": "cpp",
-    "MCQ_POINTER1.C": "cpp"
+    "MCQ_POINTER1.C": "cpp",
+    "__availability": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
