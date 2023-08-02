@@ -10,8 +10,8 @@ class Node{
         this->next=NULL;
     }
 };
- void InsertAtHead(Node* &head,int d){
-         //new node create
+void InsertAtHead(Node* &head,int d){
+    //new node create
      Node* temp=new Node(d);
      temp->next=head;
      head=temp;
