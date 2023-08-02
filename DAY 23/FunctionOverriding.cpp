@@ -4,7 +4,7 @@ using namespace std;
 class A{
 public:
   void speak(){
-    cout<<"A IS SPEAKING "<<endl;
+  cout<<"A IS SPEAKING "<<endl;
   }
 };
 class B:public A{
