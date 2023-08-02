@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 class A{
-    public:
+public:
     void func(){
 cout<<"I AM A "<<endl;
     }
