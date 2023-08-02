@@ -7,8 +7,8 @@ int height;
 };
 class Male:public Human{
     public:
-    string name;
-    string prof;
+string name;
+string prof;
     string Role;
 };
 class Female:public Human{
