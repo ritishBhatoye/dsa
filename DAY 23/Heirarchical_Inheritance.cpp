@@ -18,7 +18,7 @@ class Female:public Human{
     string Role;
 };
 int main(){
-    Male m;
+Male m;
     m.weight=90;
     m.height=6;
     m.name="ANIL";
