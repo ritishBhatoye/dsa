@@ -34,5 +34,5 @@ int main(){
     InsertAtHead(head,12);
     print(head);
 
-        return 0;
+    return 0;
 }

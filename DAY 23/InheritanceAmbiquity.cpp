@@ -4,7 +4,7 @@ using namespace std;
 class A{
     public:
     void func(){
-        cout<<"I AM A "<<endl;
+    cout<<"I AM A "<<endl;
     }
 };
 class B{
