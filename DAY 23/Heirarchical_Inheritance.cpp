@@ -19,7 +19,7 @@ class Female:public Human{
 };
 int main(){
 Male m;
-    m.weight=90;
+m.weight=90;
     m.height=6;
     m.name="ANIL";
     m.prof="DOCTOR";
