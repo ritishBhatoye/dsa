@@ -3,7 +3,7 @@ using namespace std;
 class A{
     public:
     void sayHello(){
-        cout<<" Hello Rahul Bhatoye "<<endl;
+    cout<<" Hello Rahul Bhatoye "<<endl;
     }
     void sayHello(string name){
 cout<<" HELLO "<<name<<endl;
