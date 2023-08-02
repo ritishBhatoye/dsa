@@ -13,7 +13,7 @@ string prof;
 };
 class Female:public Human{
     public:
-    string name;
+string name;
     string prof;
     string Role;
 };
