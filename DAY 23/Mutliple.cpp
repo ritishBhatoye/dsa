@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 class Human{
-    public:
+   public:
  int height;
 int weight;
 };
