@@ -3,7 +3,7 @@ using namespace std;
 class Human{
     public:
     int height;
-    int weight;
+int weight;
 };
 class Person{
     public:
