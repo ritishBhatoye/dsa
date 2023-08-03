@@ -6,7 +6,7 @@ int height;
 int weight;
 };
 class Person{
-    public:
+public:
     string quality;
 
 };
