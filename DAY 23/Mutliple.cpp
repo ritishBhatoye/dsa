@@ -17,7 +17,7 @@ string color;
 };
 int main(){
     Male m;
-    m.height=6;
+m.height=6;
     m.weight=90;
     m.quality="GOOD";
     m.prof="SDE ENGINEER ";
