@@ -20,7 +20,7 @@ int main(){
 m.height=6;
  m.weight=90;
 m.quality="GOOD";
-    m.prof="SDE ENGINEER ";
+m.prof="SDE ENGINEER ";
     m.color="BROWN";
     cout<<"PROFESSION : "<<m.prof<<endl;
     cout<<"HEIGHT     : "<<m.height<<endl;
