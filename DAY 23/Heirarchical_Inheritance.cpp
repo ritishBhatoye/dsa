@@ -6,7 +6,7 @@ int weight;
 int height;
 };
 class Male:public Human{
-    public:
+public:
 string name;
 string prof;
     string Role;
