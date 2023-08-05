@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 class Node{
-    public:
+public:
     int data;
     Node* next;
     //CONSTRUCTOR
