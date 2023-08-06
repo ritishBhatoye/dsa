@@ -22,7 +22,7 @@ void InsertAtHead(Node* &head,int d){
         cout<<temp->data<<" ";
      temp=temp->next;    
     }
-  cout<<endl; 
+   cout<<endl; 
  }
 int main(){
  Node* node1=new Node(10);
