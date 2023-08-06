@@ -4,7 +4,7 @@ class Node{
 public:
     int data;
     Node* next;
- //CONSTRUCTOR
+  //CONSTRUCTOR
     Node(int data){
         this->data=data;
         this->next=NULL;
