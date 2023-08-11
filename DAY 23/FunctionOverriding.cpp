@@ -1,7 +1,7 @@
 //RUNTIME POLYMORPHISM :- METHOD OVERRIDING
 #include<iostream>
 using namespace std;
-class A{
+ class A{
 public:
   void speak(){
   cout<<"A IS SPEAKING "<<endl;
