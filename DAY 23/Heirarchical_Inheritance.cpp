@@ -11,7 +11,7 @@ string name;
 string prof;
     string Role;
 };
-class Female:public Human{
+class Female:public Human {
     public:
 string name;
     string prof;
