@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
  void user_input(vector<int> &arr,int size){
-     cout<<"ENTER THE ELEMENTS IN AN ARRAY YOU WANT TO INSERT : "<<endl;
+     cout<< "ENTER THE ELEMENTS IN AN ARRAY YOU WANT TO INSERT : "<<endl;
      int a;
      for(int i=0;i<size;i++){
          cin>>a;
