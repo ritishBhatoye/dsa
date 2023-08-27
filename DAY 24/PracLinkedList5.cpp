@@ -28,16 +28,28 @@ void InsertAtTail(Node* &tail,int d){
     tail->next=temp;
     tail=temp;
 }
-void InsertAtPostion(Node* &head,int position,int d){
+void InsertAtPostion(Node* &tail,Node* &head,int position,int d){
+    if(position==1){
+    InsertAtHead(head,d);
+    return;
+    }
     Node* temp=head;
     int cnt=1;
     while(cnt<position-1){
         temp=temp->next;
         cnt++;
     }
+    //inserting at last position
+
+    if(temp->next==NULL){
+        InsertAtTail(tail,d);
+        return;
+    } 
+
     Node* nodeToInsert=new Node(d);
     nodeToInsert->next=temp->next;
     temp->next=nodeToInsert;
+    
 }
 int main(){
     Node* n1=new Node(10);
@@ -49,7 +61,13 @@ int main(){
     print(head);
     InsertAtTail(tail,30);
     print(head);
-    InsertAtPostion(head,2,25);
+    // InsertAtPostion(head,1,25);
+    // print(head);
+    InsertAtPostion(tail,head,4,50);
     print(head);
+
+    cout<<"HEAD "<<head->data<<endl;
+    cout<<"TAIL "<<tail->data<<endl;
+
     return 0;
 }
