@@ -23,11 +23,22 @@ temp->next= head;
 head=temp;
 }
 
-
+void InsertAtPosition(Node* &head,int position,int d){
+    Node* temp=head;
+    int cnt=1; 
+    while(cnt<position-1){
+        temp=temp->next;
+        cnt++;
+    }
+    //CREATING A NODE FOR D
+    Node* nodeToInsert=new Node(d);
+    
+    nodeToInsert->next=temp->next;
+    temp->next=nodeToInsert;
+}
 
 void print(Node* &head){
     Node* temp=head;
-
     while(temp!=NULL){
         cout<<temp->data<<" ";
         temp=temp->next;
