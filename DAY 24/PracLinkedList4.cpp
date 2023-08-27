@@ -57,6 +57,7 @@ int main(){
     print(head);
     InsertAtTail(tail,40);
     print(head);
-
+    InsertAtPosition(head,4,35);
+    print(head);
     return 0;
 }
