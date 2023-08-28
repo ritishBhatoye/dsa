@@ -35,16 +35,26 @@ int getLength(Node* head){
 }
 
 void insertAtHead(Node* &head,int d){
-    Node* temp=new Node(d);
+    if(head==NULL){
+        Node* temp=new Node(d);
+        head=temp;
+    }
+else{    Node* temp=new Node(d);
     temp->next=head;
     head->prev=temp;
-    head=temp;
+    head=temp;}
 }
 void insertAtTail(Node* &tail,int d){
+if(tail==NULL){
+    Node* temp=new Node(d);
+    tail=temp;
+}
+
+else{    
     Node* temp=new Node(d);
     tail->next=temp;
     temp->prev=tail;
-    tail=temp;
+    tail=temp;}
 }
 void insertAtPosition(Node* &tail,Node* &head,int position,int d){
 if(position==1){
