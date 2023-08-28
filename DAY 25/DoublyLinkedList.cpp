@@ -89,6 +89,7 @@ int main(){
     insertAtTail(tail,input());
     print(head);
     insertAtPosition(tail,head,2,input());
+    print(head);
         cout<<endl;
     
     cout<<"LENGTH OF THE LINKED LIST IS : "<<getLength(head)<<endl;
