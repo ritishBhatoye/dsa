@@ -77,6 +77,9 @@ int main(){
     print(head);
     insertAtHead(head,input());
     print(head);
+    cout<<"AT 1 POSITION "<<endl;
+    insertAtPosition(tail,head,1,input());
+    print(head);
 
     return 0;
 }
