@@ -50,15 +50,34 @@ Node* temp=tail;
 do{
     cout<<tail->data<<" ";
     tail=tail->next;
-}while(tail->next!=temp);
-cout<<" ";
+}while(tail!=temp);
+cout<<endl;
+}
+void deleteNode(Node* &tail,int value){
+    //FOR EMPTY LIST
+    if(tail==NULL){
+        cout<<"List is empty "<<endl;
+        return;
+    }
+    else{
+        //NON-EMPTY CASE
+
+    }
 }
 int main(){
     Node* tail=NULL;
     //Empty list me insert krre hai
-    insertNode(tail,10,3);
+    insertNode(tail,5,3);
+    // print(tail);
+    insertNode(tail,3,5);
     print(tail);
-    insertNode(tail,3,10);
+    insertNode(tail,5,7);
+    print(tail);
+    insertNode(tail,7,9);
+    print(tail);
+    insertNode(tail,7,8);
+    print(tail);
+    insertNode(tail,5,10);
     print(tail);
     return 0;
 }
