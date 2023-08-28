@@ -12,7 +12,12 @@ class Stack{
 //behaviour
 
 Stack(int size){
-
+this->size=size;
+arr=new int[size];
+top=-1;
+}
+void push(int element){
+    
 }
 };
 
