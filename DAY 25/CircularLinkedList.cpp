@@ -62,6 +62,19 @@ void deleteNode(Node* &tail,int value){
     else{
         //NON-EMPTY CASE
 
+
+        //ASSUMING THAT VALUE IS PRESENT IN THE LINKED LIST
+        Node* prev=tail;
+        Node* curr=prev->next;
+
+        while(curr->data!=value){
+            prev=curr;
+            curr=curr->next;
+        }
+        prev->next=curr->next;
+        curr->next=NULL;
+        delete curr;
+
     }
 }
 int main(){
