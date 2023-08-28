@@ -34,20 +34,22 @@ int getLength(Node* head){
     return len;
 }
 
-void insertAtHead(Node* &head,int d){
+void insertAtHead(Node* &tail,Node* &head,int d){
     if(head==NULL){
         Node* temp=new Node(d);
         head=temp;
+        tail=temp;
     }
 else{    Node* temp=new Node(d);
     temp->next=head;
     head->prev=temp;
     head=temp;}
 }
-void insertAtTail(Node* &tail,int d){
+void insertAtTail(Node* &tail,Node* &head,int d){
 if(tail==NULL){
     Node* temp=new Node(d);
     tail=temp;
+    head=temp;  
 }
 
 else{    
@@ -92,11 +94,11 @@ int main(){
     Node* tail= node1;
     print(head);
     cout<<endl;
-    insertAtHead(head,input());
-    insertAtHead(head,input());
-    insertAtHead(head,input());
+    insertAtHead(head,tail,input());
+    insertAtHead(head,tail,input());
+    insertAtHead(head,tail,input());
     print(head);
-    insertAtTail(tail,input());
+    insertAtTail(head,tail,input());
     print(head);
     insertAtPosition(tail,head,2,input());
     print(head);
