@@ -46,7 +46,7 @@ void insertAtTail(Node* &tail,int d){
     temp->prev=tail;
     tail=temp;
 }
-void insertAtTail(Node* &head,int position,int d){
+void insertAtPosition(Node* &tail,Node* &head,int position,int d){
 if(position==1){
     insertAtHead(head,d);
     return;
@@ -88,7 +88,9 @@ int main(){
     print(head);
     insertAtTail(tail,input());
     print(head);
+    insertAtPosition(tail,head,2,input());
         cout<<endl;
+    
     cout<<"LENGTH OF THE LINKED LIST IS : "<<getLength(head)<<endl;
     return 0;
 }
