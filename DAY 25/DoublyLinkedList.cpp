@@ -40,6 +40,12 @@ void insertAtHead(Node* &head,int d){
     head->prev=temp;
     head=temp;
 }
+void insertAtTail(Node* &head,int d){
+    Node* temp=new Node(d);
+    tail->next=temp;
+    temp->prev=tail;
+    tail=temp;
+}
 int input(){
     int d;
     cout<<"ENTER THE DATA FOR NODE "<<endl;
