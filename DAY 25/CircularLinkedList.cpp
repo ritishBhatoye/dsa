@@ -47,19 +47,18 @@ else{
 void print(Node* tail)
 {
 Node* temp=tail;
-cout<<tail->data<<" ";
-
-
-while(tail->next!=temp ){
+do{
     cout<<tail->data<<" ";
     tail=tail->next;
-}
+}while(tail->next!=temp);
 cout<<" ";
 }
 int main(){
     Node* tail=NULL;
     //Empty list me insert krre hai
     insertNode(tail,10,3);
+    print(tail);
+    insertNode(tail,3,10);
     print(tail);
     return 0;
 }
