@@ -17,7 +17,12 @@ class Node{
         }
         cout<<"MEMORY IS FREE FOR NODE WITH DATA "<<value<<endl;
     }
+};
+
+void insertAtHead(Node* &head,int d){
+
 }
+void insertAtTail(Node)
 int main(){
     return 0;
 }
