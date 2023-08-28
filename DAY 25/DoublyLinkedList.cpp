@@ -40,11 +40,27 @@ void insertAtHead(Node* &head,int d){
     head->prev=temp;
     head=temp;
 }
-void insertAtTail(Node* &head,int d){
+void insertAtTail(Node* &tail,int d){
     Node* temp=new Node(d);
     tail->next=temp;
     temp->prev=tail;
     tail=temp;
+}
+void insertAtTail(Node* &head,int position,int d){
+if(position==1){
+    insertAtHead(head,d);
+    return;
+}
+Node* temp=head;
+int cnt=1;
+while(cnt<position-1){
+    temp=temp->next;
+    cnt++;
+}
+if(temp->next==NULL){
+    insertAtTail(tail,d);
+    return;
+}
 }
 int input(){
     int d;
@@ -55,13 +71,16 @@ int input(){
 int main(){
     Node* node1=new Node(10);
     Node* head=node1;
+    Node* tail= node1;
     print(head);
     cout<<endl;
     insertAtHead(head,input());
     insertAtHead(head,input());
     insertAtHead(head,input());
     print(head);
-    cout<<endl;
+    insertAtTail(tail,input());
+    print(head);
+        cout<<endl;
     cout<<"LENGTH OF THE LINKED LIST IS : "<<getLength(head)<<endl;
     return 0;
 }
