@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 //DELETION
+void deleteNode(int position,Node* &head){
+if(position==1){
+    
+}
+}
 class Node{
 public:
 int data;
@@ -34,5 +39,7 @@ int main(){
     Node* tail=n1;
     InsertAtTail(tail,20);
     print(head);
+    InsertAtTail(tail,30);
+    print(head); 
     return 0;
 }
