@@ -61,6 +61,14 @@ if(temp->next==NULL){
     insertAtTail(tail,d);
     return;
 }
+//CREATING A NODE FOR D
+Node* nodeToInsert=new Node(d);
+
+nodeToInsert->next=temp->next;
+temp->next->prev=nodeToInsert;
+temp->next=nodeToInsert;
+nodeToInsert->prev=temp;
+
 }
 int input(){
     int d;
