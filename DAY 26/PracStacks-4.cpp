@@ -43,7 +43,7 @@ public:
     {
         if (top1 >= 0)
         {
-            int ans = arr[top];
+            int ans = arr[top1];
             top1--;
             return ans;
         }
@@ -69,6 +69,10 @@ public:
 };
 int main()
 {
-
+    Stack s(6);
+    s.push1(10);
+    s.push1(20);
+    s.push2(60);
+    s.push2(50);
     return 0;
 }
