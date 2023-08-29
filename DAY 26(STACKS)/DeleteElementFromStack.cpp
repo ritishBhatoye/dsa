@@ -7,6 +7,7 @@ class Stack{
     int size;
     int *arr;
     int top;
+    //int count=0;
 
     Stack(int size){
      this->size=size;
@@ -48,16 +49,14 @@ class Stack{
             return false;
         }
     }
-    void deleteMiddleElement(){
-     
-    }
 };
-
 int main(){
-    Stack s(40);
+    Stack s(4);
     s.push(10);
     s.push(20);
     s.push(30);
+    int count=0;
     cout<<s.peek()<<endl;
+    
     return 0;
 }
