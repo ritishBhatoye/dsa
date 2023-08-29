@@ -53,6 +53,6 @@ int main(){
     st.push(20);
     st.push(30);
 
-    st.peek();
+    cout<<st.peek()<<endl;
     return 0;
 }
