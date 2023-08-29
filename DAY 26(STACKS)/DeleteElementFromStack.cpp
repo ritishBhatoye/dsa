@@ -48,6 +48,9 @@ class Stack{
             return false;
         }
     }
+    void deleteMiddleElement(){
+     
+    }
 };
 
 int main(){
@@ -56,6 +59,5 @@ int main(){
     s.push(20);
     s.push(30);
     cout<<s.peek()<<endl;
-    
     return 0;
 }
