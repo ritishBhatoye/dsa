@@ -10,7 +10,7 @@ int isPresent(int *arr,int size,int e){
        if(e==arr[i])
        {
          ans=i;
-         break;
+         
        }
        else{
         ans=-1;
@@ -19,8 +19,8 @@ int isPresent(int *arr,int size,int e){
     return ans;
 }
 int main(){
-   int arr[8]={7, 5, 2, 11, 2, 43, 1, 1};
-   cout<<isPresent(arr,8,10)<<endl;
+   int arr[10]={1, 4, 3, 8, 3, 32, 24, 1, 23, 8};
+   cout<<isPresent(arr,10,8)<<endl;
    
 
     return 0;
