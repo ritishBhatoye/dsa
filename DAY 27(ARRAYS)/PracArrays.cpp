@@ -8,18 +8,34 @@ for(int i=0;i<size;i++){
 }
 }
 void print(int *arr,int size){
+    cout<<"ARRAY ELEMENTS "<<endl;
 for(int i=0;i<size;i++){
     cout<<arr[i]<<" ";
 }
 }
-
+int sum(int *arr,int *arr1,int size,int size1){
+    int result=0;
+    for(int i=0;i<arr;i++){
+        result+=arr[i];
+    }
+    for(int i=0;i<arr1;i++)
+{
+    result+=arr1[i];
+}
+}
 
 int main(){
 int size;
-cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
+int size1;
+cout<<"ENTER THE SIZE OF AN ARRAY 1 "<<endl;
 cin>>size;
 int arr[size];
 input(arr,size);
 print(arr,size);
+cout<<"ENTER THE SIZE OF AN ARRAY 2 "<<endl;
+cin>>size1;
+int arr1[size1];
+input(arr1,size1);
+print(arr1,size1);
     return 0;
 }
