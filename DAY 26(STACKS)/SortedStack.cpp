@@ -8,6 +8,19 @@ while(!s.empty()){
     s.pop();
 }
 }
+void sortedInsert(stack<int> &s,int x){
+    if(s.empty() || (s.empty() && s.top()<x)){
+        s.push(x);
+    }
+
+    int n=s.top();
+    s.pop();
+    
+    //recurssive call
+    sortedInsert(s,x);
+
+    s.push(n);
+}
 void sortStack(stack<int> &s){
 if(s.empty()){
     //base case
@@ -24,11 +37,12 @@ sortedInsert(s,num);
 int main(){
     stack<int> s;
     s.push(10);
-    s.push(20);
-    s.push(30);
+    s.push(5);
     s.push(40);
-    s.push(50);
+    s.push(1);
+    s.push(8);
+    // print(s);
+    sortStack(s);
     print(s);
-
     return 0;
 }
