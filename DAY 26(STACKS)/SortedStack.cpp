@@ -9,8 +9,9 @@ while(!s.empty()){
 }
 }
 void sortedInsert(stack<int> &s,int x){
-    if(s.empty() || (s.empty() && s.top()<x)){
+    if(s.empty() || (!s.empty() && s.top()<x)){
         s.push(x);
+        return ;
     }
 
     int n=s.top();
