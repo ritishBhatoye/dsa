@@ -67,7 +67,8 @@
     "MCQ_POINTER1.C": "cpp",
     "__availability": "cpp",
     "deque": "cpp",
-    "stack": "cpp"
+    "stack": "cpp",
+    "queue": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
