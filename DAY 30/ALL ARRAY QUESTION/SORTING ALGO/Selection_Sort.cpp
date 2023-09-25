@@ -21,7 +21,14 @@ void SelectionSort(int *arr,int size){
         }
         swap(arr[minI],arr[i]);
     }
+    print(arr,size);
 }
 int main(){
+    int size;
+    cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
+    cin>>size;
+    int arr[size];
+    input(arr,size);
+    SelectionSort(arr,size);
     return 0;
 }
