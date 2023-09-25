@@ -5,30 +5,46 @@ void input(int *arr,int size){
         cin>>arr[i];
     }
 }
-void  firstNlastelementocc(int *arr,int size,int x){
+int firstOccurenceOfelement(int *arr,int size,int x){
+    int s=0;
+    int e=size-1;
+    int mid=(s+e)/2;
+    int ans=0;
+    while(s<=e){
+        if(arr[mid]==x){
+        ans=mid;
+        e=mid-1;
+        }
+        if(arr[mid]>x){
+         e=mid-1;
+        }
+        if(arr[mid]<x){
+            s=mid+1;
+        }
+        mid=(s+e)/2;
+    }
+    return ans;
+}
+int lastOccurence(int *arr,int size,int x){
 int s=0;
 int e=size-1;
-int fo=0;
-int lo=0;
 int mid=(s+e)/2;
+int ans=-1;
 while(s<=e){
     if(arr[mid]==x){
-        return mid;
+        ans=mid;
+        s=mid+1;
     }
     if(arr[mid]>x){
         e=mid-1;
-        fo=mid;
     }
-    else{
+    if(arr[mid]<x){
         s=mid+1;
-        lo=mid;
     }
     mid=(s+e)/2;
 }
-int ans[2]={lo,fo};
 return ans;
 }
-
 int main(){
     int size;
     cin>>size;
@@ -37,6 +53,8 @@ int main(){
     int x;
     cout<<"ENTER THE ELEMENT YOU WANT TO SEARCH "<<endl;
     cin>>x;
-    firstNlastelementocc(arr,size,x);
+    cout<<"FIRST OCCURENCE OF "<<x<<" IS "<<firstOccurenceOfelement(arr,size,x)<<endl;
+    cout<<"LAST OCCURENCE OF "<<x<<" IS "<<lastOccurence(arr,size,x)<<endl;
+
     return 0;
 } 
