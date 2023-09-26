@@ -1,3 +1,11 @@
+//IN THIS SORTING PROCESS
+//STEP 1  ELEMENT IS SELECTED SMALLER THAN CURRENT ELEMENT
+//STEP 2  SWAPPING OF THESE TWO ELEMENT 
+//SIMPLE APPROACH 
+//IN THS A VARIABLE IS CREATE WITH TEMP NAME AND INT 
+//WHICH CURRENT INDEX OF 'i' IS STORED AFTER SWAPING
+// IT IS CHANGED TO 'j'
+
 #include<iostream>
 using namespace std;
 void input(int *arr,int size){
@@ -11,20 +19,16 @@ void print(int *arr,int size){
         cout<<arr[i]<<" ";
     }
 }
-int PeakElement(int *arr,int size){
-    int s=0;
-    int e=size-1;
-    int mid=s+(e-s)/2;
-    while(s<=e){
-        if(arr[mid]<arr[mid+1]){
-            s=mid+1;
+void SelectionSort(int *arr,int size){
+    for(int i=0;i<size;i++){
+        int temp=i;
+        for(int j=i+1;j<size;j++){
+              if(arr[temp]>arr[j])
+              {   temp=j;}
         }
-        else{
-            e=mid;
-        }
-   mid=s+(e-s)/2;
+        swap(arr[temp],arr[i]);
     }
-return mid;
+    print(arr,size);
 }
 int main(){
     int size;
@@ -32,7 +36,6 @@ cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
     cin>>size;
     int arr[size];
     input(arr,size);
-    int X=PeakElement(arr,size);
-    cout<<"PEAK ELEMENT "<<arr[X]<<" IS AT "<<PeakElement(arr,size)<<endl;
+    SelectionSort(arr,size);
     return 0;
 }
