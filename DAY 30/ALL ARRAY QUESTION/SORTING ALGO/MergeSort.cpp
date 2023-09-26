@@ -51,6 +51,8 @@ void merge(int *arr,int s,int e){
     while(index1<len2){
         arr[mainArrayIndex++]=second[index2++];
     }
+    delete []first;
+    delete []second;
 }
 
 void MergeSort(int *arr,int s,int e){
