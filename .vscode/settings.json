@@ -68,7 +68,9 @@
     "__availability": "cpp",
     "deque": "cpp",
     "stack": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "__tree": "cpp",
+    "set": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
