@@ -10,5 +10,9 @@ int main(){
     cout<<a<<endl;
     cout<<*p<<endl;
     cout<<**q<<endl;
+    //PRINTING ADDRESS OF A
+    cout<<&a<<endl;
+    cout<<p<<endl;
+    cout<<*q<<endl;
     return 0;
 }
