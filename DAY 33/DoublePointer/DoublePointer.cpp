@@ -6,5 +6,9 @@ int main(){
     int **q=&p;
     cout<<"ADDRESS OF a "<<p<<endl;
     cout<<"ADDRESS OF p "<<q<<endl;
+    //PRINTING VALUE OF A
+    cout<<a<<endl;
+    cout<<*p<<endl;
+    cout<<**q<<endl;
     return 0;
 }
