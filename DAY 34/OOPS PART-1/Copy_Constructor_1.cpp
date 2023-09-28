@@ -12,6 +12,10 @@ using namespace std;
         this->age=age;
     }
     Student(Student& temp){
+        cout<<endl<<endl;
+
+        cout<<"COPY CONSTRUCTOR IS CALLED"<<endl;
+        cout<<endl<<endl;
           this->name=temp.name;
           this->age=temp.age;
     }
