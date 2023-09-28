@@ -27,9 +27,11 @@ int main(){
     st.rollNo=27;
     st.Class="XII";
     st.age=18;
+    cout<<endl<<endl;
     st.pName();
     st.pRollNo();
     st.pClass();
     st.pAge();
+    cout<<endl<<endl;
     return 0;
 }
