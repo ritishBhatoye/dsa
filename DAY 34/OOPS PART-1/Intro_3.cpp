@@ -38,6 +38,7 @@ cout<<endl<<endl;
 cout<<"LEVEL   : "<<(*b).getLevel()<<endl;
 cout<<"HEALTH  : "<<(*b).getHealth()<<endl;
 cout<<endl<<endl;
-
+//or
+cout<<"LEVEL   : "<<b->getLevel()<<endl;
     return 0;
 }
