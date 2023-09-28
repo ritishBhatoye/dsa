@@ -14,14 +14,28 @@ void setName(char name[]){
 void print(){
     cout<<"NAME : "<<this->name<<endl;
 }
+Student(Student& s){
+char *ch=new char[strlen(s.name)+1];
+strcpy(ch,s.name);
+this->name=ch;
+}
 };
 
 int main(){
     Student s;
     cout<<endl<<endl;
     char name[7]="RITISH";
-    s.setName(name);
+    s.setName(name); 
     s.print();
     cout<<endl<<endl;
+
+    //USE DEFAULT COPY CONSTRUCTOR
+Student s1(s);
+s1.print();
+cout<<endl<<endl;
+//STUDENT s ka name change
+s.name[0]='K';
+s.print();
+s1.print();
     return 0;
 }
