@@ -36,6 +36,9 @@ cout<<endl<<endl;
 //STUDENT s ka name change
 s.name[0]='K';
 s.print();
+cout<<endl<<endl;
 s1.print();
+cout<<endl<<endl;
+
     return 0;
 }
