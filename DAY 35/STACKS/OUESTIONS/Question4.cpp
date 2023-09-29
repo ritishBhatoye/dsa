@@ -15,7 +15,10 @@ s.push(ch);
 else{
     if(!s.empty()){
         char top=s.top();
-        if(matches(top,ch)){
+        if((ch ==')' && top=='(')||
+            (ch =='}' && top=='{')||
+            (ch ==']' && top=='[')
+        ){
             s.pop();
         }
         else{
@@ -37,6 +40,24 @@ else{
 
 int main(){
     stack<int> s;
-    
+    string str;
+    cout<<endl<<endl;
+    cout<<"ENTER THE STRING OF PARENTHESIS TO CHECK WHETHER IT IS VALID OR NOT "<<endl;
+    cin>>str;
+    if(valid(str)){
+    cout<<endl<<endl;
+        
+        cout<<"VALID PARENTHESIS "<<endl;
+    cout<<endl;
+
+    }
+    else{
+    cout<<endl<<endl;
+
+        cout<<"NOT VALID PARENTHESIS "<<endl;
+    cout<<endl;
+
+    }
+    cout<<endl<<endl;
     return 0;
 }
