@@ -20,9 +20,17 @@ class Stack{
             cout<<"STACK OVERFLOW "<<endl;
         }
     }
-    void 
+    void pop(){
+        if(top>=0){
+  top--;
+        }
+        else{
+cout<<"STACK UNDERFLOW "<<endl;
+        }
+    }
 };
 int main(){
+Stack s(5);
 
     return 0;
 }
