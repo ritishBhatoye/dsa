@@ -45,16 +45,19 @@ Stack(int size){
         return false;
     }
  }
- void midPop(){
-    if(size%2==0){
+void midPop(){
+ 
         top=(size/2);
-    }
-    else{
-        top=(size/2)+1;
-    }
-    pop();
-    size--;
-    top=size-1;
+           
+    
+    // else{
+    //     top=(size/2);
+            
+    // }
+
+     pop();
+     size--;
+     top=size-2;
  }
 };
 // void midPop(stack<int> &s,int size){
@@ -76,10 +79,12 @@ int main(){
     s.midPop();
     cout<<endl;
     cout<<"NEW SIZE "<<s.size<<endl;
-    while(!s.isEmpty()){
-        cout<<s.peakElement()<<" ";
+   do
+   {
+       cout<<s.peakElement()<<" ";
         s.pop();
-    }
+   } while (!s.isEmpty());
+   
     cout<<endl<<endl;
     return 0;
 }
