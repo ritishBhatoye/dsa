@@ -20,6 +20,24 @@ class MaleChild:public Male{
     public:
     int height;
     int weight;
+    void setHeight(int height){
+        this->height=height;
+    }
+    int getHeight(){
+        return this->height;
+    }
+    void setWeight(int weight){
+     this->weight=weight;
+    }
+    int getWeight(){
+        return this->weight;
+    }
+    void setAge(int age){
+        this->age=age;
+    }
+    int getAge(){
+        return this->age; 
+    }
     void playing (){
         cout<<"PLAYING "<<endl;
     }
@@ -27,13 +45,13 @@ class MaleChild:public Male{
 
 int main(){
 MaleChild mc;
-mc.age=18;
-mc.height=161;
-mc.weight=75;
+mc.setAge(18);
+mc.setHeight(161);
+mc.setWeight(75);
 cout<<endl<<endl;
-cout<<"AGE       : "<<mc.age<<endl;
-cout<<"HEIGHT    : "<<mc.height<endl;
-cout<<"WEIGHT    : "<<mc.weight<<endl;
+cout<<"AGE       : "<<mc.getAge()<<endl;
+cout<<"HEIGHT    : "<<mc.getHeight()<<endl;
+cout<<"WEIGHT    : "<<mc.getWeight()<<endl;
 mc.sleeping();
 mc.speak();
 cout<<endl<<endl;
