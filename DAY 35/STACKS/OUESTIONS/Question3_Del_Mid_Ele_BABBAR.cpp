@@ -1,36 +1,31 @@
-//DELELTING MIDDLE ELEMENT FROM AN ARRAY 
 #include<iostream>
+#include<stack>
 using namespace std;
-class Stack{
-    public:
-    int size;
-    int *arr;
-    int top;
-    Stack(int size){
-        this->size=size;
-        top=-1;
-        arr=new int[size];
-    }
-    void push(int num){
-        if(size-top>1){
-            top++;
-            arr[top]=num;
+   void solve(stack<int> &s,int count,int size){
+        if(count==(size/2)){
+            s.pop();
+            return ;
         }
-        else{
-            cout<<"STACK OVERFLOW "<<endl;
-        }
-    }
-    void pop(){
-        if(top>=0){
-  top--;
-        }
-        else{
-cout<<"STACK UNDERFLOW "<<endl;
-        }
-    }
-};
-int main(){
-Stack s(5);
 
+        int num=s.top();
+        s.pop();
+        solve(s,count+1,size);
+        s.push(num);
+
+    }
+int main(){
+    stack<int> s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    s.push(40);
+    s.push(50);
+    int count=0;
+    solve(s,count,s.size());
+    do{
+        cout<<s.top()<<" ";
+        s.pop();
+    }
+    while(!s.empty());
     return 0;
 }
