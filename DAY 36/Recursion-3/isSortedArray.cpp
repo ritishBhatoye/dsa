@@ -11,22 +11,21 @@ void print(int *arr,int size){
         cout<<arr[i]<<" ";
     }
 }
-bool isSorted(int *arr,int size,int i){
-    //base CASE
-    bool ans;
-if(i==(size-1)){
-    ans=true;
-    return ans;
-}
-if(arr[i]<arr[i+1]){
-   ans=true;
-   return ans;
-}
-//RECURSIVE CALL
-return isSorted(arr,size,i+1),ans;
 
+bool isSortedArray(int *arr,int size){
+    if(size==0 || size==1){
+        return true;
+    }
+    if(arr[0]>arr[1]){
+        return false;
+    }
+    else{
+        bool ans=isSortedArray(arr+1,size-1);
+        return ans;
+    }
 }
 int main(){
+
     int size;
     cout<<endl<<endl;
     cout<<"ENTER THE SIZE OF AN ARRAY "<<endl;
@@ -38,10 +37,9 @@ int main(){
     cout<<endl<<endl;
     cout<<"ENTERRED ELEMENT IN AN ARRAY : "<<endl;
     cout<<endl;
-    int i=0;
     print(arr,size);
     cout<<endl<<endl;
-    if(isSorted(arr,i,size)){
+    if(isSortedArray(arr,size)){
         cout<<"ARRAY IS SORTED "<<endl;
     }
     else{
