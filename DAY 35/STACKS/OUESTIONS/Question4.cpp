@@ -54,7 +54,7 @@ int main(){
     else{
     cout<<endl<<endl;
 
-        cout<<"NOT VALID PARENTHESIS "<<endl;
+    cout<<"NOT VALID PARENTHESIS "<<endl;
     cout<<endl;
 
     }
