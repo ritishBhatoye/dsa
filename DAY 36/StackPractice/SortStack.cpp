@@ -6,7 +6,7 @@
 using namespace std;
 void insertAtBottom(stack<int> &s,int num){
     //Base Case
-    if((s.top()<num && !s.empty())|| s.empty()){
+    if(s.empty()||(!s.empty() && s.top()<num)){
         s.push(num);
         return;
     }
