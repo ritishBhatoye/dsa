@@ -14,18 +14,17 @@ void print(int *arr,int size){
 
 bool LinearSearch(int *arr,int size,int x){
     bool ans;
-    //BASE CASE 
-    if(size==0 && arr[size]!=x || size==1 && arr[size]!=x){
-         return false;
-    }
-    if(arr[0]==x || arr[1]==x){
-        return true;
-    }
-    else{ 
-        ans=LinearSearch(arr+1,size-1,x);
-        return ans;
-    }
-    
+    //base case
+if(size==0){
+    return false;
+}
+if(arr[0]==x){
+    return true;
+}
+else{
+    ans=LinearSearch(arr+1,size-1,x);1
+    return ans;
+}
 
 }
 
