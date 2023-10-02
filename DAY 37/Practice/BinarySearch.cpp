@@ -25,10 +25,12 @@ bool BinarySearch(int *arr,int s,int e,int x){
         return true;
     }
  else{   if(arr[mid]>x){
+    //LEFT PART
        ans=BinarySearch(arr,s,mid-1,x);
        return ans;
     }
     if(arr[mid]<x){
+        //RIGHT PART
         ans=BinarySearch(arr,mid+1,e,x);
         return ans;
     }
