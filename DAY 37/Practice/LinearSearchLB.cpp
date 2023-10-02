@@ -10,10 +10,12 @@ void print(int *arr,int size){
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
 }
 
 bool LinearSearch(int *arr,int size,int x){
     bool ans;
+    print(arr,size);
     //base case
 if(size==0){
     return false;
@@ -22,7 +24,7 @@ if(arr[0]==x){
     return true;
 }
 else{
-    ans=LinearSearch(arr+1,size-1,x);1
+    ans=LinearSearch(arr+1,size-1,x);
     return ans;
 }
 
