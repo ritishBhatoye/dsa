@@ -24,7 +24,6 @@ bool isSorted(int *arr,int size){
    { ans=isSorted(arr+1,size-1);
     return ans;
 }
-
 }
 
 int main(){
