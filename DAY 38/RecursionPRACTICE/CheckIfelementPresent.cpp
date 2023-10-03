@@ -14,6 +14,28 @@ bool checkIfElementInAnArray(int *arr,int size,int x){
     return checkIfElementInAnArray(arr+1,size-1,x);
     }
 }
+//USING BINARY SEARCH 
+int checkIfEleInAnArrayUsingBinarySearch(int *arr,int s,int e,int x){
+    int mid=(s+e)/2;
+    //BASE CASE
+    if(s>e){
+        return -1;
+    }
+    if(arr[mid]==x){
+        return mid;
+    }
+    else{
+    if(arr[mid]>x){
+        //MOVE TO LEFT PART
+        return checkIfEleInAnArrayUsingBinarySearch(arr,s,mid-1,x);
+    }
+    if(arr[mid]<x){
+        //MOVE TO RIGHT PART
+        return checkIfEleInAnArrayUsingBinarySearch(arr,mid+1,e,x);
+    }
+    mid=(s+e)/2;
+    }
+}
 
 void input(int *arr,int size){
     for(int i=0;i<size;i++){
@@ -42,8 +64,8 @@ cout<<"ENTER THE ELEMENT YOU WANT TO INSERT "<<endl;
 cin>>x;
 
 cout<<endl<<endl;
-if(checkIfElementInAnArray(arr,size,x)){
-    cout<<x<<" IS PRESENT IN AN ARRAY  "<<endl;
+if(checkIfEleInAnArrayUsingBinarySearch(arr,0,size-1,x)!=-1){
+    cout<<x<<" IS PRESENT IN AN ARRAY AT "<<checkIfEleInAnArrayUsingBinarySearch(arr,0,size-1,x)<<endl;
 }
 else{
     cout<<x<<" IS NOT PRESENT IN AN ARRAY  "<<endl;
