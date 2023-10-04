@@ -27,18 +27,39 @@ int pivotElement(int *arr,int s,int e){
     }
     mid=s+(e-s)/2;
 }
+int BinarySearch(int *arr,int s,int e,int k){
+    int mid=s+(e-s)/2;
+//base case
+if(s>e){
+    return mid+1;
+}
 
+//recursive call
+if(arr[mid]==k){
+    return mid;
+}
+else{
+    if(arr[mid]>k)
+{
+    return BinarySearch(arr,s,mid-1,k);
+}
+if(arr[mid]<k){
+     return BinarySearch(arr,mid+1,e,k);
+}
+mid=s+(e-s)/2;
+}
+}
 int SearchRotatedNSortedArr(int *arr,int size,int k)
 {    
     
    int pivot=pivotElement(arr,0,size-1);
-   if(arr[pivot]<=k && k<=arr[e]){
+   if(arr[pivot]<=k && k<=arr[size-1]){
     //BS ON SECOND LINE 
-  return SearchRotatedNSortedArr(arr,pivot,size-1,k);
+  return BinarySearch(arr,pivot,size-1,k);
    }
    else{
-    //BS ON THE FIRST LIE 
-    return SearchRotatedNSortedArr(arr,0,pivot-1,k);
+    //BS ON THE FIRST LINE 
+    return BinarySearch(arr,0,pivot-1,k);
    }
 }
 
@@ -56,7 +77,12 @@ int main(){
     cout<<endl;
     cout<<"ENTERRED ELEMENT IN AN ARRAY :- "<<endl;
     print(arr,size);
-   cout<<"PIVOT ELEMENT IS : AT "<< pivotElement(arr,0,size-1);
+    cout<<endl;
+   //cout<<"PIVOT ELEMENT IS : AT "<< pivotElement(arr,0,size-1);
+   cout<<"ENTER THE ELEMENT TO SEARCH IN AN ARRAY "<<endl;
+   int k;
+   cin>>k;
+   cout<<"ELEMENT IS AT : "<<SearchRotatedNSortedArr(arr,size,k)<<endl;
     cout<<endl<<endl;
     return 0;
 }
