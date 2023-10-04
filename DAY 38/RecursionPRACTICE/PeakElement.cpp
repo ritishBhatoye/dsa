@@ -10,6 +10,22 @@ void print(int *arr,int size){
         cout<<arr[i]<<" ";
     }
 }
+
+int peakEleRECURSION(int *arr,int s,int e){
+    int mid=(s+e)/2;
+    //base case
+    if(s>e){
+        return mid;
+    }
+    ///recursive call
+    if(arr[mid]>arr[0]){
+        return peakEleRECURSION(arr,mid+1,e);
+    }
+    if(arr[mid]<arr[0]){
+        return peakEleRECURSION(arr,s,mid);
+    }
+    mid=(s+e)/2;
+}
 int PeakElement(int *arr,int s,int e){
     int mid=(s+e);
 while(s<e)
@@ -37,7 +53,7 @@ int main(){
    cout<<endl;
    print(arr,size);
    cout<<endl;
-   int x=PeakElement(arr,0,size-1);
+   int x=peakEleRECURSION(arr,0,size-1);
    cout<<"PEAK ELEMENT "<<arr[x]<<" IS PRESENT AT "<<x<<endl;
     return 0;
 }
