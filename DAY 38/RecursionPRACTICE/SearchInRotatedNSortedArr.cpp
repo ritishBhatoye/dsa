@@ -19,13 +19,15 @@ int pivotElement(int *arr,int s,int e){
     if(s>e){
     return s;
     }
+else{  
     if(arr[mid]>=arr[0]){
-        s=mid+1;
+       return pivotElement(arr,mid+1,e);
     }
-    else{
-        e=mid;
+     else{
+       return pivotElement(arr,s,mid);
     }
     mid=s+(e-s)/2;
+    }
 }
 int BinarySearch(int *arr,int s,int e,int k){
     int mid=s+(e-s)/2;
@@ -78,11 +80,11 @@ int main(){
     cout<<"ENTERRED ELEMENT IN AN ARRAY :- "<<endl;
     print(arr,size);
     cout<<endl;
-   //cout<<"PIVOT ELEMENT IS : AT "<< pivotElement(arr,0,size-1);
-   cout<<"ENTER THE ELEMENT TO SEARCH IN AN ARRAY "<<endl;
-   int k;
-   cin>>k;
-   cout<<"ELEMENT IS AT : "<<SearchRotatedNSortedArr(arr,size,k)<<endl;
+   cout<<"PIVOT ELEMENT IS : AT "<< pivotElement(arr,0,size-1);
+    cout<<"ENTER THE ELEMENT TO SEARCH IN AN ARRAY "<<endl;
+    int k;
+    cin>>k;
+    cout<<"ELEMENT IS AT : "<<SearchRotatedNSortedArr(arr,size,k)<<endl;
     cout<<endl<<endl;
     return 0;
 }
