@@ -83,7 +83,6 @@ int main(){
     s.push2(40);
     cout<<"PEAK ELEMENT OF STACK - 1 "<<s.peak1()<<endl;
     cout<<"PEAK ELEMENT OF STACK - 2 "<<s.peak2()<<endl;
-
-
+    
     return 0;
 }
