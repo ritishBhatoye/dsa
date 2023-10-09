@@ -23,6 +23,7 @@ class Stack{
             cout<<"STACK OVERFLOW"<<endl;
         }
     }
+    //POP OPERATION 
     void pop(){
         if(top>=0)
         {
