@@ -26,7 +26,6 @@ void Cost(string &s){
             st.push(ch);
          }
         }
-        
     } 
     int a=0,b=0;
        while(!st.empty())
