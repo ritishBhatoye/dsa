@@ -2,7 +2,7 @@
 #include<stack>
 using namespace std;
 
-void Cost(string &s){
+int Cost(string &s){
     stack<char> st;
     //for ODD CASE
     if((s.length()%2)==1){
@@ -38,12 +38,19 @@ void Cost(string &s){
             {
             b++;
             }
-            s.pop();
+            st.pop();
         }
         int ans=(a+1)/2 + (b+1)/2;
     return ans;
 }
 
 int main(){
+    string s;
+    cout<<endl<<endl;
+    cout<<"ENTER THE STRING :- "<<endl;
+    cin>>s;
+    cout<<endl<<endl;
+    cout<<"MINIMUM COST TO MAKE STRING VALID : "<<Cost(s);
+    cout<<endl<<endl;
     return 0;
 }
