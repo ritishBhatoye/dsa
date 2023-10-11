@@ -14,20 +14,26 @@ for(int i=0;i<s.size();i++){
     }
     //for CLOSING BRACKET
     else{
-        while(!st.empty()){
+        if(!st.empty()){
             if((ch==')' && st.top()=='(')||
                (ch==']' && st.top()=='[')||
                (ch=='}' && st.top()=='{')){
-                return true;
+                  st.pop();
             }
              else{
                 return false;
              }
         }
-        if(st.empty()){
-            return true;
+        else{
+            return false;
         }
     }
+}
+if(st.empty()){
+    return true;
+}
+else{
+    return false;
 }
 }
 
