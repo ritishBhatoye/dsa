@@ -17,37 +17,38 @@ bool isRedundent(string s){
             st.push(ch);
            }
         else{
-            //for CLOSING BRACKET 
-           if(!st.empty())
-            {
-                if((ch==')' && st.top()=='(')){
-
-                return false;
+            //for CLOSING BRACKET or LOWER CASE LETTER
+            if(ch==')'){
+                bool red=true;
+                while(st.top()!='('){
+                    char top=st.top();
+                    if(top=='+'||top=='-'||top=='/'||top=='*'){
+                        red=false;
+                    }
+                    st.pop();
+                }
+                if(red==true){
+                    return true;
+                }
+                st.pop();
             }
-            if((ch==')' && st.top()=='+')||
-               (ch==')' && st.top()=='/')||
-               (ch==')' && st.top()=='*')||
-               (ch==')' && st.top()=='-')
-            ){
-                 st.pop();
-            }
-            }
-            else{
-                return false;
-            }
-        }
-    }
-if(st.empty()){
-   return true;
-    }
-    else{
-        return false;
-    }
-
 }
-
+    }
+return false;    
+}
 int main()
 {
     string s;
+    cout<<endl<<endl;
+    cout<<"ENTER THE STRING FOR CHECKING WHETHER IT IS CONTAINING REDUNDENT BRACKETS "<<endl;
+    cin>>s;
+    if(isRedundent(s)){
+        cout<<"REDUNDENT "<<endl;
+    }
+    else{
+        cout<<"NOT REDUNDENT "<<endl;
+    }
+    cout<<endl<<endl;
+
     return 0;
 }
