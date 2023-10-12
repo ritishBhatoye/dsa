@@ -25,7 +25,7 @@ bool isValid(string &s){
          (ch==']' && st.top()=='['))
          {
             st.pop();
-            return true;
+            
          }
          else{
             return false;
@@ -37,7 +37,7 @@ bool isValid(string &s){
       }
     
     }
-      if(s.empty()){
+      if(st.empty()){
         return true;
         
     }
