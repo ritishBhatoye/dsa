@@ -1,4 +1,5 @@
 #include <iostream>
+#include<stack>
 #include<vector>
 using namespace std;
 
@@ -19,7 +20,7 @@ int findCelebrity(vector<vector<int> > m){
         int second=st.top();
         st.pop();
 
-        //STEP 3 :-
+    //STEP 3 :-
         if(m[first][second]==1){
             st.push(second);
         }
@@ -46,7 +47,7 @@ int findCelebrity(vector<vector<int> > m){
 
 int main(){
 
-    vector<vector<int>> m;
+    vector<vector<int> > m;
     int size;
     cout<<endl<<endl;
     cout<<"ENTER THE SIZE : "<<endl;
