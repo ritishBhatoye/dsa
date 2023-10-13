@@ -87,8 +87,64 @@ class dQueue{
         }
         arr[rear]=data;
     }
+
+    int getFront(){
+        if(front==-1){
+            return -1;
+        }
+        else{
+            return arr[front];
+        }
+    }
+    int getRear(){
+        if(front==-1){
+            return -1;
+        }
+        else{
+            return arr[rear];
+        }
+    }
+    bool isEmpty(){
+        if(front==-1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    bool isFull(){
+        if((front==0 && rear==size-1) || (front!=0 && rear==(front-1)%(size-1))){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 };
 
 int main(){
+    dQueue d(2);
+    d.pushFront(10);
+    d.pushFront(20);
+    cout<<endl<<endl;
+    cout<<"FRONT : "<<d.getFront()<<endl;
+    cout<<endl;
+    if(d.isEmpty())
+    {
+      cout<<"QUEUE IS EMPTY "<<endl;
+    }
+    else{
+      cout<<"QUEUE IS NOT EMPTY "<<endl;
+    }
+    cout<<endl;
+    if(d.isFull()){
+        cout<<"QUEUE IS FULL!!! "<<endl;
+    }
+    else{
+        cout<<"QUEUE IS NOT FULL "<<endl;
+
+    }
+    cout<<endl<<endl;
+
     return 0;
 }
