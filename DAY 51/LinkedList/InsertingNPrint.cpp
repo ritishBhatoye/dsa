@@ -58,6 +58,7 @@ int main()
     print(head);
     insertAtHead(head,50);
     print(head);
+    
     cout<<endl;
     return 0;
 }
