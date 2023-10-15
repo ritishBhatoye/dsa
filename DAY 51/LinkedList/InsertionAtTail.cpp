@@ -32,8 +32,7 @@ void insertAtTail(Node* &tail,Node* &head,int data)
  tail->next=temp;
  //MOVE TAIL TO TEMP NODE
  tail=temp;
- //or
- //tail=tail->next
+
  //NOT  NECESSSARY(OPTIONAL)
  temp->next=NULL;
 }
