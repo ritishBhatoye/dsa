@@ -7,12 +7,14 @@ public:
     int data;
     Node *next;
     Node *prev;
+    Node *tail;
 
 public:
     Node(int data){
         this->data=data;
         this->next=NULL;
         this->prev=NULL;
+        this->tail=NULL;
     }
 };
 
@@ -47,10 +49,19 @@ void insertAtHead(Node* &head,int data)
     //moving HEAD
     head=temp;
 }
+//insertion At Tail or END
+void insertAtTail(Node* &tail,int data)
+{    
+    //creating NEW NODE
+    Node* temp=new Node(data);
+    tail->next=temp;
+    tail=temp;
+}
 int main()
 {
     Node* n=new Node(10);
     Node* head=n;
+    Node* tail=n;
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
@@ -59,6 +70,8 @@ int main()
     insertAtHead(head,30);
     print(head);    
     insertAtHead(head,40);
+    print(head);
+    insertAtTail(tail,100);
     print(head);
     return 0;
 }
