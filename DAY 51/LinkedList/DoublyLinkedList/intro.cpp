@@ -23,9 +23,9 @@ void insertionAtHead(Node* &head,int data)
     Node* temp=new Node(data);
     
     
-    temp->next=head->prev;
-    head->prev=temp;
-
+    temp->next=head;
+    head=temp;
+  
 
 }
 
