@@ -7,7 +7,6 @@ class Node
     int data;
     Node* prev;
     Node* next;
-    Node* tail;
 
     public:
     Node(int data)
@@ -15,7 +14,6 @@ class Node
         this->data=data;
         this->prev=NULL;
         this->next=NULL;
-        this->tail=NULL;
     }
 };
 
