@@ -12,6 +12,12 @@ class Node
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        if(this->next!=NULL){
+            delete next;
+            next=NULL;
+        }
+    }
 };
 
 //insertion
@@ -27,7 +33,7 @@ if(tail==NULL)
     tail=n;
     n->next=n;
 }
-{
+else{
     //inserting at last node
     //non-empty 
     //assuming that the element is present in the LIST
@@ -47,21 +53,73 @@ if(tail==NULL)
 }
 void print(Node* tail){
     Node* temp=tail;
+    if(tail==NULL){
+        cout<<"LIST IS EMPTY "<<endl;
+        return ;
+    }
     do
     {
    cout<<tail->data<<" ";
    tail=tail->next;
     }while(tail!=temp);
-    cout<<endl<<endl;
+    cout<<endl;
 }
+
+void deleteNode(Node* &tail,int value)
+{
+    //empty list
+    if(tail==NULL)
+    {
+        cout<<"LIST IS EMPTY , PLEASE CHECK AGAIN "<<endl;
+        return ;
+    }
+    else{
+        //non-empty 
+        
+        ///assuming that value is present in the LINKED LIST
+        Node* prev=tail;
+
+        Node* curr=prev->next;
+        while(curr->data!=value){
+            prev=curr;
+            curr=curr->next;
+        }
+        prev->next=curr->next;
+
+       //1 NODE Linked List
+       if(curr==prev){
+        tail=NULL;
+       }
+       //>=NODE Linked List
+        else if(tail==curr)
+        {
+            tail=prev;
+        }
+        curr->next=NULL;
+
+        delete curr;
+    }
+}
+
 int main()
 {
     Node* tail=NULL;
     //empty list me insert 
-     insertNode(tail,5,3);
-  
+     cout<<endl<<endl;
 
+     insertNode(tail,5,3);
      print(tail);
+    //  insertNode(tail,3,10);
+    //  print(tail);
+    //  insertNode(tail,10,20);
+    //  print(tail);
+    // //  deleteNode(tail,3);
+    // //  print(tail); 
+    //  deleteNode(tail,3);
+    //  print(tail);
+    deleteNode(tail,3);
+       print(tail);
+     cout<<endl<<endl;
 
     return 0;
 }
