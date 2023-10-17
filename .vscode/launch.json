@@ -25,8 +25,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 54/RemoveElement",
-      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 54/RemoveElement/build/Debug/outDebug"
+      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 55",
+      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 55/build/Debug/outDebug"
     }
   ],
   "version": "2.0.0"
