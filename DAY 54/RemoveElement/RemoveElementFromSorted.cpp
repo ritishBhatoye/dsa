@@ -14,6 +14,12 @@ class Node
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        if(this->next!=NULL){
+            delete next;
+            next=NULL;
+        }
+    }
 };
 //print or traversing
 void print(Node* &head)
@@ -77,31 +83,28 @@ int getLength(Node* &head)
     }
     return l;
 }
-Node* findMiddleNode(Node* &head){
-    int len=getLength(head);
-    int ans=len/2;
-    Node* temp=head;
-    int cnt=0;
-    while(cnt<ans){
-        temp=temp->next;
-        cnt++;
-    }
-    return temp;
-}
-Node* getMiddle(Node* &head){
-    if(head==NULL || head->next==NULL){
-        return head;
-    }
-    Node* fast=head->next;
-    Node* slow=head;
-    while(fast!=NULL){
-        fast=fast->next;
-        if(fast!=NULL){
-            fast=fast->next;
-        }
-        slow=slow->next;
-    }
-    return slow;
+void removeElement(Node* &head)
+{
+
+   //non empty
+   Node* curr=head;
+   while(curr!=NULL)
+   {
+     if((curr->next!=NULL) && curr->data==curr->next->data)
+     {
+         Node* nodeDel=curr->next;
+   
+         delete nodeDel;
+         curr->next=curr->next->next;
+         
+     }
+     else
+     {
+        curr=curr->next;
+     }
+
+   }
+  print(head);
 }
 int main(){
     Node* n=new Node(10);
@@ -110,17 +113,15 @@ int main(){
     print(head);
     insertAtTail(tail,20);
     print(head);
-    insertAtTail(tail,30);
+    insertAtTail(tail,20);
     print(head);    
     insertAtTail(tail,40);
     print(head);
     insertAtTail(tail,50);
     print(head);
-    Node* ans=findMiddleNode(head);
-    cout<<ans->data;
-    cout<<endl<<endl;
-    Node* ans2=getMiddle(head);
-    cout<<ans2->data;
+    removeElement(head);
+
+
     cout<<endl<<endl;
     return 0;
 }
