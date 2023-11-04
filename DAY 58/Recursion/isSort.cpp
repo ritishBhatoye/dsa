@@ -1,5 +1,19 @@
 #include<iostream>
 using namespace std;
+bool isSorted(int *arr,int size){
+    bool ans;
+    for(int i=0;i<size;i++){
+        for(int j=i+1;j<size;j++){
+            if(arr[j]<arr[j+1]){
+                ans=true;
+            }
+            else{
+                ans=false;
+            }
+        }
+    }
+    return ans;
+}
 void input(int *arr,int size){
     for(int i=0;i<size;i++){
         cin>>arr[i];
@@ -12,20 +26,19 @@ void print(int *arr,int size){
     cout<<endl;
 }
 bool isSort(int *arr,int size){
-
-    if(size==1){
+  
+       if(size==1|| size==0)
+       {
         return true;
+       }
+       if(arr[0]>arr[1])
+       {
+      return false;
+       }
+    else{
+     
+    return isSort(arr+1,size-1);
     }
-    else if(arr[0]>arr[1])
-    {
-        
-        return false;
-    }
-    else
-    {
-        isSort(arr+1,size-1);
-        return true;
-    }    
 }
 int main(){
     int size;
