@@ -33,6 +33,23 @@ void rotateByOne(int *arr,int size){
     }
     arr[size-1]=temp;
 }
+void reverseArr(int *arr,int i,int j){
+
+    while(i<=j){
+        swap(arr[i],arr[j]);
+        i++;
+        j--;
+    }
+}
+void rotateByD(int* arr,int size,int d)
+{
+///reverse D part
+reverseArr(arr,0,d-1);
+//reverse N-D part
+reverseArr(arr,d,size-1);
+//reverse complete array 
+reverseArr(arr,0,size-1);
+}
 int main()
 {
     int size;
@@ -43,8 +60,13 @@ int main()
     arr=new int[size];
     input(arr,size);
     sortArr(arr,size);
-    rotateByOne(arr,size);
-
+    // rotateByOne(arr,size);
+   
+    print(arr,size);
+    int d;
+    cout<<"ROTATE BY HOW MANY PLACES : "<<endl;
+    cin>>d;
+    rotateByD(arr,size,d);
     print(arr,size);
     cout<<endl<<endl;
     
