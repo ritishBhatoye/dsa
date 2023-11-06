@@ -25,8 +25,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 58/Recursion",
-      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 58/Recursion/build/Debug/outDebug"
+      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 59/Stacks",
+      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 59/Stacks/build/Debug/outDebug"
     }
   ],
   "version": "2.0.0"
