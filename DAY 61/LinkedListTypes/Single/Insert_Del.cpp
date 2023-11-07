@@ -11,6 +11,13 @@ class Node{
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        int value=this->data;
+        if(this->next!=NULL){
+            delete next;
+            this->next=NULL;
+        }
+    }
 };
 
 //inserting at head
@@ -56,15 +63,55 @@ void deletionAtHead(Node* &head){
 }
 void deletionAtPos(Node* &head,int pos)
 {
-    
+
+   if(pos==1){
+    deletionAtHead(head);
+   } 
+  else
+  {
    Node* curr=head;
-
+   Node* prev=NULL;
    int cnt=1;
-
+   while(cnt<pos){
+        prev=curr;
+        curr=curr->next;
+        cnt++;
+   } 
+   //POSTION REACHED
+   prev->next=curr->next;
+   curr->next=NULL;
+   delete curr;
+   }
 
 }
 
-// void deletionAtPos()
+int length(Node* &head){
+    Node* temp=head;
+    int cnt=0;
+    while(temp!=NULL)
+    {
+          temp=temp->next;
+          cnt++;
+    }
+    return cnt;
+}
+void delNodeData(Node* &head,int d){
+    Node* curr=head;
+    Node* prev=NULL;
+    int cnt=1;
+    int len=length(head);
+
+        if(curr->data!=d)
+        {
+        prev=curr;
+        curr=curr->next;
+        }
+        else{ 
+            prev->next=curr->next;
+            curr->next=NULL;
+            delete curr; 
+    }
+ }
 void print(Node* &head){
     Node* temp=head;
     while(temp!=NULL){
@@ -95,6 +142,7 @@ int main(){
         cout<<endl<<endl;
         print(head);
     }
+
     cout<<endl<<endl;
     int t;
     cout<<"ENTER THE NUMBER OF ELEMENTS YOU WANT TO INSERT  AT TAIL : ";
@@ -121,7 +169,16 @@ int main(){
     insertAtPos(head,tail,pos,data);
     print(head);
     cout<<endl<<endl;
-    deletionAtHead(head);
+    int element;
+    cout<<"ENTER THE DATA YOU WANT TO DELETE : ";
+    cin>>element;
+    delNodeData(head,element);
+    print(head);
+    int p;
+    cout<<"ENTER THE POSITION TO DELELTE NODE : "<<endl;
+    cin>>p;
+    deletionAtPos(head,p);
+    cout<<endl;
     print(head);
     cout<<endl;
     cout<<endl;

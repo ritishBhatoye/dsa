@@ -25,8 +25,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 61/LinkedListTypes/Single",
-      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 61/LinkedListTypes/Single/build/Debug/outDebug"
+      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 61/LinkedListTypes/DoublyLL.cpp",
+      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 61/LinkedListTypes/DoublyLL.cpp/build/Debug/outDebug"
     }
   ],
   "version": "2.0.0"
