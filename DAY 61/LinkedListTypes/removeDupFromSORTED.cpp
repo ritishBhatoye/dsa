@@ -11,8 +11,27 @@ class Node{
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        int val=this->data;
+        if(this->next==NULL){
+            delete next;
+            this->next=NULL;
+        }
+    }
 };
-
+Node* reverseLL(Node* &head)
+{
+Node* curr=head;
+Node* prev=NULL;
+Node* forw;
+while(curr!=NULL){
+    forw=curr->next;
+    curr->next=prev;
+    prev=curr;
+    curr=forw;
+}
+return prev;
+}
 //inserting at head
 void insertAtHead(Node* &head,int data){
     Node* temp=new Node(data);
@@ -56,56 +75,31 @@ void print(Node* &head){
     }
     cout<<endl;
 }
-int getLength(Node* &head){
-    Node* temp=head;
-    int l=0;
-    while(temp!=NULL){
-            temp=temp->next;
-            l++;
-    }
-    return l;
-}
 
-Node* midNode(Node* &head){
-   if(head==NULL || head->next==NULL){
+Node* removeDup(Node* &head)
+{
+    if(head==NULL){
+        return NULL;
+    }
+    Node* curr=head;
+  while(curr!=NULL)
+  {
+    if((curr->next!=NULL) && curr->data==curr->next->data)
+      { 
+        Node* nextN=curr->next->next;
+        Node* NodeToDel=curr->next;
+        delete(NodeToDel);
+         curr->next=nextN;
+ 
+      }
+    else{
+          
+            curr=curr->next;
+     }
+    }
+    
     return head;
-   }
-   if(head->next->next==NULL){
-    return head->next;
-   }
-   Node* slow=head;
-   Node* fast=head->next;
-
-   while(fast!=NULL){
-    fast=fast->next;
-    if(fast!=NULL){
-        fast=fast->next;
     }
-    slow=slow->next;
-   }
-return slow;
-}
-// Node* midNode(Node* &head,int len){
-//     Node* temp=head;
-//     int cnt;
-//     while(temp!=NULL){
-//         temp=temp->next;
-//         cnt++;
-      
-//         if(cnt==(len/2)){
-//             if(len%2==0)
-//             {
-//                 return temp;
-//             }
-//             else{
-//                 Node* t=temp->next;
-//                 return t;
-//             }
-//         }
-//       }
-
-//     }
-
 
 int main(){
     Node* n=new Node(10);
@@ -145,9 +139,11 @@ int main(){
         print(head);
     }
     cout<<endl<<endl;
-    int len=getLength(head);
-    Node* MidNode=midNode(head);
-    cout<<MidNode->data<<endl;
+    Node* nLL=removeDup(head);
+    cout<<endl;
+    cout<<"AFTER REMOVING DUPLICATES FROM SORTED LINKED LIST : "<<endl;
+     
+    print(nLL);
     // int pos;
     // int data;
     // cout<<"ENTER THE DATA TO BE INSERTED : ";
