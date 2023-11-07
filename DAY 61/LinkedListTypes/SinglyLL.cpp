@@ -18,11 +18,26 @@ void insertAtHead(Node* &head,int data){
     temp->next=head;
     head=temp;
 }
+//inserting at tail
 void insertAtTail(Node* &tail,int data){
     Node* temp=new Node(data);
     tail->next=temp;
     tail=tail->next;
 
+}
+//inserting at POSITION
+void insertAtPosition(Node* &head,int pos,int data){
+    Node* temp=head;
+    int cnt=1;
+    while(cnt<pos-1){
+        temp=temp->next;
+        cnt++;
+    }
+    //POSITION REACHEC
+    //inserting at POSITION
+    Node* nNode=new Node(data);
+    nNode->next=temp->next;
+    temp->next=nNode;
 }
 //traversing Linked List
 void print(Node* &head){
@@ -96,6 +111,16 @@ int main()
     print(head);
     cin>>d;
     insertAtTail(tail,d);
+    cout<<"DATA : "<<head->data<<endl;
+    cout<<"NULL : "<<head->next<<endl;
+    cout<<endl<<endl;
+    print(head);
+    int pos;
+    cout<<"ENTER THE POSITION : "<<endl;
+    cin>>pos;
+    cin>>d;
+
+    insertAtPosition(head,pos,d);
     cout<<"DATA : "<<head->data<<endl;
     cout<<"NULL : "<<head->next<<endl;
     cout<<endl<<endl;
