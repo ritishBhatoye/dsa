@@ -27,6 +27,14 @@ void insertAtTail(Node* &tail,int data){
 }
 //inserting at POSITION
 void insertAtPosition(Node* &head,int pos,int data){
+    if(pos==1){
+        insertAtHead(head,data);
+        return ;
+    }
+    if(temp->next==NULL){
+        insertAtTail(tail,data);
+        return ;
+    }
     Node* temp=head;
     int cnt=1;
     while(cnt<pos-1){
