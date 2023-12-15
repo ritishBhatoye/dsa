@@ -72,7 +72,8 @@
     "__tree": "cpp",
     "set": "cpp",
     "charconv": "cpp",
-    "topview": "cpp"
+    "topview": "cpp",
+    "map": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
