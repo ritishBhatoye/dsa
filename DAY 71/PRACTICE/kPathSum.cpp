@@ -31,12 +31,26 @@ node* buildTree(node* root){
 void solve(node* root,int k,int &count,vector<int> path)
 {
 
-   
+   if(root==NULL){
+    return ;
+   }
+   path.push_back(root->data);
+   solve(root->left,k,count,path);
+   solve(root->right,k,count,path);
+   int size=path.size();
+   int sum=0;
+   for(int i=size-1;i>=0;i--){
+    sum+=path[i];
+    if(sum==k){
+        count++;  
+    }
+   }
+    path.pop_back();
 }
-int sumK(node* root){
+int sumK(node* root,int k){
     vector<int> path;
     int count=0;
-    solve(root,k,count,path)
+    solve(root,k,count,path);
     return count;
 }
 
@@ -45,7 +59,7 @@ int main(){
     //creating BST
     root=buildTree(root);
     cout<<endl<<endl;
-    cout<<"NUMBER OF LEAF NODES : "<<leafNode(root)<<endl;
+    cout<<"NUMBER OF PATHS : "<<sumK(root,3)<<endl;
     cout<<endl<<endl;
 
     return 0;
