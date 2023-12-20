@@ -68,7 +68,7 @@ void lvlOrder(node* root){
         }
     }
 }
-
+//
 node* min(node* root){
     node* temp=root;
     while(temp->left!=NULL){
