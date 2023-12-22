@@ -36,7 +36,7 @@ return root;
 void takeInput(node* &root){
     int data;
     cout<<"ENTER THE DATA : "<<endl;
-
+//
     cin>>data;
     while(data!=-1)
     {

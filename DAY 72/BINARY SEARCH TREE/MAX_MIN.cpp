@@ -76,7 +76,7 @@ node* min(node* root){
     }
     return temp;
 }
-
+//
 node* max(node* root){
     node* temp=root;
     while(temp->right!=NULL){
