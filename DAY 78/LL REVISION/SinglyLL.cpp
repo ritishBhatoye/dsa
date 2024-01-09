@@ -12,6 +12,13 @@ public:
         this->data = data;
         this->next = NULL;
     }
+    ~Node(){
+        int val=this->data;
+        if(this->next!=NULL){
+            delete next;
+            this->next=NULL;
+        }
+    }
 };
 
 void InsertAtHead(Node* &head,int data)
@@ -54,8 +61,26 @@ void InsertAtPos(Node* &head,Node* &tail,int pos,int data)
   Node* newNode=new Node(data);
   newNode->next=temp->next;
   temp->next=newNode;  
-
 }
+
+void delNode(Node* &head,Node* &tail,int pos)
+{
+   
+   Node* curr=head;
+   Node* prev=NULL;
+   int cnt=1;
+   while(cnt<pos)
+   {
+    prev=curr;
+    curr=curr->next;
+    cnt++;
+   }
+   
+   prev->next=curr->next;
+   curr->next=NULL;
+   delete curr;
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -72,6 +97,8 @@ int main()
     cout<<endl;
     print(head);
     cout<<endl;
+    delNode(head,tail,2);
+    print(head);
 
     cout<<endl<<endl;
 
