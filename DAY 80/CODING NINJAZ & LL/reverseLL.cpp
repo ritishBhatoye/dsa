@@ -29,6 +29,20 @@ void print(Node* &head){
     }
     cout<<endl;
 }
+
+Node* reverseLL(Node* &head)
+{
+Node* curr=head;
+Node* prev=NULL;
+
+while(curr!=NULL){
+    Node* forw=curr->next;
+    curr->next=prev;
+    prev=curr;
+    curr=forw;
+}
+return prev;
+}
 int main()
 {
     Node* n=new Node(10);
@@ -43,6 +57,9 @@ int main()
     insertAtTail(tail,60);
     print(head);
     cout<<endl<<endl;
+    cout<<"AFTER REVERSING :- "<<endl;
+    Node* ans=reverseLL(head);
+    print(ans);
     cout<<endl<<endl;
 
     return 0;
