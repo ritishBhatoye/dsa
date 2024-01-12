@@ -43,6 +43,14 @@ while(curr!=NULL){
 }
 return prev;
 }
+
+Node* reverseRec(Node* &head)
+{
+    
+   if(head==NULL || head->next==NULL){
+    return prev;
+   }
+}
 int main()
 {
     Node* n=new Node(10);
