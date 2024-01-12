@@ -64,7 +64,7 @@ int main(){
     InsertAtTail(tail,20);
     print(head);
     InsertAtTail(tail,30);
-    print(head);
+    print(head);1
     InsertAtTail(tail,40);
     print(head);
     InsertAtTail(tail,50);
