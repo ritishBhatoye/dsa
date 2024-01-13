@@ -9,6 +9,13 @@ class Node{
         this->data=data;
         this->next=NULL;
     }
+    ~Node(){
+        int val=this->data;
+        if(this->next==NULL){
+            delete next;
+            this->next=NULL;
+        }
+    }
 };
 
 void InsertAtTail(Node* &tail,int data)
@@ -29,8 +36,11 @@ void print(Node* &head){
 }
 
 Node* removeDupFromUnsort(Node* &head){
+    if(head==NULL || head->next==NULL){
+        return head;
+    }
     Node* curr=head;
-    while(curr!=NULL)
+    while(curr->next!=NULL && curr!=NULL)
     {
         Node* temp=curr->next;
         while(temp!=NULL)
@@ -60,8 +70,8 @@ int main()
 
     cout<<endl<<endl;
     InsertAtTail(tail,10);
-    InsertAtTail(tail,10);
-    InsertAtTail(tail,5);
+    InsertAtTail(tail,2);
+    InsertAtTail(tail,20);
    cout<<endl;
    print(head);
    Node* ans=removeDupFromUnsort(head);
