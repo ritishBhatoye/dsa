@@ -38,7 +38,8 @@ void print(Node* &head){
 }
 
 Node* removeDup(Node* &head){
-    if(head==NULL){
+    if(head==NULL)
+    {
         return NULL;
     }
     Node* curr=head;

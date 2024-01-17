@@ -25,8 +25,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 80/CODING NINJAZ & LL",
-      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 80/CODING NINJAZ & LL/build/Debug/outDebug"
+      "cwd": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 81/LL QUESTIONS",
+      "program": "/Users/ritishbhatoye/Desktop/COMPETETIVE PROGRAMMING/DSA(LB)/DAY 81/LL QUESTIONS/build/Debug/outDebug"
     }
   ],
   "version": "2.0.0"

@@ -108,7 +108,7 @@ Node* mergeSort(Node* head)
    }
 
    Node* mid=findMid(head);
-   Node* left=mid;
+   Node* left=head;
    Node* right=mid->next;
    mid->next=NULL;
 
