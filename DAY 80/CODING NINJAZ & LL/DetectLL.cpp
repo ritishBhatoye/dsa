@@ -41,6 +41,7 @@ bool detectLoop(Node* &head)
 map<Node* ,bool> vis;
 
 if(head==NULL){
+
     return false;
 }
 
@@ -48,6 +49,7 @@ Node* temp=head;
 
 while(temp!=NULL){
     if(vis[temp]==true){
+        cout<<"Present on element "<<temp->data<<endl;
         return true;
     }
     vis[temp]=true;
