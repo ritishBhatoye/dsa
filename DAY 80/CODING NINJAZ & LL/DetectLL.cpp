@@ -73,8 +73,13 @@ int main()
     insertAtTail(tail,3);
     cout<<endl;
     print(head);
-    Node* ans=detectLoop(head);
-    print(ans);
+    if(detectLoop(head)){
+        cout<<"YES LOOP EXIST "<<endl;
+    }
+    else
+    {
+        cout<<"NO LOOP EXIST "<<endl;
+    }
      
     cout<<endl<<endl;
     
