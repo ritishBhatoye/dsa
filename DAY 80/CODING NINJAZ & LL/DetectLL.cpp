@@ -92,6 +92,22 @@ Node* startingNode(Node* &head){
 
     return slow;
 }
+
+void removeLoop(Node* head){
+    if(head==NULL)
+    {
+        return ;
+    }
+
+    Node* startOfLoop=startingNode(head);
+    Node* temp=startOfLoop;
+
+    while(temp->next!=startOfLoop){
+    temp=temp->next;
+    }
+
+    temp->next=NULL;
+}
 int main()
 {
     cout<<endl<<endl;
