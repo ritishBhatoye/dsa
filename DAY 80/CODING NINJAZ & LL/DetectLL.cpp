@@ -57,6 +57,27 @@ while(temp!=NULL){
 }
 return false;
 }
+Node* flyodDetect(Node* &head){
+    if(head==NULL){
+        return NULL;
+    }
+    Node* fast=head;
+    Node* slow=head;
+
+    while(fast!=NULL && slow!=NULL){
+        fast=fast->next;
+        if(fast!=NULL){
+            fast=fast->next;
+        }
+        slow=slow->next;
+
+        if(slow==fast){
+            cout<<"Present at "<<slow->data<<endl;
+            return slow;
+        }
+    }
+    return NULL;
+}
 int main()
 {
     cout<<endl<<endl;
@@ -80,7 +101,15 @@ int main()
     {
         cout<<"NO LOOP EXIST "<<endl;
     }
-     
+     cout<<endl<<endl;
+    if(flyodDetect(head)!=NULL)
+    {
+        cout<<"CYCLE IS PRESENT "<<endl;
+    }
+    else
+    {
+        cout<<"CYCLE IS NOT PRESENT "<<endl;
+    }
     cout<<endl<<endl;
     
     return 0;
