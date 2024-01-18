@@ -78,6 +78,20 @@ Node* flyodDetect(Node* &head){
     }
     return NULL;
 }
+Node* startingNode(Node* &head){
+    if(head==NULL){
+        return NULL;
+    }
+
+    Node* intersection=flyodDetect(head);
+    Node* slow=head;
+    while(slow!=intersection){
+        slow=slow->next;
+        intersection=intersection->next;
+    }
+
+    return slow;
+}
 int main()
 {
     cout<<endl<<endl;
