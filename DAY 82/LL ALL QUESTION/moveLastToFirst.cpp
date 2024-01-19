@@ -36,26 +36,24 @@ cout<<endl;
 }
 
 
-Node* removeDup(Node* &head)
+Node* lastToFirst(Node* &head,Node* &tail)
 {
-if(head==NULL){
-    return NULL;
-}
+   Node* curr=head;
+   Node* prev=NULL;
 
-Node* curr=head;
+   while(curr->next!=NULL)
+   {
+      prev=curr;
+      curr=curr->next;
 
-while(curr!=NULL){
-    if((curr->next!=NULL) && (curr->data==curr->next->data)){
-        Node* nxtNode=curr->next->next;
-        Node* nodeToDel=curr->next;
-        delete(nodeToDel);
-        curr->next=nxtNode;
-    }
-    else{
-        curr=curr->next;
-    }
-}
-return head;
+   }
+    
+    curr->next=head;
+    prev->next=NULL;
+    head=curr;
+    tail=prev;
+
+    return head;
 }
 int main()
 {
@@ -73,7 +71,7 @@ int main()
    
     cout<<endl;
     print(head);
-    Node* ans=removeDup(head);
+    Node* ans=lastToFirst(head,tail);
     print(ans); 
 
      
