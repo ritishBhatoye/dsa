@@ -76,25 +76,42 @@ void heapify(int arr[],int n,int i){
     int left=2*i;
     int right=2*i+1;
 
-    if(left < n && arr[largest] <arr[left]){
+    if(left<n && arr[largest] < arr[left]){
         largest=left;
     }
-    if(right< n && arr[largest] < arr[right]){
+    if(right < n && arr[largest] < arr[right]){
         largest=right;
     }
     if(largest!=i){
         swap(arr[largest],arr[i]);
+        heapify(arr,n,largest);
     }
 }
 
 int main(){
-    MinHeap h;
-    h.insert(10);
-    h.insert(20);
-    h.insert(30);
-    h.insert(40);
-    h.insert(50);
-    h.print();
+//     MinHeap h;
+//     h.insert(10);
+//     h.insert(20);
+//     h.insert(30);
+//     h.insert(40);
+//     h.insert(50);
+//     h.print();
+//    cout<<endl<<endl;
 
+    int arr[6]={-1,54,53,55,52,50};
+   cout<<endl<<endl;
+  
+    int n=5;
+   cout<<endl<<endl;
+
+    for(int i=n/2;i>0;i--){
+       heapify(arr,n,i);
+    }
+   cout<<endl<<endl;
+
+   for(int i=1;i<=n;i++){
+   cout<<arr[i]<<" ";
+   }
+   cout<<endl<<endl;
     return 0;
 }
