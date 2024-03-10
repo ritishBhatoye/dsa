@@ -70,6 +70,13 @@ class MaxHeap{
      }
 };
 
+
+void heapify()
+{
+       
+}
+
+
 int main(){
     MaxHeap m;
     m.Insert(10);

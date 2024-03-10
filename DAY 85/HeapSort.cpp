@@ -14,8 +14,9 @@ void heapify(int arr[], int n, int i)
     if (right <= n && arr[right] < arr[i])
     {
         largest = right;
+        
     }
-
+ 
     if (largest != i)
     {
 
