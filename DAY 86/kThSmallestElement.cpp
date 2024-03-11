@@ -77,7 +77,8 @@ void heapSort(int arr[],int n){
 }
 
 int KthElement(int arr[],int size){
-      for(int i = size/2;i>0;i--){
+      for(int i = size/2;i>0;i--)
+    {
         heapify(arr,size,i);
     }
    heapSort(arr,size);
