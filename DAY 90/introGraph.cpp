@@ -9,8 +9,8 @@ class graph{
 
     unordered_map<int,list<int> > adj;
 
-    void addEdge(int u,int v,bool direction){
-
+    void addEdge(int u,int v,bool direction)
+    {
         adj[u].push_back(v);
 
         if(direction==0){
@@ -18,38 +18,37 @@ class graph{
         }
     }
 
-    void printAdjList(){
+    void printEdges(){
         for(auto i:adj){
-            cout<<i.first<<" -> "<<i;
+            cout<<i.first<<" -> ";
             for(auto j:i.second){
-                cout<<j<<" , ";
+                cout<<j<<" ";
             }
             cout<<endl;
         }
     }
 };
 
+
 int main(){
+    int m;
+    cout<<"ENTER THE NUMBER OF NDOES : "<<endl;
+    cin>>m;
     cout<<endl;
     int n;
-    cout<<"ENTER THE NUMBER OF NODES :- ";
+    cout<<"ENTER THE NUMBER OF EDGES : "<<endl;
     cin>>n;
-    cout<<endl<<endl;
-    int m;
-    cout<<"ENTER THE NUMBER OF EDGES :- ";
-    cin>>m;
-
+    cout<<endl;
+      
     graph g;
-
-    for(int i=0;i<m;i++){
+    for(int i=0;i<n;i++){
         int u,v;
         cin>>u>>v;
         g.addEdge(u,v,0);
     }
-    
-g.printAdjList();
-    cout<<endl<<endl;
+    cout<<endl;
+    g.printEdges();
+    cout<<endl;
 
-
-
+    return 0;
 }

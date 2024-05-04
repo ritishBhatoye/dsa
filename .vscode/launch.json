@@ -25,8 +25,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Volumes/HPP500/Downloads/dsa/DAY 88",
-      "program": "/Volumes/HPP500/Downloads/dsa/DAY 88/build/Debug/outDebug"
+      "cwd": "/Volumes/HPP500/Downloads/dsa/DAY 92",
+      "program": "/Volumes/HPP500/Downloads/dsa/DAY 92/build/Debug/outDebug"
     }
   ],
   "version": "2.0.0"
