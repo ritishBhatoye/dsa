@@ -75,7 +75,8 @@
     "topview": "cpp",
     "map": "cpp",
     "functional": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "execution": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
