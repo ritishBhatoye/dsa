@@ -24,3 +24,42 @@ void MoveLeftByOne(int *arr,int size)
     arr[size-1]=Las;
 
 }
+
+void MoveLeftByDPlaces(int *arr,int size,int d)
+{
+    if(d>size){
+        d=d%size;
+    }
+    else{
+ int temp[d];
+ for(int i=0;i<d;i++)
+ {
+    temp[i]=arr[i];
+ }
+ for(int i=0;i<size-d;i++)
+ {
+    arr[i]=arr[i+d];
+ }
+ for(int i=size-d;i<size;i++)
+ {
+    arr[i]=temp[i - size +d];
+ }
+    }
+}
+
+int main()
+{   
+    int size;
+    int *arr=new int[size];
+    cout<<"ENTER THE SIZE OF THE ARRAY ";
+    cin>>size;
+    inputArr(arr,size);
+    cout<<endl;
+    printArr(arr,size);
+    cout<<endl;
+    cout<<"AFTER MOVING IT LEFT BY ONE "<<endl;
+    MoveLeftByDPlaces(arr,size,2);
+    printArr(arr,size);
+    cout<<endl;
+    return 0;
+}
