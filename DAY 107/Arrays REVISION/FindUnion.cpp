@@ -24,10 +24,9 @@ int *Union(int* arr1,int* arr2,int s1, int s2)
     {
         if(arr1[i]==arr2[i])
         {
-
-             
              
         }
+        
     }
 }
 
