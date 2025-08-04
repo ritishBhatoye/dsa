@@ -76,7 +76,8 @@
     "map": "cpp",
     "functional": "cpp",
     "list": "cpp",
-    "execution": "cpp"
+    "execution": "cpp",
+    "climits": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "clang",
