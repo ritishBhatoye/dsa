@@ -17,7 +17,7 @@ void printArr(int* arr, int size){
 
 void swapAlternative(int* arr,int size)
 {
-    for(int i=0;i<size;i+=2){
+    for(int i=0;i<size-1;i+=2){
         swap(arr[i],arr[i+1]);
     }
 
