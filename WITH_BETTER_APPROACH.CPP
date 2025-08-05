@@ -21,7 +21,7 @@ int SecondLargestElement(int *arr,int size){
  int max=LargestElement(arr,size);
  int i=0;
  while(i<size){
- if(max<ans && arr[i]!=max)
+ if(arr[i]>ans && arr[i]!=max)
 { 
  ans=arr[i];
 }
