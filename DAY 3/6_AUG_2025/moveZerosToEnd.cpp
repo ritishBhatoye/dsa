@@ -38,6 +38,38 @@ void moveZerosToEnd(int* arr,int size){
 
     printArr(arr,size);
 }
+//Optmized Approach 
+void movingZerosToEndOPT(int* arr, int size) {
+    int i = 0; 
+
+    for (int j = 0; j < size; j++) {
+        if (arr[j] != 0) {
+            swap(arr[i], arr[j]);
+            i++;
+        }
+    }
+
+    printArr(arr, size);
+}
+// from the striver POV
+void movingZerosToEndOPTStriver(int* arr, int size) {
+    int j = -1; 
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i]== 0) {
+            j=i;
+            break;
+        }
+    }
+    for(int i=j+1;i<size;i++){
+        if(arr[i]!=0){
+            swap(arr[i],arr[j]);
+           j++;
+        }
+    }
+
+    printArr(arr, size);
+}
 
 int main(){
     cout<<endl<<endl;
@@ -52,7 +84,7 @@ cout<<endl;
 printArr(arr,size);
     cout<<endl<<endl;
 cout<<"After moving Zeros to end"<<endl;
-moveZerosToEnd(arr,size);
+movingZerosToEndOPTStriver(arr,size);
     cout<<endl<<endl;
 
 
