@@ -36,6 +36,7 @@ int main(){
  int arr[size];
  input(arr,size);
  cout<<"FIRST LARGEST ELEMENT IN AN ARRAY "<<LargestElement(arr,size)<<endl;
+ 
  cout<<"SECOND LARGEST ELEMENT IN AN ARRAY "<<SecondLargestElement(arr,size)<<endl;
 
     return 0;
