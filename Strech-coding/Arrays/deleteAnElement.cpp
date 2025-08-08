@@ -14,26 +14,27 @@ void printArr(int* arr, int size) {
     }
 }
 
-void insertionInAnArray(int* arr,int& size,int k,int p)
-{
-    if(p>size || p<0)
-    {
-        cout<<"PLEASE ENTER VALID INDEX "<<endl;
+void deletionInAnArray(int* arr, int& size, int k) {
+    int index = -1;
+
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == k) {
+            index = i;
+            break;
+        }
     }
-  
 
 
-    for(int i=size;i>p;i--)
-    {
-        
-        arr[i]=arr[i-1];
-
+    if (index != -1) {
+        for (int i = index; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        size--; 
+        cout << "Element " << k << " deleted successfully.\n";
+    } else {
+        cout << "Element not found in the array.\n";
     }
-    
-    arr[p]=k;
-
-size++;
-    
 }
 
 int main()
@@ -43,21 +44,19 @@ int main()
     cout<<"Enter the size of an array ";
     cin>>size;
     cout<<endl;
-    int* arr=new int[size+1];
+    int* arr=new int[size];
     inputArr(arr,size);
     cout<<endl;
     printArr(arr,size);
     cout<<endl;
-    cout<<"Enter the element to insert :- ";
+    cout<<"Enter the element to DELETE :- ";
     int k;
     cin>>k;
     cout<<endl;
-    int p;
-    cout<<"Enter the Position(index) :- ";
-    cin>>p;
+
     cout<<endl<<endl;
-    insertionInAnArray(arr,size,k,p);
-    cout<<"After INSERTION of new element :- ";
+deletionInAnArray(arr,size,k);
+    cout<<"After DELETION of new element :- ";
     printArr(arr,size);
     cout<<endl<<endl;
 
