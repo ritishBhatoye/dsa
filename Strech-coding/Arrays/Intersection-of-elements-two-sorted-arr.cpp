@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
 
@@ -31,8 +32,12 @@ vector<int> ans;
         {
             j++;
         }
+        //for handling approach duplicate issue
         else{
-            ans.push_back(arr1[i]);
+            
+            if(ans.empty() || ans.back()!=arr1[i])
+            {ans.push_back(arr1[i]);}
+
             i++;
             j++;
         }
