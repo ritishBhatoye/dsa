@@ -14,11 +14,19 @@ void printArr(int* arr, int size) {
     }
 }
 
-int findUniqueElement(int* arr, int size)
-{
+
+int findUniqueElement(int* arr,int size){
     int ans=0;
-    for(int i=0;i<size;i++){
+//XOR ing all the elements 
+    for(int i=0;i<size;i++)
+    {
         ans=ans^arr[i];
+    }
+//XORT [1,n-1]
+
+    for(int i=1;i<size;i++)
+    {
+        ans=ans^arr[i]  ;
     }
     return ans;
 }

@@ -25,9 +25,9 @@ void intersectionOfArrays(int* arr1,int* arr2,int size1,int size2)
   while(i<size1 && j<size2){
     if(arr1[i]<arr2[j]){
         i++;
-    }
+    } 
     else if(arr2[j]<arr1[i]){
-j++;
+        j++; 
     }
     else{
         ans.push_back(arr1[i]);
