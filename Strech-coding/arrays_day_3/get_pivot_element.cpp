@@ -38,6 +38,27 @@ int get_pivot_element(int* arr,int size){
 return s;
 }
 
+int get_pivot_element_optimize(int* arr,int size){
+
+    int totalSum=0;
+    int leftSum=0;
+
+    for(int i=0;i<size;i++)
+    {
+        totalSum+=arr[i];
+    }
+
+    for(int i=0;i<size;i++)
+    {
+        if(leftSum==totalSum-leftSum-arr[i])
+        {
+            return i;
+        }
+
+        leftSum+=arr[i];
+    }
+}
+
 int main(){
     cout<<endl;
     int size;
@@ -50,7 +71,7 @@ int main(){
     printArr(arr,size);
     cout<<endl;
    
-    int result=get_pivot_element(arr,size);
+    int result=get_pivot_element_optimize(arr,size);
     cout<<endl;
     cout<<"Pivot Element "<<result;
     cout<<endl;
