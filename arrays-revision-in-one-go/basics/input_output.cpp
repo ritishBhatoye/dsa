@@ -4,6 +4,7 @@ using namespace std;
 void input_arr(int* arr,int size)
 {
     cout<<endl;
+    
     for(int i=0;i<size;i++)
     {
         cout<<"Enter the element at "<<i<<" : ";
