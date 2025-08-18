@@ -1,5 +1,3 @@
-
-
 #include<iostream>
 #include <climits>
 #include <utility>
@@ -62,10 +60,6 @@ int main()
     cout<<"Unique Element :- "<<ans<<endl;
    
     cout<<ans<<endl;
-
-    cout<<endl<<endl;
-
-
 
     cout<<endl<<endl;
 
