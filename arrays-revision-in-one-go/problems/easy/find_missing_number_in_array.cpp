@@ -46,7 +46,18 @@ int find_missing_number_in_array(int* arr,int size)
     return -1;
 }
 
+// more optmized
 
+int find_missing_number_in_array_opt(int* arr,int size){
+    int element_sum=0;
+    int sum=(size*(size+1))/2;
+
+    for(int i=0;i<size;i++)
+    {
+        element_sum=element_sum+arr[i];
+    }
+    return sum-element_sum;
+}
 int main()
 {
 
@@ -61,7 +72,7 @@ int main()
     
     print_arr(arr,size);
     cout<<endl<<endl;   
-    int ans=find_missing_number_in_array(arr,size);
+    int ans=find_missing_number_in_array_opt(arr,size);
 
     if(ans!=-1)
     {
