@@ -4,11 +4,11 @@
 
 using namespace std;
 
-void input_vector(vector<int>& arr)
+void input_vector(vector<int>& arr,int size)
 {
     cout<<endl;
     
-    for(int i=0;i<arr.size();i++)
+    for(int i=0;i<size;i++)
     {
         cout<<"Enter the element at "<<i<<" : ";
         cin>>arr[i];
@@ -28,11 +28,10 @@ void print_vector(vector<int>& arr)
 
 }
 
-vector<int> union(vector<int& a,vector<int>& b)
+vector<int> union_of_two_sorted_array(vector<int>& a,int s1,vector<int>& b,int s2)
 {
     vector<int> ans;
-    int s1=a.size();
-    int s2=b.size();
+   
     
     int i=0,j=0;
 
@@ -40,58 +39,46 @@ vector<int> union(vector<int& a,vector<int>& b)
     {
         if(a[i] == b[j])
         {
-            ans.push_back(a[i]);
+            if(ans.empty() || a[i]!=ans.back() )
+            {
+                ans.push_back(a[i]);
+
+            }
             i++;
             j++;
         }
-        if(a[i]< b[j])
+       else if(a[i]< b[j])
         {
+            if( ans.empty() || a[i]!=ans.back() ){
+
             ans.push_back(a[i]);
+            }
             i++;
         }
-        else if(a[i]>b[i])
+        else
         {
-            ans.push_back(b[i]);
+            if(ans.empty() || b[j]!=ans.back() )
+            {
+            ans.push_back(b[j]);
+            }
             j++;
         }
     }
 
    while(i<s1) 
    {
-        if(a[i] == b[j])
-        {
-            ans.push_back(a[i]);
-            i++;
-            j++;
-        }
-        if(a[i]< b[j])
-        {
-            ans.push_back(a[i]);
-            i++;
-        }
-        else if(a[i]>b[i])
-        {
-            ans.push_back(b[i]);
-            j++;
-        }
+    if( ans.empty() || a[i]!=ans.back()){
+        ans.push_back(a[i]);
+
+    } 
+        i++;
     }
-    while(j<s1){
-        if(a[i] == b[j])
+    while(j<s2){
+        if(ans.empty()|| b[j]!=ans.back())
         {
-            ans.push_back(a[i]);
-            i++;
-            j++;
+            ans.push_back(b[j]);
         }
-        if(a[i]< b[j])
-        {
-            ans.push_back(a[i]);
-            i++;
-        }
-        else if(a[i]>b[i])
-        {
-            ans.push_back(b[i]);
-            j++;
-        }
+       j++;
     }
     return ans;
 }
@@ -100,23 +87,31 @@ vector<int> union(vector<int& a,vector<int>& b)
 int main()
 {
 
-    int size;
+    int s1,s2;
     cout<<endl<<endl;
-    cout<<"Enter the size  of an array :- ";
-    cin>>size;
+    cout<<"Enter the size  of an Array 1 :- ";
+    cin>>s1;
     cout<<endl<<endl;
-    int* arr=new int[size];
-    input_arr(arr,size);
+    vector<int> a(s1);
+    input_vector(a,s1);
+    cout<<endl<<endl;
+    cout<<"Enter the size  of an Array 2 :- ";
+    cin>>s2;
+    cout<<endl<<endl;
+    vector<int> b(s2);
+    input_vector(b,s2);
     cout<<endl<<endl;
     
-    print_arr(arr,size);
+    print_vector(a);
+    cout<<endl<<endl;   
+    print_vector(b);
     cout<<endl<<endl;   
 
-    cout<<"Array moving zeros to end :- ";
-    moves_zero_to_end_opt(arr,size);
+    cout<<"Union is :- ";
+    vector<int> ans=union_of_two_sorted_array(a,s1,b,s2);
+    print_vector(ans);
     cout<<endl<<endl;
 
-    print_arr(arr,size);
 
     cout<<endl<<endl;
 
