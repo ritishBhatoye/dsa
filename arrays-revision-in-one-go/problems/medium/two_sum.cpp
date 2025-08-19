@@ -146,6 +146,35 @@ vector<int> two_sum_for_sorted_array(vector<int>& arr,int size,int k)
     }
 return {-1,-1};
 }
+
+
+//with very intense optmization
+
+vector<int> two_sum_for_sorted_array_with_extra_space(vector<int>& arr,int size,int k)
+{
+ unordered_map<int,int> mpp;
+vector<int> ans;
+ for(int i=0;i<size;i++)
+ {
+    int num=arr[i];
+    int more_needed=k-num;
+    //mpp.end() stands for "not found"
+    if(mpp.find(more_needed)!=mpp.end())
+    {
+     
+        ans.push_back(i);
+        ans.push_back(mpp[more_needed]);
+
+
+        return ans;
+
+        break;
+    }
+    mpp[num]=i;
+ }
+ return {-1,-1};
+}
+
 int main()
 {
 
@@ -162,7 +191,7 @@ int main()
     cin>>k;
     print_vector(arr);
     cout<<endl<<endl;   
-    vector<int> ans=two_sum_for_sorted_array(arr,size,k);
+    vector<int> ans= two_sum_for_sorted_array_with_extra_space(arr,size,k);
     if(ans[0]==-1 && ans[1]==-1)
     {
         cout<<"No elements doesn't exist for which sum if eqaul to target"<<endl;
