@@ -62,6 +62,47 @@ int majority_element(int* arr,int size)
     }
 return -1;
 }
+
+int majority_element_optimize(int* arr,int size)
+{
+
+    int ele=0;
+    int cnt=0;
+
+    for(int i=0;i<size;i++)
+    {
+        if(cnt==0)
+        {
+            cnt=1;
+            ele=arr[i];
+
+        }
+        else if(ele==arr[i]) cnt++;
+
+        else {
+            cnt--;
+        }
+    }
+
+
+    int cnt1=0;
+
+    for(int i=0;i<size;i++)
+    {
+        if(ele==arr[i])
+        {
+            cnt1++;
+        }
+    }
+
+    if(cnt1>(size/2))
+    {
+        return ele;
+    
+    }
+return -1;
+}
+
 int main(){
     cout<<endl<<endl;
 int size;
@@ -76,7 +117,7 @@ cout<<endl;
 
 printArr(arr,size);
 cout<<endl;
-int ans=majority_element_brute(arr,size);
+int ans=majority_element_optimize(arr,size);
 cout<<"Majority Element :- "<<ans;
     cout<<endl<<endl;
    
