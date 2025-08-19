@@ -85,29 +85,30 @@ vector<int> push_to_arr(vector<int>& arr,int s,int e)
 }
 int longest_subarray_sum_k(vector<int>& arr,long long k)
 {
-    int size=arr.size();
-   int left=0;  
-   int right=0;
-    vector<int> ans;
-    int maxLen=0;
     long long sum=arr[0];
-    while(right<size)
+    int maxLen=0;
+    int left=0;
+    int right=0;
+    int size=arr.size();
+
+    while(right < size)
     {
-        while(left<=right && sum > k)
+        while(left<=right)
         {
-            sum=-arr[left];
+            sum-=arr[left];
+            left--;
         }
         if(sum==k)
         {
-            maxLen=max(maxLen,right-left+1);
+            maxLen=maxLen(maxLen,right-left+1);
+
         }
         right++;
-        if(right < size )
+        if(right < size)
         {
-            sum=sum+arr[right];
+            sum+=arr[left];
         }
     }
-  return maxLen;
 }
 
 int main()
