@@ -1,34 +1,36 @@
 #include<iostream>
+#include <utility> 
+
 using namespace std;
 
-void print_arr(int* arr,int size)
-{
+ void inputArr(int* arr,int size)
+ {
     for(int i=0;i<size;i++)
     {
+        cout<<"Enter the element of an array at "<<i<<" ";
+        cin>>arr[i];
+    }
+ }
+
+void printArr(int* arr,int size){
+    for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
 }
 
-void input_arr(int* arr,int size)
+int binary_search(int* arr,int size,int k)
 {
-    for(int i=0;i<size;i++)
-    {
-        cout<<"Enter the element at "<<i<<" : ";
-        cin>>arr[i];
-    }
-}
-
-bool isPresent(int* arr,int size,int k)
-{
+    int ans=-1;
     int s=0;
     int e=size-1;
 
     while(s<=e)
     {
         int mid=s+(e-s)/2;
+
         if(arr[mid]==k)
         {
-            return true;
+            return mid;
             break;
         }
         else if(arr[mid]>k)
@@ -40,40 +42,42 @@ bool isPresent(int* arr,int size,int k)
             s=mid+1;
         }
     }
-    return false;
+    return ans;
 }
 
-int main()
-{
+int main(){
+    cout<<endl;
     int size;
-    
-    cout<<endl<<endl;
-    
     cout<<"Enter the size of an array :- ";
     cin>>size;
+    cout<<endl;
     int* arr=new int[size];
-    cout<<endl<<endl;
-
-    input_arr(arr,size);
-    cout<<endl<<endl;
-    print_arr(arr,size);
+    inputArr(arr,size);
+    cout<<endl;
+    printArr(arr,size);
+    cout<<endl;
+  
 
     cout<<endl<<endl;
     int k;
-    cout<<"Enter the element you want to search :- ";
-
+    cout<<"Enter the Elment you want to search :- ";
     cin>>k;
-
-    if(isPresent(arr,size,k))
+    cout<<endl<<endl;
+    
+    int ans=binary_search(arr,size,k);
+    if(ans!=-1)
     {
-        cout<<k<<" is present in the array "<<endl;
+        cout<<"Element "<<k<<" is at  "<<ans;
     }
-    else
-    {
-        cout<<k<<" is NOT present in the array "<<endl;
-
+    else{
+        cout<<"Element "<<k<<" is not presemt "<<endl;
+        
     }
     cout<<endl<<endl;
+
+
+
+    cout<<endl;
 
     return 0;
 }

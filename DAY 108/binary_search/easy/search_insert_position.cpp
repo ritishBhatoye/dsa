@@ -1,82 +1,80 @@
 #include<iostream>
+#include <utility> 
+
 using namespace std;
 
-void print_arr(int* arr,int size)
-{
+ void inputArr(int* arr,int size)
+ {
     for(int i=0;i<size;i++)
     {
+        cout<<"Enter the element of an array at "<<i<<" ";
+        cin>>arr[i];
+    }
+ }
+
+void printArr(int* arr,int size){
+    for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
 }
 
-void input_arr(int* arr,int size)
-{
-    for(int i=0;i<size;i++)
-    {
-        cout<<"Enter the element at "<<i<<" : ";
-        cin>>arr[i];
-    }
-}
-
-int search_insert_position(int* arr,int size,int k)
+int search_insert_position(int *arr,int size,int k)
 {
     int s=0;
     int e=size-1;
     int ans=-1;
-    ///edge case
-    if(arr[e]<k)
-    {
-        return size;
-    }
 
     while(s<=e)
     {
         int mid=s+(e-s)/2;
 
-        if(arr[mid]>=k)
+        if(arr[mid]<=k)
         {
             ans=mid;
-            e=mid-1;
-        }
-        else 
-        {
             s=mid+1;
         }
+        else
+        {
+            e=mid-1;
+        }
+
     }
     return ans;
 }
 
-int main()
-{
+int main(){
+    cout<<endl;
     int size;
-    
-    cout<<endl<<endl;
-    
     cout<<"Enter the size of an array :- ";
     cin>>size;
+    cout<<endl;
     int* arr=new int[size];
-    cout<<endl<<endl;
-
-    input_arr(arr,size);
-    cout<<endl<<endl;
-    print_arr(arr,size);
+    inputArr(arr,size);
+    cout<<endl;
+    printArr(arr,size);
+    cout<<endl;
+  
 
     cout<<endl<<endl;
     int k;
-    cout<<"Enter the element you for which you want to search Index :- ";
-
+    cout<<"Enter the Elment for which you want to search INDEX :- ";
     cin>>k;
-
-    if(search_insert_position(arr,size,k)==-1)
+    cout<<endl<<endl;
+    
+    int ans=search_insert_position(arr,size,k);
+    if(ans!=-1)
     {
-        cout<<"Element is not present in the array "<<endl;
+        cout<<"Element "<<k<<" can be at  "<<ans;
     }
-    else
-    {
-        cout<<"Element "<<k<<" can be inserted at :- "<<search_insert_position(arr,size,k)<<endl;
-
+    else{
+        cout<<"Element "<<k<<" is not present "<<endl;
+        
     }
     cout<<endl<<endl;
+
+
+
+    cout<<endl;
 
     return 0;
 }
