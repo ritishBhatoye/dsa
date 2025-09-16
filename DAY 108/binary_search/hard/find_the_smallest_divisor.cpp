@@ -54,7 +54,7 @@ void print_vector(vector<int>& arr)
             }
             return sum;
         }
-        
+        r
         int smallestDivisor(vector<int>& nums, int threshold) 
         {
             sort(nums.begin(),nums.end());
