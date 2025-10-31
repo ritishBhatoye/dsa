@@ -9,15 +9,13 @@ int secondLargest(int *arr,int size)
 
     for(int i=0;i<size;i++)
     {
-        cout<<"Second Largest :- "<<sLargest<<endl;
-        cout<<"Largest :- "<<largest<<endl;
-
-        if(largest < arr[i] && sLargest < largest)
+     
+        if(largest < arr[i])
         {
             sLargest=largest;
             largest=arr[i];
         }
-        else if(sLargest < arr[i] && sLargest < largest)
+        else if(sLargest < arr[i] && arr[i] < largest)
         {
             sLargest=arr[i];
         }
