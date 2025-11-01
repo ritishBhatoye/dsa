@@ -27,6 +27,18 @@ void reverseAnArr(int s,int e,int *arr)
     }
 }
 
+void rotoateLeftByK(int* arr,int size,int k)
+{
+    if(k>size)
+    {
+        k=k%size;
+    }
+
+    int *temp=new int[k];
+
+    for(int i=0)
+}
+
 void rotateLeftByK(int* arr,int size,int k)
 {
     reverseAnArr(0,k-1,arr);
