@@ -18,18 +18,44 @@ void inputArr(int *arr,int size)
     }
 }
 
+void moveZeroToEnd(int *arr,int size)
+{
+   int i=0;
+   int j=size-1;
+
+   while(i<j)
+   {
+    if(arr[i]==0 && arr[j]!=0)
+    {
+        swap(arr[i],arr[j]);
+        i++;
+        j--;
+    }
+    else if(arr[j]==0 )
+    {
+        j--;
+    }
+    else if(arr[i]!=0)
+    {
+        i++;
+    }
+   }
+}
 
 int main()
 {
     cout<<endl<<endl;
     int size;
     cout<<"Enter the size of an array :- ";
-    cint>>size;
+    cin>>size;
 
     int *arr=new int[size];
     cout<<"Enter the element in the array :- ";
-    
+
     inputArr(arr,size);
+    printArr(arr,size);
+    cout<<"After moving zeros to end :- "<<endl;
+    moveZeroToEnd(arr,size);
     printArr(arr,size);
     
     cout<<endl<<endl;
