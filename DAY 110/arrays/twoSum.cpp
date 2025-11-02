@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<map>
 #include<algorithm>
 
 using namespace std;
@@ -45,6 +46,24 @@ vector<int> twoSum(vector<int>& arr,int k)
     return {0,0};
 }
 
+vector<int> twoSumOPT(vector<int>& arr,int k)
+{
+    map<int,int> mp;
+    for(int i=0;i<arr.size();i++)
+    {
+        int a = arr[i];
+
+        int more= k-arr[i];
+        if(mp.find(more)!=mp.end())
+        {
+            return {mp[more],i};
+        }
+        mp[a]=i;
+    }
+
+    return {-1,-1};
+}
+
 int main()
 {
     int size;
@@ -62,7 +81,7 @@ int main()
     int k;
     cout<<"Enter the value of the K :- "<<endl;
     cin>>k;
-    vector<int> ans=twoSum(arr,k);
+    vector<int> ans=twoSumOPT(arr,k);
     
     cout<<"ANS :- "<<endl;
     printArr(ans,ans.size());
