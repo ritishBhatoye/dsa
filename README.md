@@ -1,6 +1,14 @@
 # 🚀 DSA Practice Repository
 
-A comprehensive collection of Data Structures and Algorithms implementations and problem solutions, documenting my journey through 110+ days of consistent practice.
+## 📖 Description
+
+This repository serves as a complete documentation of my Data Structures and Algorithms learning journey, spanning over 110 days of dedicated practice. It contains 500+ problem solutions and implementations covering the entire spectrum of DSA concepts - from basic array operations to advanced graph algorithms.
+
+What started as a beginner's exploration of programming fundamentals has evolved into a comprehensive collection that includes implementations of core data structures (arrays, linked lists, stacks, queues, trees, heaps, graphs), classic algorithms (sorting, searching, recursion, dynamic programming), and solutions to real-world coding challenges from platforms like LeetCode and Coding Ninjas.
+
+Each day's folder represents a milestone in this learning journey, with problems carefully selected to build upon previous concepts while introducing new challenges. The repository also includes dedicated revision sessions and topic-specific deep dives, making it both a learning resource and a reference guide for anyone preparing for technical interviews or strengthening their DSA fundamentals.
+
+Whether you're a beginner starting your DSA journey or someone looking to revise concepts, this repository offers well-commented, clean C++ implementations with a logical progression from basics to advanced topics.
 
 ## 📚 Overview
 
