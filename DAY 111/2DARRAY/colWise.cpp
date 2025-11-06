@@ -26,16 +26,16 @@ void print2DArr(vector<vector<int>> &arr,int row,int col)
     }
 }
 
-vector<int> rowWiseSum(vector<vector<int>> &arr,int row,int col)
+vector<int> colWiseSum(vector<vector<int>> &arr,int row,int col)
 {
     int sum=0;
     vector<int> ans;
 
-    for(int i=0;i<row;i++)
+    for(int i=0;i<col;i++)
     {
-        for(int j=0;j<col;j++)
+        for(int j=0;j<row;j++)
         {
-            sum+=arr[i][j];
+            sum+=arr[j][i];
         }
         ans.push_back(sum);
         sum=0;
@@ -62,11 +62,11 @@ int main()
     cout<<endl<<endl;
 
     cout<<endl<<endl;
-    vector<int> ans=rowWiseSum(arr,row,col);
+    vector<int> ans=colWiseSum(arr,row,col);
     cout<<endl<<endl;
     for(int i=0;i<ans.size();i++)
     {
-        cout<<"Sum of row "<<i<<" :- "<<ans[i]<<endl;
+        cout<<"Sum of Col "<<i<<" :- "<<ans[i]<<endl;
     }
     cout<<endl<<endl;
     
