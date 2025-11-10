@@ -28,6 +28,18 @@ void print2DArr(vector<vector<int>> &arr,int row,int col)
     }
 }
 
+int sum(vector<vector<int>> &arr,int row,int col)
+{
+    int sum=0;
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            sum+=arr[i][j];
+        }
+    }
+    return sum;
+}
 int main()
 {
     cout<<endl<<endl;
@@ -47,6 +59,10 @@ int main()
     cout<<endl<<endl;
     print2DArr(arr,row,col);
     
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    int ans=sum(arr,row,col);
+    cout<<"Sum :- "<<ans<<endl;
     cout<<endl<<endl;
 
     return 0;
