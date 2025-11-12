@@ -28,15 +28,65 @@ void print2DArr(vector<vector<int>> &arr,int row,int col)
     }
 }
 
-
-string checkSquareIdentityDiagonal(vector<vector<int>> &arr,int row,int col)
+bool checkIfArrIsIdentity(vector<vector<int>> &arr)
 {
-    if(row==col)
+    int n=arr.size();
+    int m=arr[0].size();
+
+    for(int row=0;row<n;row++)
     {
-        return 'square';
+        for(int col=0;col<m;col++)
+        {
+            if(row==col)
+            {
+                if(arr[row][col]!=1)
+                {
+                    return false;
+                }
+            }
+        }
     }
-    if(arr[])
+    return true;
 }
+bool checkIfArrIsDiagonal(vector<vector<int>> &arr)
+{
+    int n=arr.size();
+    int m=arr[0].size();
+
+    for(int row=1;row<n;row++)
+    {
+        for(int col=1;col<m;col++)
+        {
+            if(row==col)
+            {
+                if(arr[row][col]==0)
+                {
+                    return false;
+                }
+            }
+        }
+    }
+    return true;
+}
+
+
+// string checkSquareIdentityDiagonal(vector<vector<int>> &arr,int row,int col)
+// {
+//     if(row==col)
+//     {
+//         return "SQUARE";
+//     }
+//    else if(checkIfArrIsIdentity(arr))
+//     {
+//         return "IDENTITY";
+//     }
+//     else if(checkIfArrIsDiagonal(arr))
+//     {
+//         return "DIAGONAL";
+//     }
+
+//     return "CAN NOT DETRERMINED";
+// }
 
 
 int main()
@@ -57,20 +107,22 @@ int main()
     input2DArr(arr,row,col);
     cout<<endl<<endl;
     print2DArr(arr,row,col);
-    int k;
-    cout<<"Enter the element you want to search :- ";
-    cin>>k;
+   
     cout<<endl<<endl;
     cout<<endl<<endl;
-    if(binarySearchIn2D(arr,k))
-    {
-        cout<<"Element "<<k<<" is present "<<endl;
-    }
-    else
-    {
-        cout<<"Element "<<k<<" is NOT present "<<endl;
-    }
 
+    if(row==col)
+    {
+        cout<<"SQAURE"<<endl;
+    }
+    if(checkIfArrIsIdentity(arr))
+    {
+        cout<<"IDENTITY"<<endl;
+    }
+    if(checkIfArrIsDiagonal(arr))
+    {
+        cout<<"DIAGONAL"<<endl;
+    }
     cout<<endl<<endl;
 
     return 0;
