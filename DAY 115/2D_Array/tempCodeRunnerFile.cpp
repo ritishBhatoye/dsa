@@ -1,2 +1,8 @@
- // int rowAns=rowWiseSum(a,row,col);
-    // cout<<"Row Wise Sum :- "<<rowAns<<endl;
+ if(checkIfIdentity(arr,row,col))
+    {
+        cout<<"Matrix is IDENTITY "<<endl;
+    }
+    else
+    {
+        cout<<"Matrix is not in IDENTITY "<<endl;
+    } 
