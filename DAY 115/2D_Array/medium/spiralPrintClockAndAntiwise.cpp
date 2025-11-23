@@ -72,6 +72,53 @@ vector<int> spiralPrint(vector<vector<int>> &arr,int row,int col)
     return ans;
 }
 
+vector<int> spiralPrintAnti(vector<vector<int>> &arr,int row,int col)
+{
+    vector<int> ans;
+    int startRow=0;
+    int startCol=0;
+    int endRow=row-1;
+    int endCol=col-1;
+    int count=0;
+    int total=row*col;
+    while(count<total)
+    {
+        
+        for(int i=endCol;i>=startCol && count<total ;i--)
+        {
+            // cout<<arr[startRow][i]<<" ";
+                ans.push_back(arr[startRow][i]);
+                count++;
+        }
+        startRow++;
+
+        for(int i=startRow;i<=endRow && count<total ;i++)
+        {
+            // cout<<arr[i][startCol]<<" ";
+            ans.push_back(arr[i][startCol]);
+            count++;
+        }
+        startCol++;
+
+        for(int i=startCol;i<=endCol && count<total ;i++)
+        {
+            // cout<<arr[endRow][i]<<" ";
+            ans.push_back(arr[endRow][i]);
+            count++;
+        }
+        endRow--;
+
+        for(int i=endRow;i>=startRow && count<total ;i--)
+        {
+            // cout<<arr[i][endCol]<<" ";
+            ans.push_back(arr[i][endCol]);
+            count++;
+        }
+        endCol--;
+    }
+    return ans;
+}
+
 int main()
 {
 
@@ -95,9 +142,21 @@ int main()
     {
         cout<<ans[i]<<" ";
     }
-
+    
     cout<<endl<<endl;
-
+    cout<<"Spiral Print Anti Clockwise "<<endl;
+    cout<<endl<<endl;
+    vector<int> ansSpiralPrintAnti=spiralPrintAnti(arr,row,col);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    
+    for(int i=0;i<ansSpiralPrintAnti.size();i++)
+    {
+        cout<<ansSpiralPrintAnti[i]<<" ";
+    }
+    cout<<endl<<endl;
+    
     cout<<endl<<endl;
 
 
