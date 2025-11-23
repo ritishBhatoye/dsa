@@ -40,6 +40,19 @@ void printWithEachRowReverse(vector<vector<int>> &arr,int row,int col)
 
     }
 }
+void printWithEachColReverse(vector<vector<int>> &arr,int row,int col)
+{
+    for(int i=row-1;i>=0;i--)
+    {
+        for(int j=0;j<col;j++)
+        {
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+
+    }
+}
+
 
 
 
@@ -78,7 +91,8 @@ int main()
     // int ans=countNumberOfZero(a,row,col);
     cout<<endl<<endl;
     // cout<<"Total Count of numbers :- "<<ans<<endl;
-
+    cout<<"Reverse Col Wise  :- "<<endl;
+    printWithEachColReverse(a,row,col);
     cout<<endl<<endl;
 
     return 0;
