@@ -23,6 +23,22 @@ void reverseString(char str[])
 
 }
 
+bool checkPalidrome(char str[])
+{
+    int s=0;
+    int e=lengthOfString(str)-1;
+
+    while(s<=e)
+    {
+        if(str[s++]!=str[e--])
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -41,6 +57,15 @@ int main()
     cout<<"After reversing :- "<<endl;
     reverseString(name);
     cout<<name<<endl;
+    if(checkPalidrome(name))
+    {
+        cout<<"Entered string is PALIDROME"<<endl;
+    }
+    else
+    {
+        cout<<"Entered string is NOT PALIDROME"<<endl;
+
+    }
     cout<<endl<<endl;
 
 
