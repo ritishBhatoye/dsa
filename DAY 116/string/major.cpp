@@ -11,6 +11,18 @@ int lengthOfString(char name[])
     return cnt;
 }
 
+void reverseString(char str[])
+{
+    int s=0;
+    int e=lengthOfString(str)-1;
+
+    while(s<=e)
+    {
+        swap(str[s++],str[e--]);
+    }
+
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -23,6 +35,12 @@ int main()
     cout<<endl<<endl;
     int ans=lengthOfString(name);
     cout<<"Enterted Length "<<ans<<endl;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    cout<<"After reversing :- "<<endl;
+    reverseString(name);
+    cout<<name<<endl;
     cout<<endl<<endl;
 
 
