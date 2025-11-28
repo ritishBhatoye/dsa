@@ -70,7 +70,9 @@ char maxOccuringChar(char str[])
         }
     }
     return 'a'+ans;
-}
+} 
+
+
 int main()
 {
     
