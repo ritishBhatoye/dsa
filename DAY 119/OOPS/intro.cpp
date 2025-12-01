@@ -6,6 +6,7 @@ class Person
     public:
     string name;
     int age;
+    static string gender;
 
     private:
     int level;
@@ -31,12 +32,13 @@ class Person
     }
 };
 
+string Person::gender="MALE";
 
 int main()
 {
 
     ///Static Allocation
-
+    cout<<"STATIC MEMBER GENDER :- "<<Person::gender<<endl;
     cout<<endl<<endl;
     // Person p;
     // p.name="Ritish";
