@@ -34,6 +34,7 @@ class Person
 
 string Person::gender="MALE";
 
+
 int main()
 {
 
