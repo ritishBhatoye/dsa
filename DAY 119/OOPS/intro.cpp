@@ -19,7 +19,11 @@ class Person
     {
         level=l;
     }
-
+    //As This following consttructor Run first means that it is always being executed at the time of the object creation 
+    Person()
+    {
+        cout<<"HNJI PERSON JI :- "<<endl;
+    }
 };
 
 
