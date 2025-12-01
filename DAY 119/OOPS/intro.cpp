@@ -24,6 +24,11 @@ class Person
     {
         cout<<"HNJI PERSON JI :- "<<endl;
     }
+    //Parameterized Constructor
+    Person(string name)
+    {
+        this->name=name;
+    }
 };
 
 
@@ -39,18 +44,13 @@ int main()
     // p.setLevel(2);
     //Dyanamic Allocation
 
-    Person *p=new Person;
-
-    (*p).name="Rahul";
-    (*p).age=21;
-
-
+    Person p("RAHUL BRO");
+    cout<<"NAME :- "<<p.name<<endl;
+    Person pa(p);
+    cout<<"PA(Object) NAME :- "<<pa.name<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
-    cout<<"NAME :- "<<p->name<<endl;
-    cout<<"AGE :- "<<p->age<<endl;
-    cout<<"LEVEL :- ";
-    p->getLevel();
+  
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
