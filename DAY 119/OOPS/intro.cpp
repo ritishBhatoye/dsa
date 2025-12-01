@@ -30,6 +30,11 @@ class Person
     {
         this->name=name;
     }
+
+    static string callToGender()
+    {
+        return gender;
+    }
 };
 
 string Person::gender="MALE";
@@ -40,6 +45,8 @@ int main()
 
     ///Static Allocation
     cout<<"STATIC MEMBER GENDER :- "<<Person::gender<<endl;
+    cout<<"STATIC FUNCITON GENDER :- "<<Person::callToGender()<<endl;
+
     cout<<endl<<endl;
     // Person p;
     // p.name="Ritish";
