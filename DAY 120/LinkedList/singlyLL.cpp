@@ -38,6 +38,30 @@ void print(Node* &head)
     cout<<endl;
 }
 
+void insertAtMiddle(Node* &head,Node* &tail,int data,int p)
+{
+
+    int i=0;
+    Node *itr=head;
+    while(i!=p)
+    {
+        itr=itr->next;
+        i++;
+    }
+
+    if(itr->next==NULL || itr==NULL)
+    {
+        cout<<"YOU hAVE reached to an end "<<endl; 
+    }
+
+    Node* temp=new Node(data);
+    temp->next=itr->next;
+    itr->next=temp;   
+
+}
+
+
+
 int main()
 {
     cout<<endl<<endl;
@@ -49,7 +73,17 @@ int main()
     insertAtTail(tail,40);
     insertAtTail(tail,50);
     insertAtTail(tail,60);
+    int p,data;
+    cout<<endl<<endl;
 
+    cout<<"Enter the position in the 0-based index to insert an element :- "<<endl;
+    cin>>p;
+    cout<<endl<<endl;
+    cout<<"Enter the data :- ";
+    cin>>data;
+    cout<<endl<<endl;
+
+    insertAtMiddle(head,tail,data,p);
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
