@@ -41,9 +41,9 @@ void print(Node* &head)
 void insertAtMiddle(Node* &head,Node* &tail,int data,int p)
 {
 
-    int i=0;
+    int i=1;
     Node *itr=head;
-    while(i!=p)
+    while(i!=p-1)
     {
         itr=itr->next;
         i++;
@@ -60,7 +60,26 @@ void insertAtMiddle(Node* &head,Node* &tail,int data,int p)
 
 }
 
+void deleteNode(Node* &head,int position)
+{
 
+    Node* temp=head;
+    Node* prev=NULL;
+    int cnt=1;
+
+    while(cnt<=position-1)
+    {
+        prev=temp;
+        temp=temp->next;
+        cnt++;
+    }
+
+    prev->next=temp->next;
+    // temp->next=NULL;
+
+    delete temp;
+
+}
 
 int main()
 {
@@ -75,6 +94,7 @@ int main()
     insertAtTail(tail,60);
     int p,data;
     cout<<endl<<endl;
+    print(head);
 
     cout<<"Enter the position in the 0-based index to insert an element :- "<<endl;
     cin>>p;
@@ -83,10 +103,20 @@ int main()
     cin>>data;
     cout<<endl<<endl;
 
+    print(head);
     insertAtMiddle(head,tail,data,p);
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
+    cout<<endl<<endl;
+    int delPos;
+    cout<<"Enter the position of Node you want to delete :- "<<endl;
+    cin>>delPos;
+    deleteNode(head,delPos);
+    print(head);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
 
     return 0;
 }
