@@ -78,6 +78,25 @@ void insertAtPostion(Node* &head,int data,int position)
 
 }
 
+void deleteNode(Node* &head,int k)
+{
+    Node* curr=head;
+    Node* p=NULL;
+    int cnt=1;
+
+    while(cnt<=k-1)
+    {
+        p=curr;
+        curr=curr->next;
+        cnt++;
+    }
+
+    p->next=curr->next;
+    curr->next->prev=p;
+    
+    delete curr;
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -108,6 +127,16 @@ int main()
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<"Enter the position of node that you want to delete :- ";
+    int delNode;
+    cin>>delNode;
+    deleteNode(head,delNode);
+    print(head);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
 
     return 0;
 }
