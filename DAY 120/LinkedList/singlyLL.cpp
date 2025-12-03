@@ -81,6 +81,25 @@ void deleteNode(Node* &head,int position)
 
 }
 
+Node* reverseList(Node* head)
+{
+    Node* curr=head;
+    Node* prev=NULL;
+
+
+
+    Node* temp;
+    while(curr!=NULL)
+    {
+        temp=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=temp;
+    }
+
+    return prev;
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -95,7 +114,9 @@ int main()
     int p,data;
     cout<<endl<<endl;
     print(head);
-
+    Node* ans=reverseList(head);
+    cout<<"REVERSING LL :- ";
+    print(ans);
     cout<<"Enter the position in the 0-based index to insert an element :- "<<endl;
     cin>>p;
     cout<<endl<<endl;
