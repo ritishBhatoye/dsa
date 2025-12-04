@@ -56,6 +56,23 @@ void deletionOfTail(Node* &head,Node* &tail)
     tail->next=NULL;
     delete nodeToDel;
 }
+void deletionOfKElement(Node* &head,int k)
+{
+    int cnt=1;
+    Node* temp=head;
+    while(cnt<k-1)
+    {
+        temp=temp->next;
+        cnt++;
+    }
+    Node* nodeToDel=temp->next;
+
+    temp->next=temp->next->next;
+
+
+    delete nodeToDel;
+}
+
 int main()
 {
     Node* n=new Node(10);
@@ -73,8 +90,12 @@ int main()
     print(head);
     cout<<endl<<endl;
     cout<<endl<<endl;
-    deletionAtHead(head);
-    deletionOfTail(head,tail);
+    // deletionAtHead(head);
+    // deletionOfTail(head,tail);
+    cout<<"Enter the position of an element you want to delete :- ";
+    int k;
+    cin>>k;
+    deletionOfKElement(head,k);
     print(head);
     cout<<endl<<endl;
 
