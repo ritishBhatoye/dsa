@@ -50,6 +50,7 @@ void insertAtK(Node* &head,int data,int k)
     temp->next=nodeToAdd;
     nodeToAdd->prev=temp;
 }
+
 void insertBeforeGivenNode(Node* &head,int givenNodeData,int data)
 {
     Node* temp=head;
@@ -64,6 +65,36 @@ void insertBeforeGivenNode(Node* &head,int givenNodeData,int data)
     temp->next=nodeToAdd;
     nodeToAdd->prev=temp;
 
+}
+
+
+void deletionAtHead(Node* &head)
+{
+    Node* temp=head;
+    head=head->next;
+    delete temp;
+
+}  
+void deletionAtTail(Node* &tail)
+{
+    Node* temp=tail;
+    tail=tail->prev;
+    tail->next=NULL;
+    delete temp;
+}
+void deleteKNode(Node* &head,int k)
+{
+    Node* temp=head;
+    int cnt=1;
+    while(cnt<k-1)
+    {
+        temp=temp->next;
+        cnt++;
+    }
+    Node* temp2=temp;
+    temp->next=temp->next->next;
+    temp2->n
+ 
 }
 
 void print(Node* &head)
@@ -99,22 +130,32 @@ int main()
     // int data;
     // cout<<"Enter the data which you want to insert :- ";
     // cin>>data;
-    int k;
-    cout<<"Enter the Node before which you want to insert the new node :- ";
-    cin>>k;
+    deletionAtHead(head);
+    cout<<"After deletion at head :- "<<endl;
+    print(head);
     cout<<endl<<endl;
-    cout<<endl<<endl;
-    int data;
-    cout<<"Enter the Node you want to insert :- ";
-    cin>>data;
-    insertBeforeGivenNode(head,k,data);
-    cout<<endl<<endl;
-    cout<<endl<<endl;
-    // insertAtK(head,data,k);
+    cout<<"After deletion at tail :- "<<endl;
+
+    deletionAtTail(tail);
     cout<<endl<<endl;
     print(head);
-
+    // insertBeforeGivenNode(head,k,data);
     cout<<endl<<endl;
+    int k;
+    cout<<"Enter the position for which you want to delete the node :- "<<endl;
+    cin>>k;
+    cout<<endl<<endl;
+
+    deleteKNode(head,k);
+    print(head);
+    cout<<endl<<endl;
+
+    // cout<<endl<<endl;
+    // insertAtK(head,data,k);
+    // cout<<endl<<endl;
+    // print(head);
+
+    // cout<<endl<<endl;
 
     return 0;
 }
