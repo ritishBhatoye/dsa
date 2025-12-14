@@ -52,21 +52,24 @@ void deleteAtHead(Node* &head)
     Node* temp=head;
     head=head->next;
     temp->next=NULL;
-    
+
     delete temp;
 }
 
-void deleteAtTail(Node*&head,Node* &tail)
+void deleteAtTail(Node* &head,Node* &tail)
 {
     Node* temp=head;
-    while(temp->next!=temp)
+    while(temp->next!=tail)
     {
         temp=temp->next;
     }
-    tail=temp;
 
+    tail=temp;
+    tail->next=NULL;
     temp=temp->next;
+
     delete temp;
+
 }
 
 void deleteAtK(Node* head,int k)
@@ -88,7 +91,6 @@ void deleteAtK(Node* head,int k)
 
     delete nodeToDelete;
 
-
 }   
 
 bool searchNode(Node* head,int k)
@@ -102,6 +104,7 @@ bool searchNode(Node* head,int k)
             return true; 
             break;
         }
+        temp=temp->next;
     }
     return false;
 }
