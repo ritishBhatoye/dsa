@@ -1,3 +1,3 @@
-  // Node* temp=new Node(t2->data);
-        // ansTail->next=temp;
-        // ansTail=temp;
+    inputAtTail(tail,3);
+    inputAtTail(tail,4);
+    inputAtTail(tail,5);
