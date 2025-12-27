@@ -30,6 +30,29 @@ void insertAtTail(Node* &tail,int k)
     tail=temp;
 
 }
+
+void insertAtK(Node* &head,int data,int k)
+{
+    if(k==0)
+    {
+        insertAtHead(head,data);
+    }
+    Node* temp=new Node(data);
+    Node* itr=head;
+    int cnt=1;
+
+    while(cnt<k-1)
+    {
+        itr=itr->next;
+        cnt++;
+    }
+
+    temp->next=itr->next;
+    itr->next=temp;
+
+}
+
+
 void print(Node* &head)
 {
     Node* temp=head;
@@ -41,6 +64,11 @@ void print(Node* &head)
 
     }
 }
+
+// void deleteAthead()
+// {
+
+// }
 
 int main()
 {
@@ -55,11 +83,24 @@ int main()
     insertAtTail(tail,40);
     insertAtTail(tail,50);
     cout<<endl<<endl;
+
     print(head);
     cout<<endl<<endl;
     cout<<endl<<endl;
+    int k;
+    int data;
+    cout<<"Enter the Node data you want to insert :- ";
+    cin>>data;
+    cout<<"Enter the position where you want to insert Node :- ";
+    cin>>k;
+    insertAtK(head,data,k);
 
     cout<<endl<<endl;
     cout<<endl<<endl;
+    print(head);
+    cout<<endl<<endl;
+
+    cout<<endl<<endl;
+
 
 }
