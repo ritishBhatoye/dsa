@@ -14,78 +14,71 @@ class Node
         this->next=NULL;
         this->prev=NULL;
     }
-}
+};
 
-
-
-void print(Node* &head)
-{
-    Node* temp=head;
-    
-    while(temp!=NULL)
-    {
-        cout<<temp->data<<endl;
-        temp=temp->next;
-    }
-}
 
 void insertAtHead(Node* &head,int data)
 {
-Node* temp=new Node(data);
-temp->next=head;
-head=head->next;
+    Node* temp=new Node(data);
+
+    temp->next=head;
+    head->prev=temp;
+    head=head->prev;
+
 }
 
 void insertAtTail(Node* &tail,int data)
 {
-    Node temp=new Node(data);
+    Node* temp=new Node(data);
 
     tail->next=temp;
     temp->prev=tail;
-    tail=temp;
+
+    tail=tail->next;
 }
 
 void insertAtK(Node* &head,int data,int k)
 {
-   Node* itr=head;
+    int cnt=0;
 
-   int cnt=1;
-   while(cnt<k-1)
-   {
-    itr=itr->next;
-    cnt++;
-   }
-
-   Node* temp=new Node(data);
-   temp->prev=itr;
-   temp->next=itr->next;
-   itr->next=temp;
-
-
-}
-
-void deleteAtHead(Node*& head)
-{
     Node* temp=head;
 
-    head=head->next;
-    head->prev=NULL;
+    while(cnt!=k-2)
+    {
+        temp=temp->next;
+        cnt++;
+    }
 
-    temp->next=NULL;
-    temp->prev=NULL;
+    Node* insert=new Node(data);
+    insert->next=temp->next;
+    insert->prev=temp;
+    temp->next=insert;
 
-    delete temp;
+
 }
+
+//deletion 
+void deleteAtHead(Node* &head)
+{
+        Node* temp=head;
+
+        head=head->next;
+
+        temp->next=NULL;
+        temp->prev=NULL;
+
+        delete temp;
+}
+
 
 void deleteAtTail(Node* &tail)
 {
     Node* temp=tail;
+
     tail=tail->prev;
-
     tail->next=NULL;
-
     temp->next=NULL;
-    temp-prev=NULL;
+    temp->prev=NULL;
 
     delete temp;
 
@@ -93,30 +86,92 @@ void deleteAtTail(Node* &tail)
 
 void deleteAtK(Node* &head,int k)
 {
-    Node* itr=head;
-
     int cnt=0;
 
-    while(cnt!=k-1)
-    {
-        itr=itr->next;
-        cnt++;
+    Node* temp=head;
 
+    while(cnt!=k-2)
+    {
+        temp=temp->next;
+        cnt++;
     }
 
-    Node temp=itr->next;
+    Node* nodeToDelete=temp->next;
 
+    temp->next=temp->next->next;
+    temp->next->next->prev=temp;
 
-    itr->next=itr->next->next;
+    nodeToDelete->next=NULL;
+    nodeToDelete->prev=NULL;
 
-    temp->next=NULL;
-    temp->prev=NULL;
+    delete nodeToDelete;
 
-    delete temp;
+}
 
+void print(Node* &head)
+{
+    Node* temp=head;
+
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<" ";
+        temp=temp->next;
+    }
 }
 
 int main()
 {
+    Node* temp=new Node(10);
+
+    Node* head=temp;
+    Node* tail=temp;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    insertAtTail(tail,20);
+    insertAtTail(tail,30);
+    insertAtTail(tail,40);
+    insertAtTail(tail,50);
+    insertAtTail(tail,60);
+
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    print(head);
+    cout<<endl<<endl;
+
+    int k;
+    cout<<"Enter the position where you want to insert :- ";
+    cin>>k;
+    int data;
+    cout<<"Enter the Node :- ";
+    cin>>data;
+    cout<<endl<<endl;
+    insertAtK(head,data,k);
+    print(head);
+    cout<<endl<<endl;
+    cout<<"After deleting from Head :- ";
+    cout<<endl<<endl;
+    deleteAtHead(head);
+
+    print(head);
+    cout<<endl<<endl;
+    cout<<"After delete from Tail :- ";
+    deleteAtTail(tail);
+    cout<<endl<<endl;
+    print(head);
+    cout<<endl<<endl;
+    int pos;
+    cout<<"Enter the position for node that you want to delete :- ";
+    cin>>pos;
+    deleteAtK(head,pos);
+    print(head);
+    cout<<endl<<endl;
+
+
+    cout<<endl<<endl;
+
     return 0;
 }
