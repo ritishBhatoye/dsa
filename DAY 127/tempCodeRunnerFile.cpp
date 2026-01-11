@@ -1,2 +1,4 @@
-    // insertAtTail(tail,2);
-    // insertAtTail(tail,1);
+ // if(newNode!=tail)
+    // {
+    //     tail=newNode;
+    // }
