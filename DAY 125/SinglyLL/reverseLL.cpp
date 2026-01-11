@@ -158,6 +158,23 @@ bool searchNode(Node* head,int k)
     }
     return false;
 }
+Node* reverse(Node* &head)
+{
+    Node* prev=NULL;
+    Node* curr=head;
+    Node* temp;
+    while(curr!=NULL)
+    {
+        temp=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=temp;
+        
+    }
+    
+
+    return prev;
+}
 
 void print(Node* &head)
 {
@@ -174,28 +191,32 @@ void print(Node* &head)
 int main()
 {
     cout<<endl<<endl;
-    Node* n=new Node(7);
+    Node* n=new Node(1);
     Node* head=n;
     Node* tail=n;
-    insertAtTail(tail,7);
-    insertAtTail(tail,7);
-    insertAtTail(tail,7);
+    insertAtTail(tail,2);
+    insertAtTail(tail,3);
+    insertAtTail(tail,4);
+    print(head);
+    cout<<endl;
+    Node* ans=reverse(head);
+    print(ans);
     // insertAtTail(tail,7);
     // insertAtTail(tail,5);
     // insertAtTail(tail,6);
    
-    int count =cnt(head,7);
-    print(head);
-    cout<<"count :- "<<count<<endl;
+    // int count =cnt(head,7);
+    // print(head);
+    // cout<<"count :- "<<count<<endl;
 
    
 
-    while(count!=0)
-    {
-        deleteElement(head,7);
-        count--;
-    }
-    print(head);
+    // while(count!=0)
+    // {
+    //     deleteElement(head,7);
+    //     count--;
+    // }
+    // print(head);
 
     cout<<endl<<endl;
     cout<<endl<<endl;

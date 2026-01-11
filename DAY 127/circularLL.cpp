@@ -14,6 +14,22 @@ class Node
     }
 };
 
+int length(Node* &tail)
+{
+    int cnt=0;
+    Node* temp=tail;
+
+    do
+    {
+        cnt++;
+        tail=tail->next;
+
+    }
+    while(temp!=tail);
+
+    return cnt;
+}
+
 void insertNode(Node* &tail,int element ,int data)
 {
     
@@ -38,11 +54,6 @@ void insertNode(Node* &tail,int element ,int data)
     Node* newNode=new Node(data);
     newNode->next=temp->next;
     temp->next=newNode;
-
-    // if(newNode!=tail)
-    // {
-    //     tail=newNode;
-    // }
 
 }
 }
@@ -78,7 +89,8 @@ int main()
     cout<<endl<<endl;
     print(tail);
     cout<<endl<<endl;
- 
+    int n=length(tail);
+    cout<<"Length :- "<<n<<endl;
     cout<<endl<<endl;
 
     return 0;
