@@ -131,11 +131,12 @@ int main()
     Node* head=node;
     Node* tail=node;
     cout<<endl<<endl;
-    insertAtHead(head,20);
-    insertAtHead(head,30);
-    insertAtHead(head,40);
-    insertAtHead(head,50);
-    insertAtHead(head,60);
+    
+    insertAtTail(tail,20);
+    insertAtTail(tail,30);
+    insertAtTail(tail,40);
+    insertAtTail(tail,50);
+    insertAtTail(tail,60);
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
