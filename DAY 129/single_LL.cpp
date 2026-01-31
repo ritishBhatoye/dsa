@@ -140,6 +140,22 @@ int main()
     cout<<endl<<endl;
     print(head);
     cout<<endl<<endl;
+    int k;
+    cout<<"Enter the value for the K :- ";
+    cin>>k;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
+    cout<<endl<<endl;
+    if(searchNode(head,k))
+    {
+        cout<<k<<" is present in LL "<<endl;
+    }
+    else
+    {
+        cout<<k<<" is not present in LL "<<endl;
+    }
+    cout<<endl<<endl;
     cout<<endl<<endl;
 
     return 0;
