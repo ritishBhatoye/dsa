@@ -105,6 +105,23 @@ void deleteAtTail(Node* &head,Node* &tail)
     tail=temp;
 
 }
+
+void deleteNode(Node* &head,int k)
+{
+    Node* temp=head;
+
+    while(temp->next->data!=k)
+    {
+        temp=temp->next;
+    }
+
+    Node* nodeToDelete=temp->next;
+    
+    temp->next=temp->next->next;
+
+    delete nodeToDelete;
+}
+
 bool searchNode(Node* head,int k)
 {
     Node* temp=head;
@@ -157,8 +174,12 @@ int main()
         cout<<k<<" is not present in LL "<<endl;
     }
     cout<<endl<<endl;
-    deleteNode()
+    int delNode;
+    cout<<"Enter the Node to Delete :- "<<endl;
+    cin>>delNode;
+    deleteNode(head,delNode);
     cout<<endl<<endl;
+    print(head);
     cout<<endl<<endl;
 
     cout<<endl<<endl;
