@@ -123,6 +123,7 @@ bool searchNode(Node* head,int k)
     return true;
 }
 
+
 int main()
 {
     cout<<endl<<endl;
@@ -156,6 +157,10 @@ int main()
         cout<<k<<" is not present in LL "<<endl;
     }
     cout<<endl<<endl;
+    deleteNode()
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
     cout<<endl<<endl;
 
     return 0;
