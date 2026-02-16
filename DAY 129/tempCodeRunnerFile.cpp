@@ -1,9 +1,7 @@
-if(checkPalidrome(head))
-    {
-        cout<<"LL is having palidrome characteristics"<<endl;
-    }
-    else
-    {
-        cout<<"LL is NOT having palidrome characteristics"<<endl;
+ if(temp->next==NULL)
+            {
+                temp=NULL;
 
-    }
+            }
+            temp->data=temp->next->data;
+            temp->next=temp->next->next;
