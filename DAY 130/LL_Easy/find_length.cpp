@@ -47,7 +47,6 @@ bool searchElement(Node* &head,int k)
             
         }
 
-
       }
       return true;
 
