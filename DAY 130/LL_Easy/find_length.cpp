@@ -95,6 +95,9 @@ int main()
     cout<<endl<<endl;
     cout<<"N :- "<<n<<endl;
     int k;
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
     cout<<"Enter the Element to search :- ";
     cin>>k;
 
