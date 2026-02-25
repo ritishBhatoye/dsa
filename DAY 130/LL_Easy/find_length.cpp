@@ -184,6 +184,7 @@ Node* swapNodes(Node* &head)
 
          if(curr==head)
          {
+            head=forw;
             
          }
 
