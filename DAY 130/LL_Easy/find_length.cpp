@@ -199,11 +199,11 @@ Node* swapNodes(Node* &head)
         else
         {
             
-            // Node* temp=prev->next;
+            Node* temp=curr->next;
 
             curr->next=prev;
 
-            prev->next=nextNode;
+            prev->next=temp;
 
         }
 
