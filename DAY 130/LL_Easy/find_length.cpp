@@ -134,7 +134,18 @@ Node* reverseLL(Node* &head)
 
 Node* reverseIter(Node* &head)
 {
-    Node* temp=head;
+    if(head==NULL || head->next==NULL)
+    {
+        return head;
+    }
+
+    Node* newHead=reverseIter(head->next);
+
+    Node* front=newHead->next;
+
+    front->next=head;
+    
+    
 
 }
 
