@@ -100,7 +100,10 @@ int main()
 
     cout<<"Enter the Element to search :- ";
     cin>>k;
-    if(search())
+    if(search(head,k))
+    {
+        cout<<
+    }
 
     cout<<endl<<endl;
 
