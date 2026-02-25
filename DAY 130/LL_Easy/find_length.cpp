@@ -193,8 +193,6 @@ Node* swapNodes(Node* &head)
             head=temp->next;
 
 
-            prev=nextNode;
-            curr=nextNode->next;
         }
         else
         {
@@ -202,7 +200,7 @@ Node* swapNodes(Node* &head)
             curr->next=prev;
 
             prev->next=nextNode;
-            curr=;
+            curr=nextNode;
 
         }
     }
