@@ -246,9 +246,9 @@ int main()
 
 
 
-    Node* afterDelHead=deleteNode(head,20);
+    // Node* afterDelHead=deleteNode(head,20);
     
-    print(afterDelHead);
+    // print(afterDelHead);
     cout<<endl<<endl;
 
 
