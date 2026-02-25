@@ -165,8 +165,9 @@ Node* deleteNode(Node* &head,int k)
         temp=temp->next;
     }
     
-    temp->next=temp->next->next;
     temp->data=temp->next->data;
+    temp->next=temp->next->next;
+   
 
     return head;
 
