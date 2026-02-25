@@ -33,9 +33,10 @@ bool searchElement(Node* &head,int k)
 {
       Node* itr=head;
 
-      while(itr->next=!NULL)
+      while(itr->next!=NULL)
       {
         itr=itr->next;
+        
 
       }
       return true;
