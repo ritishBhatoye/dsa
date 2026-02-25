@@ -126,7 +126,7 @@ Node* reverseLL(Node* &head)
     {
         forw=curr->next;
         curr->next=prev;
-        prev=prev->next;
+        prev=curr;
         curr=forw;
     }
 
@@ -176,9 +176,8 @@ int main()
     print(rev);
     cout<<endl<<endl;
 
-
     cout<<endl<<endl;
-    
+
     cout<<endl<<endl;
 
 
