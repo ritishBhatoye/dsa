@@ -157,9 +157,10 @@ Node* deleteNode(Node* &head,Node* &k)
 
     while(temp->next!=k)
     {
+        if(h)
         temp=temp->next;
     }
-
+    
     temp->next=temp->next->next;
     temp->data=temp->next->data;
 
@@ -214,7 +215,8 @@ int main()
     // Node* ans=reverseIter(head);
     // print(ans);
 
-    deleteNode()
+    Node* afterDelHead=deleteNode(20);
+    
     cout<<endl<<endl;
 
 
