@@ -14,6 +14,21 @@ class Node
     }
 };
 
+//length
+int length(Node* &head)
+{
+    Node* temp=head;
+
+    int cnt=0;
+
+    while(temp!=NULL)
+    {
+        temp=temp->next;
+        cnt++;
+    }
+
+    return cnt;
+}
 
 
 //TRAVERSAL
@@ -55,7 +70,13 @@ bool searchElement(Node* &head,int k)
 void insertAtTail(Node*& head,Node* &tail,int k,int data)
 {
     int n=length(head);
-    if(k!=n)
+    if(k==0)
+    {
+        cout<<"PLEASE USE HEAD INSERTION "<<endl;
+        return;
+    }
+
+    else if(k!=0 && k<=n)
     {
         Node* temp=new Node(data);
         
@@ -65,8 +86,9 @@ void insertAtTail(Node*& head,Node* &tail,int k,int data)
         {
             if(i==k)
             {
-                temp->next=itr->next->next;
+                Node* tempPtr=itr->next;
                 itr->next=temp;
+                temp->next=tempPtr;
                 break;
             }
             else
@@ -93,20 +115,6 @@ void insertAtHead(Node* &head,int data)
     temp=temp->next;
 }
 
-int length(Node* &head)
-{
-    Node* temp=head;
-
-    int cnt=0;
-
-    while(temp!=NULL)
-    {
-        temp=temp->next;
-        cnt++;
-    }
-
-    return cnt;
-}
 
 int main()
 {
@@ -114,11 +122,13 @@ int main()
     Node* node=new Node(10);
     Node* tail=node;
     Node* head=node;
-    insertAtTail(tail,20);
-    insertAtTail(tail,30);
-    insertAtTail(tail,40);
-    insertAtTail(tail,50);
-    insertAtTail(tail,60);
+    insertAtTail(head,tail,2,20);
+    insertAtTail(head,tail,3,30);
+    insertAtTail(head,tail,4,40);
+    insertAtTail(head,tail,5,50);
+    insertAtTail(head,tail,6,60);
+
+    insertAtTail(head,tail,2,54);
 
     print(head);
     cout<<endl<<endl;
