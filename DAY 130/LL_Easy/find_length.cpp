@@ -160,7 +160,10 @@ Node* deleteNode(Node* &head,Node* &k)
         temp=temp->next;
     }
 
-    temp->next
+    temp->next=temp->next->next;
+    temp->data=temp->next->data;
+
+    return head;
 
 }
 
