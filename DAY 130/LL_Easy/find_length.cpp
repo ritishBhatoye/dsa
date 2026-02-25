@@ -179,7 +179,7 @@ Node* swapNodes(Node* &head)
     Node* curr=head;
     Node* forw=head->next;
 
-    while(itr!=NULL)
+    while(forw!=)
     {
 
          if(curr==head)
@@ -195,7 +195,7 @@ Node* swapNodes(Node* &head)
     
     
             
-            itr=itr->next->next;
+
 
          }
 
@@ -209,8 +209,6 @@ Node* swapNodes(Node* &head)
         curr=curr->next;
 
 
-        
-        itr=itr->next->next;
         
     }
 
