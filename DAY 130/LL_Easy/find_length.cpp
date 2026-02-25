@@ -190,7 +190,7 @@ Node* swapNodes(Node* &head)
 
         forw=nextNode->next;
         
-        
+        itr=itr->next->next;
         
     }
 
