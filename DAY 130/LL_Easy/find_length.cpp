@@ -155,7 +155,7 @@ Node* deleteNode(Node* &head,int k)
 {
     Node* temp=head;
 
-    while(temp->next->data!=k)
+    while(temp->data!=k)
     {
         if(temp->next==NULL)
         {
