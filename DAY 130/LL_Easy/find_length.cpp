@@ -60,7 +60,6 @@ int main()
     insertAtTail(tail,60);
 
     print(head);
-    
     cout<<endl<<endl;
     cout<<endl<<endl;
     int n=length(head);
