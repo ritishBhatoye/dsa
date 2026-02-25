@@ -181,7 +181,7 @@ Node* swapNodes(Node* &head)
 
     while(itr!=NULL)
     {
-        Node* temp=itrl
+        Node* temp=itf
     }
 }
 
