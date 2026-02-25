@@ -38,6 +38,7 @@ bool searchElement(Node* &head,int k)
         if(itr->data==k)
         {
             return true;
+            break;
         }
         else
         {
