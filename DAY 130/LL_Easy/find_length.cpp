@@ -185,7 +185,11 @@ Node* swapNodes(Node* &head)
         Node* temp=curr;
         curr=forw;
         forw = temp;
+        itr=itr->next->next;
+        
     }
+
+    return head
 }
 
 int main()
