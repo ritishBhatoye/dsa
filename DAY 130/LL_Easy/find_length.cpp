@@ -185,6 +185,7 @@ Node* swapNodes(Node* &head)
         Node* nextNode=curr->next;
         Node* nextPair=curr->next->next;
 
+        nextNode->next=curr;
         
     }
 
