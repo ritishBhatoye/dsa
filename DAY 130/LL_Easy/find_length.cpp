@@ -151,7 +151,7 @@ Node* reverseIter(Node* &head)
 
 }
 
-Node* deleteNode(Node* &head,Node* &k)
+Node* deleteNode(Node* &head,int k)
 {
     Node* temp=head;
 
@@ -218,6 +218,8 @@ int main()
     cout<<endl<<endl;
     // Node* ans=reverseIter(head);
     // print(ans);
+
+
 
     Node* afterDelHead=deleteNode(head,20);
     
