@@ -58,9 +58,14 @@ void insertAtTail(Node*& head,Node* &tail,int k,int data)
     if(k!=n)
     {
         Node* temp=new Node(data);
-        Node* 
+        
+        Node* itr=head;
+
+        while(itr->)
+
+        
     }
-    
+
    else
    {
      Node* temp=new Node(data);
