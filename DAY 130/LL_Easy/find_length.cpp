@@ -219,8 +219,9 @@ int main()
     // Node* ans=reverseIter(head);
     // print(ans);
 
-    Node* afterDelHead=deleteNode(20);
+    Node* afterDelHead=deleteNode(head,20);
     
+    print(afterDelHead);
     cout<<endl<<endl;
 
 
