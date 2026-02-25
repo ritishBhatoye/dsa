@@ -60,10 +60,9 @@ void insertAtTail(Node*& head,Node* &tail,int k,int data)
         Node* temp=new Node(data);
         
         Node* itr=head;
+        int i=0;
+        while(i)
 
-        while(itr->)
-
-        
     }
 
    else
