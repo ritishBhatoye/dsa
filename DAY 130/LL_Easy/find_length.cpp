@@ -134,8 +134,10 @@ Node* reverseLL(Node* &head)
 
 Node* reverseIter(Node* &head)
 {
-    Node* temp=
+    Node* temp=head;
+
 }
+
 int main()
 {
     cout<<endl<<endl;
