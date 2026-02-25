@@ -29,7 +29,10 @@ void print(Node* &head)
 }
 
 //search
-bool search(Node* & )
+bool search(Node* &head)
+{
+    
+}
 
 
 
