@@ -29,7 +29,7 @@ void print(Node* &head)
 }
 
 //search
-bool searchElement(Node* &head)
+bool searchElement(Node* &head,int k)
 {
       Node*  
 }
