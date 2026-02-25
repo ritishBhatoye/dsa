@@ -31,7 +31,7 @@ void print(Node* &head)
 //search
 bool searchElement(Node* &head,int k)
 {
-      Node*  N
+      Node* temp=new
 }
 
 
