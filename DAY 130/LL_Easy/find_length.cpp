@@ -175,52 +175,8 @@ Node* deleteNode(Node* &head,int k)
 
 Node* swapNodes(Node* &head)
 {
-    Node* prev=NULL;
-    Node* curr=head;
-
-    while(curr!=NULL && curr->next!=NULL )
-    {
-
-        Node* nextNode=curr->next->next;
-
-        if(prev==NULL)
-        {
-            
-            // prev=curr->next;
-
-            Node* temp=curr->next;
-            // curr=curr->next;
-            temp->next=curr;
-            head=temp;
-
-
-
-        }
-        else
-        {
-            cout<<"AFTER SETTING  PREV :-"<<endl;
-            cout<<endl;
-            cout<<"PREV :- "<<prev->data<<endl;
-            cout<<endl;
-
-            cout<<"CURR :- "<<curr->data<<endl;
-            cout<<endl;
-
-            Node* temp=curr->next;
-
-            curr->next=prev;
-
-            prev->next=temp;
-
-        }
-
-        prev=curr;
-        curr=nextNode;
-    }
-
-    return head;
+    
 }
-
 int main()
 {
     cout<<endl<<endl;
