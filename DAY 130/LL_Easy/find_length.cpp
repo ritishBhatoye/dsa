@@ -41,7 +41,8 @@ bool searchElement(Node* &head,int k)
         }
         else
         {
-        itr=itr->next;
+       
+         itr=itr->next;
             
         }
 
