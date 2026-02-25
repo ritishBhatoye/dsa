@@ -35,8 +35,14 @@ bool searchElement(Node* &head,int k)
 
       while(itr->next!=NULL)
       {
-
-        
+        if(itr->data==k)
+        {
+            return true;
+        }
+        else
+        {
+            
+        }
         itr=itr->next;
 
 
