@@ -141,12 +141,19 @@ Node* reverseIter(Node* &head)
 
     Node* newHead=reverseIter(head->next);
 
-    Node* front=newHead->next;
+    Node* front=head->next;
 
     front->next=head;
     
-    
+    head->next=NULL;
 
+    return newHead;
+
+}
+
+Node* deleteNode(Node* &head,Node* &k)
+{
+    
 }
 
 int main()
@@ -186,14 +193,15 @@ int main()
 
     }   
 
-    Node* rev=reverseLL(head);
+    // Node* rev=reverseLL(head);
 
-    cout<<endl<<endl;
-    print(rev);
-    cout<<endl<<endl;
-
+    // cout<<endl<<endl;
+    // print(rev);
     cout<<endl<<endl;
 
+    cout<<endl<<endl;
+    Node* ans=reverseIter(head);
+    print(ans);
     cout<<endl<<endl;
 
 
