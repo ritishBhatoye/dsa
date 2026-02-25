@@ -95,7 +95,7 @@ int main()
     cout<<endl<<endl;
     cout<<"N :- "<<n<<endl;
     int k;
-    cout<<"E"
+    cout<<"Enter the "
     cin>>k;
 
 
