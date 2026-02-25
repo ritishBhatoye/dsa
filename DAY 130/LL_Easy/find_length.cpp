@@ -190,8 +190,10 @@ Node* swapNodes(Node* &head)
 
         if(prev!=NULL)
         {
-            
+            prev->next=nextNode
         }
+
+        
     }
 
     return head;
