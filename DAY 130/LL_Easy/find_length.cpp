@@ -180,7 +180,12 @@ Node* swapNodes(Node* &head)
 
     head=haed->next;
 
-    while(curr!)
+    while(curr!=NULL && curr->next!=NULL)
+    {
+        Node* nextNode=curr->next;
+    }
+
+    return head;
 }
 int main()
 {
