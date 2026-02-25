@@ -185,7 +185,7 @@ Node* swapNodes(Node* &head)
         if(prev==NULL)
         {
             
-            prev=curr;
+            prev=curr->next;
 
 
             
