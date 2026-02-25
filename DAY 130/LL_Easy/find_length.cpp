@@ -184,12 +184,13 @@ Node* swapNodes(Node* &head)
 
         if(prev==NULL)
         {
-            nextNode=prev;
+            
+            
 
         }
         else
         {
-            
+
 
         }
     }
