@@ -106,7 +106,7 @@ int main()
     }
     else
     {
-        cout<<"Element "<<k<<" is available in the LL  "<<endl;
+        cout<<"Element  "<<k<<" is available in the LL  "<<endl;
 
     }
 
