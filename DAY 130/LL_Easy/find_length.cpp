@@ -199,6 +199,12 @@ Node* swapNodes(Node* &head)
 
     return head;
 }
+
+
+Node* removeNthNode(Node* &head,int k)
+{
+    
+}
 int main()
 {
     cout<<endl<<endl;
