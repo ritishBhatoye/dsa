@@ -173,7 +173,13 @@ Node* deleteNode(Node* &head,int k)
 
 }
 
-Node* swapNodes()
+Node* swapNodes(Node* &head)
+{
+    Node* curr=head;
+    Node* forw=curr->next;
+
+    
+}
 
 int main()
 {
