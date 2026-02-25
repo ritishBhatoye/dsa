@@ -168,6 +168,7 @@ Node* deleteNode(Node* &head,Node* &k)
 }
 
 int main()
+{
     cout<<endl<<endl;
     Node* node=new Node(10);
     Node* tail=node;
@@ -210,11 +211,14 @@ int main()
     cout<<endl<<endl;
 
     cout<<endl<<endl;
-    Node* ans=reverseIter(head);
-    print(ans);
+    // Node* ans=reverseIter(head);
+    // print(ans);
+
+    deleteNode()
     cout<<endl<<endl;
 
 
+    return 0;
 
 
 }
