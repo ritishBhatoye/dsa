@@ -116,6 +116,23 @@ void insertAtHead(Node* &head,int data)
 }
 
 
+Node* reverseLL(Node* &head)
+{
+    Node* prev=NULL;
+    Node* curr=head;
+    Node* forw;
+
+    while(forw!=NULL)
+    {
+        forw=curr->next;
+        curr->next=prev;
+        prev=prev->next;
+        curr=forw;
+    }
+
+    return prev;
+}
+
 int main()
 {
     cout<<endl<<endl;
@@ -151,10 +168,17 @@ int main()
     {
         cout<<"Element  "<<k<<" is NOT available in the LL  "<<endl;
 
-    }
+    }   
+
+    Node* rev=reverseLL(head);
 
     cout<<endl<<endl;
+    print(rev);
+    cout<<endl<<endl;
 
+
+    cout<<endl<<endl;
+    
     cout<<endl<<endl;
 
 
