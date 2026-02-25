@@ -32,7 +32,20 @@ void insertAtTail(Node* &tail,int data)
     tail=tail->next;
 }
 
-int length()
+int length(Node* &head)
+{
+    Node* temp=head;
+
+    int cnt=0;
+
+    while(temp!=NULL)
+    {
+        temp=temp->next;
+        cnt++;
+    }
+
+    return cnt;
+}
 
 int main()
 {
@@ -49,7 +62,10 @@ int main()
     print(head);
     cout<<endl<<endl;
     cout<<endl<<endl;
+    int n=length(head);
+
     cout<<endl<<endl;
+    cout<<"N :- "<<n<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
 
