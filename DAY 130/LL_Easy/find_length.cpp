@@ -159,7 +159,7 @@ Node* deleteNode(Node* &head,Node* &k)
     {
         if(temp->next==NULL)
         {
-            cout<<"Node "
+            cout<<"Node "<<k->data<<" not found "<<endl;
             return head;
         }
         temp=temp->next;
