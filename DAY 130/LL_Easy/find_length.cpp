@@ -192,7 +192,6 @@ Node* swapNodes(Node* &head)
             // curr=curr->next;
             temp->next=curr;
             head=temp;
-            curr=curr->next;
 
 
 
@@ -200,7 +199,10 @@ Node* swapNodes(Node* &head)
         else
         {
             cout<<"AFTER SETTING  PREV :-"<<endl;
+            cout<<endl;
             cout<<"PREV :- "<<prev->data<<endl;
+            cout<<endl;
+
             cout<<"CURR :- "<<curr->data<<endl;
 
             Node* temp=curr->next;
