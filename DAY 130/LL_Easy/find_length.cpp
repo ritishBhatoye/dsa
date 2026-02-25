@@ -201,6 +201,7 @@ Node* swapNodes(Node* &head)
 
             curr->next=prev;
 
+            prev->next=nextNode;
             
 
         }
