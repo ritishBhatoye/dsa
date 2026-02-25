@@ -95,9 +95,10 @@ int main()
     cout<<endl<<endl;
     cout<<"N :- "<<n<<endl;
     int k;
-    cin k;
+    cout<<"E"
+    cin>>k;
 
-    
+
     cout<<endl<<endl;
 
     cout<<endl<<endl;
