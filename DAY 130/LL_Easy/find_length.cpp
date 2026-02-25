@@ -168,7 +168,6 @@ Node* deleteNode(Node* &head,Node* &k)
 }
 
 int main()
-{
     cout<<endl<<endl;
     Node* node=new Node(10);
     Node* tail=node;
