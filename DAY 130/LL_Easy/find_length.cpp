@@ -178,7 +178,7 @@ Node* swapNodes(Node* &head)
     Node* prev=NULL;
     Node* curr=head;
 
-    while(curr->next!=NULL || curr!=NULL)
+    while(curr!=NULL && curr->next!=NULL )
     {
 
         Node* nextNode=curr->next->next;
