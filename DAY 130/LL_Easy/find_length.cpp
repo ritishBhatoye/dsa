@@ -175,7 +175,10 @@ Node* deleteNode(Node* &head,int k)
 
 Node* swapNodes(Node* &head)
 {
-    Node*
+    Node* prev=NULL;
+    Node* curr=head;
+
+    while(curr!=NULL || curr)
 }
 
 int main()
