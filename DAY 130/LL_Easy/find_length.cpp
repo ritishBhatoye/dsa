@@ -188,7 +188,10 @@ Node* swapNodes(Node* &head)
         nextNode->next=curr;
         curr->next=nextPair;
 
-        
+        if(prev!=NULL)
+        {
+            
+        }
     }
 
     return head;
