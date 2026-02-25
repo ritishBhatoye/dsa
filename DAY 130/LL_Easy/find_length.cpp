@@ -95,7 +95,7 @@ int main()
     cout<<endl<<endl;
     cout<<"N :- "<<n<<endl;
     cout<<endl<<endl;
-    Node
+    
     cout<<endl<<endl;
 
 
