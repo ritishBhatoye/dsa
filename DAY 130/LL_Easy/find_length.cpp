@@ -27,6 +27,10 @@ void print(Node* &head)
         temp=temp->next;
     }
 }
+
+
+
+
 void insertAtTail(Node* &tail,int data)
 {
     Node* temp=new Node(data);
