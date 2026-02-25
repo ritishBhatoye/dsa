@@ -186,7 +186,10 @@ Node* swapNodes(Node* &head)
         forw->next=curr;
         curr->next=forw->next;
 
+        curr=nextNode;
 
+        forw=nextNode->next;
+        
         
         
     }
