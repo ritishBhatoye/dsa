@@ -157,7 +157,11 @@ Node* deleteNode(Node* &head,Node* &k)
 
     while(temp->next!=k)
     {
-        if(h)
+        if(temp->next==NULL)
+        {
+            cout<<"Node "
+            return head;
+        }
         temp=temp->next;
     }
     
