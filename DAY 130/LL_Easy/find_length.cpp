@@ -16,7 +16,7 @@ class Node
 
 
 
-
+//TRAVERSAL
 void print(Node* &head)
 {
     Node* temp=head;
