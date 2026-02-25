@@ -153,7 +153,8 @@ Node* reverseIter(Node* &head)
 
 Node* deleteNode(Node* &head,Node* &k)
 {
-    
+    N
+
 }
 
 int main()
