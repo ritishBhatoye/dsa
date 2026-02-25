@@ -52,12 +52,28 @@ bool searchElement(Node* &head,int k)
 
 
 
-void insertAtTail(Node* &tail,int data)
+void insertAtTail(Node*& head,Node* &tail,int k,int data)
+{
+    int n=length(head);
+    if(k!=n)
+    {
+        Node* temp=new Node(data);
+        Node* 
+    }
+   else
+   {
+     Node* temp=new Node(data);
+    tail->next=temp;
+    tail=tail->next;
+}
+}
+void insertAtHead(Node* &head,int data)
 {
     Node* temp=new Node(data);
 
-    tail->next=temp;
-    tail=tail->next;
+    temp->next=head;
+
+    temp=temp->next;
 }
 
 int length(Node* &head)
@@ -104,7 +120,6 @@ int main()
     {
         cout<<"Element "<<k<<" is available in the LL  "<<endl;
     }
-    
     else
     {
         cout<<"Element  "<<k<<" is NOT available in the LL  "<<endl;
