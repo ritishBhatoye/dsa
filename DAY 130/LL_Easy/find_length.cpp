@@ -173,6 +173,8 @@ Node* deleteNode(Node* &head,int k)
 
 }
 
+Node* swapNodes()
+
 int main()
 {
     cout<<endl<<endl;
