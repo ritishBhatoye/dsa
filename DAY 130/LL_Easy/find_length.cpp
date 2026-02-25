@@ -155,11 +155,11 @@ Node* deleteNode(Node* &head,int k)
 {
     Node* temp=head;
 
-    while(temp->next!=k)
+    while(temp->next->data!=k)
     {
         if(temp->next==NULL)
         {
-            cout<<"Node "<<k->data<<" not found "<<endl;
+            cout<<"Node "<<k<<" not found "<<endl;
             return head;
         }
         temp=temp->next;
