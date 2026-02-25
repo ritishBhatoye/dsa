@@ -175,41 +175,7 @@ Node* deleteNode(Node* &head,int k)
 
 Node* swapNodes(Node* &head)
 {
-    Node* itr=head;
-    Node* curr=head;
-    Node* forw=head->next;
-
-    while(forw->next==NULL || forw==NULL)
-    {
-
-         if(curr==head)
-         {
-            Node* nextNode=forw->next;
-        
-            forw->next=curr;
-            forw=nextNode;
-            
-            curr->next=forw;
-            head=curr;
-            curr=curr->next;
-
-
-         }
-
-        Node* nextNode=forw->next;
-        
-        forw->next=curr;
-        forw=nextNode;
-
-        curr->next=forw;
-
-        curr=curr->next;
-
-
-        
-    }
-
-    return head;
+    Node*
 }
 
 int main()
