@@ -190,7 +190,7 @@ Node* swapNodes(Node* &head)
 
             
 
-            Node* temp=curr;
+            Node* temp=curr->next;
 
             curr=curr->next;
             curr->next=temp;
