@@ -188,7 +188,7 @@ Node* swapNodes(Node* &head)
             prev=curr->next;
 
             Node* temp=curr->next;
-            curr=curr->next;
+            // curr=curr->next;
             temp->next=curr;
             head=temp;
 
