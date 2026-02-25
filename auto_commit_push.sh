@@ -2,9 +2,11 @@
 
 cd "$(dirname "$0")"  # repo root
 
-while true; do
-  fswatch -1 .  # wait for any change in the repo
-  git add .
-  git commit -m "auto: save $(date '+%Y-%m-%d %H:%M:%S')" || continue
-  git push
-done
+# Only commit if there are any changes (staged or unstaged)
+if git diff --quiet && git diff --cached --quiet; then
+  echo "No changes to commit."
+  exit 0
+fi
+
+git add .
+git commit -m "auto: save $(date '+%Y-%m-%d %H:%M:%S')" && git push

@@ -100,7 +100,7 @@ int main()
 
     cout<<"Enter the Element to search :- ";
     cin>>k;
-    if(search(head,k))
+    if(searchElement(head,k))
     {
         cout<<"Element "<<k<<" is available in the LL  "<<endl;
     }
