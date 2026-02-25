@@ -129,10 +129,13 @@ Node* reverseLL(Node* &head)
         prev=curr;
         curr=forw;
     }
-
     return prev;
 }
 
+Node* reverseIter(Node* &head)
+{
+    Node* temp=
+}
 int main()
 {
     cout<<endl<<endl;
