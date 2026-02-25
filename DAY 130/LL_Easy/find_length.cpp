@@ -102,7 +102,12 @@ int main()
     cin>>k;
     if(search(head,k))
     {
-        cout<<"Element "<<k<<" is available in the LL  "
+        cout<<"Element "<<k<<" is available in the LL  "<<endl;
+    }
+    else
+    {
+        cout<<"Element "<<k<<" is available in the LL  "<<endl;
+
     }
 
     cout<<endl<<endl;
