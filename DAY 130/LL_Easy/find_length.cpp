@@ -102,7 +102,7 @@ int main()
     cin>>k;
     if(search(head,k))
     {
-        cout<<
+        cout<<"Element "<<k<<" is available in the LL  "
     }
 
     cout<<endl<<endl;
