@@ -310,7 +310,10 @@ int main()
     Node* ansSwapNodes=swapNodes(head);
 
     print(ansSwapNodes);
+
     cout<<endl<<endl;
+
+    
     cout<<endl<<endl;
     cout<<endl<<endl;
 
