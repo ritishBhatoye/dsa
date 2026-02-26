@@ -386,14 +386,16 @@ Node* midNode(Node* &head)
 int main()
 {
     cout<<endl<<endl;
-    Node* node=new Node();
+    Node* node=new Node(1);
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
     insertAtTail(head,tail,3,3);
-    insertAtTail(head,tail,4,40);
-    insertAtTail(head,tail,5,50);
-    insertAtTail(head,tail,6,60);
+    insertAtTail(head,tail,4,4);
+    insertAtTail(head,tail,5,5);
+    insertAtTail(head,tail,6,6);
+    insertAtTail(head,tail,7,7);
+    insertAtTail(head,tail,8,8);
 
 
     // Node* node1=new Node(2);
@@ -474,7 +476,7 @@ int main()
     // cout<<endl<<endl;
     // print(ans);
     Node* ans = midNode(head);
-    cout<<endl<<end;
+    cout<<endl<<endl;
     print(ans);
     cout<<endl<<endl;
     cout<<endl<<endl;
