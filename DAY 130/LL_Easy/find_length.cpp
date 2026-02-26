@@ -207,7 +207,7 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
     int n=length(temp);
 
     int i=0;
-    while(i< n-k-1)
+    while(i< n-k+1)
     {
         temp=temp->next;
         i++;
