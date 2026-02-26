@@ -279,10 +279,11 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
         }
         else
         {
-            Node* temp=new Node(head1->data)
-            {
-
-            }
+            Node* temp=new Node(head2->data);
+            
+            ansTail->next=temp;
+            ansTail=ansTail->next;
+            
         }
 
     }
