@@ -366,7 +366,7 @@ Node* removeLoopInLL(Node* &head)
 
 Node* midNode(Node* &head)
 {
-    Node* slow=head;
+    Node* slow=NULL;
     Node* fast=head->next;
 
     while(fast->next!=NULL)
