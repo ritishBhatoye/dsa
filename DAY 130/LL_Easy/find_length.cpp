@@ -324,7 +324,7 @@ Node* detectLoopInLL(Node* &head)
 
     while(temp!=m.end())
     {
-        
+        temp=temp->next;
     }
 }
 
