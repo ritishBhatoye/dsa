@@ -212,7 +212,10 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
         return head;
     }
 
-    else if(k==)
+    else if(k==1)
+    {
+        head
+    }
 
 
     int i=1;
