@@ -369,7 +369,7 @@ Node* midNode(Node* &head)
     Node* slow=head;
     Node* fast=head;
 
-    while(fast->next!=NULL)
+    while(fast->next->next!=NULL)
     {
         slow=slow->next;
 
