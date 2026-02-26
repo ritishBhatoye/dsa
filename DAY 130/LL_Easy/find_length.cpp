@@ -317,7 +317,9 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 
 Node* detectLoopInLL(Node* &head)
 {
+    Node* temp=head;
     
+    while(temp)
 }
 
 int main()
