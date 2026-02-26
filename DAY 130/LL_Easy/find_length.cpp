@@ -390,9 +390,15 @@ bool isPalidrome(Node* &head)
     Node* l1=head;
 
     Node* mid=midNode(head);
+    cout<<endl;
+
+    cout<<"MID :- ";
+    print(mid);
+    cout<<endl;
+    cout<<endl;
 
     Node* l2=reverseLL(mid);
-
+    
     Node* saveMid=mid->next;
 
     while(l1 && l2)
