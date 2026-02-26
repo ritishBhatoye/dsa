@@ -337,7 +337,7 @@ int main()
     Node* tail2=node2;
     Node* head2=node2;
     insertAtTail(head2,tail2,2,3);
-    insertAtTail(head2,tail2,3,2);
+    insertAtTail(head2,tail2,3,4);
     insertAtTail(head2,tail2,4,5);
     insertAtTail(head2,tail2,5,6);
 
@@ -345,6 +345,8 @@ int main()
 
     cout<<endl<<endl;
     print(head1);
+    cout<<endl<<endl;
+
     print(head2);
 
     cout<<endl<<endl;
@@ -401,9 +403,9 @@ int main()
     // Node* ans=removeNthNodeFromEnd(head,k);
     // print(ans);
 
-    // Node* ans=mergeTwoSorted(head1,head2);
-    // cout<<endl<<endl;
-    // print(ans);
+    Node* ans=mergeTwoSorted(head1,head2);
+    cout<<endl<<endl;
+    print(ans);
     cout<<endl<<endl;
 
 
