@@ -319,17 +319,22 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 int main()
 {
     cout<<endl<<endl;
-    Node* node=new Node();
-    Node* tail=node;
-    Node* head=node;
-    insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,3);
+    // Node* node=new Node();
+    // Node* tail=node;
+    // Node* head=node;
+    // insertAtTail(head,tail,2,2);
+    // insertAtTail(head,tail,3,3);
     // insertAtTail(head,tail,4,40);
     // insertAtTail(head,tail,5,50);
     // insertAtTail(head,tail,6,60);
 
 
-    print(head);
+    Node* node1=new Node(2);
+    Node* tail1=node1;
+    Node* head1=node1;
+    insertAtTail(head1,tail1,2,2);
+    insertAtTail(head1,tail1,3,3);
+    print(head);    
     cout<<endl<<endl;
     cout<<endl<<endl;
     int n=length(head);
