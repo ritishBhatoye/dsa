@@ -331,7 +331,8 @@ Node* detectLoopInLL(Node* &head)
             return temp;
             break;
         }
-
+        m[temp]=cnt;
+        cnt++;
         temp=temp->next;
     }
 
