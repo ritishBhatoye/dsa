@@ -344,7 +344,9 @@ int main()
 
 
     cout<<endl<<endl;
-    print(head1)
+    print(head1);
+    print(head2);
+
     cout<<endl<<endl;
     // int n=length(head);
 
