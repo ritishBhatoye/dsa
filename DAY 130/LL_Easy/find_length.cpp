@@ -374,16 +374,18 @@ int main()
     cout<<endl<<endl;
     cout<<endl<<endl;
 
-    int k;
-    cout<<endl<<endl;
+    // int k;
+    // cout<<endl<<endl;
 
-    cout<<"Enter the Node you want to delete from the back :- "<<endl;
+    // cout<<"Enter the Node you want to delete from the back :- "<<endl;
 
-    cin>>k;
-    cout<<endl<<endl;
+    // cin>>k;
+    // cout<<endl<<endl;
 
-    Node* ans=removeNthNodeFromEnd(head,k);
-    print(ans);
+    // Node* ans=removeNthNodeFromEnd(head,k);
+    // print(ans);
+
+    mergeTwoSorted()
     cout<<endl<<endl;
     cout<<endl<<endl;
 
