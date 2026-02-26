@@ -284,7 +284,7 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
             ansTail->next=temp;
             ansTail=ansTail->next;
         }
-        else if(head1->data > head2->data)
+        else
         {
             Node* temp=new Node(head2->data);
             
@@ -293,6 +293,11 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 
         }
 
+    }
+
+    while(head1)
+    {
+        
     }
 
 
