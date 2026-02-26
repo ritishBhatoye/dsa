@@ -338,7 +338,28 @@ Node* detectLoopInLL(Node* &head)
 
     return NULL;
 }
+Node* detectLoopInLL(Node* &head)
+{
+    int cnt=0;
 
+    Node* temp=head;
+
+    unordered_map m<Node*,int>;
+
+    while(temp!=NULL)
+    {
+        if(m.find(temp)!=m.end())
+        {
+            return temp;
+            break;
+        }
+        m[temp]=cnt;
+        cnt++;
+        temp=temp->next;
+    }
+
+    return NULL;
+}
 int main()
 {
     cout<<endl<<endl;
