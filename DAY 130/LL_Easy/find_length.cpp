@@ -219,7 +219,8 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
         delete delNode;
         return head;
     }
-    else if()
+
+    else if(k==)
 
     int i=1;
     while(i< n-k+1)
