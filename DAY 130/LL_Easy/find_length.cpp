@@ -201,9 +201,9 @@ Node* swapNodes(Node* &head)
 }
 
 
-Node* removeNthNode(Node* &head,int k)
+Node* removeNthNodeFromEnd(Node* &head,int k)
 {
-    
+    Node
 }
 int main()
 {
