@@ -389,7 +389,7 @@ bool isPalidrome(Node* &head)
 {
     Node* temp=head;
 
-    while()
+    while(temp)
 }
 
 int main()
