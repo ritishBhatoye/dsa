@@ -220,7 +220,10 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
         return head;
     }
 
-    else if(k==)
+    else if(k==n)
+    {
+        
+    }
 
     int i=1;
     while(i< n-k+1)
