@@ -324,8 +324,16 @@ Node* detectLoopInLL(Node* &head)
 
     while(temp!=NULL)
     {
+        if(m.find(temp)!=m.end())
+        {
+            return temp;
+            break;
+        }
+
         temp=temp->next;
     }
+
+    return 
 }
 
 int main()
