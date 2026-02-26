@@ -251,7 +251,8 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
 
     return head;
     
-
+    }
+    return NULL;
 
 }
 int main()
