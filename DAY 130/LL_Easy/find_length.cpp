@@ -500,7 +500,7 @@ int main()
     // Node* ans=mergeTwoSorted(head1,head2);
     // cout<<endl<<endl;
     // print(ans);
-    Node* ans = midNode(head);
+    Node* ans = isPalidrome(head);
     cout<<endl<<endl;
     print(ans);
     cout<<endl<<endl;
