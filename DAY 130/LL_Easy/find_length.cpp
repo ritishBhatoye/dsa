@@ -271,7 +271,8 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
     {
         if(head1->data < head2->data)
         {
-
+            ansHead=head1->data;
+            
         }
     }
 
