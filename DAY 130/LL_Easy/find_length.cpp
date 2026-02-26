@@ -257,6 +257,13 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
 }
 
 
+Node* mergeTwoSorted(Node* &l1,Npde* &l2)
+{
+
+    Node* ansHead=
+
+}
+
 
 int main()
 {
