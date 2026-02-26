@@ -369,9 +369,9 @@ Node* midNode(Node* &head)
     Node* slow=head;
     Node* fast=head;
 
-    while()
+    while(slow)
     {
-        
+
     }
 }
 int main()
