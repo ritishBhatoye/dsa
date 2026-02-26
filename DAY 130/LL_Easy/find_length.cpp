@@ -307,13 +307,13 @@ int main()
     // Node* afterDelHead=deleteNode(head,20);
     
     // print(afterDelHead);
-    Node* ansSwapNodes=swapNodes(head);
+    // Node* ansSwapNodes=swapNodes(head);
 
-    print(ansSwapNodes);
+    // print(ansSwapNodes);
 
     cout<<endl<<endl;
+    Node* ans=removeNthNodeFromEnd()
 
-    
     cout<<endl<<endl;
     cout<<endl<<endl;
 
