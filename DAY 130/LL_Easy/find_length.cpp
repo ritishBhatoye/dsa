@@ -264,7 +264,8 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
     Node* ansTail=NULL;
 
 
-    
+    Node* head1=l1;
+    Node*
 
 
 }
