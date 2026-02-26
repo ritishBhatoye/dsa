@@ -338,7 +338,7 @@ Node* detectLoopInLL(Node* &head)
 
     return NULL;
 }
-Node* detectLoopInLL(Node* &head)
+Node* removeLoopInLL(Node* &head)
 {
     int cnt=0;
 
@@ -350,7 +350,7 @@ Node* detectLoopInLL(Node* &head)
     {
         if(m.find(temp)!=m.end())
         {
-            return temp;
+            return head;
             break;
         }
         m[temp]=cnt;
