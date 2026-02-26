@@ -322,7 +322,7 @@ Node* detectLoopInLL(Node* &head)
     Node* temp=head;
     unordered_map m<Node*,int>;
 
-    while(temp!=m.end())
+    while(temp!=NULL)
     {
         temp=temp->next;
     }
