@@ -206,7 +206,8 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
     Node* temp=head;
     int n=length(temp);
 
-    
+    int 
+
 }
 int main()
 {
