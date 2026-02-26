@@ -362,6 +362,12 @@ Node* removeLoopInLL(Node* &head)
 
     return head;
 }
+
+
+Node* midNode(Node* &head)
+{
+    Node* ListNode
+}
 int main()
 {
     cout<<endl<<endl;
