@@ -387,9 +387,8 @@ Node* midNode(Node* &head)
 
 bool isPalidrome(Node* &head)
 {
-    Node* temp=head;
-
-    while(temp)
+    Node8 temp=had;
+    Node* mid=
 }
 
 int main()
