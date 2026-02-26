@@ -332,9 +332,14 @@ int main()
     Node* node1=new Node(2);
     Node* tail1=node1;
     Node* head1=node1;
+
+    Node* node2=new Node(1);
+    Node* tail2=node1;
+    Node* head2=node1;
     insertAtTail(head1,tail1,2,2);
     insertAtTail(head1,tail1,3,3);
     print(head);    
+
     cout<<endl<<endl;
     cout<<endl<<endl;
     int n=length(head);
