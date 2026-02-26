@@ -204,7 +204,15 @@ Node* swapNodes(Node* &head)
 Node* removeNthNodeFromEnd(Node* &head,int k)
 {
     Node* temp=head;
+
     int n=length(temp);
+
+    if(k>n)
+    {
+        return head;
+    }
+
+
 
     int i=1;
     while(i< n-k+1)
