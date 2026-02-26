@@ -258,16 +258,15 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
 int main()
 {
     cout<<endl<<endl;
-    Node* node=new Node(10);
+    Node* node=new Node(1);
     Node* tail=node;
     Node* head=node;
-    insertAtTail(head,tail,2,20);
-    insertAtTail(head,tail,3,30);
-    insertAtTail(head,tail,4,40);
-    insertAtTail(head,tail,5,50);
-    insertAtTail(head,tail,6,60);
+    insertAtTail(head,tail,2,2);
+    insertAtTail(head,tail,3,3);
+    // insertAtTail(head,tail,4,40);
+    // insertAtTail(head,tail,5,50);
+    // insertAtTail(head,tail,6,60);
 
-    insertAtTail(head,tail,2,54);
 
     print(head);
     cout<<endl<<endl;
@@ -275,22 +274,22 @@ int main()
     int n=length(head);
 
     cout<<endl<<endl;
-    cout<<"N :- "<<n<<endl;
-    int k;
+    // cout<<"N :- "<<n<<endl;
+    // int k;
     cout<<endl<<endl;
     cout<<endl<<endl;
 
-    cout<<"Enter the Element to search :- ";
-    cin>>k;
-    if(searchElement(head,k))
-    {
-        cout<<"Element "<<k<<" is available in the LL  "<<endl;
-    }
-    else
-    {
-        cout<<"Element  "<<k<<" is NOT available in the LL  "<<endl;
+    // cout<<"Enter the Element to search :- ";
+    // cin>>k;
+    // if(searchElement(head,k))
+    // {
+    //     cout<<"Element "<<k<<" is available in the LL  "<<endl;
+    // }
+    // else
+    // {
+    //     cout<<"Element  "<<k<<" is NOT available in the LL  "<<endl;
 
-    }   
+    // }   
 
     // Node* rev=reverseLL(head);
 
