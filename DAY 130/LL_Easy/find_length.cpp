@@ -336,10 +336,10 @@ int main()
     Node* node2=new Node(1);
     Node* tail2=node2;
     Node* head2=node2;
+    insertAtTail(head2,tail2,2,3);
     insertAtTail(head2,tail2,3,2);
-    insertAtTail(head2,tail2,4,3);
-    insertAtTail(head2,tail2,5,4);
-    insertAtTail(head2,tail2,6,5);
+    insertAtTail(head2,tail2,4,5);
+    insertAtTail(head2,tail2,5,6);
 
 
 
