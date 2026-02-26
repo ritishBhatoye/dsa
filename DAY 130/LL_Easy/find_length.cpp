@@ -203,7 +203,7 @@ Node* swapNodes(Node* &head)
 
 Node* removeNthNodeFromEnd(Node* &head,int k)
 {
-    Node
+    Node* temp=head;
 }
 int main()
 {
