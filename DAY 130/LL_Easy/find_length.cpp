@@ -385,7 +385,7 @@ int main()
     // Node* ans=removeNthNodeFromEnd(head,k);
     // print(ans);
 
-    mergeTwoSorted()
+    Node* ans=mergeTwoSorted();
     cout<<endl<<endl;
     cout<<endl<<endl;
 
