@@ -371,7 +371,7 @@ Node* midNode(Node* &head)
 
     while(fast->next!=NULL)
     {
-        slow=fast;
+        slow=slow->next;
 
         fast=fast->next;
 
@@ -398,7 +398,7 @@ bool isPalidrome(Node* &head)
     cout<<endl;
 
     Node* l2=reverseLL(mid);
-    cout<<"After reversing from MID :- "<<endl;
+    cout<<"After reversing from MID:- "<<endl;
     print(l2);
     Node* saveMid=mid->next;
     cout<<"SaveMid "<<endl;
