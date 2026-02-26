@@ -318,6 +318,7 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 
 Node* detectLoopInLL(Node* &head)
 {
+    int cnt=0;
     Node* temp=head;
     unordered_map m<Node*,int>;
 
