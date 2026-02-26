@@ -322,7 +322,7 @@ int main()
     cin>>k;
     cout<<endl<<endl;
 
-    Node* ans=removeNthNodeFromEnd(head,);
+    Node* ans=removeNthNodeFromEnd(head,k);
     print(ans);
     cout<<endl<<endl;
     cout<<endl<<endl;
