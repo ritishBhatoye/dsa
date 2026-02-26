@@ -307,7 +307,7 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
     }
     while(head2!=NULL)
     {
-        while
+        Node* temp=new Node(head2->data);
         head2=head2->next;
 
     }
