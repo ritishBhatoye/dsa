@@ -322,7 +322,7 @@ Node* detectLoopInLL(Node* &head)
 
     Node* temp=head;
 
-    unordered_map m<Node*,int>;
+    unordered_map<Node*,int> m;
 
     while(temp!=NULL)
     {
@@ -413,10 +413,10 @@ int main()
 
 
     cout<<endl<<endl;
-    print(head1);
-    cout<<endl<<endl;
+    // print(head1);
+    // cout<<endl<<endl;
 
-    print(head2);
+    // print(head2);
 
     cout<<endl<<endl;
     // int n=length(head);

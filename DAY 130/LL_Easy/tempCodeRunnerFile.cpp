@@ -1,4 +1,4 @@
+  // print(head1);
+    // cout<<endl<<endl;
 
-    Node* ans=mergeTwoSorted(head1,head2);
-    cout<<endl<<endl;
-    print(ans);
+    // print(head2);
