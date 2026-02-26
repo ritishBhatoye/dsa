@@ -366,7 +366,10 @@ Node* removeLoopInLL(Node* &head)
 
 Node* midNode(Node* &head)
 {
-    Node* ListNode
+    Node* slow=head;
+    Node* fast=head;
+
+    while()
 }
 int main()
 {
