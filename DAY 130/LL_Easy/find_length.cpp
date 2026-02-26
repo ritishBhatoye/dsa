@@ -230,7 +230,11 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
 
         }
 
-        Node* delNode
+        Node* delNode=temp->next;
+
+        delete delNode;
+        te
+        return temp->next;
     }
 
     int i=1;
