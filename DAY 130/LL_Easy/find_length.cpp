@@ -397,7 +397,12 @@ bool isPalidrome(Node* &head)
 
     while(l1 && l2)
     {
-        if(l1->data!=)
+        if(l1->data!=l2->data)
+        {
+            return false;
+        }
+        l1=l1->next;
+        l2=l2->next;
     }
 
 
