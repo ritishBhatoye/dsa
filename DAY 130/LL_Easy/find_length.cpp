@@ -502,10 +502,15 @@ int main()
     // print(ans);
     if(isPalidrome(head))
     {
-        cout<<"LL is "
+        cout<<"LL is having PALIDROME behaviour"<<endl;
+    }
+    else
+    {
+        cout<<"LL is NOT having PALIDROME behaviour"<<endl;
+
     }
     cout<<endl<<endl;
-    print(ans);
+    // print(ans);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
