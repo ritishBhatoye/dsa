@@ -299,7 +299,8 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
     {
         Node* temp=new Node(head1->data);
 
-        temp->next=
+        ansTail->next=temp;
+        ansT
     }
 
 
