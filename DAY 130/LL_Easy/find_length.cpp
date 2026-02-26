@@ -386,27 +386,27 @@ Node* midNode(Node* &head)
 int main()
 {
     cout<<endl<<endl;
-    // Node* node=new Node();
-    // Node* tail=node;
-    // Node* head=node;
-    // insertAtTail(head,tail,2,2);
-    // insertAtTail(head,tail,3,3);
-    // insertAtTail(head,tail,4,40);
-    // insertAtTail(head,tail,5,50);
-    // insertAtTail(head,tail,6,60);
+    Node* node=new Node();
+    Node* tail=node;
+    Node* head=node;
+    insertAtTail(head,tail,2,2);
+    insertAtTail(head,tail,3,3);
+    insertAtTail(head,tail,4,40);
+    insertAtTail(head,tail,5,50);
+    insertAtTail(head,tail,6,60);
 
 
-    Node* node1=new Node(2);
-    Node* tail1=node1;
-    Node* head1=node1;
+    // Node* node1=new Node(2);
+    // Node* tail1=node1;
+    // Node* head1=node1;
 
-    Node* node2=new Node(1);
-    Node* tail2=node2;
-    Node* head2=node2;
-    insertAtTail(head2,tail2,2,3);
-    insertAtTail(head2,tail2,3,4);
-    insertAtTail(head2,tail2,4,5);
-    insertAtTail(head2,tail2,5,6);
+    // Node* node2=new Node(1);
+    // Node* tail2=node2;
+    // Node* head2=node2;
+    // insertAtTail(head2,tail2,2,3);
+    // insertAtTail(head2,tail2,3,4);
+    // insertAtTail(head2,tail2,4,5);
+    // insertAtTail(head2,tail2,5,6);
 
 
 
