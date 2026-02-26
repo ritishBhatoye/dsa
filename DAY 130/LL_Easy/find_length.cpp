@@ -265,7 +265,15 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 
 
     Node* head1=l1;
-    Node*
+    Node* head2=l2;
+
+    while(head1 && head2)
+    {
+        if()
+        {
+            
+        }
+    }
 
 
 }
