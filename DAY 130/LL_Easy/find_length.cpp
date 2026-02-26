@@ -312,8 +312,18 @@ int main()
     // print(ansSwapNodes);
 
     cout<<endl<<endl;
-    Node* ans=removeNthNodeFromEnd(head,);
+    cout<<endl<<endl;
 
+    int k;
+    cout<<endl<<endl;
+
+    cout<<"Enter the Node you want to delete from the back :- "<<endl;
+
+    cin>>k;
+    cout<<endl<<endl;
+
+    Node* ans=removeNthNodeFromEnd(head,);
+    print(ans);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
