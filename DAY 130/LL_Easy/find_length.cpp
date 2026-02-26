@@ -272,7 +272,9 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
     {
         if(head1->data==head2->data)
         {
-            
+            Node* temp=new Node(head1->data);
+            ansTail->next=temp;
+            ansTail=ansTail->next;
         }
 
         else if(head1->data < head2->data)
