@@ -269,9 +269,9 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 
     while(head1 && head2)
     {
-        if()
+        if(head1->data < head2->data)
         {
-            
+
         }
     }
 
