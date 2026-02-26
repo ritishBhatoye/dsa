@@ -341,7 +341,7 @@ Node* detectLoopInLL(Node* &head)
 Node* removeLoopInLL(Node* &head)
 {
     int cnt=0;
-
+    Node* prev =
     Node* temp=head;
 
     unordered_map m<Node*,int>;
@@ -350,7 +350,7 @@ Node* removeLoopInLL(Node* &head)
     {
         if(m.find(temp)!=m.end())
         {
-            return head;
+            return temp;
             break;
         }
         m[temp]=cnt;
