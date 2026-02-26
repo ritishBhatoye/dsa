@@ -405,7 +405,7 @@ bool isPalidrome(Node* &head)
         l2=l2->next;
     }
 
-
+return true;
 }
 
 int main()
@@ -415,12 +415,12 @@ int main()
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,3);
-    insertAtTail(head,tail,4,4);
-    insertAtTail(head,tail,5,5);
-    insertAtTail(head,tail,6,6);
-    insertAtTail(head,tail,7,7);
-    insertAtTail(head,tail,8,8);
+    // insertAtTail(head,tail,3,3);
+    // insertAtTail(head,tail,4,4);
+    // insertAtTail(head,tail,5,5);
+    // insertAtTail(head,tail,6,6);
+    // insertAtTail(head,tail,7,7);
+    // insertAtTail(head,tail,8,8);
 
 
     // Node* node1=new Node(2);
