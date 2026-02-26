@@ -376,9 +376,12 @@ Node* midNode(Node* &head)
         fast=fast->next;
 
         if(fast->next!=NULL)
-        {}
+        {
+            fast=fast->next;
+        }
     }
-    
+    return slow;
+
 }
 int main()
 {
@@ -467,9 +470,11 @@ int main()
     // Node* ans=removeNthNodeFromEnd(head,k);
     // print(ans);
 
-    Node* ans=mergeTwoSorted(head1,head2);
+    // Node* ans=mergeTwoSorted(head1,head2);
+    // cout<<endl<<endl;
+    // print(ans);
+    cout<<endl<<end;
     cout<<endl<<endl;
-    print(ans);
     cout<<endl<<endl;
 
 
