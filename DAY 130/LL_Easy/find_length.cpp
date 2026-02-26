@@ -350,8 +350,8 @@ Node* removeLoopInLL(Node* &head)
     {
         if(m.find(temp)!=m.end())
         {
-            prev->next=p
-            return temp;
+            prev->next=NULL;
+            return head;
             break;
         }
         m[temp]=cnt;
