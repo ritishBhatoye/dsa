@@ -385,6 +385,12 @@ Node* midNode(Node* &head)
 }
 
 
+bool isPalidrome(Node* &head)
+{
+    Node* temp=head;
+
+    while()
+}
 
 int main()
 {
