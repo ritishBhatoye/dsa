@@ -473,7 +473,9 @@ int main()
     // Node* ans=mergeTwoSorted(head1,head2);
     // cout<<endl<<endl;
     // print(ans);
+    Node* ans = midNode(head);
     cout<<endl<<end;
+    print(ans);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
