@@ -259,6 +259,7 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
 
 Node* mergeTwoSorted(Node* &l1,Node* &l2)
 {
+    Node* dummy=new Node(-1);
 
     Node* ansHead=NULL;
     Node* ansTail=NULL;
@@ -272,7 +273,7 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
         if(head1->data < head2->data)
         {
             ansHead=head1->data;
-            
+
         }
     }
 
