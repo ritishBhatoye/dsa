@@ -1,4 +1,5 @@
 #include<iostream>
+
 using namespace std;
 
 class Node
@@ -318,7 +319,7 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
 Node* detectLoopInLL(Node* &head)
 {
     Node* temp=head;
-    
+    unodered_map m<Node*,int>;
     while(temp)
 }
 
