@@ -312,7 +312,7 @@ int main()
     // print(ansSwapNodes);
 
     cout<<endl<<endl;
-    Node* ans=removeNthNodeFromEnd()
+    Node* ans=removeNthNodeFromEnd(head,);
 
     cout<<endl<<endl;
     cout<<endl<<endl;
