@@ -344,7 +344,7 @@ Node* removeLoopInLL(Node* &head)
     Node* prev = head;
     Node* temp=head;
 
-    unordered_map m<Node*,int>;
+    unordered_map<Node*,int> m;
 
     while(temp!=NULL)
     {
