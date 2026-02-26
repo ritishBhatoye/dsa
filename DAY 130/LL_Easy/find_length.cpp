@@ -227,7 +227,6 @@ Node* removeNthNodeFromEnd(Node* &head,int k)
         while(temp!=NULL)
         {
             temp=temp->next;
-
             
         }
     }
