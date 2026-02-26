@@ -300,8 +300,10 @@ Node* mergeTwoSorted(Node* &l1,Node* &l2)
         Node* temp=new Node(head1->data);
 
         ansTail->next=temp;
-        ansT
+        ansTail=ansTail->next;
     }
+
+    
 
 
 }
