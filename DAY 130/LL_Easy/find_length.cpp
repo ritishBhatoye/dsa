@@ -370,6 +370,9 @@ Node* midNode(Node* &head)
     Node* fast=head;
 
     while()
+    {
+        
+    }
 }
 int main()
 {
