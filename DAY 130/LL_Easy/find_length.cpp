@@ -360,7 +360,7 @@ Node* removeLoopInLL(Node* &head)
         temp=temp->next;
     }
 
-    return NULL;
+    return head;
 }
 int main()
 {
