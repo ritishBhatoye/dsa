@@ -373,12 +373,12 @@ Node* midNode(Node* &head)
     {
         slow=slow->next;
 
-        fast=fast->next;
+        fast=fast->next->next;
 
-        if(fast->next!=NULL)
-        {
-            fast=fast->next;
-        }
+        // if(fast->next!=NULL)
+        // {
+        //     fast=fast->next;
+        // }
     }
     return slow;
 
