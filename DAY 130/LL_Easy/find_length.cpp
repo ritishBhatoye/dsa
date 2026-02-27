@@ -388,8 +388,10 @@ Node* midNode(Node* &head)
 bool isPalidrome(Node*& head)
 {
 
-    Node* mid=
-    Node* newHead=mid(temp);
+    Node* mid=midNode(head);
+    Node* newHead=mid(head);
+
+    if()
 
 }
 
