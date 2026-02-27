@@ -399,9 +399,10 @@ bool isPalidrome(Node*& head)
 
     while(second!=NULL)
     {
-        if(first->data!=second->next)
+        if(first->data!=second->data)
         {
-            return true;
+            return false;
+            break;
         }
 
         first=first->next;
@@ -409,7 +410,7 @@ bool isPalidrome(Node*& head)
 
     }
 
-
+    return true;
 
 
 }
