@@ -391,7 +391,7 @@ bool isPalidrome(Node*& head)
     Node* mid=midNode(head);
     Node* newHead=mid(head);
 
-    if()
+    Node* temp = ;
 
 }
 
