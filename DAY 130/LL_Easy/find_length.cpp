@@ -393,7 +393,10 @@ bool isPalidrome(Node*& head)
 
 
 
+    Node* first=newHead;
+
     
+
 
 }
 
