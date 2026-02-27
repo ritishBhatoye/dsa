@@ -407,6 +407,7 @@ bool isPalidrome(Node* &head)
     {
         if(l1->data!=l2->data)
         {
+            reverse(l1);
             return false;
         }
         l1=l1->next;
