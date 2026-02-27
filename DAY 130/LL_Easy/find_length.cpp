@@ -422,8 +422,8 @@ int main()
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,2);
-    insertAtTail(head,tail,4,1);
+    // insertAtTail(head,tail,3,2);
+    // insertAtTail(head,tail,4,1);
 
     // insertAtTail(head,tail,3,3);
     // insertAtTail(head,tail,4,4);

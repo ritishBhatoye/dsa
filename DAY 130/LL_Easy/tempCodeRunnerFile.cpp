@@ -1,4 +1,2 @@
-  // print(head1);
-    // cout<<endl<<endl;
-
-    // print(head2);
+    // insertAtTail(head,tail,3,2);
+    // insertAtTail(head,tail,4,1);
