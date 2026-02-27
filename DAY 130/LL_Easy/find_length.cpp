@@ -389,7 +389,7 @@ bool isPalidrome(Node*& head)
 {
 
     Node* mid=midNode(head);
-    Node* newHead=mid(head);
+    Node* newHead=reverse(mid->next);
 
     Node* temp = ;
 
