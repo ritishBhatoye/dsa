@@ -403,7 +403,7 @@ bool isPalidrome(Node* &head)
     Node* saveMid=mid->next;
     cout<<"SaveMid "<<endl;
     print(saveMid);
-    while(l1 && l2)
+    while(l2!=NULL)
     {
         if(l1->data!=l2->data)
         {
