@@ -399,7 +399,7 @@ bool isPalidrome(Node*& head)
 
     while(second!=NULL)
     {
-        if()
+        if(first->data!=)
     }
 
 
