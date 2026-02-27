@@ -385,36 +385,9 @@ Node* midNode(Node* &head)
 }
 
 
-bool isPalidrome(Node* &head)
+bool isPalidrome(Node*& head)
 {
-    Node* l1=head;
-
-    Node* mid=midNode(head);
-    cout<<endl;
-
-    cout<<"MID :- ";
-    print(mid);
-    cout<<endl;
-    cout<<endl;
-
-    Node* l2=reverseLL(mid->next);
-    cout<<"After reversing from MID:- "<<endl;
-    print(l2);
-    Node* saveMid=mid->next;
-    cout<<"SaveMid "<<endl;
-    print(saveMid);
-    while(l2!=NULL)
-    {
-        if(l1->data!=l2->data)
-        {
-            reverse(l1);
-            return false;
-        }
-        l1=l1->next;
-        l2=l2->next;
-    }
-
-return true;
+    Node* 
 }
 
 int main()
