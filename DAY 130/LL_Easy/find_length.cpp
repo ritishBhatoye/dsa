@@ -393,9 +393,16 @@ bool isPalidrome(Node*& head)
 
 
 
-    Node* first=newHead;
+    Node* first=head;
 
-    
+    Node* second=newHead;
+
+    while(second!=NULL)
+    {
+        if()
+    }
+
+
 
 
 }
