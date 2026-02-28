@@ -505,8 +505,19 @@ Node* removeDupSorted(Node* &head)
 {
     Node* temp=head;
 
-    
+    while(temp->next!=NULL)
+    {
+        if(temp->data==temp->next->data)
+        {
+            temp->data=temp->next->data;
+            temp->next=temp->next->next;
+        }
+    }
+
+    return head;
 }
+
+
 
 int main()
 {
@@ -619,8 +630,7 @@ int main()
     Node* nodeToDelete=head->next->next;
     //delete node without head
 
-    print(head);
-    deleteNodeWithOutHead(nodeToDelete);
+    Node* removeDup=removeDupSorted
     cout<<endl<<endl;
 
     print(head);
