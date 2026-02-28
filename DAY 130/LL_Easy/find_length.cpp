@@ -424,41 +424,41 @@ bool isPalidrome(Node*& head)
 
 // 17. Merge K Sorted Linked Lists 
 
-// Node* mergeKLists(vector<Node*>& list) 
-// {
-//     priority_queue<
-//     pair<int, Node*>,              // 👈 element type
-//     vector<pair<int, Node*>>,      // 👈 underlying container
-//     greater<pair<int, Node*>>      // 👈 comparator
-// > pq;
-//     for(int i=0;i<list.size();i++)
-//     {
-//         if(list[i])
-//         {
-//             pq.push({list[i]->data,list[i]->data});
-//         }
+Node* mergeKLists(vector<Node*>& list) 
+{
+    priority_queue<
+    pair<int, Node*>,              // 👈 element type
+    vector<pair<int, Node*>>,      // 👈 underlying container
+    greater<pair<int, Node*>>      // 👈 comparator
+> pq;
+    for(int i=0;i<list.size();i++)
+    {
+        if(list[i])
+        {
+            pq.push({list[i]->data,list[i]});
+        }
         
-//     }
+    }
 
-//    Node* dummy=new Node(-1);
-//    Node* temp=dummy;
+   Node* dummy=new Node(-1);
+   Node* temp=dummy;
 
-//    while(!pq.empty())
-//    {
-//         auto it=pq.top();
-//         pq.pop();
+   while(!pq.empty())
+   {
+        auto it=pq.top();
+        pq.pop();
 
-//         if(it.second->next)
-//         {
-//             pq.push({it.second->data->next,it.second->next});
-//         }
+        if(it.second->next)
+        {
+            pq.push({it.second->data->next,it.second->next});
+        }
 
-//         temp->next=it.second;
-//         temp=temp->next;
-//    }
-// return dummy->next;
+        temp->next=it.second;
+        temp=temp->next;
+   }
+return dummy->next;
     
-// }
+}
 
 //19. Rotate a Linked List  *(25–35 min)*   
 Node* rotateLL(Node* &head,int k)
@@ -484,10 +484,10 @@ Node* rotateLL(Node* &head,int k)
     temp->next=NULL;
     while(newTemp->next!=NULL)
     {
-        temp=temp->next;
+        newTemp=newTemp->next;
     }
 
-    temp->next=head;
+    newTemp->next=head;
 
     return newHead;
 }
