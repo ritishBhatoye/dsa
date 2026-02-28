@@ -421,7 +421,12 @@ bool isPalidrome(Node*& head)
 
 tNode* mergeKLists(vector<Node*>& lists) 
 {
-    pirority_queue<pair<int,Node*>, vector<pair<int,Node*>>,greater<pair<int,Node*>>
+    pirority_queue<pair<int,Node*>, vector<pair<int,Node*>>,greater<pair<int,Node*>>> pq;
+
+    for(int i=0;i<list.size();i++)
+    {
+        pq.push({})
+    }
 }
 
 int main()
