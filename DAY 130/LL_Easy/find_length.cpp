@@ -415,7 +415,11 @@ bool isPalidrome(Node*& head)
 
 }
 // 16. Intersection Point of Two Linked Lists 
+//
 
+// 17. Merge K Sorted Linked Lists 
+
+ListNode* mergeKLists(vector<ListNode*>& lists) 
 
 int main()
 {
