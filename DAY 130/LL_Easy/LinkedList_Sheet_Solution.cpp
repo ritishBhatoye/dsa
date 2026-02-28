@@ -630,10 +630,10 @@ int main()
     Node* nodeToDelete=head->next->next;
     //delete node without head
 
-    Node* removeDup=removeDupSorted
+    Node* removeDupSortedHead=removeDupSorted(head);
     cout<<endl<<endl;
 
-    print(head);
+    print(removeDupSortedHead);
 
     cout<<endl<<endl;
     // print(ans);
