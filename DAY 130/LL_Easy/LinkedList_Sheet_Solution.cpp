@@ -4,6 +4,7 @@
 #include <queue>
 #include <functional>
 #include <utility>
+#include<unordered_set>
 
 using namespace std;
 
@@ -523,12 +524,11 @@ Node* removeDupSorted(Node* &head)
 Node* removeDup(Node* &head)
 {
     if(head->next==NULL || head==NULL) return head;
-    int cnt=0;
     Node* temp=head;
 
-    unordered_map<int,int> m;
-
-    while(temp!=NULL)
+    unordered_set<int> m;
+    m.insert(temp->data);
+    while(temp->next!=NULL)
     {
         if(m.find(temp->next->data)!=m.end())
         {
@@ -541,9 +541,8 @@ Node* removeDup(Node* &head)
         }
         else
         {
-            m[temp->data]=cnt;
-            cnt++;
-    
+           
+            m.insert(temp->next->data);
             temp=temp->next;
         }
        
