@@ -499,7 +499,7 @@ void deleteNodeWithOutHead(Node* &node)
     node->next=node->next->next;
 
 }
-// 21. Remove Duplicates from Linked List (Sorted / Unsorted)  *(25–35 min)*  
+// 21. Remove Duplicates from Linked List (Sorted)  *(25–35 min)*  
 
 Node* removeDupSorted(Node* &head)
 {
@@ -512,10 +512,15 @@ Node* removeDupSorted(Node* &head)
             temp->data=temp->next->data;
             temp->next=temp->next->next;
         }
+        temp=temp->next;
     }
 
     return head;
 }
+
+//Remove Dup from Both Sorted or Unsorted LL
+
+()
 
 
 
@@ -526,7 +531,7 @@ int main()
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,3);
+    insertAtTail(head,tail,3,2);
     insertAtTail(head,tail,4,4);
     insertAtTail(head,tail,5,5);
     insertAtTail(head,tail,6,6);
@@ -627,7 +632,7 @@ int main()
     // print(rotate);
     // cout<<endl<<endl;
     
-    Node* nodeToDelete=head->next->next;
+
     //delete node without head
 
     Node* removeDupSortedHead=removeDupSorted(head);
