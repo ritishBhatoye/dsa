@@ -1,7 +1,9 @@
 #include<iostream>
 #include<unordered_map>
 #include<vector>
-#include<priority_queue>
+#include <queue>
+#include <functional>
+#include <utility>
 
 using namespace std;
 
@@ -422,15 +424,15 @@ bool isPalidrome(Node*& head)
 
 // 17. Merge K Sorted Linked Lists 
 
-Node* mergeKLists(vector<Node*>& lists) 
+Node* mergeKLists(vector<Node*>& list) 
 {
     pirority_queue<pair<int,Node*>, vector<pair<int,Node*>>,greater<pair<int,Node*>>> pq;
 
     for(int i=0;i<list.size();i++)
     {
-        if(lists[i])
+        if(list[i])
         {
-            pq.push({list[i]->data,list[i]->val});
+            pq.push({list[i]->data,list[i]->data});
         }
         
     }
