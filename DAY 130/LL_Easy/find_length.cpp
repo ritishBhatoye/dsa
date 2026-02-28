@@ -428,7 +428,10 @@ tNode* mergeKLists(vector<Node*>& lists)
         pq.push({list[i]->data,list[i]->val});
     }
 
-    auto it=
+    auto it=pq.top();
+    it.pop();
+
+    
 }
 
 int main()
