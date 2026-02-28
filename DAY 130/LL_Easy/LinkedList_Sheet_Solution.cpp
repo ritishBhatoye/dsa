@@ -501,7 +501,12 @@ void deleteNodeWithOutHead(Node* &node)
 }
 // 21. Remove Duplicates from Linked List (Sorted / Unsorted)  *(25–35 min)*  
 
-Node* removeDup()
+Node* removeDupSorted(Node* &head)
+{
+    Node* temp=head;
+
+    
+}
 
 int main()
 {
