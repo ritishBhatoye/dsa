@@ -597,17 +597,19 @@ int main()
     // Node* ans=mergeTwoSorted(head1,head2);
     // cout<<endl<<endl;
     // print(ans);
-    cout<<endl<<endl;
-    int k;
-    cout<<"Enter the rotation entity :- ";
-    cin>>k;
-    cout<<endl<<endl;
+    // cout<<endl<<endl;
+    // int k;
+    // cout<<"Enter the rotation entity :- ";
+    // cin>>k;
+    // cout<<endl<<endl;
 
 
-    Node* rotate=rotateLL(head,k);
-    print(rotate);
-    cout<<endl<<endl;
-    
+    // Node* rotate=rotateLL(head,k);
+    // print(rotate);
+    // cout<<endl<<endl;
+    //delete node without head
+    print(head);
+    deleteNodeWithOutHead();
     cout<<endl<<endl;
     // print(ans);
     cout<<endl<<endl;
