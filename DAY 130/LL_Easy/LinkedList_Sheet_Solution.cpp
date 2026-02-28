@@ -522,6 +522,7 @@ Node* removeDupSorted(Node* &head)
 
 Node* removeDup(Node* &head)
 {
+    if(head->next==NULL || head==NULL) return head;
     int cnt=0;
     Node* temp=head;
 
@@ -538,11 +539,14 @@ Node* removeDup(Node* &head)
           delete nodeToDel;
 
         }
-
-        m[temp->data]=cnt;
-        cnt++;
-
-        temp=temp->next;
+        else
+        {
+            m[temp->data]=cnt;
+            cnt++;
+    
+            temp=temp->next;
+        }
+       
     }
 
     return head;
