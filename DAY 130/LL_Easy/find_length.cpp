@@ -419,7 +419,10 @@ bool isPalidrome(Node*& head)
 
 // 17. Merge K Sorted Linked Lists 
 
-ListNode* mergeKLists(vector<ListNode*>& lists) 
+tNode* mergeKLists(vector<Node*>& lists) 
+{
+    pirority_queue<pair<int,Node*>, 
+}
 
 int main()
 {
