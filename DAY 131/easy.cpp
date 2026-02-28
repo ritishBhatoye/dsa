@@ -93,12 +93,14 @@ void reverseArr(int *arr,int s,int e)
 
 }
 
-bool checkPalidrome(string s,int s,int e)
+bool checkPalidrome(string st,int s,int e)
 {
-  if(arr[s]!=arr[e])
+  if(st[s]!=st[e])
   {
-    
+    return false;
   }   
+
+    return checkPalidrome(st,s++,e--);
 }
 
 int main()
@@ -118,23 +120,23 @@ int main()
 
     int ans=power(10,5);
     cout<<ans<<endl;
-    int size;
-    cout<<"Enter the size of an array :- ";
-    cin>>size;
-    cout<<endl<<endl;
-    int* arr=new int[size];
-    cout<<"Enter the elements in the array :- ";
-    inputArr(arr,size);
-    cout<<endl<<endl;
-    cout<<"Before the reversing the array :- "<<endl;
+    // int size;
+    // cout<<"Enter the size of an array :- ";
+    // cin>>size;
+    // cout<<endl<<endl;
+    // int* arr=new int[size];
+    // cout<<"Enter the elements in the array :- ";
+    // inputArr(arr,size);
+    // cout<<endl<<endl;
+    // cout<<"Before the reversing the array :- "<<endl;
 
-    print(arr,size);
-    cout<<endl<<endl;
+    // print(arr,size);
+    // cout<<endl<<endl;
 
-    reverseArr(arr,0,size-1);
+    // reverseArr(arr,0,size-1);
 
-    cout<<endl<<endl;
-    cout<<"After the reversing the array :- "<<endl;
+    // cout<<endl<<endl;
+    // cout<<"After the reversing the array :- "<<endl;
     print(arr,size);
     cout<<endl<<endl;
 
