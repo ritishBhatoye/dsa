@@ -527,13 +527,15 @@ Node* removeDup(Node* &head)
 
     unordered_map<int,int> m;
 
-    while(temp->next!=NULL)
+    while(temp!=NULL)
     {
         if(m.find(temp->next->data)!=m.end())
         {
           
           Node* nodeToDel=temp->next;
-          nodeToDel->next=NULL;
+          temp->next=nodeToDel->next;
+
+          delete nodeToDel;
 
         }
 
