@@ -464,11 +464,13 @@ Node* rotateLL(Node* &head,int k)
 
     Node* temp=head;
     Node* newHead=NULL;
-
-    while()
+    int i=n-k;
+    while(i!=1)
     {
-
+        temp=temp->next;
     }
+
+
 
 }
 
