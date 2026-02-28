@@ -96,12 +96,17 @@ void reverseArr(int *arr,int s,int e)
 
 bool checkPalidrome(string st,int s,int e)
 {
-  if(st[s]!=st[e] && s==e)
+  if(st[s]!=st[e])
   {
     return false;
   }   
+  else
+  {
+    return true;    
+
+  }
+  return checkPalidrome(st,++s,++e);
     
-    return checkPalidrome(st,++s,++e);
 
 }
 
