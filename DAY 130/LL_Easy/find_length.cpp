@@ -445,9 +445,10 @@ tNode* mergeKLists(vector<Node*>& lists)
             pq.push({it.second->data->next,it.second->next});
         }
 
-        
+        temp->next=it.second;
+        temp=temp->next;
    }
-
+return dummy->next;
     
 }
 
