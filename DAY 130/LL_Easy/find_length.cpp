@@ -442,8 +442,10 @@ tNode* mergeKLists(vector<Node*>& lists)
 
         if(it.second->next)
         {
-            
+            pq.push({it.second->data->next,it.second->next});
         }
+
+        
    }
 
     
