@@ -531,6 +531,7 @@ Node* removeDup(Node* &head)
     {
         if(m.find(temp->data)!=m.end())
         {
+            Node* nodeToDelete=temp;
             temp->data=temp->next->data;
             temp->next=temp->next->next;
         
