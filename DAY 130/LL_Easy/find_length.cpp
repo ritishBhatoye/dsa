@@ -457,7 +457,10 @@ Node* rotateLL(Node* &head,int k)
 {
     int n=length(head);
 
-    while()
+    if(n>k)
+    {
+        
+    }
 
 }
 
