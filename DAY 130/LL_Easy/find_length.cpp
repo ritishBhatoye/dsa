@@ -468,10 +468,19 @@ Node* rotateLL(Node* &head,int k)
     while(i!=1)
     {
         temp=temp->next;
+        i--;
     }
 
+    newHead=temp->next;
 
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
 
+    temp->next=head;
+
+    return newHead;
 }
 
 int main()
@@ -481,8 +490,8 @@ int main()
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    // insertAtTail(head,tail,3,2);
-    // insertAtTail(head,tail,4,1);
+    insertAtTail(head,tail,3,2);
+    insertAtTail(head,tail,4,1);
 
     // insertAtTail(head,tail,3,3);
     // insertAtTail(head,tail,4,4);
