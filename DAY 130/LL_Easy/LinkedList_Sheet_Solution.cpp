@@ -554,15 +554,14 @@ Node* removeDup(Node* &head)
 Node* sort012(Node* &head)
 {
     Node* temp=head;
-
-    Node* ans=NULL;
+    Node* dummy=new Node(-1);
+    Node* ans=dummy;
 
     while(temp!=NULL)
     {
-        if(temp->next!=NULL)
-        {
-            
-        }
+        Node* check=ans;
+
+        if(temp->)
     }
 }
 
