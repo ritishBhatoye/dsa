@@ -490,8 +490,10 @@ int main()
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,2);
-    insertAtTail(head,tail,4,1);
+    insertAtTail(head,tail,3,3);
+    insertAtTail(head,tail,4,4);
+    insertAtTail(head,tail,5,5);
+    insertAtTail(head,tail,6,6);
 
     // insertAtTail(head,tail,3,3);
     // insertAtTail(head,tail,4,4);
@@ -578,15 +580,11 @@ int main()
     // Node* ans=mergeTwoSorted(head1,head2);
     // cout<<endl<<endl;
     // print(ans);
-    if(isPalidrome(head))
-    {
-        cout<<"LL is having PALIDROME behaviour"<<endl;
-    }
-    else
-    {
-        cout<<"LL is NOT having PALIDROME behaviour"<<endl;
-
-    }
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    
+    cout<<endl<<endl;
+    
     cout<<endl<<endl;
     // print(ans);
     cout<<endl<<endl;
