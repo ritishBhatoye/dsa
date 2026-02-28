@@ -567,7 +567,15 @@ Node* sort012(Node* &head)
     {
         if(temp->data==0)
         {
-            
+            Node* newNode=new Node(temp->data);
+            zeroTail->next=newNode;
+            zeroTail=zeroTail->next;
+        }
+        else if(temp->data==1)
+        {   
+            Node* newNode=new Node(temp->data);
+            oneTail->next=newNode;
+            oneTail=oneTail->next;
         }
     }
 
