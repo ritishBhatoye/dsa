@@ -120,6 +120,17 @@ int main()
 
     int ans=power(10,5);
     cout<<ans<<endl;
+    string st;
+    cout<<"Enter the string :- ";
+    cin>>st;
+    if(checkPalidrome(st,0,))
+    {
+        cout<<"String "<<st<<" is Palidrome "<<endl;
+    }
+    else
+    {
+        cout<<"String "<<st<<" is NOT Palidrome "<<endl;
+    }
     // int size;
     // cout<<"Enter the size of an array :- ";
     // cin>>size;
