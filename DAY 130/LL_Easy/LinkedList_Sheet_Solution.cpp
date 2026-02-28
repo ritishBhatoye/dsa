@@ -593,7 +593,7 @@ Node* sort012(Node* &head)
         zeroTail->next=oneHead;
     }
 
-    else if(twoHead!=NULL)
+    if(twoHead!=NULL)
     {
         twoHead=twoHead->next;
         oneTail->next=twoHead;
@@ -685,7 +685,10 @@ insertAtTail(head, tail,15, 1);
     // cout<<endl<<endl;
     // print(rev);
     Node* headSort012=sort012(head);
+    print(head);
+    cout<<endl<<endl;
 
+    cout<<endl<<endl;
     print(headSort012);
     cout<<endl<<endl;
 
