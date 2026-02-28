@@ -551,6 +551,21 @@ Node* removeDup(Node* &head)
     return head;
 }
 
+Node* sort012(Node* &head)
+{
+    Node* temp=head;
+
+    Node* ans=NULL;
+
+    while(temp!=NULL)
+    {
+        if(temp->next!=NULL)
+        {
+            
+        }
+    }
+}
+
 
 
 int main()
