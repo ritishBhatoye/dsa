@@ -1,5 +1,8 @@
 #include<iostream>
 #include<unordered_map>
+#include<vector>
+#include<priority_queue>
+
 using namespace std;
 
 class Node
@@ -419,7 +422,7 @@ bool isPalidrome(Node*& head)
 
 // 17. Merge K Sorted Linked Lists 
 
-tNode* mergeKLists(vector<Node*>& lists) 
+Node* mergeKLists(vector<Node*>& lists) 
 {
     pirority_queue<pair<int,Node*>, vector<pair<int,Node*>>,greater<pair<int,Node*>>> pq;
 
@@ -581,8 +584,14 @@ int main()
     // cout<<endl<<endl;
     // print(ans);
     cout<<endl<<endl;
+    int k;
+    cout<<"Enter the rotation entity :- ";
+    cin>>k;
     cout<<endl<<endl;
-    
+
+
+    Node* rotate=rotateLL(head,k);
+    print(rotate);
     cout<<endl<<endl;
     
     cout<<endl<<endl;
