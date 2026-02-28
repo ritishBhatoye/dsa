@@ -522,9 +522,10 @@ Node* removeDupSorted(Node* &head)
 
 Node* removeDup(Node* &head)
 {
+    int cnt=0;
     Node* temp=head;
 
-    unordered_map<int,Node*> m;
+    unordered_map<Node*,int> m;
 
     while(temp->next!=NULL)
     {
@@ -533,6 +534,8 @@ Node* removeDup(Node* &head)
         
             temp->next=temp->next->next;
             temp->data=temp->next->data;
+        temp=temp->next;
+
         }
 
         m[temp]=cnt;
@@ -657,10 +660,11 @@ int main()
 
     //delete node without head
 
-    Node* removeDupSortedHead=removeDupSorted(head);
+    // Node* removeDupSortedHead=removeDupSorted(head);
     cout<<endl<<endl;
-
-    print(removeDupSortedHead);
+    //delete dup from sorted and unsorted LL
+    Node* removeDupLL=removeDup(head);
+    print(removeDupLL);
 
     cout<<endl<<endl;
     // print(ans);
