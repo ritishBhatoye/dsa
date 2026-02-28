@@ -530,7 +530,9 @@ Node* removeDup(Node* &head)
     {
         if(m.find(temp)!=m.end())
         {
-            Node* temp=
+        
+            temp->next=temp->next->next;
+            temp->data=temp->next->data;
         }
 
         m[temp]=cnt;
