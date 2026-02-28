@@ -577,7 +577,26 @@ Node* sort012(Node* &head)
             oneTail->next=newNode;
             oneTail=oneTail->next;
         }
+        else if(temp->data==2)
+        {   
+            Node* newNode=new Node(temp->data);
+            twoTail->next=newNode;
+            twoTail=twoTail->next;
+        }
+
+        temp=temp->next;
     }
+
+    if(oneHead!=NULL)
+    {
+        zeroTail->next=oneHead;
+    }
+
+    else if(twoHead!=NULL)
+    {
+        oneTail->next=twoHead;
+    }
+    return zeroHead;
 
 }
 
