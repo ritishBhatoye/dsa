@@ -529,12 +529,10 @@ Node* removeDup(Node* &head)
 
     while(temp->next!=NULL)
     {
-        if(m.find(temp->next->data)!=m.end())
+        if(m.find(temp->data)!=m.end())
         {
-            temp->data=temp->next->data;
-            temp->next=temp->next->next;
-        
-
+            Node* nodeToDelete=temp;
+            temp-
         }
 
         m[temp->data]=cnt;
