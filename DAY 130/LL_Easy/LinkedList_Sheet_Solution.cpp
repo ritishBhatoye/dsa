@@ -587,13 +587,13 @@ Node* sort012(Node* &head)
         temp=temp->next;
     }
 
-    if(oneHead!=NULL)
+    if(oneHead->next!=NULL)
     {
         oneHead=oneHead->next;
         zeroTail->next=oneHead;
     }
 
-    if(twoHead!=NULL)
+    if(twoHead->next!=NULL)
     {
         twoHead=twoHead->next;
         oneTail->next=twoHead;
