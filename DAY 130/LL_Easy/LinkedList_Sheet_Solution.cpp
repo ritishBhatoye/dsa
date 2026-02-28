@@ -560,7 +560,7 @@ Node* sort012(Node* &head)
     while(temp!=NULL)
     {
 
-        if(temp->data >= ans->data)
+        if(temp->data >= ans->data && temp->data==0)
         {
             Node* newNode=new Node(temp->data);
 
