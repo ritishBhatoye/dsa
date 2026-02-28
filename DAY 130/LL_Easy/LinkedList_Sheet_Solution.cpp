@@ -520,7 +520,20 @@ Node* removeDupSorted(Node* &head)
 
 //Remove Dup from Both Sorted or Unsorted LL
 
-()
+Node* removeDup(Node* &head)
+{
+    Node* temp=head;
+
+    unordered_map<int,Node*> m;
+
+    while(temp->next!=NULL)
+    {
+        if(m.find(temp->next)!=m.end())
+        {
+            
+        }
+    }
+}
 
 
 
