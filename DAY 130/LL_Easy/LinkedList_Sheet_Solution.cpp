@@ -551,15 +551,22 @@ Node* removeDup(Node* &head)
 
 int main()
 {
+    // 1 → 2 → 3 → 2 → 4 → 3 → 5 → 1 → 6 → 2
     cout<<endl<<endl;
     Node* node=new Node(1);
     Node* tail=node;
     Node* head=node;
     insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,2);
-    insertAtTail(head,tail,4,4);
-    insertAtTail(head,tail,5,5);
-    insertAtTail(head,tail,6,6);
+    insertAtTail(head,tail,3,3);
+    insertAtTail(head,tail,4,2);
+    insertAtTail(head,tail,5,4);
+    insertAtTail(head,tail,6,3);
+    insertAtTail(head,tail,7,5);
+    insertAtTail(head,tail,8,1);
+    insertAtTail(head,tail,8,6);
+    insertAtTail(head,tail,8,2);
+
+
 
     // insertAtTail(head,tail,3,3);
     // insertAtTail(head,tail,4,4);
