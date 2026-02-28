@@ -587,27 +587,19 @@ Node* sort012(Node* &head)
         temp=temp->next;
     }
 
-    if(zeroHead->next!=NULL && oneHead->next==NULL && twoHead->next!=NULL)
-    {
-        twoHead=twoHead->next;
-        zeroTail->next=twoHead;
-    }
+// Connect 0 -> 1 or 2
+if(oneHead->next != NULL)
+zeroTail->next = oneHead->next;
+else
+zeroTail->next = twoHead->next;
 
-    if(oneHead->next!=NULL && zeroHead->next!=NULL)
-    {
-        oneHead=oneHead->next;
-        zeroTail->next=oneHead;
+// Connect 1 -> 2
+oneTail->next = twoHead->next;
 
-    }
+// Terminate
+twoTail->next = NULL;
 
-    if(oneHead->next!=NULL && twoHead->next!=NULL)
-    {
-        twoHead=twoHead->next;
-        oneTail->next=twoHead;
-    }
-
-
-    return zeroHead->next;
+return zeroHead->next;
 
 }
 
