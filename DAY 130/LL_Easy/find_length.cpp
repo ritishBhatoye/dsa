@@ -493,7 +493,12 @@ Node* rotateLL(Node* &head,int k)
 }
 // 20. Delete Node Without Head Pointer  *(20–30 min)*  
 
-ListNode* deleteNodeWithOutHead()
+void deleteNodeWithOutHead(Node* &node)
+{
+    node->data=node->next->data;
+    node->next=node->next->next;
+
+}
 
 int main()
 {
