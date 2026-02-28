@@ -607,9 +607,16 @@ int main()
     // Node* rotate=rotateLL(head,k);
     // print(rotate);
     // cout<<endl<<endl;
+    
+    Node* nodeToDelete=head->next->next;
     //delete node without head
+
     print(head);
-    deleteNodeWithOutHead();
+    deleteNodeWithOutHead(nodeToDelete);
+    cout<<endl<<endl;
+
+    print(head);
+
     cout<<endl<<endl;
     // print(ans);
     cout<<endl<<endl;
