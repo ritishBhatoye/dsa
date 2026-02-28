@@ -534,7 +534,6 @@ Node* removeDup(Node* &head)
             temp->data=temp->next->data;
             temp->next=temp->next->next;
         
-            temp=temp->next;
 
         }
 
