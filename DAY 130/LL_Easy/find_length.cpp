@@ -462,6 +462,8 @@ Node* rotateLL(Node* &head,int k)
         k=k%n;
     }
 
+    int 
+
 }
 
 int main()
