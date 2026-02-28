@@ -1,5 +1,6 @@
 #include<iostream>
-#include <algorithm>
+#include<algorithm>
+#include<string>
 
 using namespace std;
 //Factorial
@@ -99,8 +100,8 @@ bool checkPalidrome(string st,int s,int e)
   {
     return false;
   }   
-
-    return checkPalidrome(st,s++,e--);
+    
+    return checkPalidrome(st,++s,++e);
 }
 
 int main()
@@ -123,7 +124,7 @@ int main()
     string st;
     cout<<"Enter the string :- ";
     cin>>st;
-    if(checkPalidrome(st,0,))
+    if(checkPalidrome(st,0,st.length()-1))
     {
         cout<<"String "<<st<<" is Palidrome "<<endl;
     }
@@ -148,7 +149,7 @@ int main()
 
     // cout<<endl<<endl;
     // cout<<"After the reversing the array :- "<<endl;
-    print(arr,size);
+    // print(arr,size);
     cout<<endl<<endl;
 
     return 0;
