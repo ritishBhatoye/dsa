@@ -561,7 +561,15 @@ Node* sort012(Node* &head)
     {
         Node* check=ans;
 
-        if(temp->)
+        if(temp->data >= ans->data)
+        {
+            Node* newNode=new Node(temp->data);
+
+            ans->next=newNode;
+            ans=ans->next;
+            temp=temp->next;
+        }
+
     }
 }
 
