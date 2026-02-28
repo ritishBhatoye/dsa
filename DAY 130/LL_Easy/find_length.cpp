@@ -425,7 +425,11 @@ tNode* mergeKLists(vector<Node*>& lists)
 
     for(int i=0;i<list.size();i++)
     {
-        pq.push({list[i]->data,list[i]->val});
+        if(lists[i])
+        {
+            pq.push({list[i]->data,list[i]->val});
+        }
+        
     }
 
    Node* dummy=new Node(-1);
@@ -433,7 +437,13 @@ tNode* mergeKLists(vector<Node*>& lists)
 
    while(!pq.empty())
    {
-        auto it=
+        auto it=pq.top();
+        pq.pop();
+
+        if(it.second->next)
+        {
+            
+        }
    }
 
     
