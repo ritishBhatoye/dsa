@@ -100,7 +100,7 @@ bool checkPalidrome(string st,int s,int e)
   {
     return false;
   }   
-  else
+  if(st[s]==st[e])
   {
     return true;    
 
