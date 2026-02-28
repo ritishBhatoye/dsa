@@ -578,20 +578,28 @@ Node* sort012(Node* &head)
 
 int main()
 {
-    //2 → 0 → 2 → 1 → 0 → 1 → 2 → 0 → 1 → 2 → 1 → 0 → 2 → 0 → 1
-    cout<<endl<<endl;
-    Node* node=new Node(2);
-    Node* tail=node;
-    Node* head=node;
-    insertAtTail(head,tail,2,0);
-    insertAtTail(head,tail,3,2);
-    insertAtTail(head,tail,4,1);
-    insertAtTail(head,tail,5,0);
-    insertAtTail(head,tail,6,1);
-    insertAtTail(head,tail,7,2);
-    insertAtTail(head,tail,8,0);
-    insertAtTail(head,tail,8,1);
-    insertAtTail(head,tail,8,0);
+  // 2 → 0 → 2 → 1 → 0 → 1 → 2 → 0 → 1 → 2 → 1 → 0 → 2 → 0 → 1
+
+cout << endl << endl;
+
+Node* node = new Node(2);
+Node* tail = node;
+Node* head = node;
+
+insertAtTail(head, tail, 2, 0);
+insertAtTail(head, tail, 3, 2);
+insertAtTail(head, tail, 4, 1);
+insertAtTail(head, tail, 5, 0);
+insertAtTail(head, tail, 6, 1);
+insertAtTail(head, tail, 7, 2);
+insertAtTail(head, tail, 8, 0);
+insertAtTail(head, tail, 9, 1);
+insertAtTail(head, tail,10, 2);
+insertAtTail(head, tail,11, 1);
+insertAtTail(head, tail,12, 0);
+insertAtTail(head, tail,13, 2);
+insertAtTail(head, tail,14, 0);
+insertAtTail(head, tail,15, 1);
 
 
 
@@ -648,6 +656,9 @@ int main()
 
     // cout<<endl<<endl;
     // print(rev);
+    Node* headSort012=sort012(head);
+
+    print(headSort012);
     cout<<endl<<endl;
 
     cout<<endl<<endl;
