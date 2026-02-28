@@ -93,6 +93,8 @@ void reverseArr(int *arr,int s,int e)
 
 }
 
+bool chec
+
 int main()
 {
 
