@@ -450,7 +450,7 @@ Node* mergeKLists(vector<Node*>& list)
 
         if(it.second->next)
         {
-            pq.push({it.second->data->next,it.second->next});
+            pq.push({it.second->next->data,it.second->next});
         }
 
         temp->next=it.second;
