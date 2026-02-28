@@ -453,7 +453,13 @@ return dummy->next;
 }
 
 //19. Rotate a Linked List  *(25–35 min)*   
-Node* rotateLL(Node*&)
+Node* rotateLL(Node* &head,int k)
+{
+    int n=length(head);
+
+    while()
+
+}
 
 int main()
 {
