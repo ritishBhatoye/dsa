@@ -525,20 +525,20 @@ Node* removeDup(Node* &head)
     int cnt=0;
     Node* temp=head;
 
-    unordered_map<Node*,int> m;
+    unordered_map<int,int> m;
 
     while(temp->next!=NULL)
     {
-        if(m.find(temp)!=m.end())
+        if(m.find(temp->data)!=m.end())
         {
         
             temp->next=temp->next->next;
             temp->data=temp->next->data;
-        temp=temp->next;
+            temp=temp->next;
 
         }
 
-        m[temp]=cnt;
+        m[temp->data]=cnt;
         cnt++;
 
         temp=temp->next;
