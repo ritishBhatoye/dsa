@@ -559,7 +559,6 @@ Node* sort012(Node* &head)
 
     while(temp!=NULL)
     {
-        Node* check=ans;
 
         if(temp->data >= ans->data)
         {
@@ -571,26 +570,28 @@ Node* sort012(Node* &head)
         }
 
     }
+
+    return dummy->next;
 }
 
 
 
 int main()
 {
-    // 1 → 2 → 3 → 2 → 4 → 3 → 5 → 1 → 6 → 2
+    //2 → 0 → 2 → 1 → 0 → 1 → 2 → 0 → 1 → 2 → 1 → 0 → 2 → 0 → 1
     cout<<endl<<endl;
-    Node* node=new Node(1);
+    Node* node=new Node(2);
     Node* tail=node;
     Node* head=node;
-    insertAtTail(head,tail,2,2);
-    insertAtTail(head,tail,3,3);
-    insertAtTail(head,tail,4,2);
-    insertAtTail(head,tail,5,4);
-    insertAtTail(head,tail,6,3);
-    insertAtTail(head,tail,7,5);
+    insertAtTail(head,tail,2,0);
+    insertAtTail(head,tail,3,2);
+    insertAtTail(head,tail,4,1);
+    insertAtTail(head,tail,5,0);
+    insertAtTail(head,tail,6,1);
+    insertAtTail(head,tail,7,2);
+    insertAtTail(head,tail,8,0);
     insertAtTail(head,tail,8,1);
-    insertAtTail(head,tail,8,6);
-    insertAtTail(head,tail,8,2);
+    insertAtTail(head,tail,8,0);
 
 
 
