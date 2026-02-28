@@ -736,8 +736,8 @@ insertAtTail(head, tail,15, 1);
     // Node* removeDupSortedHead=removeDupSorted(head);
     cout<<endl<<endl;
     //delete dup from sorted and unsorted LL
-    Node* removeDupLL=removeDup(head);
-    print(removeDupLL);
+    // Node* removeDupLL=removeDup(head);
+    // print(removeDupLL);
 
     cout<<endl<<endl;
     // print(ans);
