@@ -528,11 +528,18 @@ Node* removeDup(Node* &head)
 
     while(temp->next!=NULL)
     {
-        if(m.find(temp->next)!=m.end())
+        if(m.find(temp)!=m.end())
         {
-            
+            Node* temp=
         }
+
+        m[temp]=cnt;
+        cnt++;
+
+        temp=temp->next;
     }
+
+    return head;
 }
 
 
