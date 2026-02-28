@@ -553,9 +553,24 @@ Node* removeDup(Node* &head)
 
 Node* sort012(Node* &head)
 {
-    
+    Node* temp=head;
     Node* zeroHead=new Node(-1);
-    Node* zeroTail=
+    Node* zeroTail=zeroHead;
+
+    Node* oneHead=new Node(-1);
+    Node* oneTail=oneHead;
+
+    Node* twoHead=new Node(-1);
+    Node* twoTail=twoHead;
+
+    while(temp!=NULL)
+    {
+        if(temp->data==0)
+        {
+            
+        }
+    }
+
 }
 
 
