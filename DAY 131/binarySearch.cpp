@@ -69,7 +69,7 @@ int bsRec(int *arr,int s,int e,int k)
 
 bool isSort(int* arr,int size)
 {
-    if(s==0 || size==1)
+    if(size==0 || size==1)
     {
         return true;
     }
@@ -98,18 +98,27 @@ int main()
     cout<<endl<<endl;
     printArr(arr,size);
     cout<<endl<<endl;
-    int k;
-    cout<<"Enter the value for K :- ";
-    cin>>k;
-    // int result=binarySearch(arr,size,k);
-    int result =bsRec(arr,0,size-1,k);
-    if(result==-1)
+    // int k;
+    // cout<<"Enter the value for K :- ";
+    // cin>>k;
+    // // int result=binarySearch(arr,size,k);
+    // int result =bsRec(arr,0,size-1,k);
+    // if(result==-1)
+    // {
+    //     cout<<k<<" is NOT present in the array "<<endl;
+    // }
+    // else
+    // {
+    //     cout<<k<<" is present in the ARRAY at "<<result<<endl;
+    // }
+
+    if(isSort(arr,size))
     {
-        cout<<k<<" is NOT present in the array "<<endl;
+        cout<<"Array is sorted "<<endl;
     }
     else
     {
-        cout<<k<<" is present in the ARRAY at "<<result<<endl;
+        cout<<"Array is not sorted "<<endl;
     }
     cout<<endl<<endl;
     cout<<endl<<endl;
