@@ -109,6 +109,34 @@ bool checkPalidrome(string st,int s,int e)
     
 }
 
+int fib(int n)
+{
+    if(n==0)
+        return 0;
+    if(n==1)
+        return 1;
+
+    int ans=fib(n-1) + fib(n-2);
+    // cout<<ans<<" ";
+    return ans;
+}
+
+void sayDigit(int n,string arr[])
+{
+    if(n==0)
+    {
+        return ;
+    }
+    int digit=n%10;
+    n=n/10;
+    sayDigit(n,arr);
+    cout<<arr[digit]<<" ";
+
+
+}
+
+
+
 int main()
 {
 
@@ -123,24 +151,35 @@ int main()
     print1toN(20);
     cout<<endl<<endl;
     cout<<endl<<endl;
+    int n;
+    cout<<"Enter the digit :- ";
+    cin>>n;
+    cout<<endl<<endl;
 
-    int ans=power(10,5);
-    cout<<ans<<endl;
-    string st;
-    cout<<"Enter the string :- ";
-    cin>>st;
-    if(checkPalidrome(st,0,st.length()-1))
-    {
-        cout<<"String "<<st<<" is Palidrome "<<endl;
-    }
-    else
-    {
-        cout<<"String "<<st<<" is NOT Palidrome "<<endl;
-    }
+    string arr[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+    sayDigit(n,arr);
+    // int ans=power(10,5);
+    // cout<<ans<<endl;
+    // string st;
+    // cout<<"Enter the string :- ";
+    // cin>>st;
+    // if(checkPalidrome(st,0,st.length()-1))
+    // {
+    //     cout<<"String "<<st<<" is Palidrome "<<endl;
+    // }
+    // else
+    // {
+    //     cout<<"String "<<st<<" is NOT Palidrome "<<endl;
+    // }
     // int size;
     // cout<<"Enter the size of an array :- ";
     // cin>>size;
+    // int f;
+    // cout<<"Enter the fibnacci series :- ";
+    // cin>>f;
+    // int fibAns=fib(f);
     // cout<<endl<<endl;
+    // cout<<"Ans :- "<<fibAns<<endl;
     // int* arr=new int[size];
     // cout<<"Enter the elements in the array :- ";
     // inputArr(arr,size);
