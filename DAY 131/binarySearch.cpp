@@ -67,6 +67,16 @@ int bsRec(int *arr,int s,int e,int k)
 
 }
 
+bool isSort(int* arr,int s,int e)
+{
+
+    if(s==e)
+    {
+        
+    }
+
+}
+
 int main()
 {
 
