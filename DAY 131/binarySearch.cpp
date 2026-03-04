@@ -101,7 +101,7 @@ int sum(int* arr,int size,int s)
 
 }
 
-int sumOptimized(int* arr,int size,int s)
+int sumOptimized(int* arr,int size)
 {
     if(size==0)
     {
@@ -109,11 +109,13 @@ int sumOptimized(int* arr,int size,int s)
     }
     if(size==1)
     {
-        return 1;
+        return arr[0];
     }
+    int prev=sumOptimized(arr-1,size-1);
 
-    int result=sumOptimized(arr,size,s);
-    
+    int result=arr[0] + prev;
+
+    return prev;
 }
 
 int main()
@@ -154,7 +156,7 @@ int main()
     }
     cout<<endl<<endl;
     cout<<endl<<endl;
-    int ans = sum(arr,size,0);
+    int ans = sumOptimized(arr,size);
     cout<<endl<<endl;
     cout<<"Ans :- "<<ans<<endl;
     cout<<endl<<endl;
