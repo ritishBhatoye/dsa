@@ -118,14 +118,19 @@ int sumOptimized(int* arr,int size)
     return result;
 }
 
-bool linearSearch(int* arr,int size)
+bool linearSearch(int* arr,int size,int k)
 {
     if(size==0)
     {
-        return 0;
+        return false;
     }
 
-    else 
+    else if(arr[0]==k) return true;
+
+    else
+    {
+        return linearSearch(arr+1,size-1,k);
+    }
 }
 
 int main()
