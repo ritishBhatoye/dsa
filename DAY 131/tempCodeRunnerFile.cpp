@@ -1,4 +1,218 @@
-bool checkPalidrome(string s,int s,int e)
-// {
+#include<iostream>
+#include<algorithm>
+#include<string>
+
+using namespace std;
+//Factorial
+int fac(int k)
+{
+    if(k==0)
+    {
+        return 1;
+    }
+
+    return k * fac(k-1);
+}
+
+void print1toN(int n)
+{
+
+    if(n==1)
+    {
+        cout<<n<<" ";
+        return ;
+    }
     
+
+    print1toN(n-1);
+    
+    cout<<n<<" ";
+    
+    return ;
+}
+
+void printNto1(int n)
+{
+
+    if(n==1)
+    {
+        cout<<n<<" ";
+        return ;
+    }
+    cout<<n--<<" ";
+    
+    printNto1(n);
+
+}
+
+//power function
+// \(a^b\) 
+int power(int a,int b)
+{
+   if(b==0)
+        return 1;  
+
+    return a*power(a,b-1);    
+}
+//Reverse an array / string using recursion
+void inputArr(int *arr,int size)
+{
+    cout<<endl<<endl;
+    for(int i=0;i<size;i++)
+    {
+        cout<<"Enter the element at "<<i<<" = ";
+        cin>>arr[i];
+    }
+    cout<<endl<<endl;
+
+}
+
+void print(int * arr,int size)
+{
+    cout<<endl<<endl;
+    for(int i=0;i<size;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+
+void reverseArr(int *arr,int s,int e)
+{
+
+    if(s==e)
+    {
+        cout<<"Reached end... "<<endl;
+        return ;
+    }
+   
+    swap(arr[s++],arr[e--]);
+    
+    reverseArr(arr,s,e);  
+
+}
+
+bool checkPalidrome(string st,int s,int e)
+{
+  if(s>=e)
+  {
+    return true;
+  }   
+  if(st[s]!=st[e])
+  {
+    return false;    
+
+  }
+  return checkPalidrome(st,s+1,e-1);
+    
+}
+
+
+
+// void reverseStr(vector<char>& s,int st,int e)
+// {
+
+//     if(st>e)
+//     {
+//         return ;
+//     }
+
+//     swap(s[st],s[e]);
+//     reverseStr(s,st+1,e-1);
+
 // }
+
+int fib(int n)
+{
+    if(n==0)
+        return 0;
+    if(n==1)
+        return 1;
+
+    int ans=fib(n-1) + fib(n-2);
+    // cout<<ans<<" ";
+    return ans;
+}
+
+void sayDigit(int n,string arr[])
+{
+    if(n==0)
+    {
+        return ;
+    }
+    int digit=n%10;
+    n=n/10;
+    sayDigit(n,arr);
+    cout<<arr[digit]<<" ";
+
+
+}
+
+
+
+int main()
+{
+
+    cout<<endl<<endl;
+    // int k;
+    // cout<<"Enter the number to find Fac :- ";
+    // cin>>k;
+    cout<<endl<<endl;
+    // cout<<"Fac :- "<<fac(k)<<endl;
+    printNto1(20);
+    cout<<endl<<endl;
+    print1toN(20);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    int n;
+    cout<<"Enter the digit :- ";
+    cin>>n;
+    cout<<endl<<endl;
+
+    string arr[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+    sayDigit(n,arr);
+    // int ans=power(10,5);
+    int a,b;
+    cout<<"Enter the number for which you want to see the result :- ";
+    cin>>a;
+    cout<<"Enter the number for power :- ";
+    cin>>b;
+    cout<<"Power  :- "<<power(a,b);
+    // cout<<ans<<endl;
+    // string st;
+    // cout<<"Enter the string :- ";
+    // cin>>st;
+    // if(checkPalidrome(st,0,st.length()-1))
+    // {
+    //     cout<<"String "<<st<<" is Palidrome "<<endl;
+    // }
+    // else
+    // {
+    //     cout<<"String "<<st<<" is NOT Palidrome "<<endl;
+    // }
+    // int size;
+    // cout<<"Enter the size of an array :- ";
+    // cin>>size;
+    // int f;
+    // cout<<"Enter the fibnacci series :- ";
+    // cin>>f;
+    // int fibAns=fib(f);
+    // cout<<endl<<endl;
+    // cout<<"Ans :- "<<fibAns<<endl;
+    // int* arr=new int[size];
+    // cout<<"Enter the elements in the array :- ";
+    // inputArr(arr,size);
+    // cout<<endl<<endl;
+    // cout<<"Before the reversing the array :- "<<endl;
+
+    // print(arr,size);
+    // cout<<endl<<endl;
+
+    // reverseArr(arr,0,size-1);
+
+    // cout<<endl<<endl;
+    // cout<<"After the reversing the array :- "<<endl;
+    // print(arr,size);
+    cout<<endl<<endl;
+
+    return 0;
+}

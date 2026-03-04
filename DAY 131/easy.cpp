@@ -108,18 +108,18 @@ bool checkPalidrome(string st,int s,int e)
 
 
 
-void reverseStr(vector<char>& s,int st,int e)
-{
+// void reverseStr(vector<char>& s,int st,int e)
+// {
 
-    if(st>e)
-    {
-        return ;
-    }
+//     if(st>e)
+//     {
+//         return ;
+//     }
 
-    swap(s[st],s[e]);
-    reverseStr(s,st+1,e-1);
+//     swap(s[st],s[e]);
+//     reverseStr(s,st+1,e-1);
 
-}
+// }
 
 int fib(int n)
 {
@@ -158,18 +158,18 @@ int main()
     // cin>>k;
     cout<<endl<<endl;
     // cout<<"Fac :- "<<fac(k)<<endl;
-    printNto1(20);
+    // printNto1(20);
     cout<<endl<<endl;
-    print1toN(20);
+    // print1toN(20);
     cout<<endl<<endl;
     cout<<endl<<endl;
-    int n;
-    cout<<"Enter the digit :- ";
-    cin>>n;
+    // int n;
+    // cout<<"Enter the digit :- ";
+    // cin>>n;
     cout<<endl<<endl;
 
-    string arr[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
-    sayDigit(n,arr);
+    // string arr[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+    // sayDigit(n,arr);
     // int ans=power(10,5);
     int a,b;
     cout<<"Enter the number for which you want to see the result :- ";
