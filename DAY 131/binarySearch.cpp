@@ -96,8 +96,8 @@ int sum(int* arr,int size,int sum)
         return sum;
     }
 
-    return (arr+1,size-1,arr[0]+arr[1]);
-
+    int result=(arr+1,size-1,arr[0]);
+    return result;
 
 }
 
