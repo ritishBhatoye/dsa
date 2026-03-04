@@ -74,12 +74,17 @@ bool isSort(int* arr,int size)
         return true;
     }
 
-    if(arr[size-2]>arr[size-1])
+    if(arr[0]>arr[1])
     {
         return false;
     }
 
-    return (arr,size-1);
+    else
+    {
+        bool ans = isSort(arr+1,size-1);
+        
+
+    }
 
 }
 
