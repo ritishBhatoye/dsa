@@ -36,6 +36,11 @@ int inversionCount(int* arr,int size)
 
 //o(logn)
 
+// first[ind1] > second[ind2]
+// It means:
+// first[ind1] is greater
+// AND all elements after it in first are also greater
+// (because left array is already sorted)
 int merge(int* arr,int s,int e)
 {
     int mid = (s+e)/2;
