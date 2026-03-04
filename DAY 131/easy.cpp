@@ -117,9 +117,9 @@ void reverseStr(vector<char>& s,int st,int e)
         return ;
     }
 
-
     swap(s[st],s[e]);
     reverseStr(s,st+1,e-1);
+
 }
 
 int fib(int n)
