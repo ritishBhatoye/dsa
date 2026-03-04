@@ -153,6 +153,14 @@ int main()
     cin>>k;
 
     if(linearSearch(arr,size,k))
+    {
+        cout<<"Element "<<k<<"is present in the array"<<endl;
+    }
+    else
+    {
+        cout<<"Element "<<k<<" is NOT preset in the array"<<endl;
+    }
+    
     // int k;
     // cout<<"Enter the value for K :- ";
     // cin>>k;
