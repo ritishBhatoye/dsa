@@ -109,7 +109,18 @@ bool checkPalidrome(string st,int s,int e)
     
 }
 
-void reverseStr(vector<char>)
+void reverseStr(vector<char>& s,int st,int e)
+{
+
+    if(st>e)
+    {
+        return ;
+    }
+
+
+    swap(s[st],s[e]);
+    reverseStr(s,st+1,e-1);
+}
 
 int fib(int n)
 {
