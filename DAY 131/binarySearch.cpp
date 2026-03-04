@@ -92,28 +92,23 @@ bool isSort(int* arr,int size)
 int sum(int* arr,int size)
 {
     int sum+=arr[0];
-    if(size==0)
+    if(size==0 || size==1)
     {
         return sum;
     }
 
-    if(size==1)
-    {
-        return sum;
-    }
-    else 
-    {
-        
-    }
+    // if(size==1)
+    // {
+    //     return sum;
+    // }
+    return (arr+1,size-1);
 
-    
 
 }
 
 
 int main()
 {
-
     cout<<endl<<endl;
     int size;
     cout<<"Enter the size of an array :- ";
@@ -148,6 +143,9 @@ int main()
     {
         cout<<"Array is not sorted "<<endl;
     }
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    int ans = 
     cout<<endl<<endl;
     cout<<endl<<endl;
 
