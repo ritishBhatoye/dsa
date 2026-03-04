@@ -49,13 +49,7 @@ void printNto1(int n)
 // \(a^b\) 
 int power(int a,int b)
 {
-    if(b==0)
-    {
-        return 1;
-    }
-
-    return a * power(a,b-1);
-
+   if(b==0) 
 }
 //Reverse an array / string using recursion
 void inputArr(int *arr,int size)
@@ -108,6 +102,8 @@ bool checkPalidrome(string st,int s,int e)
   return checkPalidrome(st,s+1,e-1);
     
 }
+
+
 
 void reverseStr(vector<char>& s,int st,int e)
 {
