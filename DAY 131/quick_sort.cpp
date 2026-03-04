@@ -36,13 +36,13 @@ int partition(int* arr,int s,int e)
 
     int i=s,j=e;
 
-    while(i< pivotIndex && pivotIndex > j)
+    while(i< pivotIndex && j > pivotIndex)
     {
-        while(arr[i] <= pivot )
+        while(i < pivotIndex && arr[i] <= pivot)
         {
             i++;
         }
-        while(arr[j] > pivot)
+        while(j > pivotIndex  && arr[j] > pivot)
         {
             j--;
         }
