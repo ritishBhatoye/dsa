@@ -120,7 +120,12 @@ int sumOptimized(int* arr,int size)
 
 bool linearSearch(int* arr,int size)
 {
-    
+    if(size==0)
+    {
+        return 0;
+    }
+
+    else 
 }
 
 int main()
