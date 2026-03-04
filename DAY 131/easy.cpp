@@ -109,6 +109,8 @@ bool checkPalidrome(string st,int s,int e)
     
 }
 
+void reverseStr(vector<char>)
+
 int fib(int n)
 {
     if(n==0)
