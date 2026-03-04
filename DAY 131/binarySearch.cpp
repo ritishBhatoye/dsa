@@ -131,6 +131,7 @@ bool linearSearch(int* arr,int size,int k)
     {
         return linearSearch(arr+1,size-1,k);
     }
+
 }
 
 int main()
@@ -147,6 +148,11 @@ int main()
     cout<<endl<<endl;
     printArr(arr,size);
     cout<<endl<<endl;
+    int k;
+    cout<<"Enter the element you want to search :- ";
+    cin>>k;
+
+    if(linearSearch(arr,size,k))
     // int k;
     // cout<<"Enter the value for K :- ";
     // cin>>k;
@@ -161,19 +167,19 @@ int main()
     //     cout<<k<<" is present in the ARRAY at "<<result<<endl;
     // }
 
-    if(isSort(arr,size))
-    {
-        cout<<"Array is sorted "<<endl;
-    }
-    else
-    {
-        cout<<"Array is not sorted "<<endl;
-    }
+    // if(isSort(arr,size))
+    // {
+    //     cout<<"Array is sorted "<<endl;
+    // }
+    // else
+    // {
+    //     cout<<"Array is not sorted "<<endl;
+    // }
     cout<<endl<<endl;
     cout<<endl<<endl;
-    int ans = sumOptimized(arr,size);
+    // int ans = sumOptimized(arr,size);
     cout<<endl<<endl;
-    cout<<"Ans :- "<<ans<<endl;
+    // cout<<"Ans :- "<<ans<<endl;
     cout<<endl<<endl;
 
     return 0;
