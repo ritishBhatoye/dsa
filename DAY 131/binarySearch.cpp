@@ -82,7 +82,8 @@ bool isSort(int* arr,int size)
     else
     {
         bool ans = isSort(arr+1,size-1);
-        
+
+        return ans;
 
     }
 
