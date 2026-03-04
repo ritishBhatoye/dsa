@@ -1,3 +1,8 @@
+// Time complexity becomes O(log n) when:
+// The input size reduces exponentially
+// We eliminate half (or constant fraction) each step
+// Example: Binary Search, Balanced BST, Heap operations
+
 #include<iostream>
 using namespace std;
 
