@@ -89,6 +89,16 @@ bool isSort(int* arr,int size)
 
 }
 
+int sum(int* arr,int size)
+{
+
+    int sum=0;
+
+    (size==0){}
+
+}
+
+
 int main()
 {
 
