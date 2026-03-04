@@ -101,6 +101,20 @@ int sum(int* arr,int size,int s)
 
 }
 
+int sumOptimized(int* arr,int size,int s)
+{
+    if(size==0)
+    {
+        return 0;
+    }
+    if(size==1)
+    {
+        return 1;
+    }
+
+    int result=sumOptimized(arr,size,s);
+    
+}
 
 int main()
 {
