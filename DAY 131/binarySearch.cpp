@@ -91,7 +91,8 @@ bool isSort(int* arr,int size)
 
 int sum(int* arr,int size)
 {
-    int sum+=arr[0];
+    int sum=0;
+    sum+=arr[0];
     if(size==0 || size==1)
     {
         return sum;
@@ -101,6 +102,7 @@ int sum(int* arr,int size)
     // {
     //     return sum;
     // }
+
     return (arr+1,size-1);
 
 
@@ -145,8 +147,9 @@ int main()
     }
     cout<<endl<<endl;
     cout<<endl<<endl;
-    int ans = 
+    int ans = sum(arr,size);
     cout<<endl<<endl;
+    cout<<"Ans :- "<<ans<<endl;
     cout<<endl<<endl;
 
     return 0;
