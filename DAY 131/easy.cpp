@@ -49,7 +49,10 @@ void printNto1(int n)
 // \(a^b\) 
 int power(int a,int b)
 {
-   if(b==0) 
+   if(b==0)
+        return 1;  
+
+    return a*power(a,b-1);    
 }
 //Reverse an array / string using recursion
 void inputArr(int *arr,int size)
@@ -168,6 +171,12 @@ int main()
     string arr[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
     sayDigit(n,arr);
     // int ans=power(10,5);
+    int a,b;
+    cout<<"Enter the number for which you want to see the result :- ";
+    cin>>a;
+    cout<<"Enter the number for power :- ";
+    cin>>b;
+    cout<<"Power  :- "<<power(a,b);
     // cout<<ans<<endl;
     // string st;
     // cout<<"Enter the string :- ";
