@@ -47,7 +47,7 @@ int partition(int* arr,int s,int e)
             j--;
         }
 
-        if(i < pivotIndex && pivotIndex > j)
+        if(i < pivotIndex &&  j > pivotIndex)
         {
             swap(arr[i++],arr[j--]);
         }
