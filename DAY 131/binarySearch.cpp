@@ -67,13 +67,14 @@ int bsRec(int *arr,int s,int e,int k)
 
 }
 
-bool isSort(int* arr,int s,int e)
+bool isSort(int* arr,int size)
 {
 
-    if(s==e)
+    if(s==0)
     {
         return false;
     }
+    
 
 }
 
