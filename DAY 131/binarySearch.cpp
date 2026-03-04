@@ -89,15 +89,15 @@ bool isSort(int* arr,int size)
 
 }
 
-int sum(int* arr,int size,int sum)
+int sum(int* arr,int size,int s)
 {
     if(size==0)
     {
-        return sum;
+        return s;
     }
 
-    int result=(arr+1,size-1,arr[0]);
-    return result;
+    return sum(arr+1,size-1,s+arr[0]);
+
 
 }
 
