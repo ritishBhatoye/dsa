@@ -16,6 +16,7 @@ void merge(int* arr,int s,int e)
         first[i]=arr[k++];
     }
 
+
     for(int i=0;i<l2;i++)
     {
         second[i]=arr[k++];
@@ -23,6 +24,14 @@ void merge(int* arr,int s,int e)
 
     int index1=0;
     int index2=0;
+
+    while(index1 < l1 && index2 < l2)
+    {
+        if(arr[index1] )
+        {
+            
+        }
+    }
 
 }
 
