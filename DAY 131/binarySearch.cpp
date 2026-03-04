@@ -72,7 +72,7 @@ bool isSort(int* arr,int s,int e)
 
     if(s==e)
     {
-        
+        return false;
     }
 
 }
