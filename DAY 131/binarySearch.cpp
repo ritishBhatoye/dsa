@@ -111,11 +111,11 @@ int sumOptimized(int* arr,int size)
     {
         return arr[0];
     }
-    int prev=sumOptimized(arr-1,size-1);
+    int prev=sumOptimized(arr+1,size-1);
 
     int result=arr[0] + prev;
 
-    return prev;
+    return result;
 }
 
 int main()
