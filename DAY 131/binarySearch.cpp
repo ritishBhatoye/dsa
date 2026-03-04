@@ -118,6 +118,11 @@ int sumOptimized(int* arr,int size)
     return result;
 }
 
+bool linearSearch(int* arr,int size)
+{
+    
+}
+
 int main()
 {
     cout<<endl<<endl;
