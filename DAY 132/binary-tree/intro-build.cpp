@@ -83,8 +83,26 @@ void inOrder(node* root)
     cout<<root->data<<" ";
 
     inOrder(root->right);
+}
+
+// Pre Order  traversal NLR
+
+void preOrder(node* root)
+{
+    if(root==NULL)
+        return ;
+
+    cout<<root->data<<" ";
+
+    //move towards left
+    preOrder(root->left);
+    //move towards right
+    preOrder(root->right);
 
 }
+
+//Post Order traversal LRN
+void postOrder(node* root)
 
 int main()
 {
