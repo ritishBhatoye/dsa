@@ -69,9 +69,21 @@ void levelOrder(node* root)
 
 }
 
-void preOrder(node* root)
+// In order traversel LNR
+
+void inOrder(node* root)
 {
-    qu
+    if(root==NULL)
+        return ;
+
+    //move towards left
+    inOrder(root->left);
+    
+    // Print Node
+    cout<<root->data<<" ";
+
+    inOrder(root->right);
+
 }
 
 int main()
