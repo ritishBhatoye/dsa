@@ -103,6 +103,17 @@ void preOrder(node* root)
 
 //Post Order traversal LRN
 void postOrder(node* root)
+{
+    if(root==NULL)
+        return ;
+
+    //move to left
+    postOrder(root->left);
+    //move to right 
+    postOrder(root->right);
+
+    cout<<root->data<<" ";
+}
 
 int main()
 {
@@ -116,7 +127,19 @@ int main()
     cout<<endl<<endl;
     levelOrder(root);
     cout<<endl<<endl;
+    cout<<"Printing InOrder traversal :- ";
     cout<<endl<<endl;
+    inOrder(root);
+    cout<<endl<<endl;
+
+    cout<<"Printing PreOrder traversal :- ";
+    cout<<endl<<endl;
+    preOrder(root);
+    cout<<endl<<endl;
+    cout<<"Printing PostOrder traversal :- ";
+    cout<<endl<<endl;
+    postOrder(root);
+
     cout<<endl<<endl;
 
     return 0;
