@@ -135,7 +135,6 @@ void postOrderItrApp(node* root)
     {
         node* temp = s.top();
 
-
         if(temp->right)
         {
             s.push(temp->right);
@@ -146,7 +145,6 @@ void postOrderItrApp(node* root)
         }
 
         cout<<temp->data<<" ";
-        s.pop();
     }
 
 }
@@ -193,6 +191,8 @@ int main()
     cout<<endl<<endl;
 
     postOrderItrApp(root);
+    cout<<endl<<endl;
+
     cout<<"In Order :- ";
     inOrder(root);
     cout<<endl<<endl;
