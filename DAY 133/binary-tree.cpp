@@ -133,7 +133,7 @@ void postOrderItrApp(node* root)
     // ordered_set<int> o;
     
     s.push(root);
-    node* lastVisted=NULL;
+    node* lastVisited=NULL;
 
     while(!s.empty())
     {
