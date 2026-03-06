@@ -133,24 +133,19 @@ void postOrderItrApp(node* root)
     ordered_set<int> o;
     
     s.push(root);
-    
+    node* lastVisted=NULL;
 
     while(!s.empty())
     {
-        node* temp = s.top();
-
-        if(temp->left!=NULL)
+        if(root->left)
         {
-            s.push(temp->left);
+            s.push(root->left);
+            lastVisited = root->left;
         }
-
-        if(temp->right!=NULL)
+        if(root->right && root->right != lastVisited)
         {
-            s.push(temp->right);
+            s.push(root->right)
         }
-       
-
-        cout<<temp->data<<" ";
     }
 
 }
