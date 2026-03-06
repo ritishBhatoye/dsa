@@ -136,8 +136,19 @@ void postOrderItrApp(node* root)
         node* temp = s.top();
 
 
-        if(temp->)
+        if(temp->right)
+        {
+            s.push(temp->right);
+        }
+        if(temp->left)
+        {
+            s.push(temp->left);
+        }
+
+        cout<<temp->data<<" ";
+        s.pop();
     }
+
 }
 
 void inOrder(node* root)
@@ -172,10 +183,16 @@ int main()
     cout<<"Pre Order iterative :- ";
     preOrderItrApp(root);
     cout<<endl<<endl;
-
+    
     cout<<"Post Order :- ";
     postOrder(root);
     cout<<endl<<endl;
+
+    cout<<"Post Order Iterative :- ";
+
+    cout<<endl<<endl;
+
+    postOrderItrApp(root);
     cout<<"In Order :- ";
     inOrder(root);
     cout<<endl<<endl;
