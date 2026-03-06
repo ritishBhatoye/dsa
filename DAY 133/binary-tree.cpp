@@ -219,7 +219,25 @@ void buildTreeFromLevelOrder(node* root)
 
         q.pop();
 
-        
+        cout<<"Enter the data for LEFT of the : "<<temp->data<<endl;
+        int leftData;
+        cin>>leftData
+
+        if(leftData!=-1)
+        {
+            temp->left = new node(leftData);
+            q.push(temp->left);
+        }
+
+        cout<<"Enter the data for RIGHT of the : "<<temp->data<<endl;
+        int rightData;
+        cin>>rightData
+
+        if(rightData!=-1)
+        {
+            temp->left = new node(leftData);
+            q.push(temp->left);
+        }
     }
 
 }
