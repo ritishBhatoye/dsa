@@ -202,8 +202,17 @@ void inOrderItr(node* root)
 
 void buildTreeFromLevelOrder(node* root)
 {
-    queue<node*> root;
+    queue<node*> q;
     
+    cout<<"Enter data for root :- ";
+    int d;
+    cin>>d;
+
+    while(!q.empty())
+    {
+        
+    }
+
 }
 
 int main()
