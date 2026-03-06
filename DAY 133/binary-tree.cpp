@@ -126,7 +126,11 @@ int main()
     cout<<"Pre Order :- ";
     preOrder(root);
     cout<<endl<<endl;
+    cout<<"Post Order :- ";
+    postOrder(root);
     cout<<endl<<endl;
+    cout<<"In Order :- ";
+    inOrder(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
