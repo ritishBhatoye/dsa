@@ -135,14 +135,16 @@ void postOrderItrApp(node* root)
     {
         node* temp = s.top();
 
-        if(temp->right)
-        {
-            s.push(temp->right);
-        }
-        if(temp->left)
+        if(temp->left!=NULL)
         {
             s.push(temp->left);
         }
+
+        if(temp->right!=NULL)
+        {
+            s.push(temp->right);
+        }
+       
 
         cout<<temp->data<<" ";
     }
