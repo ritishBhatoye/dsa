@@ -89,9 +89,17 @@ void preOrderLoop(node* root)
     s.push(root);
     while(!s.empty())
     {
-        node* temp = root;
-        q.pus
+        node* temp = s.top();
+
         cout<<temp->data<<" ";
+
+        s.pop();
+        if(root->left)
+        {
+            s.push(root->left);
+        }
+       
+        s.push(root->right);
     }
 }
 
