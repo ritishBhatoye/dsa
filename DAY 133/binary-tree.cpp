@@ -94,15 +94,16 @@ void preOrderLoop(node* root)
         cout<<temp->data<<" ";
 
         s.pop();
-        
-        if(root->left)
-        {
-            s.push(root->left);
-        }
+
         if(root->right)
        {
             s.push(root->right);
        }
+        if(root->left)
+        {
+            s.push(root->left);
+        }
+        
         
     }
 }
