@@ -83,7 +83,7 @@ void preOrder(node* root)
 
 }
 
-void preOrderLoop(node* root)
+void preOrderItrApp(node* root)
 {
     stack<node*> s;
     s.push(root);
@@ -95,13 +95,13 @@ void preOrderLoop(node* root)
 
         s.pop();
 
-        if(root->right)
+        if(temp->right)
        {
-            s.push(root->right);
+            s.push(temp->right);
        }
-        if(root->left)
+        if(temp->left)
         {
-            s.push(root->left);
+            s.push(temp->left);
         }
         
         
@@ -154,6 +154,10 @@ int main()
     cout<<"Pre Order :- ";
     preOrder(root);
     cout<<endl<<endl;
+    cout<<"Pre Order iterative :- ";
+    preOrderItrApp(root);
+    cout<<endl<<endl;
+
     cout<<"Post Order :- ";
     postOrder(root);
     cout<<endl<<endl;
