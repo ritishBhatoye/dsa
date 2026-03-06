@@ -208,8 +208,17 @@ void buildTreeFromLevelOrder(node* root)
     int d;
     cin>>d;
 
+    root=new node(d);
+
+    q.push(root);
+
+
     while(!q.empty())
     {
+        node* temp = q.front();
+
+        q.pop();
+
         
     }
 
