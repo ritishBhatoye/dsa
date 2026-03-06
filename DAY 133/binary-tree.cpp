@@ -131,7 +131,23 @@ void postOrderItrApp(node* root)
     node* curr = root;
     node* lastVisited = NULL;
 
-    while()
+    while(curr != NULL || !s.empty())
+    {
+        if(curr != NULL)
+        {
+            s.push(curr);
+            curr = curr->left;
+        }
+        else
+        {
+            node* temp = s.top();
+
+            if(temp->right!=NULL && temp->right != lastVisited)
+            {
+                temp->right
+            }
+        }
+    }
 }
 
 void inOrder(node* root)
