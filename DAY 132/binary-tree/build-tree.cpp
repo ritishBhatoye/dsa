@@ -34,7 +34,7 @@ node* buildTree(node* root)
     cout<<"Enter the data to LEFT of "<<d<<" :- "<<endl;
     root->left=buildTree(root->left);
 
-    cout<<"Enter the data to RIGHT of "<<d<<" :- ";
+    cout<<"Enter the data to RIGHT of "<<d<<" :- "<<endl;
     root->right = buildTree(root->right);
 
     return root;

@@ -32,10 +32,10 @@ node* buildTree(node* root)
 
     root = new node(d);
 
-    cout<<"Enter the element in the left of the "<<d<<" :- ";
+    cout<<"Enter the element in the left of the "<<d<<" :- "<<endl;
     root->left = buildTree(root->left);
 
-    cout<<"Enter the element in the right of the "<<d<<" :- ";
+    cout<<"Enter the element in the right of the "<<d<<" :- "<<endl;
     root->left = buildTree(root->right);
 
     return root;
@@ -120,7 +120,11 @@ int main()
     cout<<"Building tree :- "<<endl<<endl;
     root=buildTree(root);
     cout<<endl<<endl;
+    cout<<"Level Order :- ";
+    levelOrder(root);
     cout<<endl<<endl;
+    cout<<"Pre Order :- ";
+    preOrder(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
