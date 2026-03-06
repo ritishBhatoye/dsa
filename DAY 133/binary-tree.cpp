@@ -82,6 +82,14 @@ void preOrder(node* root)
 
 }
 
+void preOrderLoop(node* root)
+{
+    while(root->left!=NULL)
+    {
+        
+    }
+}
+
 void postOrder(node* root)
 {
     if(root==NULL)
