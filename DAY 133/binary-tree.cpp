@@ -116,7 +116,7 @@ int main()
 {
 //    1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
 
-
+// 5 12 7 17 -1 -1 23 -1 -1 -1 13 14  
     cout<<endl<<endl;
     node* root = NULL;
     cout<<"Building tree :- "<<endl<<endl;
