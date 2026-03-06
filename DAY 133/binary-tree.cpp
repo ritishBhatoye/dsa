@@ -142,13 +142,13 @@ void postOrderItrApp(node* root)
         {
             node* temp = s.top();
 
-            if(temp->right!=NULL && temp->right != lastVisited)
+            if(temp->right!=NULL &&   lastVisited!=temp->right )
             {
                 curr=temp->right;
             }
             else{
                 cout<<temp->data<<" ";
-                lastVisited = temp->right;
+                lastVisited = temp;
                 s.pop();
 
             }
@@ -168,6 +168,13 @@ void inOrder(node* root)
 
     inOrder(root->right);
 }
+
+
+void inOrderItr(node* root)
+{
+
+}
+
 
 int main()
 {
