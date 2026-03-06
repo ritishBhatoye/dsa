@@ -176,6 +176,26 @@ void inOrderItr(node* root)
     node* curr=root;
 
     while(curr!=NULL || !s.empty())
+    {
+        if(curr!=NULL)
+        {
+            s.push(curr);
+            curr=curr->left;
+        }
+
+        else
+        {
+                node* temp=s.top();
+
+                if(temp->right)
+                {
+                    s.push(temp->right);
+                    
+
+                }
+
+        }
+    }
 
 }
 
