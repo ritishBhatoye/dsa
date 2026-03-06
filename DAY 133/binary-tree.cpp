@@ -191,7 +191,7 @@ void inOrderItr(node* root)
                 if(temp->right)
                 {
                     s.push(temp->right);
-
+                    curr=temp->right;
 
                 }
 
