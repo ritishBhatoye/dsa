@@ -124,7 +124,21 @@ void postOrder(node* root)
     cout<<root->data<<" ";
 }
 
-void postOd
+void postOrderItrApp(node* root)
+{
+    if(root == NULL)
+        return ;
+    stack<node*> s;
+    s.push(root);
+
+    while(!s.empty())
+    {
+        node* temp = s.top();
+
+
+        if(temp->)
+    }
+}
 
 void inOrder(node* root)
 {
