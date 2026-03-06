@@ -98,8 +98,11 @@ void preOrderLoop(node* root)
         {
             s.push(root->left);
         }
-       
-        s.push(root->right);
+        if(root->right)
+       {
+                 s.push(root->right);
+       }
+        
     }
 }
 
