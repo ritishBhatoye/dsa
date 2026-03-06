@@ -124,6 +124,7 @@ void postOrder(node* root)
     cout<<root->data<<" ";
 }
 
+void postOd
 
 void inOrder(node* root)
 {
