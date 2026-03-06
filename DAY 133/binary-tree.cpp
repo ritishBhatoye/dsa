@@ -200,6 +200,10 @@ void inOrderItr(node* root)
 
 }
 
+void buildTreeFromLevelOrder(node* root)
+{
+    queue<int>
+}
 
 int main()
 {
