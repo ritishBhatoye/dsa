@@ -127,30 +127,11 @@ void postOrder(node* root)
 
 void postOrderItrApp(node* root)
 {
-    if(root == NULL)
-        return ;
     stack<node*> s;
-    // ordered_set<int> o;
-    
-    s.push(root);
-    node* lastVisited=NULL;
+    node* curr = root;
+    node* lastVisited = NULL;
 
-    while(!s.empty())
-    {
-        if(root->left)
-        {
-            s.push(root->left);
-            lastVisited = root->left;
-        }
-        if(root->right && root->right != lastVisited)
-        {
-            s.push(root->right);
-            lastVisited=root->right;
-        }
-
-    }
-    
-
+    while()
 }
 
 void inOrder(node* root)
