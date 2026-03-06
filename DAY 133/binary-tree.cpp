@@ -200,7 +200,7 @@ void inOrderItr(node* root)
 
 }
 
-void buildTreeFromLevelOrder(node* root)
+void buildTreeFromLevelOrder(node* &root)
 {
     queue<node*> q;
     
@@ -221,7 +221,7 @@ void buildTreeFromLevelOrder(node* root)
 
         cout<<"Enter the data for LEFT of the : "<<temp->data<<endl;
         int leftData;
-        cin>>leftData
+        cin>>leftData;
 
         if(leftData!=-1)
         {
@@ -231,12 +231,12 @@ void buildTreeFromLevelOrder(node* root)
 
         cout<<"Enter the data for RIGHT of the : "<<temp->data<<endl;
         int rightData;
-        cin>>rightData
+        cin>>rightData;
 
         if(rightData!=-1)
         {
-            temp->left = new node(leftData);
-            q.push(temp->left);
+            temp->right = new node(rightData);
+            q.push(temp->right);
         }
     }
 
@@ -250,7 +250,7 @@ int main()
     cout<<endl<<endl;
     node* root = NULL;
     cout<<"Building tree :- "<<endl<<endl;
-    root=buildTree(root);
+    buildTreeFromLevelOrder(root);
     cout<<endl<<endl;
     cout<<"Level Order :- ";
     levelOrder(root);
