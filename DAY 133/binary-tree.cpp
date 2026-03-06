@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<stack>
 
 using namespace std;
 
@@ -84,9 +85,13 @@ void preOrder(node* root)
 
 void preOrderLoop(node* root)
 {
-    while(root->left!=NULL)
+    stack<node*> s;
+    s.push(root);
+    while(!s.empty())
     {
-        
+        node* temp = root;
+        q.pus
+        cout<<temp->data<<" ";
     }
 }
 
