@@ -1,7 +1,7 @@
 #include<iostream>
 #include<queue>
 #include<stack>
-#include<ordered>
+
 
 using namespace std;
 
@@ -130,7 +130,7 @@ void postOrderItrApp(node* root)
     if(root == NULL)
         return ;
     stack<node*> s;
-    ordered_set<int> o;
+    // ordered_set<int> o;
     
     s.push(root);
     node* lastVisted=NULL;
@@ -147,8 +147,9 @@ void postOrderItrApp(node* root)
             s.push(root->right);
             lastVisited=root->right;
         }
-        
+
     }
+    r
 
 }
 
