@@ -190,7 +190,7 @@ void inOrderItr(node* root)
                 cout<<temp->data<<" ";
                 if(temp->right)
                 {
-                    s.push(temp->right);
+                    // s.push(temp->right);
                     curr=temp->right;
 
                 }
