@@ -36,7 +36,7 @@ node* buildTree(node* root)
     root->left = buildTree(root->left);
 
     cout<<"Enter the element in the right of the "<<d<<" :- "<<endl;
-    root->left = buildTree(root->right);
+    root->right = buildTree(root->right);
 
     return root;
 }
@@ -115,6 +115,8 @@ void inOrder(node* root)
 int main()
 {
 //    1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+
+
     cout<<endl<<endl;
     node* root = NULL;
     cout<<"Building tree :- "<<endl<<endl;
