@@ -186,11 +186,12 @@ void inOrderItr(node* root)
         else
         {
                 node* temp=s.top();
-
+                s.pop();
+                cout<<temp->data<<" ";
                 if(temp->right)
                 {
                     s.push(temp->right);
-                    
+
 
                 }
 
@@ -230,9 +231,15 @@ int main()
 
     postOrderItrApp(root);
     cout<<endl<<endl;
+    cout<<endl<<endl;
 
     cout<<"In Order :- ";
     inOrder(root);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+    cout<<"In Order  Iterative Approach :- ";
+
+    inOrderItr(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
