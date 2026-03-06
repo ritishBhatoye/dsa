@@ -133,6 +133,7 @@ void postOrderItrApp(node* root)
     ordered_set<int> o;
     
     s.push(root);
+    
 
     while(!s.empty())
     {
