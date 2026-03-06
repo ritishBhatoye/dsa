@@ -144,7 +144,13 @@ void postOrderItrApp(node* root)
 
             if(temp->right!=NULL && temp->right != lastVisited)
             {
-                temp->right
+                curr=temp->right;
+            }
+            else{
+                cout<<temp->data<<" ";
+                lastVisited = temp->right;
+                s.pop();
+
             }
         }
     }
