@@ -100,7 +100,7 @@ void preOrderLoop(node* root)
         }
         if(root->right)
        {
-                 s.push(root->right);
+            s.push(root->right);
        }
         
     }
