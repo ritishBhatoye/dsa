@@ -172,7 +172,11 @@ void inOrder(node* root)
 
 void inOrderItr(node* root)
 {
-    
+    stack<node*> s;
+    node* curr=root;
+
+    while(curr!=NULL || !s.empty())
+
 }
 
 
