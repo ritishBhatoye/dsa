@@ -144,8 +144,10 @@ void postOrderItrApp(node* root)
         }
         if(root->right && root->right != lastVisited)
         {
-            s.push(root->right)
+            s.push(root->right);
+            lastVisited=root->right;
         }
+        
     }
 
 }
