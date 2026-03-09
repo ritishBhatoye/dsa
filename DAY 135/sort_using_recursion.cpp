@@ -135,7 +135,8 @@ int main()
     printArr(arr,size);
 
     cout<<endl<<endl;
-    selectionSort(arr,size);
+    // selectionSort(arr,size);
+    bubbleSort(arr,size);
     printArr(arr,size);
     cout<<endl<<endl;
     cout<<endl<<endl;
