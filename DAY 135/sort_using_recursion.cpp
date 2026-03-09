@@ -106,5 +106,20 @@ void mergeSort(int s,int e,int* arr)
 
 int main()
 {
+    cout<<endl<<endl;
+    int size;
+    cout<<"Enter the size of an array :- ";
+    cin>>size;
+    int* arr=new int[size];
+    cout<<endl<<endl;
+    inputArr(arr,size);
+    printArr(arr,size);
+
+    cout<<endl<<endl;
+    selectionSort(arr,size);
+    printArr(arr,size);
+    cout<<endl<<endl;
+    cout<<endl<<endl;
+
     return 0;
 }
