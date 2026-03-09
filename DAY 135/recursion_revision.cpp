@@ -69,7 +69,16 @@ void inputArr(int* arr,int n)
 {
     for(int i=0;i<n;i++)
     {
+        cout<<"Enter the element at :- "<<i<<" = ";
         cin>>arr[i];
+    }
+}
+
+void printArr(int* arr,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
     }
 }
 void reverse(int s,int e,int* arr)
@@ -95,6 +104,8 @@ int main()
     int n;
     cout<<"Enter the size of an array :- ";
     cin>>n;
+    int *arr=new int[n];
+
     inputArr(arr,n);
 
 
