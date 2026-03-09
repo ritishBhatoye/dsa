@@ -65,12 +65,21 @@ void sayDigit(int n,string* digit)
 }
 
 // 6.reversing an array
+void inputArr(int* arr,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+}
 void reverse(int s,int e,int* arr)
 {
     if(s==e)
         return ;
 
-    cout<<
+    swap(arr[s],arr[e]);
+
+    reverse(s+1,e-1,arr);
 }
 int main()
 {
@@ -83,11 +92,12 @@ int main()
     // cout<<"Enter the power :- ";
     // cin>>b;
     cout<<endl<<endl;
-    string s[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
-    cout<<"Enter the digit to get the digit :- ";
     int n;
+    cout<<"Enter the size of an array :- ";
     cin>>n;
-    sayDigit(n,s);
+    inputArr(arr,n);
+
+
     // int ans = power(a,b);
     cout<<endl<<endl;
     // int n;
