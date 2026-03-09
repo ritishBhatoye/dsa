@@ -42,7 +42,6 @@ void countingDec(int n)
 
 int main()
 {
-    int a,b;
     // cout<<"Enter the Number :- ";
     // cin>>a;
 
@@ -58,14 +57,12 @@ int main()
     // int facAns = fac(n);
     cout<<endl<<endl;
     // cout<<"Factorial Ans :- "<<facAns;
-    int n;
-    cin>>n;
-    cout<<"counting from 0 to "<<n<<endl;
-    countingInc(n);
+  
     cout<<endl<<endl;
-    cout<<"counting from "<<n<<"to 0 "<<endl;
+    
+    cout<<endl<<endl;
+    cout<<endl<<endl;
 
-    countingDec(n);
 
     cout<<endl<<endl;
 
