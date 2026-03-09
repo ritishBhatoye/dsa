@@ -17,16 +17,16 @@ void printArr(int* arr,int n)
         cout<<arr[i]<<" ";
     }
 }
-//selection sort
+//bubble sort
 void selectionSort(int* arr,int n)
 {
     if(n==0)
         return ;
 
-    
+    int k=arr[0];
     for(int i=1;i<n;i++)
     {
-        if()
+        if(k>)
     }
 }
 void merge(int s,int e,int* arr)
