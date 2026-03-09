@@ -178,6 +178,19 @@ void merge(int s,int e,int* arr)
    {
         second[i]=arr[k++];
    }
+   
+   int mainIndex=s;
+   int i=0;
+   int j=0;
+
+   while(i<l1 && j <l2)
+   {
+     if(first[i]<second[j])
+     {
+        arr[]
+     }
+   }
+
 }
 void mergeSort(int s,int e,int* arr)
 {
