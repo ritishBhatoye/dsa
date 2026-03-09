@@ -12,13 +12,12 @@ int power(int a,int b)
 
 }
 
-
 int main()
 {
     int a,b;
     cout<<"Enter the Number :- ";
     cin>>a;
-    
+
     cout<<"Enter the power :- ";
     cin>>b;
     cout<<endl<<endl;
