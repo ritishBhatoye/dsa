@@ -160,7 +160,7 @@ bool checkPalidrome(int s,int e,string& str)
 //11.merge sort
 void merge(int s,int e,int* arr)
 {
-    
+    if()
 }
 
 int main()
