@@ -238,6 +238,9 @@ int main()
     inputArr(arr,n);
     cout<<"Printing :- ";
     printArr(arr,n);
+    mergeSort(0,n-1,arr);
+    cout<<"After Applyting the merge sort :- ";
+    cin>
     // reverseArr(0,n-1,arr);
     cout<<endl<<endl;
 
