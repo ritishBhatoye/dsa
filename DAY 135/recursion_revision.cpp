@@ -143,7 +143,7 @@ bool checkPalidrome(int s,int e,string& str)
         return true;
 
     
-    if(tolowercase(str[s])!=tostr[e])
+    if(tolowercase(str[s])!=toloercase(str[e]))
         return false;
     return checkPalidrome(s+1,e-1,str);
 }
