@@ -95,7 +95,7 @@ bool linearSearch(int *arr,int n,int k)
 {
     if(n==0)
         return false;
-    
+
     if(arr[0]==k)
         return true;
     
@@ -106,6 +106,8 @@ bool binarySearch(int s,int e,int* arr,int k)
 {
     if(s>e)
         return false;
+
+    
 
     
 }
