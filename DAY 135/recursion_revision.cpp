@@ -135,6 +135,17 @@ void reverseString(int s,int e,string & str)
 
 
 }
+
+//10.check if palidrome 
+bool checkPalidrome(int s,int e,string& str)
+{
+    if(s>e) 
+        return true;
+
+    if(str[s]!=str[e])
+        return false;
+    return checkPalidrome(s+1,e-1,str);
+}
 int main()
 {
     // cout<<"Enter the Number :- ";
