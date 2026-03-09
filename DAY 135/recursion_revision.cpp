@@ -1,4 +1,5 @@
 #include<iostream>
+#include <ctype.h>
 
 using namespace std;
 
@@ -143,7 +144,7 @@ bool checkPalidrome(int s,int e,string& str)
         return true;
 
     
-    if(tolowercase(str[s])!=toloercase(str[e]))
+    if(tolower(str[s])!=tolower(str[e]))
         return false;
     return checkPalidrome(s+1,e-1,str);
 }
