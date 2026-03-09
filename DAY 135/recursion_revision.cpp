@@ -169,7 +169,10 @@ void merge(int s,int e,int* arr)
     int *a1 = int new[l1];
     int *a2 = int new[l2];
 
-    
+    for(int i=0;i<l1;i++)
+    {
+        a1[i++]
+    }
 }
 void mergeSort(int s,int e,int* arr)
 {
