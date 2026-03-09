@@ -91,11 +91,11 @@ void reverseArr(int s,int e,int* arr)
     reverseArr(s+1,e-1,arr);
 }
 // 7.Linear Search
-bool linearSearch(int *arr,int k)
+bool linearSearch(int *arr,int n,int k)
 {
     if(arr[0]==k)
         return true;
-
+    
     return linearSearch(arr+1,k);
 }
 int main()
@@ -141,19 +141,19 @@ int main()
     cout<<endl<<endl;
     // cout<<"Factorial Ans :- "<<facAns;
   
-    cout<<endl<<endl;
+    // cout<<endl<<endl;
 
-    cout<<endl<<endl;
-    cout<<endl<<endl;
-
-
-    cout<<endl<<endl;
+    // cout<<endl<<endl;
+    // cout<<endl<<endl;
 
 
+    // cout<<endl<<endl;
 
-    cout<<endl<<endl;
 
-    cout<<endl<<endl;
+
+    // cout<<endl<<endl;
+
+    // cout<<endl<<endl;
 
     return 0;
 }
