@@ -8,14 +8,26 @@ void merge(int s,int e,int* arr)
     int l2 =  e - mid;
     
 
-    int* first = 
+    int* first = new int[l1];
+    int* second = new int[l2];
 
     int k=s;
 
     for(int i=0;i<l1;i++)
     {
-        
+        first[i]=arr[k++];
     }
+    
+    for(int i=0;i<l2;i++)
+    {
+        second[i]=arr[k++];
+    }
+
+    int mainIndex = s;
+
+    int i=0,k=0;
+
+    while(i<l1 && j<)
 
 }
 
