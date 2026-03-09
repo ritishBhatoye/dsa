@@ -91,12 +91,15 @@ void reverseArr(int s,int e,int* arr)
     reverseArr(s+1,e-1,arr);
 }
 // 7.Linear Search
-bool linearSearch(int *arr,int s,int e,int k)
+bool linearSearch(int *arr,int n,int k)
 {
-    if(s>e)
+    if(n==0)
         return false;
     
-    return linearSearch(arr,n-1,k);
+    if(arr[0]==k)
+        return true;
+    
+    return linearSearch(arr+1,n-1,k);
 }
 //8.Boolean Search
 bool binarySearch(int s,int e,int* arr,int k)
