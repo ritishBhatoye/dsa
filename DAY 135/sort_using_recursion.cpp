@@ -19,7 +19,7 @@ void printArr(int* arr,int n)
 }
 
 //selection sort
-//target the index of 
+//target the index of largest  element then swap it with first here we target
 void selectionSort(int* arr,int n)
 {
     if(n==0 || n==1)
