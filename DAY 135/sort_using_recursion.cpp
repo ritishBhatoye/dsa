@@ -24,6 +24,10 @@ void selectionSort(int* arr,int n)
         return ;
 
     
+    for(int i=1;i<n;i++)
+    {
+        if()
+    }
 }
 void merge(int s,int e,int* arr)
 {
