@@ -57,20 +57,24 @@ void sayDigit(int n,string* digit)
 
     int d = s % 10;
 
-    
+    cout<<digit[d]<<" ";
+
+    n=n/10;
+
+    sayDigit(n,digit);
 }
 int main()
 {
     // cout<<"Enter the Number :- ";
     // cin>>a;
-    int n;
-    cin>>n;
-    int ans = fibonacciSeries(n);
-    cout<<"Fibonacci Series :- "<<ans<<endl;
+    // int n;
+    // cin>>n;
+    // int ans = fibonacciSeries(n);
+    // cout<<"Fibonacci Series :- "<<ans<<endl;
     // cout<<"Enter the power :- ";
     // cin>>b;
-    // cout<<endl<<endl;
-
+    cout<<endl<<endl;
+    string [10]={"zero","one","two","three",""}
     // int ans = power(a,b);
     cout<<endl<<endl;
     // int n;
