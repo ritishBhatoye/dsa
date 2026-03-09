@@ -17,7 +17,7 @@ void printArr(int* arr,int n)
         cout<<arr[i]<<" ";
     }
 }
-//bubble sort
+//selection sort
 void selectionSort(int* arr,int n)
 {
     if(n==0)
