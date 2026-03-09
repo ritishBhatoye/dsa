@@ -19,6 +19,7 @@ void printArr(int* arr,int n)
 }
 
 //selection sort
+//target the index of 
 void selectionSort(int* arr,int n)
 {
     if(n==0 || n==1)
@@ -27,7 +28,7 @@ void selectionSort(int* arr,int n)
     int k=0;
     for(int i=1;i<n;i++)
     {
-        if(arr[k]>arr[i])
+        if(arr[k]<arr[i])
         {
             k=i;
         }
@@ -36,8 +37,12 @@ void selectionSort(int* arr,int n)
     swap(arr[k],arr[n-1]);
     selectionSort(arr,n-1);
 }
+
+//bubble sort
+
 void merge(int s,int e,int* arr)
 {
+    int mid = s +(e-s)/2;
     int l1 =  mid - s + 1; 
     int l2 =  e - mid;
     
@@ -59,7 +64,7 @@ void merge(int s,int e,int* arr)
 
     int mainIndex = s;
 
-    int i=0,k=0;
+    int i=0,j=0;
 
     while(i<l1 && j<l2)
     {
