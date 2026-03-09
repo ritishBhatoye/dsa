@@ -125,12 +125,13 @@ bool binarySearch(int s,int e,int* arr,int k)
 }
 
 //9. reverse string 
-void reverseString(int s,int e,string & s)
+void reverseString(int s,int e,string & str)
 {
     if(s>e)
         return ;
 
-    
+    swap(str[s],str[e]);
+    reverseString(s+1,e-1,str);
 
 
 }
@@ -170,6 +171,7 @@ int main()
 
     // int ans = power(a,b);
     cout<<endl<<endl;
+    reverseString(0,,)
     // int n;
     // cout<<"Enter the value for which you want to cal the factorial :- ";
     // cin>>n;
