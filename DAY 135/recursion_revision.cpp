@@ -12,6 +12,25 @@ int power(int a,int b)
 
 }
 
+// 2.Factorial
+int fac(int n)
+{
+    if(n==0)
+        return 1;
+
+    return n*fac(n-1);
+}
+//3.counting from 1 to n;
+
+void counting(int n)
+{
+    if(n==1)
+        return ;
+
+    counting(n-1);    
+    cout<<
+}
+
 int main()
 {
     int a,b;
