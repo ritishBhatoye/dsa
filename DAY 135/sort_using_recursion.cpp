@@ -30,9 +30,10 @@ void selectionSort(int* arr,int n)
         {
             k=i;
         }
-
-        
+        swap(arr[0],arr[i]);
     }
+
+    selection(arr+1,n-1);
 }
 void merge(int s,int e,int* arr)
 {
