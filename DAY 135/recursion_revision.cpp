@@ -143,7 +143,15 @@ bool checkPalidrome(int s,int e,string& str)
     if(s>e) 
         return true;
 
-    
+    if(!isalnum(str[s]))
+    {
+        return checkPalidrome(s+1,e,str);
+    }
+
+    if(!isalnum(str[e]))
+    {
+        return checkPalidrome(s,e-1,str);
+    }
     if(tolower(str[s])!=tolower(str[e]))
         return false;
     return checkPalidrome(s+1,e-1,str);
