@@ -81,14 +81,14 @@ void printArr(int* arr,int n)
         cout<<arr[i]<<" ";
     }
 }
-void reverse(int s,int e,int* arr)
+void reverseArr(int s,int e,int* arr)
 {
     if(s==e)
         return ;
 
     swap(arr[s],arr[e]);
 
-    reverse(s+1,e-1,arr);
+    reverseArr(s+1,e-1,arr);
 }
 int main()
 {
@@ -107,7 +107,12 @@ int main()
     int *arr=new int[n];
 
     inputArr(arr,n);
-
+    cout<<"Printing :- ";
+    printArr(arr,n);
+    reverseArr(0,n-1,arr);
+    cout<<"After reversing :- ";
+    printArr(arr,n);
+    
 
     // int ans = power(a,b);
     cout<<endl<<endl;
