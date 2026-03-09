@@ -24,7 +24,7 @@ int fac(int n)
 
 void countingInc(int n)
 {
-    if(n==1)
+    if(n==0)
         return ;
 
     countingInc(n-1);    
@@ -33,7 +33,7 @@ void countingInc(int n)
 
 void countingDec(int n)
 {
-    if(n==1)
+    if(n==0)
         return ;
     
     cout<<n<<" ";
@@ -58,9 +58,14 @@ int main()
     // int facAns = fac(n);
     cout<<endl<<endl;
     // cout<<"Factorial Ans :- "<<facAns;
-    
-    countingInc(n)
+    int n;
+    cin>>n;
+    cout<<"counting from 0 to "<<n<<endl;
+    countingInc(n);
     cout<<endl<<endl;
+    cout<<"counting from "<<n<<"to 0 "<<endl;
+
+    countingDec(n);
 
     cout<<endl<<endl;
 
