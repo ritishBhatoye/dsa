@@ -55,13 +55,13 @@ void sayDigit(int n,string* digit)
     if(n==0)
         return ;
 
-    int d = s % 10;
+    int d = n % 10;
 
-    cout<<digit[d]<<" ";
 
     n=n/10;
-
     sayDigit(n,digit);
+    
+    cout<<digit[d]<<" ";
 }
 int main()
 {
@@ -74,7 +74,11 @@ int main()
     // cout<<"Enter the power :- ";
     // cin>>b;
     cout<<endl<<endl;
-    string [10]={"zero","one","two","three",""}
+    string s[10]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+    cout<<"Enter the digit to get the digit :- ";
+    int n;
+    cin>>n;
+    sayDigit(n,s);
     // int ans = power(a,b);
     cout<<endl<<endl;
     // int n;
