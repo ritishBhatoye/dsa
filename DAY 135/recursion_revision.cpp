@@ -176,12 +176,12 @@ int main()
     cin>>str;
     reverseString(0,str.length()-1,str);
     cout<<"String Reversed :- "<<str<<endl;
-    if(checkPalidrome(0,str.length()-1,arr,k))
+    if(checkPalidrome(0,str.length()-1,str))
     {
-        cout<<"Element "<<k<<" is present in the arr"<<endl;
+        cout<<"String "<<str<<" is Palidrome "<<endl;
     }
     else{
-        cout<<"Element "<<k<<" is NOT present in the arr"<<endl;
+        cout<<"String "<<str<<" is NOT Palidrome "<<endl;
 
     }
 
