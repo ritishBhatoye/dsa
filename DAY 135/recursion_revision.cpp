@@ -91,15 +91,21 @@ void reverseArr(int s,int e,int* arr)
     reverseArr(s+1,e-1,arr);
 }
 // 7.Linear Search
-bool linearSearch(int *arr,int n,int k)
+bool linearSearch(int *arr,int s,int e,int k)
 {
-    if(n==0)
+    if(s>e)
         return false;
     
-    return linearSearch(arr+1,n-1,k);
+    return linearSearch(arr,n-1,k);
 }
 //8.Boolean Search
-bool binarySearch(int* arr)
+bool binarySearch(int s,int e,int* arr,int k)
+{
+    if(s>e)
+        return false;
+
+    
+}
 int main()
 {
     // cout<<"Enter the Number :- ";
