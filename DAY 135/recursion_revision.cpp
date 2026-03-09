@@ -171,7 +171,11 @@ int main()
 
     // int ans = power(a,b);
     cout<<endl<<endl;
-    reverseString(0,,)
+    string str;
+    cout<<"Enter the string :- ";
+    cin>>str;
+    reverseString(0,str.length()-1,str);
+    cout<<"String Reversed :- "<<str<<endl;
     // int n;
     // cout<<"Enter the value for which you want to cal the factorial :- ";
     // cin>>n;
