@@ -156,6 +156,13 @@ bool checkPalidrome(int s,int e,string& str)
         return false;
     return checkPalidrome(s+1,e-1,str);
 }
+
+//11.merge sort
+void merge(int s,int e,int* arr)
+{
+    
+}
+
 int main()
 {
     // cout<<"Enter the Number :- ";
