@@ -108,6 +108,19 @@ bool binarySearch(int s,int e,int* arr,int k)
         return false;
 
     
+    int mid = s + (e-s)/2;
+
+    if(arr[mid]==k)
+        return true;
+
+    else if(arr[mid] <k)
+    {
+        return swap(mid+1,e,arr,k);
+    }
+    else
+    {
+        
+    }
 
     
 }
