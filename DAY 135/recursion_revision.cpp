@@ -90,6 +90,11 @@ void reverseArr(int s,int e,int* arr)
 
     reverseArr(s+1,e-1,arr);
 }
+// 7.Linear Search
+int linearSearch(int *arr,int k)
+{
+    if(arr[])
+}
 int main()
 {
     // cout<<"Enter the Number :- ";
