@@ -47,9 +47,9 @@ void bubbleSort(int* arr,int size)
 
     for(int i=1;i<size;i++)
     {
-        if(arr[0] > arr[i])
+        if(arr[i] > arr[i+1])
         {
-            swap(arr[0],arr[i]);
+            swap(arr[i],arr[i+1]);
         }
     }
     bubbleSort(arr,size-1);
