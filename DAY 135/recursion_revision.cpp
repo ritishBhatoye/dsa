@@ -27,7 +27,7 @@ void countingInc(int n)
     if(n==1)
         return ;
 
-    counting(n-1);    
+    countingInc(n-1);    
     cout<<n<<" ";
 }
 
@@ -37,7 +37,7 @@ void countingDec(int n)
         return ;
     
     cout<<n<<" ";
-    coutingDec(n-1);
+    countingDec(n-1);
 }
 
 int main()
@@ -52,16 +52,20 @@ int main()
 
     // int ans = power(a,b);
     cout<<endl<<endl;
-    int n;
-    cout<<"Enter the value for which you want to cal the "
-    cin>>n;
-    int facAns = fac()
+    // int n;
+    // cout<<"Enter the value for which you want to cal the factorial :- ";
+    // cin>>n;
+    // int facAns = fac(n);
+    cout<<endl<<endl;
+    // cout<<"Factorial Ans :- "<<facAns;
+    
+    countingInc(n)
     cout<<endl<<endl;
 
     cout<<endl<<endl;
 
 
-    cout<<"Ans :- "<<ans<<endl;
+
     cout<<endl<<endl;
 
     cout<<endl<<endl;
