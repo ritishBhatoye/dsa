@@ -93,10 +93,10 @@ void reverseArr(int s,int e,int* arr)
 // 7.Linear Search
 bool linearSearch(int *arr,int n,int k)
 {
-    if(arr[0]==k)
-        return true;
+    if(n==-1)
+        return false;
     
-    return linearSearch(arr+1,k);
+    return linearSearch(arr+1,n-1,k);
 }
 int main()
 {
