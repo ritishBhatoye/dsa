@@ -93,11 +93,13 @@ void reverseArr(int s,int e,int* arr)
 // 7.Linear Search
 bool linearSearch(int *arr,int n,int k)
 {
-    if(n==-1)
+    if(n==0)
         return false;
     
     return linearSearch(arr+1,n-1,k);
 }
+//8.Boolean Search
+bool binarySearch(int* arr)
 int main()
 {
     // cout<<"Enter the Number :- ";
@@ -117,13 +119,13 @@ int main()
     inputArr(arr,n);
     cout<<"Printing :- ";
     printArr(arr,n);
-    reverseArr(0,n-1,arr);
+    // reverseArr(0,n-1,arr);
     cout<<endl<<endl;
 
     int k;
     cout<<"Enter the element k to check whether it is present in the array or not "<<endl;
     cin>>k;
-    if(linearSearch(arr,k))
+    if(linearSearch(arr,n,k))
     {
         cout<<"Element "<<k<<" is present in the arr"<<endl;
     }
