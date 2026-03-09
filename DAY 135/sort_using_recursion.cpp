@@ -21,7 +21,7 @@ void printArr(int* arr,int n)
 //selection sort
 void selectionSort(int* arr,int n)
 {
-    if(n==0)
+    if(n==0 || n==1)
         return ;
 
     int k=0;
@@ -31,10 +31,10 @@ void selectionSort(int* arr,int n)
         {
             k=i;
         }
-        swap(arr[0],arr[i]);
+       
     }
-
-    selectionSort(arr+1,n);
+    swap(arr[k],arr[n-1]);
+    selectionSort(arr,n-1);
 }
 void merge(int s,int e,int* arr)
 {

@@ -77,7 +77,7 @@ void selectionSortRec(int* arr, int size)
 
     for(int i = 1; i < size; i++)
     {
-        if(arr[minI] < arr[i])
+        if(arr[minI] > arr[i])
         {
             minI = i;
         }
