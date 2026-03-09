@@ -17,6 +17,7 @@ void printArr(int* arr,int n)
         cout<<arr[i]<<" ";
     }
 }
+
 //selection sort
 void selectionSort(int* arr,int n)
 {
@@ -33,7 +34,7 @@ void selectionSort(int* arr,int n)
         swap(arr[0],arr[i]);
     }
 
-    selection(arr+1,n-1);
+    selection(arr+1,n);
 }
 void merge(int s,int e,int* arr)
 {
