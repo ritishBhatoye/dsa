@@ -83,7 +83,7 @@ void printArr(int* arr,int n)
 }
 void reverseArr(int s,int e,int* arr)
 {
-    if(s==e)
+    if(s>e)
         return ;
 
     swap(arr[s],arr[e]);
