@@ -23,10 +23,15 @@ void selectionSort(int* arr,int n)
     if(n==0)
         return ;
 
-    int k=arr[0];
+    int k=0;
     for(int i=1;i<n;i++)
     {
-        if(k>)
+        if(arr[k]>arr[i])
+        {
+            k=i;
+        }
+
+        
     }
 }
 void merge(int s,int e,int* arr)
