@@ -56,6 +56,7 @@ void bubbleSort(int* arr,int size)
 }
 
 //quick sort
+void quickSort
 void merge(int s,int e,int* arr)
 {
     int mid = s +(e-s)/2;
