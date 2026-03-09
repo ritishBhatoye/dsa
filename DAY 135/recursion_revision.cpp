@@ -166,8 +166,8 @@ void merge(int s,int e,int* arr)
     int l1 = mid - s +1;
     int l2 = e-mid;
 
-    int *first = int new[l1];
-    int *second = int new[l2];
+    int *first = new int[l1];
+    int *second = new int[l2];
     int k=s;
    for(int i=0;i<l1;i++)
    {
@@ -240,7 +240,7 @@ int main()
     printArr(arr,n);
     mergeSort(0,n-1,arr);
     cout<<"After Applyting the merge sort :- ";
-    cin>
+    printArr(arr,n); 
     // reverseArr(0,n-1,arr);
     cout<<endl<<endl;
 
