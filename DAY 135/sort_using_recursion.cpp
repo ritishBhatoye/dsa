@@ -1,7 +1,27 @@
 #include<iostream>
 using namespace std;
 
+void inputArr(int *arr,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter the element at "<<i<<" :- ";
+        cin>>arr[i];
+    }
+}
 
+void printArr(int* arr,int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
+//selection sort
+void selectionSort(int* arr,int n)
+{
+    
+}
 void merge(int s,int e,int* arr)
 {
     int l1 =  mid - s + 1; 
@@ -50,7 +70,7 @@ void merge(int s,int e,int* arr)
 
     }
 
-    
+
 
 }
 
