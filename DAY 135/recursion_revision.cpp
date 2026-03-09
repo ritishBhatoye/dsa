@@ -118,11 +118,19 @@ int main()
     cout<<"Printing :- ";
     printArr(arr,n);
     reverseArr(0,n-1,arr);
+    cout<<endl<<endl;
 
     int k;
-    cout<<"Enter the element k "<<k<<" to check whether it is present in the array or not "<<endl;
+    cout<<"Enter the element k to check whether it is present in the array or not "<<endl;
     cin>>k;
-    
+    if(linearSearch(arr,k))
+    {
+        cout<<"Element "<<k<<" is present in the arr"<<endl;
+    }
+    else{
+        cout<<"Element "<<k<<" is NOT present in the arr"<<endl;
+
+    }
 
     // int ans = power(a,b);
     cout<<endl<<endl;
