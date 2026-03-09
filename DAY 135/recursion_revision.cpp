@@ -39,6 +39,14 @@ void countingDec(int n)
     cout<<n<<" ";
     countingDec(n-1);
 }
+//4. fibonacci series
+int fibnacciSeries(int n)
+{
+    if(n==0)
+        return ;
+
+    return fibonacciSeries(n-1)+fibonacci
+}
 
 int main()
 {
@@ -59,7 +67,7 @@ int main()
     // cout<<"Factorial Ans :- "<<facAns;
   
     cout<<endl<<endl;
-    
+
     cout<<endl<<endl;
     cout<<endl<<endl;
 
