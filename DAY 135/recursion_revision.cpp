@@ -40,10 +40,10 @@ void countingDec(int n)
     countingDec(n-1);
 }
 //4. fibonacci series
-int fibnacciSeries(int n)
+int fibonacciSeries(int n)
 {
     if(n==0)
-        return ;
+        return 0;
 
     return fibonacciSeries(n-1)+fibonacciSeries(n-2);
 }
@@ -52,7 +52,9 @@ int main()
 {
     // cout<<"Enter the Number :- ";
     // cin>>a;
-    int ans = fibnacciSeries(n);
+    int n;
+    cin>>n;
+    int ans = fibonacciSeries(n);
     cout<<"Fibonacci Series :- "<<ans<<endl;
     // cout<<"Enter the power :- ";
     // cin>>b;
