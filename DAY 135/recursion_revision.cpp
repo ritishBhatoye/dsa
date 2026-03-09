@@ -60,8 +60,17 @@ void sayDigit(int n,string* digit)
 
     n=n/10;
     sayDigit(n,digit);
-    
+
     cout<<digit[d]<<" ";
+}
+
+// 6.reversing an array
+void reverse(int s,int e,int* arr)
+{
+    if(s==e)
+        return ;
+
+    cout<<
 }
 int main()
 {
