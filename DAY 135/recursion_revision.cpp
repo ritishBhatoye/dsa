@@ -187,8 +187,22 @@ void merge(int s,int e,int* arr)
    {
      if(first[i]<second[j])
      {
-        arr[]
+        arr[mainIndex++] = first[i++];
      }
+     else
+     {
+        arr[mainIndex++] = second[j++];
+
+     }
+   }
+
+   while(i<l1)
+   {
+     arr[mainIndex++] = first[i++];
+   }
+   while(j<l2)
+   {
+    arr[mainIndex++] = second[j++];
    }
 
 }
