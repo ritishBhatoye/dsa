@@ -125,7 +125,15 @@ bool binarySearch(int s,int e,int* arr,int k)
 }
 
 //9. reverse string 
-string reverseString(i)
+void reverseString(int s,int e,string & s)
+{
+    if(s>e)
+        return ;
+
+    
+
+
+}
 int main()
 {
     // cout<<"Enter the Number :- ";
