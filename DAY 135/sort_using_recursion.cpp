@@ -27,7 +27,23 @@ void merge(int s,int e,int* arr)
 
     int i=0,k=0;
 
-    while(i<l1 && j<)
+    while(i<l1 && j<l2)
+    {
+        if(first[i] < second[j])
+        {
+            arr[mainIndex++]=first[i++];
+        }
+
+        else
+        {
+            arr[mainIndex++]=second[j++];
+        }
+    }
+
+    while(i<l1)
+    {
+        arr[i]
+    }
 
 }
 
