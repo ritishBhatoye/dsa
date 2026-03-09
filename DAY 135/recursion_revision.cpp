@@ -22,28 +22,48 @@ int fac(int n)
 }
 //3.counting from 1 to n;
 
-void counting(int n)
+void countingInc(int n)
 {
     if(n==1)
         return ;
 
     counting(n-1);    
-    cout<<
+    cout<<n<<" ";
+}
+
+void countingDec(int n)
+{
+    if(n==1)
+        return ;
+    
+    cout<<n<<" ";
+    coutingDec(n-1);
 }
 
 int main()
 {
     int a,b;
-    cout<<"Enter the Number :- ";
-    cin>>a;
+    // cout<<"Enter the Number :- ";
+    // cin>>a;
 
-    cout<<"Enter the power :- ";
-    cin>>b;
+    // cout<<"Enter the power :- ";
+    // cin>>b;
+    // cout<<endl<<endl;
+
+    // int ans = power(a,b);
+    cout<<endl<<endl;
+    int n;
+    cout<<"Enter the value for which you want to cal the "
+    cin>>n;
+    int facAns = fac()
     cout<<endl<<endl;
 
-    int ans = power(a,b);
     cout<<endl<<endl;
+
+
     cout<<"Ans :- "<<ans<<endl;
+    cout<<endl<<endl;
+
     cout<<endl<<endl;
 
     return 0;
