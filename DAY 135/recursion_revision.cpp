@@ -49,7 +49,16 @@ int fibonacciSeries(int n)
     return fibonacciSeries(n-1)+fibonacciSeries(n-2);
     
 }
+//5.Say Digit
+void sayDigit(int n,string* digit)
+{
+    if(n==0)
+        return ;
 
+    int d = s % 10;
+
+    
+}
 int main()
 {
     // cout<<"Enter the Number :- ";
