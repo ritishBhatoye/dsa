@@ -168,10 +168,15 @@ int main()
     // reverseArr(0,n-1,arr);
     cout<<endl<<endl;
 
-    int k;
-    cout<<"Enter the element k to check whether it is present in the array or not "<<endl;
-    cin>>k;
-    if(binarySearch(0,n-1,arr,k))
+    // int k;
+    // cout<<"Enter the element k to check whether it is present in the array or not "<<endl;
+    // cin>>k;
+    string str;
+    cout<<"Enter the string :- ";
+    cin>>str;
+    reverseString(0,str.length()-1,str);
+    cout<<"String Reversed :- "<<str<<endl;
+    if(checkPalidrome(0,str.length()-1,arr,k))
     {
         cout<<"Element "<<k<<" is present in the arr"<<endl;
     }
@@ -182,11 +187,7 @@ int main()
 
     // int ans = power(a,b);
     cout<<endl<<endl;
-    string str;
-    cout<<"Enter the string :- ";
-    cin>>str;
-    reverseString(0,str.length()-1,str);
-    cout<<"String Reversed :- "<<str<<endl;
+ 
     // int n;
     // cout<<"Enter the value for which you want to cal the factorial :- ";
     // cin>>n;
