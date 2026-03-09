@@ -166,13 +166,18 @@ void merge(int s,int e,int* arr)
     int l1 = mid - s +1;
     int l2 = e-mid;
 
-    int *a1 = int new[l1];
-    int *a2 = int new[l2];
+    int *first = int new[l1];
+    int *second = int new[l2];
+    int k=s;
+   for(int i=0;i<l1;i++)
+   {
+        first[i]=arr[k++];
+   }
 
-    for(int i=0;i<l1;i++)
-    {
-        a1[i++]
-    }
+   for(int i=0;i<l2;i++)
+   {
+        second[i]=arr[k++];
+   }
 }
 void mergeSort(int s,int e,int* arr)
 {
