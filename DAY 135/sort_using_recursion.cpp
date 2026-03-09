@@ -34,7 +34,7 @@ void selectionSort(int* arr,int n)
         swap(arr[0],arr[i]);
     }
 
-    selection(arr+1,n);
+    selectionSort(arr+1,n);
 }
 void merge(int s,int e,int* arr)
 {
