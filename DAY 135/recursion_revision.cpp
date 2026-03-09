@@ -45,14 +45,15 @@ int fibnacciSeries(int n)
     if(n==0)
         return ;
 
-    return fibonacciSeries(n-1)+fibonacci
+    return fibonacciSeries(n-1)+fibonacciSeries(n-2);
 }
 
 int main()
 {
     // cout<<"Enter the Number :- ";
     // cin>>a;
-
+    int ans = fibnacciSeries(n);
+    cout<<"Fibonacci Series :- "<<ans<<endl;
     // cout<<"Enter the power :- ";
     // cin>>b;
     // cout<<endl<<endl;
