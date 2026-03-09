@@ -161,9 +161,14 @@ bool checkPalidrome(int s,int e,string& str)
 void merge(int s,int e,int* arr)
 {
     if(s>=e)
-    {
-        
-    }
+        return ;
+
+    int mid=s + (e-s)/2;
+
+    merge(s,mid,arr);
+    merge(mid+1,e,arr);
+
+    mergeSort(arr,s,e)
 }
 
 int main()
