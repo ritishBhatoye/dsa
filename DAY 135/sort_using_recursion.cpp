@@ -42,7 +42,13 @@ void selectionSort(int* arr,int n)
 //simple check the adjacent elements if they are not in the correct order replace them this is not good approach 
 void bubbleSort(int* arr,int size)
 {
-    if()
+    if(size==0 || size==1)
+        return ;
+
+    for(int i=1;i<size;i++)
+    {
+        if(arr[0])
+    }
 }
 void merge(int s,int e,int* arr)
 {
