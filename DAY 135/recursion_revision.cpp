@@ -115,13 +115,14 @@ bool binarySearch(int s,int e,int* arr,int k)
 
     else if(arr[mid] <k)
     {
-        return swap(mid+1,e,arr,k);
+        return binarySearch(mid+1,e,arr,k);
     }
     else
     {
-        
+        return binarySearch(0,mid-1,arr,k);
     }
 
+    
     
 }
 int main()
@@ -149,7 +150,7 @@ int main()
     int k;
     cout<<"Enter the element k to check whether it is present in the array or not "<<endl;
     cin>>k;
-    if(linearSearch(arr,n,k))
+    if(binarySearch(0,n-1,arr,k))
     {
         cout<<"Element "<<k<<" is present in the arr"<<endl;
     }
