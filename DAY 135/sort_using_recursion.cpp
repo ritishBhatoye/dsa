@@ -19,7 +19,7 @@ void printArr(int* arr,int n)
 }
 
 //selection sort
-//target the index of largest  element then swap it with first here we target
+//target the index of largest  element then swap it 
 void selectionSort(int* arr,int n)
 {
     if(n==0 || n==1)
@@ -39,7 +39,11 @@ void selectionSort(int* arr,int n)
 }
 
 //bubble sort
-
+//simple check the adjacent elements if they are not in the correct order replace them this is not good approach 
+void bubbleSort(int* arr,int size)
+{
+    if()
+}
 void merge(int s,int e,int* arr)
 {
     int mid = s +(e-s)/2;
