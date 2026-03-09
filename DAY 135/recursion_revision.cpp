@@ -122,9 +122,10 @@ bool binarySearch(int s,int e,int* arr,int k)
         return binarySearch(0,mid-1,arr,k);
     }
 
-    
-    
 }
+
+//9. reverse string 
+string reverseString(i)
 int main()
 {
     // cout<<"Enter the Number :- ";
