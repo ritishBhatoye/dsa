@@ -20,36 +20,18 @@ void printArr(int* arr,int size)
 //Find the min element and replace with the current element
 void selectionSort(int* arr,int size)
 {
-    for(int i=0;i<size;i++)
+
+    for(int i=size-1;i>=1;i--)
     {
-        int minI=i;
-        for(int j=i+1;j<size;j++)
+        for(int j=0;j<=i;j++)
         {
-            if(arr[minI] > arr[j])
+            if(arr[j+1]<arr[j])
             {
-                minI=j;
+                swap(arr[j+1],arr[j]);
             }
         }
-        swap(arr[minI],arr[i]);
     }
-}
-//using the recursion
-void selectionSortRec(int* arr,int size)
-{
-    if(size==0 || size==1)
-        return ;
-    
-    int k=0;
-    for(int i=1;i<size;i++)
-    {
-        if(arr[k] < arr[i])
-        {
-            k=i;
-        }
-    }
-    swap(arr[k],arr[size-1]);
 
-    selectionSortRec(arr,size-1);
 
 }
 
