@@ -121,6 +121,17 @@ int height(node* root)
     return max(left,right)+1;
 }
 
+int diameter(node* root)
+{
+    if(root==NULL)
+        return 0;
+
+    int left = diameter(root->left);
+    int right = diameter(root->right);
+
+    int diameter()
+}
+
 int main()
 {
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
