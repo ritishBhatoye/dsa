@@ -48,6 +48,10 @@ void selectionSortRec(int* arr,int size)
         }
     }
 
+    swap(arr[minI],arr[0]);
+
+    selectionSortRec(arr,size--);
+
 }
 
 int main()
@@ -58,7 +62,7 @@ int main()
     int* arr=new int[size];
     inputArr(arr,size);
     cout<<"After sorting "<<endl;
-    selectionSort(arr,size);
+    selectionSortRec(arr,size);
     printArr(arr,size);
     cout<<endl<<endl;
     return 0;
