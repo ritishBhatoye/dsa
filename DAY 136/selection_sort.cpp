@@ -42,7 +42,7 @@ void selectionSortRec(int* arr,int size)
     int k=0;
     for(int i=1;i<size;i++)
     {
-        if(arr[k] > arr[i])
+        if(arr[k] < arr[i])
         {
             k=i;
         }
