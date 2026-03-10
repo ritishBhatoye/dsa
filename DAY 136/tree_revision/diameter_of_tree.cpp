@@ -135,6 +135,17 @@ int diameter(node* root)
 }
 
 
+pair<int,int> diameter(node* root)
+{
+    if(root==NULL)
+    {
+        pair<int,int> p = make_pair(0,0);
+        return p;
+    }
+
+    in
+}
+
 
 
 int main()
@@ -161,6 +172,8 @@ int main()
     levelOrder(root);
     cout<<endl<<endl;
     cout<<"Height of tree :- "<<height(root)<<endl;
+    cout<<"Diameter of tree :- "<<diameter(root)<<endl;
+
     cout<<endl<<endl;
 
     return 0;
