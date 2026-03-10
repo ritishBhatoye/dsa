@@ -33,6 +33,8 @@ void selectionSort(int* arr,int size)
         swap(arr[minI],arr[i]);
     }
 }
+//using the recursion
+void 
 
 int main()
 {
