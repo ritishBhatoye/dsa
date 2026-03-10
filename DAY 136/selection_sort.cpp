@@ -38,20 +38,18 @@ void selectionSortRec(int* arr,int size)
 {
     if(size==0 || size==1)
         return ;
-    int i=0;
-    int minI=i;
-   while(i<size)
-   {
-    if(arr[minI]>arr[i])
+    
+    int k=0;
+    for(int i=1;i<size;i++)
     {
-        minI=i;
-        i++;
+        if(arr[k] > arr[i])
+        {
+            k=i;
+        }
     }
-   }
+    swap(arr[k],arr[size-1]);
 
-    swap(arr[minI],arr[0]);
-
-    selectionSortRec(arr,size--);
+    selectionSortRec(arr,size-1);
 
 }
 
