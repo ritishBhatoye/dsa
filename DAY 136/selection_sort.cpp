@@ -34,7 +34,21 @@ void selectionSort(int* arr,int size)
     }
 }
 //using the recursion
-void 
+void selectionSortRec(int* arr,int size)
+{
+    if(size==0 || size==1)
+        return ;
+
+    int minI=0;
+    for(int i=1;i<size;i++)
+    {
+        if(arr[minI]>arr[i])
+        {
+            minI=i;
+        }
+    }
+
+}
 
 int main()
 {
