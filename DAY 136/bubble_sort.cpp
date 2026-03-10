@@ -17,11 +17,11 @@ void printArr(int* arr,int size)
         cout<<arr[i]<<" ";
     }
 }
-//Find the min element and replace with the current element
-void selectionSort(int* arr,int size)
+// simply make sure to swap the element recursively those are in the unsorted order
+void bubbleSort(int* arr,int size)
 {
 
-    for(int i=size-1;i>=1;i--)
+    for(int i=size-1;i>=0;i--)
     {
         for(int j=0;j<=i;j++)
         {
@@ -45,7 +45,7 @@ int main()
     int* arr=new int[size];
     inputArr(arr,size);
     cout<<"After sorting "<<endl;
-    selectionSortRec(arr,size);
+    bubbleSort(arr,size);
     printArr(arr,size);
     cout<<endl<<endl;
     return 0;
