@@ -191,7 +191,10 @@ void inOrderIterative(node* root)
 
 void postOrderIterative(node* root)
 {
-    if()
+    stack<node*> s;
+    s.push(root);
+
+    while()
 }
 
 
