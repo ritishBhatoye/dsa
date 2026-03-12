@@ -146,7 +146,14 @@ void inOrderIterative(node* root)
 
     queue<node*> q;
 
-    q.push(root);
+    while(root->left!=NULL)
+    {
+
+        q.push(root->left);
+
+    }
+    
+
 
     while(!q.empty())
     {
