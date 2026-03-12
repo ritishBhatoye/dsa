@@ -147,10 +147,11 @@ void inOrderIterative(node* root)
     stack<node*> s;
     s.push(root);
 
-    while(root->left->data!=-1)
+    while(root->left!=NULL)
     {
 
         s.push(root->left);
+        root=root->left;
 
     }
 
