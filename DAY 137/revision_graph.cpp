@@ -125,18 +125,21 @@ void preOrderIterative(node* root)
 
         s.pop();
 
+        if(temp->right)
+        {
+            s.push(temp->right);
+        }
+
         if(temp->left)
         {
             s.push(temp->left);
         }
-        if(temp->right)
-        {
-            s.push(temp->right)
-        }
+       
 
     }
 }
 
+void inter
 
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
 
@@ -154,6 +157,11 @@ int main()
     cout<<"Pre Order Level :- "<<endl;
     preOrder(root);
     cout<<endl<<endl;
+    cout<<"Pre Order Level Iterative :- "<<endl;
+
+    preOrderIterative(root);
+    cout<<endl<<endl;
+
     cout<<"In Order Level :- "<<endl;
     inOrder(root);
     cout<<endl<<endl;
