@@ -147,14 +147,14 @@ void inOrderIterative(node* root)
     stack<node*> s;
     s.push(root);
 
-    while(root->left!=NULL)
+    while(root->left->data!=-1)
     {
 
         s.push(root->left);
 
     }
 
-    while(!s.empty() && root->right!=NULL)
+    while(!s.empty() && root->right->data!=-1)
     {
         node* temp = s.top();
 
@@ -162,10 +162,11 @@ void inOrderIterative(node* root)
 
         cout<<temp->data<<" ";
 
-        if(root->)
+        if(root->right)
+        {
+            s.push(root->right);
+        }
     }
-
-
     
 }
 
