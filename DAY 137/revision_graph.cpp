@@ -151,7 +151,11 @@ void inOrderIterative(node* root)
     {
 
         s.push(root->left);
+        if(root->left!=NULL)
+        {
         root=root->left;
+
+        }
 
     }
 
@@ -163,9 +167,13 @@ void inOrderIterative(node* root)
 
         cout<<temp->data<<" ";
 
-        if(temp->right)
+        if(temp->right!=NULL)
         {
             s.push(root->right);
+            if(temp->right!=NULL)
+            {
+                temp=temp->right;
+            }
         }
     }
     
