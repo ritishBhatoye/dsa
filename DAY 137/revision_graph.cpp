@@ -144,20 +144,20 @@ void inOrderIterative(node* root)
     if(root==NULL)
         return ;
 
-    queue<node*> q;
+    stack<node*> s;
 
     while(root->left!=NULL)
     {
 
-        q.push(root->left);
+        s.push(root->left);
 
     }
-    
+
 
 
     while(!q.empty())
     {
-        node* temp = q.front();
+        node* temp = s.top();
 
         q.pop();
         
