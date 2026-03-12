@@ -139,7 +139,17 @@ void preOrderIterative(node* root)
     }
 }
 
-void inter
+void inOrderIterative(node* root)
+{
+    if(root==NULL)
+        return ;
+
+    queue<node*> q;
+
+    q.push(root);
+
+    whiel()
+}
 
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
 
