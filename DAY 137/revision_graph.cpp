@@ -108,12 +108,22 @@ void postOrder(node* root)
     cout<<root->data<<" ";
 }
 
-void levelOrderIterative(node* root)
+void preOrderIterative(node* root)
 {
     if(root==NULL)
         return ;
 
     stack<node*> s;
+
+    s.push(root);
+
+    while(!s.empty())
+    {
+        node* temp =  s.top();
+
+        
+
+    }
 }
 
 
