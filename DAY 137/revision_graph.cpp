@@ -148,7 +148,7 @@ void inOrderIterative(node* root)
 
     q.push(root);
 
-    whiel(!q.empty())
+    while(!q.empty())
     {
         node* temp = q.front();
 
@@ -162,7 +162,7 @@ void inOrderIterative(node* root)
         }
         if(temp->right)
         {
-            
+            q.push(temp->right);
         }
     }
 }
@@ -191,6 +191,11 @@ int main()
     cout<<"In Order Level :- "<<endl;
     inOrder(root);
     cout<<endl<<endl;
+    cout<<"In Order Level Iterative :- "<<endl;
+
+    inOrderIterative(root);
+    cout<<endl<<endl;
+
     cout<<"Post Order Level :- "<<endl;
     postOrder(root);
     cout<<endl<<endl;
