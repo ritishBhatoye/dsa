@@ -159,7 +159,7 @@ void inOrderIterative(node* root)
 
     }
 
-    while(!s.empty() || root->right->data!=-1)
+    while(!s.empty())
     {
         node* temp = s.top();
 
@@ -169,7 +169,7 @@ void inOrderIterative(node* root)
 
         if(temp->right!=NULL)
         {
-            s.push(root->right);
+            s.push(temp->right);
             if(temp->right!=NULL)
             {
                 temp=temp->right;
