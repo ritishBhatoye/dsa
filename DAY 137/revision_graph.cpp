@@ -194,7 +194,16 @@ void postOrderIterative(node* root)
     stack<node*> s;
     s.push(root);
 
-    while()
+    while(root->left!=NULL)
+    {
+        s.push(root->left);
+        root=root->left;
+    }
+
+    while(!s.empty())
+    {
+        if()
+    }
 }
 
 
