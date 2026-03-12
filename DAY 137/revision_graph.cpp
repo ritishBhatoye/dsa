@@ -223,8 +223,8 @@ void postOrderIterative(node* root)
 
         s.pop();
 
-        temp->data<<" ";
-
+        cout<<temp->data<<" ";
+ 
     }
 }
 
