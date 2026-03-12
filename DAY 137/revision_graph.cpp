@@ -1,5 +1,6 @@
 #include<iostream>
 #include<queue>
+#include<stack>
 
 using namespace std;
 
@@ -107,7 +108,13 @@ void postOrder(node* root)
     cout<<root->data<<" ";
 }
 
-vid 
+void levelOrderIterative(node* root)
+{
+    if(root==NULL)
+        return ;
+
+    stack<node*> s;
+}
 
 
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
