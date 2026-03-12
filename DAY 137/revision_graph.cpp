@@ -202,7 +202,24 @@ void postOrderIterative(node* root)
 
     while(!s.empty())
     {
-        if()
+        node* temp = s.top();
+
+        if(temp->right!=NULL)
+        {
+            if(temp->right!=NULL)
+            {
+                temp=temp->right;
+            }
+
+        }
+
+        if(temp->left)
+        {
+            if()
+        }
+
+        s.pop();
+
     }
 }
 
