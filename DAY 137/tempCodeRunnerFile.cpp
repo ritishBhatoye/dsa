@@ -1,1 +1,17 @@
-1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1
+ // while(!s.empty() || root->right->data!=-1)
+    // {
+    //     node* temp = s.top();
+
+    //     s.pop();
+
+    //     cout<<temp->data<<" ";
+
+    //     if(temp->right!=NULL)
+    //     {
+    //         s.push(root->right);
+    //         if(temp->right!=NULL)
+    //         {
+    //             temp=temp->right;
+    //         }
+    //     }
+    // }
