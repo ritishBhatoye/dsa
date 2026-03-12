@@ -191,7 +191,7 @@ void inOrderIterative(node* root)
 
 void postOrderIterative(node* root)
 {
-
+    if()
 }
 
 
