@@ -127,7 +127,7 @@ void preOrderIterative(node* root)
 
         if(temp->left)
         {
-            s.push(temp->right);
+            s.push(temp->left);
         }
         if(temp->right)
         {
