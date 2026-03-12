@@ -54,18 +54,19 @@ void levelOrder(node* root)
     {
         node* temp = q.front();
 
-        q.pop();
 
         cout<<temp->data<<" ";
 
+        q.pop();
+
         if(temp->left)
         {
-            levelOrder(temp->left);
+            q.push(temp->left);
         }
         
         if(temp->right)
         {
-            levelOrder(temp->right);
+            q.push(temp->right);
         }   
 
     }
@@ -105,6 +106,8 @@ void postOrder(node* root)
     postOrder(root->right);
     cout<<root->data<<" ";
 }
+
+vid 
 
 
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 

@@ -1,12 +1,1 @@
- cout<<"Level order :- "<<endl;
-    levelOrder(root);
-
-    cout<<endl<<endl;
-    cout<<"Pre Order Level :- "<<endl;
-    preOrder(root);
-    cout<<endl<<endl;
-    cout<<"In Order Level :- "<<endl;
-    inOrder(root);
-    cout<<endl<<endl;
-    cout<<"Post Order Level :- "<<endl;
-    postOrder(root);
+1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
