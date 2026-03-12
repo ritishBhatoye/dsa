@@ -147,14 +147,14 @@ void inOrderIterative(node* root)
     stack<node*> s;
     s.push(root);
 
-    while(root->left->data!=-1)
+    while(root->left!=NULL)
     {
 
         s.push(root->left);
 
     }
 
-    while(!s.empty() && root->right->data!=-1)
+    while(!s.empty() || root->right!=NULL)
     {
         node* temp = s.top();
 
