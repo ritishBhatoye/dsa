@@ -156,7 +156,13 @@ void inOrderIterative(node* root)
 
     while(!s.empty() && root->right!=NULL)
     {
-        
+        node* temp = s.top();
+
+        s.pop();
+
+        cout<<temp->data<<" ";
+
+        if(root->)
     }
 
 
