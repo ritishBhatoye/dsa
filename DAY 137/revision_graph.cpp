@@ -121,7 +121,18 @@ void preOrderIterative(node* root)
     {
         node* temp =  s.top();
 
-        
+        cout<<temp->data<<" ";
+
+        s.pop();
+
+        if(temp->left)
+        {
+            s.push(temp->right);
+        }
+        if(temp->right)
+        {
+            s.push(temp->right)
+        }
 
     }
 }
