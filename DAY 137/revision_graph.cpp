@@ -213,12 +213,17 @@ void postOrderIterative(node* root)
 
         }
 
-        if(temp->left)
+        if(temp->left!=NULL)
         {
-            if()
+            if(temp->left!=NULL)
+            {
+                temp=temp->left;
+            }
         }
 
         s.pop();
+
+        temp->data<<" ";
 
     }
 }
@@ -256,6 +261,8 @@ int main()
     cout<<"Post Order Level :- "<<endl;
     postOrder(root);
     cout<<endl<<endl;
+    cout<<"Post Order Level Iterative :- "<<endl;
+    postOrderIterative(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
