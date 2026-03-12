@@ -148,7 +148,23 @@ void inOrderIterative(node* root)
 
     q.push(root);
 
-    whiel()
+    whiel(!q.empty())
+    {
+        node* temp = q.front();
+
+        q.pop();
+        
+        cout<<temp->data<<" ";
+
+        if(temp->left)
+        {
+            q.push(temp->left);
+        }
+        if(temp->right)
+        {
+            
+        }
+    }
 }
 
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
