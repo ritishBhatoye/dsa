@@ -191,47 +191,15 @@ void inOrderIterative(node* root)
 
 void postOrderIterative(node* root)
 {
+   
     stack<node*> s;
-    s.push(root);
 
-    while(root->left!=NULL)
-    {
-        s.push(root->left);
-        root=root->left;
-    }
+    node* curr = root;
 
-    while(!s.empty())
-    {
-        node* temp = s.top();
-       
-        s.pop();
-     
-        if(temp->right!=NULL)
-        {
-            s.push(temp->right);
-            
-            if(temp->right!=NULL)
-            {
-                temp=temp->right;
-            }
+    node* lastVisited = NULL;
 
-        }
-        cout<<temp->data<<" ";
-        if(temp->left!=NULL)
-        {
-            s.push(temp->left);
+    while(curr!)
 
-            if(temp->left!=NULL)
-            {
-                temp=temp->left;
-            }
-        }
-
-       
-
-       
- 
-    }
 }
 
 
