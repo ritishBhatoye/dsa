@@ -198,7 +198,16 @@ void postOrderIterative(node* root)
 
     node* lastVisited = NULL;
 
-    while(curr!)
+    while(curr!=NULL || !s.empty())
+    {
+        if(curr!=NULL)
+        {
+            s.push(curr);
+            curr=curr->next;
+        }
+
+        
+    }
 
 }
 
