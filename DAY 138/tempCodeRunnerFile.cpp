@@ -1,2 +1,2 @@
- // if(root->left==NULL  && root->right == NULL)
-    //     return 1;
+    // if(root==NULL)
+    //     return 0;
