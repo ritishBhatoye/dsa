@@ -42,11 +42,11 @@ node* buildTree(node* root)
 
 int countLeafNode(node* root)
 {
-    if(root->left==NULL  && root->right == NULL)
-        return 1;
+    // if(root->left==NULL  && root->right == NULL)
+    //     return 1;
 
     if(root==NULL)
-        return 0;
+        return 1;
 
     int leftAns = countLeafNode(root->left);
     int rightAns = countLeafNode(root->right);
