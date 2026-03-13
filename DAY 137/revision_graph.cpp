@@ -206,6 +206,7 @@ void postOrderIterative(node* root)
 
         if(temp->right!=NULL)
         {
+            s.push(temp->right);
             if(temp->right!=NULL)
             {
                 temp=temp->right;
@@ -215,6 +216,8 @@ void postOrderIterative(node* root)
 
         if(temp->left!=NULL)
         {
+            s.push(temp->left);
+            
             if(temp->left!=NULL)
             {
                 temp=temp->left;
