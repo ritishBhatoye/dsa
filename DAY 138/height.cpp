@@ -30,7 +30,6 @@ node* buildTree(node* root)
     }
 
     root = new node(d);
-
     cout<<"Enter the data in the LEFT of "<<d<<endl;
 
     root->left = buildTree(root->left);
