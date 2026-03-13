@@ -203,7 +203,7 @@ void postOrderIterative(node* root)
         if(curr!=NULL)
         {
             s.push(curr);
-            curr=curr->next;
+            curr=curr->left;
         }
 
         else
@@ -219,7 +219,7 @@ void postOrderIterative(node* root)
                 cout<<temp->data<<" ";
                 lastVisited=temp;
                 s.pop();
-                
+
             }
         }
     }
@@ -230,7 +230,7 @@ void postOrderIterative(node* root)
 /// 1 2 4 -1 -1 5 -1 -1 3 6 -1 -1 7 -1 -1 
 
 
-int main()
+int main() 
 {
     node* root = NULL;
     root =  buildTree(root);
