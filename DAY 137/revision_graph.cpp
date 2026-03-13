@@ -206,7 +206,22 @@ void postOrderIterative(node* root)
             curr=curr->next;
         }
 
-        
+        else
+        {
+            node* temp = s.top();
+            
+            if(temp->right!=NULL && lastVisited!=temp->right)
+            {
+                curr = temp->right;
+            }
+            else
+            {
+                cout<<temp->data<<" ";
+                lastVisited=temp;
+                s.pop();
+                
+            }
+        }
     }
 
 }
