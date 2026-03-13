@@ -203,7 +203,9 @@ void postOrderIterative(node* root)
     while(!s.empty())
     {
         node* temp = s.top();
+       
         s.pop();
+     
         if(temp->right!=NULL)
         {
             s.push(temp->right);
@@ -214,7 +216,7 @@ void postOrderIterative(node* root)
             }
 
         }
-
+        cout<<temp->data<<" ";
         if(temp->left!=NULL)
         {
             s.push(temp->left);
@@ -227,7 +229,7 @@ void postOrderIterative(node* root)
 
        
 
-        cout<<temp->data<<" ";
+       
  
     }
 }
