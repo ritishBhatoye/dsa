@@ -137,11 +137,13 @@ void zigZagTraversal(node* root)
 {
     deque<node*> q;
 
-    q.push(root);
+    q.push_front(root);
+
     bool leftToRight = true;
+
     while(!q.empty())
     {
-
+        node* temp = q.front();
     }
 }
 
