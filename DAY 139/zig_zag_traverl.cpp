@@ -145,7 +145,7 @@ void zigZagTraversal(node* root)
 
     while(!q.empty())
     {
-        int size = q.size();   // number of nodes in this level
+        int size = q.size();   
 
         for(int i = 0; i < size; i++)
         {
