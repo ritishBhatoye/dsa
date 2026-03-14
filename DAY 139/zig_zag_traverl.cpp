@@ -88,12 +88,32 @@ void zigZagTraversal(node* root)
     while(!s.empty())
     {
         node* temp = s.top();
-        cout<<temp<<" ";
+        cout<<temp->data<<" ";
         s.pop();
 
         if(lr==true)
         {
-            if(temp->right )
+            if(temp->left)
+            {
+                s.push(temp->left);
+            }
+            if(temp->right)
+            {
+                s.push(temp->right);
+            }
+            lr=false;
+        }
+        else
+        {
+            if(temp->right)
+            {
+                s.push(temp->right);
+            }
+            if(temp->left)
+            {
+                s.push(temp->left);
+            }
+            lr=false;
         }
         
         
