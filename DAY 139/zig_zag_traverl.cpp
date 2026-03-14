@@ -2,7 +2,7 @@
 #include<stack>
 #include<queue>
 #include<vector>
-
+#include<deque>
 using namespace std;
 
 class node
@@ -131,51 +131,18 @@ vector<int> zigZagBrute(node* root)
 //more optimal approach are as follows : -
 // 1. use the queue and levelSize vector (most common)
 // 2. use two stack s1(leftToRight) and s2(RigthToLeft)
-// 3. use deque
+// 3. use dequeue with levelSize;
+
 void zigZagTraversal(node* root)
 {
+    deque<node*> q;
 
-    stack<node*> s;
-
-    bool lr;
-    s.push(root);
-    lr=true;
-
-    while(!s.empty())
+    q.push(root);
+    bool leftToRight = true;
+    while(!q.empty())
     {
-        node* temp = s.top();
-        cout<<temp->data<<" ";
-        s.pop();
 
-        if(lr==true)
-        {
-            if(temp->left)
-            {
-                s.push(temp->left);
-            }
-            if(temp->right)
-            {
-                s.push(temp->right);
-            }
-            lr=false;
-        }
-        else
-        {
-            if(temp->right)
-            {
-                s.push(temp->right);
-            }
-            if(temp->left)
-            {
-                s.push(temp->left);
-            }
-            lr=true;
-        }
-        
-        
     }
-   
-
 }
 
 
