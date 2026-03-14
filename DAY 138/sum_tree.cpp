@@ -42,15 +42,17 @@ bool sumTree(node* root)
     if(root == NULL)
         return true;
 
-    int sum = root->left->data  + root->right->data;
+    // int sum = 
 
-    if(root->data != sum )
-    {
-        return false;
-    }
+    // if(root->data != sum )
+    // {
+    //     return false;
+    // }
 
     bool leftAns = sumTree(root->left);
     bool rightAns = sumTree(root->right);
+
+    bool 
 
     return leftAns && rightAns;
 
