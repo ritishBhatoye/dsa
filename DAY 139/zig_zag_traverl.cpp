@@ -128,7 +128,8 @@ vector<int> zigZagBrute(node* root)
 
 
 }
-
+//more optimal approach are as follows : -
+1.
 void zigZagTraversal(node* root)
 {
 
