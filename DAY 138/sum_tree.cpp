@@ -69,6 +69,13 @@ bool sumTree(node* root)
 
 }
 
+pair<bool,int> isSumFast(node* root)
+{
+    if(root==NULL)
+        {
+            pair<bool,int> p = make_pair(true,0);
+        }
+}
 
 int main()
 {
