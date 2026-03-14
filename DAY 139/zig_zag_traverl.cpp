@@ -86,14 +86,28 @@ void zigZagBrute(node* root)
 
     queue<node*> q;
     
-    vector<int> ans;
+   
     q.push(root);
     
     bool leftToRight = true;
 
     while(!q.empty())
     {
-        
+        int size = q.size();
+        vector<int> ans(size);
+
+        //level process
+
+        for(int i=0;i<size;i++)
+        {
+            node* frontNode = q.front();
+            q.pop();
+
+            int index =  leftToRight ? i : size-i; 
+
+            
+
+        }
     }
 
 
