@@ -1,5 +1,5 @@
 #include<iostream>
-#include<queue>
+#include<stack>
 
 
 using namespace std;
@@ -79,12 +79,25 @@ void preOrder(node* root)
 void zigZagTraversal(node* root)
 {
 
-    queue<node*> q;
+    stack<node*> s;
 
     bool lr;
-    q.push()
-    while()
+    s.push(root);
+    lr=true;
 
+    while(!s.empty())
+    {
+        node* temp = s.top();
+        cout<<temp<<" ";
+        s.pop();
+
+        if(lr==true)
+        {
+            if(temp->right )
+        }
+        
+        
+    }
    
 
 }
