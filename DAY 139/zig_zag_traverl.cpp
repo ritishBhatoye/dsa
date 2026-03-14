@@ -144,6 +144,7 @@ void zigZagTraversal(node* root)
     while(!q.empty())
     {
         node* temp = q.front();
+        
     }
 }
 
