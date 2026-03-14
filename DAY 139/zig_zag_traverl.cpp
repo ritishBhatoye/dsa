@@ -135,50 +135,48 @@ vector<int> zigZagBrute(node* root)
 
 void zigZagTraversal(node* root)
 {
-    deque<node*> q;
+    if(root == NULL)
+        return;
 
-    q.push_front(root);
+    deque<node*> q;
+    q.push_back(root);
 
     bool leftToRight = true;
 
     while(!q.empty())
     {
-        node* temp = leftToRight ? q.front():q.back();
-        cout<<temp->data<<" ";
-        if(leftToRight)
+        int size = q.size();   // number of nodes in this level
+
+        for(int i = 0; i < size; i++)
         {
-            q.pop_front();
+            node* temp = leftToRight ? q.front() : q.back();
 
-            if(temp->left)
+            if(leftToRight)
+                q.pop_front();
+            else
+                q.pop_back();
+
+            cout << temp->data << " ";
+
+            if(leftToRight)
             {
-                q.push_back(temp->left);
+                if(temp->left)
+                    q.push_back(temp->left);
+                if(temp->right)
+                    q.push_back(temp->right);
             }
-            if(temp->right)
+            else
             {
-                q.push_back(temp->right);
+                if(temp->right)
+                    q.push_front(temp->right);
+                if(temp->left)
+                    q.push_front(temp->left);
             }
-            
-            leftToRight = false;
         }
-        else
-        {
-            q.pop_back();
 
-            if(temp->left)
-            {
-                q.push_front(temp->left);
-            }
-            if(temp->right)
-            {
-                q.push_front(temp->right);
-            }
-
-            leftToRight = true;
-        }
+        leftToRight = !leftToRight;   
     }
 }
-
-
 
 int main()
 {
