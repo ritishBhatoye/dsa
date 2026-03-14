@@ -151,9 +151,29 @@ void zigZagTraversal(node* root)
 
             if(temp->left)
             {
-                
+                q.push_back(temp->left);
+            }
+            if(temp->right)
+            {
+                q.push_back(temp->right);
+            }
+            
+            leftToRight = false;
+        }
+        else
+        {
+            q.pop_back();
+
+            if(temp->left)
+            {
+                q.push_front(temp->left);
+            }
+            if(temp->right)
+            {
+                q.push_front(temp->right);
             }
 
+            leftToRight = true;
         }
     }
 }
