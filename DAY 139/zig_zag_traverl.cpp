@@ -93,29 +93,27 @@ void zigZagTraversal(node* root)
 
         if(lr==true)
         {
-            if(temp->right)
-            {
-                s.push(temp->right);
-            }
             if(temp->left)
             {
                 s.push(temp->left);
             }
-
+            if(temp->right)
+            {
+                s.push(temp->right);
+            }
             lr=false;
         }
         else
         {
-            
-            if(temp->left)
-            {
-                s.push(temp->left);
-            }
             if(temp->right)
             {
                 s.push(temp->right);
             }
-            lr=false;
+            if(temp->left)
+            {
+                s.push(temp->left);
+            }
+            lr=true;
         }
         
         
