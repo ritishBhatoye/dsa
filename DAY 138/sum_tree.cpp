@@ -36,6 +36,15 @@ node* buildTree(node* root)
 
     return root;
 }
+int sum(node* root)
+{
+
+    if(root==NULL)
+        return 0;
+
+    
+
+}
 
 bool sumTree(node* root)
 {
