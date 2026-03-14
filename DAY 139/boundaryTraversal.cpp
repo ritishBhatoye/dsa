@@ -47,9 +47,8 @@ vector<int> leftNodes(node* root)
     vector<int> ans;
     if(root==NULL)
         return ans;
-    if(root->left!=NULL)
-    {
-    while( root->left->left!=NULL)
+
+    while(root->left!=NULL && root->left->left!=NULL)
     {
         ans.push_back(root->left->data);
         if(root->left!=NULL)
@@ -58,7 +57,6 @@ vector<int> leftNodes(node* root)
 
         }
     }
-}
     return ans;
 }
 
@@ -68,9 +66,8 @@ vector<int> rightNodes(node* root)
     if(root==NULL)
         return ans;
 
-    if(root->right!=NULL)
-    {
-        while(root->right->right!=NULL)
+    
+        while(root->right!=NULL && root->right->right!=NULL)
         {
             ans.push_back(root->right->data);
             if(root->right!=NULL)
@@ -79,7 +76,7 @@ vector<int> rightNodes(node* root)
     
             }
         }
-    }
+
    
     return ans;
 }
