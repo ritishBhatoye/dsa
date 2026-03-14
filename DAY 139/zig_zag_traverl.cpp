@@ -129,7 +129,9 @@ vector<int> zigZagBrute(node* root)
 
 }
 //more optimal approach are as follows : -
-1.
+// 1. use the queue and levelSize vector (most common)
+// 2. use two stack s1(leftToRight) and s2(RigthToLeft)
+// 3. use deque
 void zigZagTraversal(node* root)
 {
 
