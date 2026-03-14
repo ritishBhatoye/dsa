@@ -143,8 +143,8 @@ void zigZagTraversal(node* root)
 
     while(!q.empty())
     {
-        node* temp = leftToRight ? q,front():q.back();
-
+        node* temp = leftToRight ? q.front():q.back();
+        cout<<temp->data<<" ";
         if(leftToRight)
         {
             q.pop_front();
@@ -190,12 +190,12 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
-    vector<int> ans = zigZagBrute(root);
-    for(int i=0;i<ans.size();i++)
-    {
-        cout<<ans[i]<<" ";
-    }
-    // zigZagTraversal(root);
+    // vector<int> ans = zigZagBrute(root);
+    // for(int i=0;i<ans.size();i++)
+    // {
+    //     cout<<ans[i]<<" ";
+    // }
+    zigZagTraversal(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
