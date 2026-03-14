@@ -74,7 +74,20 @@ pair<bool,int> isSumFast(node* root)
     if(root==NULL)
         {
             pair<bool,int> p = make_pair(true,0);
+            return p;
         }
+    if(root->left==NULL && root->right==NULL)
+    {
+        pair<bool,int> p = make_pair(true,root->data);
+        return p;
+    }
+
+    pair<bool,int> leftAns =  isSumFast(root->left);
+    pair<bool,int> rightAns =  isSumFast(root->right); 
+
+    bool left = leftAns.first;
+    bool right = 
+
 }
 
 int main()
