@@ -143,8 +143,8 @@ void zigZagTraversal(node* root)
 
     while(!q.empty())
     {
-        node* temp = q.front();
-        
+        node* temp = leftToRight ? q,front():q.back();
+
     }
 }
 
