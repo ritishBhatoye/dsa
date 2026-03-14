@@ -51,7 +51,14 @@ int height(node* root)
 //LRN
 void postOrder(node* root)
 {
-    
+    if(root==NULL)
+        return ;
+
+     postOrder(root->left);
+     postOrder(root->right);
+     cout<<root->data<<" ";
+     
+
 }
 
 //NLR
