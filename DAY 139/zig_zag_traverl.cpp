@@ -145,6 +145,16 @@ void zigZagTraversal(node* root)
     {
         node* temp = leftToRight ? q,front():q.back();
 
+        if(leftToRight)
+        {
+            q.pop_front();
+
+            if(temp->left)
+            {
+                
+            }
+
+        }
     }
 }
 
