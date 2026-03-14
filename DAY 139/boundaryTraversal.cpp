@@ -102,19 +102,25 @@ vector<int> leafNodes(node* root)
 
 vector<int> boundaryTraversal(node* root)
 {
-    // vector<int> ans;
+    vector<int> ans;
+    ans.push_back(root->data);
+    
 
-    // vector<int> leftNodesAns = leftNodes(root);
+    vector<int> leftNodesAns = leftNodes(root);
     // ans.insert(ans.end(),leftNodesAns.begin(),leftNodesAns.end());
+    for(int i=0;i<leftNodesAns.size();i++)
+    {
+        ans.push_back(l) 
+    }
 
-    // vector<int> leafNodesAns = leafNodes(root);
-    // ans.insert(ans.end(),leafNodesAns.begin(),leafNodesAns.end());
+    vector<int> leafNodesAns = leafNodes(root);
+    ans.insert(ans.end(),leafNodesAns.begin(),leafNodesAns.end());
 
 
-    // vector<int> rightNodesAns = rightNodes(root);
-    // ans.insert(ans.end(),rightNodesAns.end(),rightNodesAns.begin());
+    vector<int> rightNodesAns = rightNodes(root);
+    ans.insert(ans.end(),rightNodesAns.end(),rightNodesAns.begin());
 
-    // return ans;
+    return ans;
 
 }
 
