@@ -1,4 +1,7 @@
 #include<iostream>
+#include<queue>
+
+
 using namespace std;
 
 class node
@@ -76,21 +79,12 @@ void preOrder(node* root)
 void zigZagTraversal(node* root)
 {
 
-    int i=1;
-    int n=height(root);
+    queue<node*> q;
 
-    while(i<=n)
-    {
-        if(i%2==0)
-        {
-            postOrder(root);
-        }
-        else
-        {
-            preOrder(root);   
-        }
-        i++;
-    }
+    bool lr;
+    q.push()
+    while()
+
    
 
 }
