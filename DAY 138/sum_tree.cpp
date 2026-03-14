@@ -95,16 +95,20 @@ pair<bool,int> isSumFast(node* root)
     pair<bool,int> ans;
     if(left && right && checkSum)
     {
-        pair<bool,int> ans = make_pair(true,sum); 
-
-        return ans;
+       ans.first =  true;
+       ans.second =  2* root->data;
     }
     else
     {
-        pair<bool,int> ans = make_pair(false,sum); 
-
-        return ans;
+       ans.first = false;
     }
+    return ans;
+}
+
+bool isSumTree(node* root)
+{
+    return isSumFast(root).first;
+
 }
 
 int main()
@@ -116,7 +120,7 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
-    if(sumTree(root))
+    if(isSumTree(root))
     {
         cout<<"Tree is comprised of SUM TREE PROPERTY "<<endl;
     }
