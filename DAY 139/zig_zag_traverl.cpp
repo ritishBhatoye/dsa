@@ -77,7 +77,7 @@ void preOrder(node* root)
 
 }
 
-void zigZagBrute(node* root)
+vector<int> zigZagBrute(node* root)
 {
     vector<int> result;
 
@@ -175,10 +175,6 @@ void zigZagTraversal(node* root)
 
 }
 
-vector<int> zigZagTraversal(node* root)
-{
-
-}
 
 
 int main()
@@ -192,8 +188,11 @@ int main()
     root = buildTree(root);
     cout<<endl<<endl;
     vector<int> ans = zigZagBrute(root);
-    for(int i=0)
-    zigZagTraversal(root);
+    for(int i=0;i<ans.size();i++)
+    {
+        cout<<ans[i]<<" ";
+    }
+    // zigZagTraversal(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
