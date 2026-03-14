@@ -102,19 +102,19 @@ vector<int> leafNodes(node* root)
 
 vector<int> boundaryTraversal(node* root)
 {
-    vector<int> ans;
+    // vector<int> ans;
 
-    vector<int> leftNodesAns = leftNodes(root);
-    ans.insert(ans.end(),leftNodesAns.begin(),leftNodesAns.end());
+    // vector<int> leftNodesAns = leftNodes(root);
+    // ans.insert(ans.end(),leftNodesAns.begin(),leftNodesAns.end());
 
-    vector<int> leafNodesAns = leafNodes(root);
-    ans.insert(ans.end(),leafNodesAns.begin(),leafNodesAns.end());
+    // vector<int> leafNodesAns = leafNodes(root);
+    // ans.insert(ans.end(),leafNodesAns.begin(),leafNodesAns.end());
 
 
-    vector<int> rightNodesAns = rightNodes(root);
-    ans.insert(ans.end(),rightNodesAns.end(),rightNodesAns.begin());
+    // vector<int> rightNodesAns = rightNodes(root);
+    // ans.insert(ans.end(),rightNodesAns.end(),rightNodesAns.begin());
 
-    return ans;
+    // return ans;
 
 }
 
@@ -132,7 +132,7 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
-    vector<int> ans = boundaryTraversal(root);
+    vector<int> ans = leftNodes(root);
     for(int i=0;i<ans.size();i++)
     {
         cout<<ans[i]<<" ";
