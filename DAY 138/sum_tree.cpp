@@ -37,6 +37,15 @@ node* buildTree(node* root)
     return root;
 }
 
+int sum(node* root)
+{
+    if(root==NULL)
+        return 0;
+
+    return root->data + sum(root->left) + sum(root->right);
+
+}
+
 bool sumTree(node* root)
 {
     if(root == NULL)
@@ -50,7 +59,11 @@ bool sumTree(node* root)
     bool leftAns = sumTree(root->left);
     bool rightAns = sumTree(root->right);
 
-    bool isSumTree = (root->left->data  + root->right->data) == root->data;
+    int leftSum = sum(root->left);
+    int rightSum = sum(root->right);
+
+    
+    bool isSumTree = root->data == (leftSum + rightSum);
 
     return leftAns && rightAns && isSumTree;
 
