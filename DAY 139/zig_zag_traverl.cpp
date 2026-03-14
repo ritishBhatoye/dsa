@@ -1,6 +1,7 @@
 #include<iostream>
 #include<stack>
-
+#include<queue>
+#include<vector>
 
 using namespace std;
 
@@ -122,6 +123,10 @@ void zigZagTraversal(node* root)
 
 }
 
+vector<int> zigZagTraversal(node* root)
+{
+
+}
 
 
 int main()
