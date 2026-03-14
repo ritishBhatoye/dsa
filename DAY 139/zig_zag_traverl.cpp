@@ -77,6 +77,28 @@ void preOrder(node* root)
 
 }
 
+void zigZagBrute(node* root)
+{
+    vector<int> result;
+
+    if(root==NULL)
+        return result;
+
+    queue<node*> q;
+    
+    vector<int> ans;
+    q.push(root);
+    
+    bool leftToRight = true;
+
+    while(!q.empty())
+    {
+        
+    }
+
+
+}
+
 void zigZagTraversal(node* root)
 {
 
