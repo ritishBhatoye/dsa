@@ -132,7 +132,7 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
-    vector<int> ans = leftNodes(root);
+    vector<int> ans = boundaryTraversal(root);
     for(int i=0;i<ans.size();i++)
     {
         cout<<ans[i]<<" ";
