@@ -105,10 +105,26 @@ void zigZagBrute(node* root)
 
             int index =  leftToRight ? i : size-i; 
 
-            
+            ans[index] = frontNode->data;
+
+            if(frontNode->left)
+            {
+                q.push(frontNode->left);
+            }
+            if(frontNode->right)
+            {
+                q.push(frontNode->right);
+            }
 
         }
+        leftToRight =  !leftToRight;
+
+        for(auto i:ans)
+        {
+            result.push_back(i);
+        }
     }
+    return result;
 
 
 }
@@ -175,6 +191,8 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
+    vector<int> ans = zigZagBrute(root);
+    for(int i=0)
     zigZagTraversal(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
