@@ -107,7 +107,7 @@ int main()
 
     root = buildTree(root);
     cout<<endl<<endl;
-    zigZagTraversal(root,1);
+    zigZagTraversal(root);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
