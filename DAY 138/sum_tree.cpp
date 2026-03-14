@@ -92,6 +92,7 @@ pair<bool,int> isSumFast(node* root)
 
     int result = leftAns.second + rightAns.second;
 
+    pair<bool,int> ans;
     if(left && right && checkSum)
     {
         pair<bool,int> ans = make_pair(true,sum); 
