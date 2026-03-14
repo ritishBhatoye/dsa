@@ -57,7 +57,7 @@ void postOrder(node* root)
      postOrder(root->left);
      postOrder(root->right);
      cout<<root->data<<" ";
-     
+
 
 }
 
@@ -73,26 +73,25 @@ void preOrder(node* root)
 
 }
 
-void zigZagTraversal(node* root,int cnt)
+void zigZagTraversal(node* root)
 {
 
-    if(root==NULL)
-        return ;
+    int i=1;
+    int n=height(root);
 
-    if(cnt%2==0)
+    while(i<=n)
     {
-        cout<<root->data<<" ";
-        zigZagTraversal(root->left,cnt+1);
-        zigZagTraversal(root->right,cnt+1);
+        if(i%2==0)
+        {
+            postOrder(root);
+        }
+        else
+        {
+            preOrder(root);   
+        }
+        i++;
     }
-    
-    else
-    {
-        zigZagTraversal(root->left,cnt+1);
-        zigZagTraversal(root->right,cnt+1);
-        cout<<root->data<<" ";
-
-    }
+   
 
 }
 
