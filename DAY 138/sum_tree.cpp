@@ -23,7 +23,7 @@ node* buildTree(node* root)
     int d;
     cin>>d;
     
-    if(d==-1)
+    if(d==0)
         return NULL;
 
     root = new node(d);
@@ -61,7 +61,7 @@ int main()
 {
     //    1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1 FALSE
     // 3 1 -1 -1 2 -1 -1 TRUE
-    // 
+    // 26 10 4 -1 -1 6 0 0 3 0 3 0 0
     node* root = NULL;
 
     root = buildTree(root);
