@@ -103,7 +103,7 @@ vector<int> zigZagBrute(node* root)
             node* frontNode = q.front();
             q.pop();
 
-            int index =  leftToRight ? i : size-i; 
+            int index =  leftToRight ? i : size-i-1; 
 
             ans[index] = frontNode->data;
 
