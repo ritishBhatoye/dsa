@@ -65,6 +65,16 @@ int diameter(node* root)
 pair<int,int> optDiameter(node* root)
 {
     if(root==NULL)
+    {
+        pair<int,int> p  = make_pair(0,0);
+
+        return p;
+    }
+
+    pair<int,int> left = optDiameter(root->left);
+    pair<int,int> right = optDiameter(root->right);
+    
+
 }
 
 int main()
