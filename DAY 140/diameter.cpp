@@ -74,7 +74,12 @@ pair<int,int> optDiameter(node* root)
     pair<int,int> left = optDiameter(root->left);
     pair<int,int> right = optDiameter(root->right);
 
-    int opt1 = 
+    int op1 = left.first;
+    int op2 = right.first;
+
+    int op3 = left.second + right.second+1;
+    pair<int,int> first = max(op1,op2);
+    return max(op1,max(op2,op3));
 
 }
 
