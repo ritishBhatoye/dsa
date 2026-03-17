@@ -50,6 +50,16 @@ int height(node* root)
 
 }
 
+int diameter(node* root)
+{
+    if(root==NULL)
+        return ;
+
+    int op1 = diameter(root->left);
+    int op2 = diamter(root->right);
+    int op3 diamter
+}
+
 int main()
 {
     // 1 -1 3 2 -1 -1 4 5 -1 -1 -1 
