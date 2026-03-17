@@ -57,7 +57,7 @@ int diameter(node* root)
 
     int op1 = diameter(root->left);
     int op2 = diamter(root->right);
-    int op3 diamter
+    int op3 = height(root->right) + height(root->left) ;
 }
 
 int main()
