@@ -78,9 +78,11 @@ pair<int,int> optDiameter(node* root)
     int op2 = right.first;
 
     int op3 = left.second + right.second+1;
-    pair<int,int> first = max(op1,op2);
-    return max(op1,max(op2,op3));
+    pair<int,int> ans;
+    ans.first= max(op1,max(op2,op3));
+    ans.second = max(left.second,right.second)+1;
 
+    return ans;
 }
 
 int main()
@@ -91,7 +93,7 @@ int main()
     cout<<endl<<endl;
     cout<<"Height of the Tree :- "<<height(root)<<endl;
     cout<<endl<<endl;
-    cout<<"Diamter of the Tree :- "<<diameter(root)<<endl;
+    cout<<"Diamter of the Tree :- "<<optDiameter(root).first<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
 
