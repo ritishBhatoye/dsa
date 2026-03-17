@@ -73,7 +73,8 @@ pair<int,int> optDiameter(node* root)
 
     pair<int,int> left = optDiameter(root->left);
     pair<int,int> right = optDiameter(root->right);
-    
+
+    int opt1 = 
 
 }
 
