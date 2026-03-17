@@ -54,10 +54,6 @@ bool isBalanced(node* root)
     if(root==NULL)
         return true;
 
-    if(root->left ==NULL && root->right)
-        return true;
-
-    
     bool left = isBalanced(root->left);
     bool right = isBalanced(root->right);
 
