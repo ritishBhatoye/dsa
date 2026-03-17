@@ -57,17 +57,20 @@ int diameter(node* root)
 
     int op1 = diameter(root->left);
     int op2 = diamter(root->right);
-    int op3 = height(root->right) + height(root->left) ;
+    int op3 = height(root->right) + height(root->left);
+
+    return max(op1,max(op2,op3));
 }
 
 int main()
 {
-    // 1 -1 3 2 -1 -1 4 5 -1 -1 -1 
+    // 1 
     node* root = NULL;
     root = buildTree(root);
     cout<<endl<<endl;
     cout<<"Height of the Tree :- "<<height(root)<<endl;
     cout<<endl<<endl;
+    cout<<"Diamter of the Tree :- "<<diameter(root)<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
 
