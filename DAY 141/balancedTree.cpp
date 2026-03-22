@@ -112,7 +112,7 @@ pair<bool,int> isBalanced(node* root)
 {
     if(root==NULL)
     {
-        pair<bool,int> p =  make(true,0);
+        pair<bool,int> p =  make_pair(true,0);
         return p;
     }
 
@@ -122,7 +122,7 @@ pair<bool,int> isBalanced(node* root)
     bool leftAns =  left.first;
     bool rightAns = right.first;
 
-    bool checkBalance = abs(left.second,right.second) <= 1;
+    bool checkBalance = abs(left.second - right.second) <= 1;
     
     pair<bool,int> ans;
     ans.second = max(left.second,right.second) + 1;
@@ -145,6 +145,7 @@ int main()
 {
     // 10 20 40 -1 -1 60 -1 -1 30 -1 -1
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    // 1 2 4 5 -1 -1 -1 -1 3 -1 -1
     node* root = NULL;
     cout<<endl<<endl;
 
