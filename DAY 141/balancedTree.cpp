@@ -143,6 +143,7 @@ pair<bool,int> isBalaned(Node* root)
 
 int main()
 {
+    // 10 20 40 -1 -1 60 
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
     node* root = NULL;
     cout<<endl<<endl;
@@ -157,6 +158,14 @@ int main()
     cout<<endl<<endl;
 
     cout<<isBalaned(root)<<endl;
+    if(isBalanced(root))
+    {
+        cout<<"Tree is balanced"<<endl;
+    }
+    else
+    {
+        cout<<"Tree is NOT balanced"<<endl;
+    }
 
     cout<<endl<<endl;
     cout<<endl<<endl;
