@@ -108,7 +108,7 @@ int diameterBrute(node* root)
 
 }
 // a tree is hieght balanced if the absolute height of the left and right is less than or eqaul to one 
-pair<bool,int> isBalaned(Node* root)
+pair<bool,int> isBalanced(node* root)
 {
     if(root==NULL)
     {
@@ -143,7 +143,7 @@ pair<bool,int> isBalaned(Node* root)
 
 int main()
 {
-    // 10 20 40 -1 -1 60 
+    // 10 20 40 -1 -1 60 -1 -1 30 -1 -1
     // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
     node* root = NULL;
     cout<<endl<<endl;
@@ -157,8 +157,8 @@ int main()
     cout<<endl<<endl;
     cout<<endl<<endl;
 
-    cout<<isBalaned(root)<<endl;
-    if(isBalanced(root))
+
+    if(isBalanced(root).first)
     {
         cout<<"Tree is balanced"<<endl;
     }
