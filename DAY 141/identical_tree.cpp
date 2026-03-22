@@ -143,7 +143,7 @@ pair<bool,int> isBalanced(node* root)
 
 bool isIdentical(node* r1,node* r2)
 {
-    if(r1!=NULL && r2==NULL)
+    if(r1==NULL && r2==NULL)
     {
         return true;
     }
