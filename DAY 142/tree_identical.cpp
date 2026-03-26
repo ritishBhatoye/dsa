@@ -218,11 +218,8 @@ bool isIdentical(node* r1,node* r2)
     bool right = isIdentical(r1->right,r2->right);
 
 
-
     bool check = r1->data == r2->data;
-
     return left && right && check;
-
 }
 
 int main()
