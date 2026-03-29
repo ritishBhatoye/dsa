@@ -1,2 +1,7 @@
-    // addAtTail(tail,50);
-    // addAtTail(tail,60);
+cout<<endl<<endl;
+    // int d;
+    // cout<<"Enter the position for Node :- ";
+
+    // cin>>d;
+    // removeKNode(head,d);
+    // print(head);
