@@ -227,8 +227,10 @@ void removeKNode(Node* head,int d)
             temp = temp->next;
 
         }
-        temp->data = temp->next->data;
+        
+        Node* delNode = temp->next;
         temp->next = temp->next->next;
+        delete delNode;
     }
 else
 {
