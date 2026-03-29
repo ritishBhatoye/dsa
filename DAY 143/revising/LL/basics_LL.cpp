@@ -208,10 +208,11 @@ void swapNodes(Node* &head)
 
 void removeKNode(Node* head,int d)
 {
+    int n = length(head); 
+
     if(head==NULL || head->next == NULL)
         return ;
     
-    int n = length(head); 
 
     if(d==n)
     {
