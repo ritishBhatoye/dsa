@@ -184,6 +184,8 @@ int main()
     // addAtTail(tail,60);
     print(head2);
     cout<<endl<<endl;
+    Node* h1 =  NULL;
+    Node* h2 = new Node(0);  
     Node* mergeAns =  mergeTwoSortedLL(head1,head2);
     cout<<"After the merge :- ";
     print(mergeAns);
