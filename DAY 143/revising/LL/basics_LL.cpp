@@ -206,35 +206,12 @@ void swapNodes(Node* &head)
 }
 //Remove Node
 
-void removeKNode(Node* head,int k)
+void removeKNode(Node* head)
 {
-    int n = length(head);
+    if(head==NULL || head->next == NULL)
+        return head;
 
-    if(k==n)
-    {
-        // deletion of the last node
-        Node* temp=head;
-        
-        Node* nodeToDel = temp;
-        nodeToDel->next  = NULL;
-        delete nodeToDel;
-    }
-
-    int p = n - k + 1;
-    Node* temp =  head;
-    int i=1;
-    while(i<p)
-    {
-        temp = temp->next;
-        i++;
-    }
-
-    Node* nodeToDel = temp->next;
-
-    temp->next = temp->next->next;
-
-    delete nodeToDel;
-
+    
 }
 
 int main()
