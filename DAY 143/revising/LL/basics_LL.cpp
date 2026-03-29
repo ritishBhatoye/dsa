@@ -67,7 +67,7 @@ int length(Node* head)
     if(head == NULL)
         return 0;
 
-    int cnt=0;
+    int cnt=1;
     while(head->next!=NULL)
     {
         head=head->next;
@@ -210,19 +210,15 @@ void removeKNode(Node* head,int k)
 {
     int n = length(head);
 
-    // if(k==n)
-    // {
-    //     // deletion of the last node
-    //     Node* temp=head;
-    //     while(temp->next->next!=NULL)
-    //     {  
-    //         temp=temp-next;
-
-    //     }
-    //     Node* nodeToDel = temp->next;
-    //     temp->next  = NULL;
-    //     delete nodeToDel;
-    // }
+    if(k==n)
+    {
+        // deletion of the last node
+        Node* temp=head;
+        
+        Node* nodeToDel = temp;
+        nodeToDel->next  = NULL;
+        delete nodeToDel;
+    }
 
     int p = n - k + 1;
     Node* temp =  head;
