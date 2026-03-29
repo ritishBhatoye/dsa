@@ -206,15 +206,15 @@ void swapNodes(Node* &head)
 }
 //Remove Node
 
-void removeKNode(Node* head)
+void removeKNode(Node* head,int d)
 {
     if(head==NULL || head->next == NULL)
         return head;
 
     
     Node* temp = head;
-
-    
+    int k =
+    while()
     
 }
 
