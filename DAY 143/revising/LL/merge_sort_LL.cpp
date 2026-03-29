@@ -116,8 +116,12 @@ Node* mergeTwoSortedLL(Node* h1,Node* h2)
         {
             Node* newNode = new Node(h1->data);
             h1=h1->next;
-            h2=h2->next;
             tail->next = newNode;
+            tail = tail->next;
+            
+            Node* node = new Node(h2->data);
+            h2=h2->next;
+            tail->next = node;
             tail = tail->next;
 
         }
