@@ -209,7 +209,7 @@ void swapNodes(Node* &head)
 void removeKNode(Node* head,int d)
 {
     if(head==NULL || head->next == NULL)
-        return head;
+        return ;
 
     
     Node* temp = head;
@@ -222,10 +222,12 @@ void removeKNode(Node* head,int d)
         i++;
     }
 
-    Node* nextNode = temp->next;
+    Node* delNode = temp->next;
 
-    
+    temp->data = temp->next->data;
+    temp->next = temp->next->next;
 
+    delete delNode;
     
 }
 
