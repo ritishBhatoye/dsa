@@ -210,18 +210,29 @@ void removeKNode(Node* head,int d)
 {
     if(head==NULL || head->next == NULL)
         return ;
+    
+    int n = length(head); 
 
-    if(d==1)
+    if(d=1)
+    {
+    
+        head->data = head->next->data;
+        head->next = head->next->next;
+    }
+    else if(d==n)
     {
         Node* temp = head;
-        head = head->next;
+        while(temp->next->next!=NULL)
+        {
+            temp = temp->next;
 
-        delete temp;
+        }
+        temp->data = temp->next->data;
+        temp->next = temp->next->next;
     }
 else
 {
     Node* temp = head;
-    int n = length(head); 
     int k = n -  d + 1;
     int i=1;
     while(i<k)
