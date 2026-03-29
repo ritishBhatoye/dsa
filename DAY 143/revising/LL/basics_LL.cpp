@@ -212,6 +212,9 @@ void removeKNode(Node* head)
         return head;
 
     
+    Node* temp = head;
+
+    
     
 }
 
