@@ -213,9 +213,13 @@ void removeKNode(Node* head,int d)
 
     if(d==1)
     {
-        
-    }
+        Node* temp = head;
+        head = head->next;
 
+        delete temp;
+    }
+else
+{
     Node* temp = head;
     int n = length(head); 
     int k = n -  d + 1;
@@ -232,7 +236,7 @@ void removeKNode(Node* head,int d)
     temp->next = temp->next->next;
 
     delete delNode;
-    
+}
 }
 
 int main()
