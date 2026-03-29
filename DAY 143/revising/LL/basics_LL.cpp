@@ -240,6 +240,8 @@ int main()
     addAtTail(tail,2);
     addAtTail(tail,3);
     addAtTail(tail,4);
+    addAtTail(tail,5);
+
     // addAtTail(tail,50);
     // addAtTail(tail,60);
     print(head);
