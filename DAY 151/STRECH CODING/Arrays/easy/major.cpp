@@ -174,7 +174,7 @@ int main()
     printVector(interAns);
     cout<<endl<<endl;
     int pairSumArr[6]={2, 7, 11, 15, 3, 6};
-    vector<int> pairSumAns = p
+    vector<int> pairSumAns = pairSum(pairSumArr,9);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
