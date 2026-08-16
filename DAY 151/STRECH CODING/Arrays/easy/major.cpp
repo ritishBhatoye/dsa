@@ -174,7 +174,7 @@ int main()
     printArr(interArr1, 7);
     cout<<"Inter Array 2"<<endl;
     printArr(interArr2, 7);
-    
+    vector<int> vect
     vector<int> interAns=arrayIntersection(interArr1,interArr2,7,7);
     cout<<endl<<endl;
     printVector(interAns);
