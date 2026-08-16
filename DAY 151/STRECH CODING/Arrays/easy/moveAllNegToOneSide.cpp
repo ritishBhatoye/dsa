@@ -27,10 +27,14 @@ void moveAllNegToOneSideORDERLY(int* arr,int size)
     {
         if(arr[i]<0)
         {
-            p.push_back(arr[i]);
+            n.push_back(arr[i]);
         }
     }
 
+    for(int i=0;i<size;i++)
+    {
+        arr[i]=p[i];
+    }
 }
 
 void moveAllNegToOneSide(int* arr,int size)
@@ -62,7 +66,7 @@ int main()
     int size =  sizeof(arr)/sizeof(arr[0]);
     printArr(arr,size);
     cout<<endl<<endl;
-    moveAllNegToOneSide(arr,size);
+    moveAllNegToOneSideORDERLY(arr,size);
     cout<<endl<<endl;
     printArr(arr,size);
     cout<<endl<<endl;
