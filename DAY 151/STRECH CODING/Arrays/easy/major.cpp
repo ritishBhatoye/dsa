@@ -10,7 +10,7 @@ void printArr(int* arr,int size)
         cout<<arr[i]<<" ";
     }
 }
-
+void printVector(n)
 // 5^0=5;
 // 5^5=0;
 int uniqueElement(int* arr,int size)
@@ -54,10 +54,19 @@ vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
     {
         if(a[i]==b[j])
         {
-            ans.push_back(a[i]);
+            ans.push_back(a[i++]);
+            j++;
         }
-        else if(a[i]<)
+        else if(a[i]<b[j])
+        {
+            i++;
+        }
+        else if(b[j]<a[i])
+        {
+            j++;
+        }
     }
+    return ans;
 }
 
 int main()
