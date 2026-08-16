@@ -106,14 +106,33 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
 
 void sort012(int* arr,int size)
 {
-    int s=0;
-    int e=size-1;
+    int i=0;
 
     int countZero = 0;
     int countOne = 0;
     int countTwo = 0;
 
+    while(i<size)
+    {
+        if(arr[i]==0)
+        {
+            countZero++;
+            i++;
+        }
+        else if(arr[i]==1)
+        {
+            countOne++;
+            i++;
 
+        }
+        else
+        {
+            countTwo++;
+            i++;
+
+        }
+    }
+    
 
 }
 
