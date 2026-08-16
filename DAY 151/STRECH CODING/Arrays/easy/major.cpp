@@ -169,7 +169,12 @@ int main()
     cout<<endl<<endl;
     int interArr1[7] = {4, 7, 2, 7, 9, 2, 5};
     int interArr2[7] = {7, 3, 7, 2, 5, 5, 8};
-    printArr(inter, int size)
+    cout<<endl<<endl;
+    cout<<"Inter Array 1"<<endl;
+    printArr(interArr1, 7);
+    cout<<"Inter Array 2"<<endl;
+    printArr(interArr2, 7);
+
     vector<int> interAns=arrayIntersection(interArr1,interArr2,7,7);
     cout<<endl<<endl;
     printVector(interAns);
