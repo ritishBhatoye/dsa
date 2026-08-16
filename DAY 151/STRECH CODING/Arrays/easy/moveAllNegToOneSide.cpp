@@ -18,21 +18,21 @@ void moveAllNegToOneSide(int* arr,int size)
     {
        if(arr[s]<0 && arr[e]>=0)
        {
-        swap(arr[s++],arr[e--])
-       }
-       else
-       {
-        
+        swap(arr[s++],arr[e--]);
        }
     }
 }
 
 int main()
 {
+    int arr[8]={ 1, -1, 3, 2, -7, -5, 11, 6 };
     cout<<endl<<endl;
-
+    int size =  sizeof(arr)/sizeof(arr[0]);
+    printArr(arr,size);
     cout<<endl<<endl;
+    moveAllNegToOneSide(arr,size);
     cout<<endl<<endl;
+    printArr(arr,size);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
