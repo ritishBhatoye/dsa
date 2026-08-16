@@ -14,11 +14,16 @@ void moveAllNegToOneSide(int* arr,int size)
     int s=0;
     int e=size-1;
 
-    while(s<e)
+    while(s<=e)
     {
        if(arr[s]<0 && arr[e]>=0)
        {
         swap(arr[s++],arr[e--]);
+       }
+       else
+       {
+        s++;
+        e--;
        }
     }
 }
