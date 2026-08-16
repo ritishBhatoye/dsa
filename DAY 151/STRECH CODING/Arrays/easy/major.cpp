@@ -137,17 +137,31 @@ void sort012(int* arr,int size)
 
     while(j<size && countZero!=0)
     {
-        arr[j]=0;
+        arr[j++]=0;
         countZero--;
     }
+
+     while(j<size && countOne!=0)
+    {
+        arr[j++]=1;
+        countOne--;
+    }
+
+     while(j<size && countTwo!=0)
+    {
+        arr[j++]=2;
+        countTwo--;
+    }
+
 
 }
 
 int main()
 {
     cout<<endl<<endl;
-    int arr[7]={2,5,6,10,20,50,100};
+    
     cout<<endl<<endl;
+
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
