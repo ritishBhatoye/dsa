@@ -43,9 +43,17 @@ int duplicatesInArray(int* arr,int size)
 return -1;
 }
 
-void arrayIntersection(int* a,int* b,int s1,int s2)
+vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
 {
-    
+    int i=0;
+    int j=0;
+
+    vector<int> ans;
+
+    while(i < s1 && j<s2)
+    {
+        if(a[i])
+    }
 }
 
 int main()
