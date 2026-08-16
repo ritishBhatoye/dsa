@@ -35,8 +35,17 @@ int duplicatesInArray(int* arr,int size)
 
     for(int i=0;i<map.size();i++)
     {
-        
+        if(arr[i]==2)
+        {
+            return i;
+        }
     }
+return -1;
+}
+
+void arrayIntersection(int* a,int* b,int s1,int s2)
+{
+    
 }
 
 int main()
