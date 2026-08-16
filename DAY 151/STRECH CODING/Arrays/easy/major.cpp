@@ -94,7 +94,7 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
         }
         else if(sum<k)
         {
-            
+            s++;
         }
     }
     return ans;
