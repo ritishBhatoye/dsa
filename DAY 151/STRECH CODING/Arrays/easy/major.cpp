@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 
@@ -10,12 +11,25 @@ void printArr(int* arr,int size)
     }
 }
 
-
-void uniqueElement(int* arr,int size)
+// 5^0=5;
+// 5^5=0;
+int uniqueElement(int* arr,int size)
 {
-    for(int i=)
+    int ans=0;
+    for(int i=0;i<size;i++)
+    {
+        ans =  ans^arr[i];
+    }
+    return ans;
+
 }
 
+int duplicatesInArray(int* arr,int size)
+{
+    vector<int> map;
+
+    
+}
 
 int main()
 {
