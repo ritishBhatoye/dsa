@@ -132,7 +132,14 @@ void sort012(int* arr,int size)
 
         }
     }
-    
+
+    int j=0;
+
+    while(j<size && countZero!=0)
+    {
+        arr[j]=0;
+        co
+    }
 
 }
 
