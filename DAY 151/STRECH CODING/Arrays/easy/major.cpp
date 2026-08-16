@@ -84,9 +84,17 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
 
     while(s<e)
     {
-        
-    }
+        int sum = arr[s]+arr[e];
+        if(sum==k)
+        {
 
+        }
+        else
+        {
+            
+        }
+    }
+    return ans;
 }
 int main()
 {
