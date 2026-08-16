@@ -111,7 +111,7 @@ void sort012(int* arr,int size)
 
     while(s<e)
     {
-        
+      
     }
 
 }
