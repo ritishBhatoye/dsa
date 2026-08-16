@@ -167,7 +167,9 @@ int main()
     cout<<endl<<endl;
     cout<<"Duplicate Element is :- "<<duplicatesInArray(dupliArr,6)<<endl;
     cout<<endl<<endl;
-    int interArray[4];
+    int interArr1[7] = {4, 7, 2, 7, 9, 2, 5};
+    int interArr2[7] = {7, 3, 7, 2, 5, 5, 8};
+    vector<int> interAns=arrayIntersection(interArr1,interArr2);
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
