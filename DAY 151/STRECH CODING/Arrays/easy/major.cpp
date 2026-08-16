@@ -10,7 +10,13 @@ void printArr(int* arr,int size)
         cout<<arr[i]<<" ";
     }
 }
-void printVector(n)
+void printVector(vector<int>& arr)
+{
+    for(int i=0;i<arr.size();i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+}
 // 5^0=5;
 // 5^5=0;
 int uniqueElement(int* arr,int size)
@@ -69,6 +75,13 @@ vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
     return ans;
 }
 
+vector<vector<int>> pairSum(int* arr,int k)
+{
+    vector<vector<int>> ans;
+
+    int s=0;
+    int e=
+}
 int main()
 {
     cout<<endl<<endl;
