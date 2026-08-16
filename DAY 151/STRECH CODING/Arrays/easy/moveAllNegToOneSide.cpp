@@ -30,10 +30,14 @@ void moveAllNegToOneSideORDERLY(int* arr,int size)
             n.push_back(arr[i]);
         }
     }
-
-    for(int i=0;i<size;i++)
+    int j=0;
+    for(int i=0;i<p.size();i++)
     {
-        arr[i]=p[i];
+        arr[j++]=p[i];
+    }
+    for(int i=0;i<n.size();i++)
+    {
+        arr[j++]=n[i];
     }
 }
 
