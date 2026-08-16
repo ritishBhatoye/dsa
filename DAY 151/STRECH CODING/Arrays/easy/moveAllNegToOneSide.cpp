@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 void printArr(int* arr,int size)
@@ -9,12 +10,48 @@ void printArr(int* arr,int size)
     }
 }
 
+void moveAllNegToOneSideORDERLY(int* arr,int size)
+{
+    vector<int> p;
+    vector<int> n;
+
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]>=0)
+        {
+            p.push_back(arr[i]);
+        }
+    }
+
+     for(int i=0;i<size;i++)
+    {
+        if(arr[i]<0)
+        {
+            p.push_back(arr[i]);
+        }
+    }
+
+}
+
 void moveAllNegToOneSide(int* arr,int size)
 {
     int s=0;
     int e=size-1;
 
-   
+    while(s<=e)
+    {
+       if(arr[s]<0 && arr[e]>=0)
+       {
+        swap(arr[s++],arr[e--]);
+       }
+       else if(arr[s]>=0)
+       {
+        s++;
+       }
+       else if(arr[e]<0)
+       {
+          e--;
+       }
     }
 }
 
