@@ -109,10 +109,11 @@ void sort012(int* arr,int size)
     int s=0;
     int e=size-1;
 
-    while(s<e)
-    {
-      
-    }
+    int countZero = 0;
+    int countOne = 0;
+    int countTwo = 0;
+
+
 
 }
 
