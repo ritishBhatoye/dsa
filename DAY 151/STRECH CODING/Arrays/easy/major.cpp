@@ -52,7 +52,11 @@ vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
 
     while(i < s1 && j<s2)
     {
-        if(a[i])
+        if(a[i]==b[j])
+        {
+            ans.push_back(a[i]);
+        }
+        else if()
     }
 }
 
