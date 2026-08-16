@@ -21,15 +21,12 @@ void moveAllNegToOneSideORDERLY(int* arr,int size)
         {
             p.push_back(arr[i]);
         }
-    }
-
-     for(int i=0;i<size;i++)
-    {
-        if(arr[i]<0)
+        else
         {
             n.push_back(arr[i]);
         }
     }
+
     int j=0;
     for(int i=0;i<p.size();i++)
     {
