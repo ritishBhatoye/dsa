@@ -167,7 +167,7 @@ int main()
     cout<<endl<<endl;
     cout<<"Duplicate Element is :- "<<duplicatesInArray(dupliArr,6)<<endl;
     cout<<endl<<endl;
-    int interArray
+    int interArray[4];
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
