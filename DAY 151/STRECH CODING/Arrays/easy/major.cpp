@@ -169,6 +169,7 @@ int main()
     cout<<endl<<endl;
     int interArr1[7] = {4, 7, 2, 7, 9, 2, 5};
     int interArr2[7] = {7, 3, 7, 2, 5, 5, 8};
+    printArr
     vector<int> interAns=arrayIntersection(interArr1,interArr2,7,7);
     cout<<endl<<endl;
     printVector(interAns);
@@ -176,7 +177,10 @@ int main()
     int pairSumArr[6]={2, 7, 11, 15, 3, 6};
     vector<vector<int>> pairSumAns = pairSum(pairSumArr,6,9);
     cout<<endl<<endl;
-    int sortArr012[6]={2, 0, 2, 1, 0, 1, 2, 0, 1};
+    int sortArr012[9]={2, 0, 2, 1, 0, 1, 2, 0, 1};
+    cout<<endl<<endl;
+    sort012(sortArr012, 9);
+    printArr(sortArr012,9);
     cout<<endl<<endl;
     cout<<endl<<endl;
 
