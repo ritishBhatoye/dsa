@@ -96,9 +96,26 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
         {
             s++;
         }
+        else if(sum > k)
+        {
+            e--;
+        }
     }
     return ans;
 }
+
+void sort012(int* arr,int size)
+{
+    int s=0;
+    int e=size-1;
+
+    while(s<e)
+    {
+        
+    }
+
+}
+
 int main()
 {
     cout<<endl<<endl;
