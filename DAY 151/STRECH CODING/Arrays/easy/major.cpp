@@ -75,12 +75,18 @@ vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
     return ans;
 }
 
-vector<vector<int>> pairSum(int* arr,int k)
+vector<vector<int>> pairSum(int* arr,int size,int k)
 {
     vector<vector<int>> ans;
 
-    int s=0;
-    int e=
+    int s = 0;
+    int e = size;
+
+    while(s<e)
+    {
+        
+    }
+
 }
 int main()
 {
