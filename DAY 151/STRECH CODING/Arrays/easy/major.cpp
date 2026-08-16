@@ -56,7 +56,7 @@ vector<int> arrayIntersection(int* a,int* b,int s1,int s2)
         {
             ans.push_back(a[i]);
         }
-        else if()
+        else if(a[i]<)
     }
 }
 
