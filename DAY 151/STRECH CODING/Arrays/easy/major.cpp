@@ -159,10 +159,11 @@ void sort012(int* arr,int size)
 int main()
 {
     cout<<endl<<endl;
-    
+    int uniqueArr[13]={17, -4, 23, 17, 91, -4, 56, 23, 91, 8, 56, 42, 8};
     cout<<endl<<endl;
-
+    cout<<"Unique Element :- "<<uniqueElement(uniqueArr,13);
     cout<<endl<<endl;
+    int 
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
