@@ -174,13 +174,21 @@ int main()
     printArr(interArr1, 7);
     cout<<"Inter Array 2"<<endl;
     printArr(interArr2, 7);
-    vector<int> vect
     vector<int> interAns=arrayIntersection(interArr1,interArr2,7,7);
+    printVector(interAns);
     cout<<endl<<endl;
     printVector(interAns);
     cout<<endl<<endl;
     int pairSumArr[6]={2, 7, 11, 15, 3, 6};
     vector<vector<int>> pairSumAns = pairSum(pairSumArr,6,9);
+    for(int i=0;pairSumAns.size();i++)
+    {
+    cout<<endl;
+
+        printVector(pairSumAns[i]);
+    cout<<endl;
+
+    }
     cout<<endl<<endl;
     int sortArr012[9]={2, 0, 2, 1, 0, 1, 2, 0, 1};
     cout<<endl<<endl;
