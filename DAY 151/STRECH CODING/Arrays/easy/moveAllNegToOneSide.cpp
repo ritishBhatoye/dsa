@@ -20,10 +20,13 @@ void moveAllNegToOneSide(int* arr,int size)
        {
         swap(arr[s++],arr[e--]);
        }
-       else
+       else if(arr[s]>=0)
        {
         s++;
-        e--;
+       }
+       else if(arr[e]<0)
+       {
+          e--;
        }
     }
 }
