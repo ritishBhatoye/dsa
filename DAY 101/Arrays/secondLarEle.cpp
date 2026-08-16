@@ -15,24 +15,29 @@ void printArr(int* arr,int size){
     cout<<endl;
 }
 
-int SecLar(int *arr,int size)
+int SecLar(int* arr,int size)
 {
-   int Lar=arr[0];
-   int SecLar=-1;
-    for(int i=0;i<size;i++)
+    int l = arr[0];
+    int s = INT_MIN;
+
+    for(int i=1;i<size;i++)
     {
-            if(arr[i] > Lar)
-            {   
-                SecLar=Lar;
-                Lar=arr[i];
-            }
-            else if(arr[i] < Lar && arr[i]>SecLar)
-            {
-                SecLar=arr[i];
-            }
+        if(arr[i]>l)
+        {
+            s=l;
+            l=arr[i];
+        }
+        else if(arr[i] <l && arr[i] > s)
+        {
+            s=arr[i];
+        }
     }
 
-return SecLar;
+    if(s==INT_MIN)
+    {
+        return -1;
+    }
+    return s;
 }
 
 
