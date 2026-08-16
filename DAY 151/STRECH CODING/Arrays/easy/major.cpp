@@ -26,9 +26,17 @@ int uniqueElement(int* arr,int size)
 
 int duplicatesInArray(int* arr,int size)
 {
-    vector<int> map;
+    vector<int> map(size,0);
 
-    
+    for(int i=0;i<size;i++)
+    {
+        map[arr[i]]++;
+    }
+
+    for(int i=0;i<map.size();i++)
+    {
+        
+    }
 }
 
 int main()
