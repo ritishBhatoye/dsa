@@ -1,2 +1,4 @@
 .last_push_time
 auto_commit_push.sh
+*.log
+.DS_Store
