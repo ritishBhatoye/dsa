@@ -163,8 +163,9 @@ int main()
     cout<<endl<<endl;
     cout<<"Unique Element :- "<<uniqueElement(uniqueArr,13);
     cout<<endl<<endl;
-    int 
+    int dupliArr[6]={3,4,5,1,2,5};
     cout<<endl<<endl;
+    int 
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
