@@ -173,6 +173,8 @@ int main()
     cout<<endl<<endl;
     printVector(interAns);
     cout<<endl<<endl;
+    int pairSumArr[6]={2, 7, 11, 15, 3, 6};
+    vector<int> pairSumAns = p
     cout<<endl<<endl;
     cout<<endl<<endl;
     cout<<endl<<endl;
