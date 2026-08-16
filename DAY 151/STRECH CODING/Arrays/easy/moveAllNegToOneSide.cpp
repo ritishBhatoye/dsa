@@ -11,21 +11,11 @@ void printArr(int* arr,int size)
 
 void moveAllNegToOneSide(int* arr,int size)
 {
-    int j=0;
-    for(int i=0;i<size;i++)
-    {
-        if(arr[i]<0)
-        {
-            j=i;
-            break;
-        }
-    }
+    int s=0;
+    int e=size-1;
 
-    for(int i=0;i<size;i++)
-    {
-      if(arr)
+   
     }
-
 }
 
 int main()
