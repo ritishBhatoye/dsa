@@ -246,7 +246,7 @@ int main()
 
     cout<<endl<<endl;
     int tripletArr[6]={-1,0,1,2,-1,-4};
-    vector<vector<int>> tripletSumAns = triplets(tripletArr, 10,0);
+    vector<vector<int>> tripletSumAns = triplets(tripletArr, 6,0);
     cout<<endl<<endl;
     cout<<"Triplet sum :- "<<endl;
     for(int i=0;i<tripletSumAns.size();i++)
