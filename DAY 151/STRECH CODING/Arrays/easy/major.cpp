@@ -160,11 +160,14 @@ void sort012(int* arr,int size)
 
 void sortArr(int* arr,int size)
 {
-    for(int i=0;i<size;i++)
+    for(int i=0;i<size-1;i++)
     {
-        for(int j=i;j<size;j++)
+        for(int j=i;j<size-1;j++)
         {
             if(arr[j]>arr[j+1])
+            {
+                swap(arr[j],arr[j+1]);
+            }
         }
     }
 }
@@ -173,7 +176,7 @@ vector<vector<int>> triplets(int* arr, int size,int k)
 {
     int i=0;
 
-
+    sortArr(arr,size);
     vector<vector<int>> ans;
 
     for(int i=0;i<size;i++)
