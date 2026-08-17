@@ -229,7 +229,14 @@ int main()
     cout<<endl;
 
     }
+
     cout<<endl<<endl;
+    int tripletArr[10]={-4, -1, -1, 0, 1, 2, -2, 2, 3, -3};
+    vector<vector<int>> tripletSumAns = triplets(arr, size,)
+    cout<<endl<<endl;
+
+    cout<<endl<<endl;
+
     int sortArr012[9]={2, 0, 2, 1, 0, 1, 2, 0, 1};
     cout<<endl<<endl;
     sort012(sortArr012, 9);
