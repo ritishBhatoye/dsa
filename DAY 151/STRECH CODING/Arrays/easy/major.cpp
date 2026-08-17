@@ -80,9 +80,9 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
     vector<vector<int>> ans;
 
     int s = 0;
-    int e = size;
+    int e = size-1;
 
-    while(s<e)
+    while(s<=e)
     {
         int sum = arr[s]+arr[e];
         if(sum==k)
@@ -182,7 +182,7 @@ int main()
     printVector(interAns);
     cout<<endl<<endl;
     int pairSumArr[6]={1, 2, 3, 4, 5, 6};
-    vector<vector<int>> pairSumAns = pairSum(pairSumArr,6,9);
+    vector<vector<int>> pairSumAns = pairSum(pairSumArr,6,7);
     cout<<"Pair Sum :- ";
     for(int i=0;pairSumAns.size();i++)
     {
