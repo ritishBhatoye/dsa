@@ -251,7 +251,7 @@ int main()
     cout<<"Triplet sum :- "<<endl;
     for(int i=0;i<tripletSumAns.size();i++)
     {
-        for(int j=0;j<tripletSumAns.size();j++)
+        for(int j=0;j<tripletSumAns[i].size();j++)
         {
             cout<<tripletSumAns[i][j]<<" ";
         }
