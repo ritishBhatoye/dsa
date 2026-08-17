@@ -183,12 +183,13 @@ int main()
     cout<<endl<<endl;
     int pairSumArr[6]={1, 2, 3, 4, 5, 6};
     vector<vector<int>> pairSumAns = pairSum(pairSumArr,6,9);
-    cout<<"Pair Sum :- "<<endl;
+    cout<<"Pair Sum :- ";
     for(int i=0;pairSumAns.size();i++)
     {
-    cout<<endl;
-
-        printVector(pairSumAns[i]);
+       for(int j=0;j<pairSumAns[i].size();j++)
+       {
+            cout<<pairSumAns[i][j]<<" ";
+       }
     cout<<endl;
 
     }
