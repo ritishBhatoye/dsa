@@ -192,7 +192,9 @@ vector<vector<int>> triplets(int* arr, int size,int k)
 
         if(k==sum)
         {
-            ans.push_back({arr[i],arr[s++],arr[e--]});
+            ans.push_back({arr[i],arr[s],arr[e]});
+            s++;
+            e--;
 
             while(s<e && arr[s]==arr[s-1]) s++;
 
