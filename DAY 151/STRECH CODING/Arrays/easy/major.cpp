@@ -174,7 +174,7 @@ void sortArr(int* arr,int size)
 
 vector<vector<int>> triplets(int* arr, int size,int k)
 {
-    int i=0;
+
 
     sortArr(arr,size);
     vector<vector<int>> ans;
