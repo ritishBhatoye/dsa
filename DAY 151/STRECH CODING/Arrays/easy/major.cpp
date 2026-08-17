@@ -104,6 +104,8 @@ vector<vector<int>> pairSum(int* arr,int size,int k)
     return ans;
 }
 
+
+
 void sort012(int* arr,int size)
 {
     int i=0;
