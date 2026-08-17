@@ -232,8 +232,17 @@ int main()
 
     cout<<endl<<endl;
     int tripletArr[10]={-4, -1, -1, 0, 1, 2, -2, 2, 3, -3};
-    vector<vector<int>> tripletSumAns = triplets(arr, size,)
+    vector<vector<int>> tripletSumAns = triplets(tripletArr, 10,0);
     cout<<endl<<endl;
+    cout<<"Triplet sum "<<endl;
+    for(int i=0;i<tripletSumAns.size();i++)
+    {
+        for(int j=0;j<tripletSumAns.size()-1;j++)
+        {
+            cout<<tripletSumAns[i][j]<<" ";
+        }
+        cout<<endl<<endl;
+    }
 
     cout<<endl<<endl;
 
