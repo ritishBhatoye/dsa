@@ -182,11 +182,11 @@ vector<vector<int>> triplets(int* arr, int size,int k)
         }
         else if(sum < k)
         {
-            e--;
+            s++;
         }
         else
         {
-            s++;
+            e--;
         }
     }
     return ans;
