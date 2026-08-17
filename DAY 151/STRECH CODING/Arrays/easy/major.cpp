@@ -161,26 +161,20 @@ void sort012(int* arr,int size)
 vector<vector<int>> triplets(int* arr, int size,int k)
 {
     int i=0;
-    int s = i+1;
-    int e = size-1;
+
 
     vector<vector<int>> ans;
 
     for(int i=0;i<size;i++)
     {
+    int s = i+1;
+    int e = size-1;
     while(s<e)
     {
         int sum = arr[i] + arr[s] + arr[e];
         if(k==sum)
         {
-            vector<int> p;
-
-            p.push_back(arr[i]);
-            p.push_back(arr[s++]);
-            p.push_back(arr[e--]);
-
-            ans.push_back(p);
-
+            ans.push_back({arr[i],arr[s++],arr[e--]});
         }
         else if(sum < k)
         {
