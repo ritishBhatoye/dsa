@@ -164,7 +164,7 @@ void sortArr(int* arr,int size)
     {
         for(int j=i;j<size;j++)
         {
-            if(arr[j]<arr[j+1])
+            if(arr[j]>arr[j+1])
         }
     }
 }
