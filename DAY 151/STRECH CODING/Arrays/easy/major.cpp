@@ -158,6 +158,17 @@ void sort012(int* arr,int size)
 
 }
 
+void sortArr(int* arr,int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        for(int j=i;j<size;j++)
+        {
+            if(arr[j]<arr[j+1])
+        }
+    }
+}
+
 vector<vector<int>> triplets(int* arr, int size,int k)
 {
     int i=0;
@@ -234,7 +245,7 @@ int main()
     int tripletArr[10]={-4, -1, -1, 0, 1, 2, -2, 2, 3, -3};
     vector<vector<int>> tripletSumAns = triplets(tripletArr, 10,0);
     cout<<endl<<endl;
-    cout<<"Triplet sum "<<endl;
+    cout<<"Triplet sum :- "<<endl;
     for(int i=0;i<tripletSumAns.size();i++)
     {
         for(int j=0;j<tripletSumAns.size()-1;j++)
