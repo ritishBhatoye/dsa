@@ -158,6 +158,12 @@ void sort012(int* arr,int size)
 
 }
 
+vector<vector<int>> triplets(int* arr, int size,int k)
+{
+    int i=0;
+    int s
+}
+
 int main()
 {
     cout<<endl<<endl;
