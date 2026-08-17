@@ -177,15 +177,19 @@ vector<vector<int>> triplets(int* arr, int size,int k)
 
 
     sortArr(arr,size);
+    printArr(arr,size);
     vector<vector<int>> ans;
 
     for(int i=0;i<size;i++)
     {
+        if(i>0 && arr[i]==arr[i-1]) continue;
     int s = i+1;
     int e = size-1;
     while(s<e)
     {
         int sum = arr[i] + arr[s] + arr[e];
+
+
         if(k==sum)
         {
             ans.push_back({arr[i],arr[s++],arr[e--]});
