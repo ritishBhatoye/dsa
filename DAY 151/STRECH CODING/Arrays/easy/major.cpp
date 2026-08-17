@@ -164,6 +164,8 @@ vector<vector<int>> triplets(int* arr, int size,int k)
     int s = i+1;
     int e = size-1;
 
+    vector<vector<<int>
+
     while(s<e)
     {
         int sum = arr[i] + arr[s] + arr[e];
@@ -172,7 +174,16 @@ vector<vector<int>> triplets(int* arr, int size,int k)
             vector<int> p;
 
             p.push_back(arr[i]);
-            p.push_back()
+            p.push_back(arr[s]);
+            p.push_back(arr[e]);
+        }
+        else if(sum < k)
+        {
+            e--;
+        }
+        else
+        {
+            s++;
         }
     }
 }
